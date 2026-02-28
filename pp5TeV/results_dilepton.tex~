@@ -1,0 +1,161 @@
+\subsection{The dilepton final state}
+\label{sec:res_dil}
+
+In the dilepton analysis, the \ttbar\ cross section is extracted from an event counting measurement.
+Figure~\ref{fig:jetsAnddilepton} shows the distributions of the jet multiplicity and the scalar \pt sum of all jets ($H_{\textrm{T}}$),
+for events passing the dilepton criteria in the \empm final state.
+In addition, it displays the lepton-pair invariant mass and \pt distributions,
+after requiring at least two jets in the event in the \empm final state. 
+Figure~\ref{fig:dimuon} shows the \ptmiss and the lepton-pair invariant mass distributions in the \mmpm final state for events passing 
+the dilepton criteria, and the Z boson veto with the $\ptmiss > 35$\,\GeV\ requirement, in the second case.
+ The predicted distributions take into account the efficiency corrections described in
+ Section~\ref{sec:evtSel} 
+and the background estimations discussed in Section~\ref{sec:bkg_dil}.
+Good agreement is observed between
+the data and predictions for both signal and background.
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_NJets_ElMu_dilepton}
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_HT_ElMu_dilepton}
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_InvMass_ElMu_2jets}
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_DiLepPt_ElMu_2jets}
+\caption[Predicted and observed distributions of the jet multiplicity and $H_\textrm{T}$ for the dilepton final states at $\sqrt{s}=5.02$\,\TeV]{
+Predicted and observed distributions of the (upper row) jet multiplicity and scalar \pt sum of all jets ($H_{\textrm{T}}$) for events passing the dilepton criteria, and of the (lower row) 
+invariant mass and \pt of the lepton pair after requiring at least two jets, in the \empm final state.
+The Z/$\gamma^{*}$ and \nonW backgrounds are determined from data (see Section~\ref{sec:bkg_dil}).
+The cross-hatched band represents the statistical and integrated luminosity uncertainties in the expected signal and background yields added in quadrature.
+The vertical bars on the data points represent the statistical uncertainty.
+The last bin of the distributions contains the overflow events~\citeTH{topobs_CMS_jhep}.
+}
+\label{fig:jetsAnddilepton}
+\end{figure}
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_MET_Muon_ZVeto}
+\includegraphics[width=0.49\textwidth]{figures/pp5TeV/H_InvMass_Muon_MET}
+\caption[Predicted and observed distributions of the \ptmiss and $M_{\ell^{\pm}\ell^{\mp}}$ for the dilepton final states at $\sqrt{s}=5.02$\,\TeV]{
+Predicted and observed distributions of the (left) \ptmiss in events passing the dilepton criteria and Z boson veto, and of the (right) invariant mass
+of the lepton pair after the $\ptmiss > 35$\,\GeV\ requirement in the \mmpm final state.
+The cross-hatched band represents the statistical and integrated luminosity uncertainties in the expected signal and background yields added in quadrature.
+The vertical bars on the data points represent the statistical uncertainty.
+The last bin of the distributions contains the overflow events~\citeTH{topobs_CMS_jhep}. 
+}
+\label{fig:dimuon}
+\end{figure}
+
+The fiducial \ttbar\ production cross section is measured by counting events in the visible phase space (defined by the same \pt, $\vert \eta \rvert$, and  multiplicity requirements 
+for leptons and jets as in Section~\ref{sec:evtSel}, but including the transition region for electrons) and is denoted by $\sigma_{\textrm{fid}}$. 
+It is extrapolated to the full phase space in order to determine the inclusive \ttbar\ cross section using the expression
+\begin{equation}
+\stt = \frac{N - N_\mathrm{B}}{\varepsilon \cdot\, \mathcal{A} \,\cdot {\mathcal{L}}} = \frac{\sigma_{\textrm{fid}}}{\mathcal{A} }\, ,
+\label{eqn:xsecA}
+\end{equation}
+where $N$ is the  total number of dilepton events observed in data, $N_\mathrm{B}$ the
+number of estimated background events,
+$\varepsilon$ the selection efficiency, 
+$\mathcal{A}$ the acceptance, 
+ and $\mathcal{L}$ the integrated luminosity. Table~\ref{tab:yields_dilepton} gives the total number of events observed in
+data, together with the total number of signal and background events expected
+from simulation or estimated from data, after the full set of selection criteria.
+The total detector, trigger, and reconstruction efficiency is estimated from data to be $\varepsilon = 0.55~\pm~0.02$ ($0.57~\pm~0.04$) in the \empm (\mmpm) final state.
+Using the definitions above, the yields from Table~\ref{tab:yields_dilepton}, and the systematic uncertainty from Table~\ref{tab:breakdown_comb}, the measured fiducial cross section for \ttbar\ production is 
+\begin{equation*}
+\sigma_{\textrm{fid}}  =  41 \pm 10\,(\stat) \pm 2\,(\syst) \pm 1\,(\lumi)\,{\mathrm{pb}}\, ,
+\end{equation*}
+in the \empm\ final state, and
+\begin{equation*}
+\sigma_{\textrm{fid}}  =  22 \pm 11\,(\stat) \pm 4\,(\syst) \pm 1\,(\lumi)\,{\mathrm{pb}}\, ,
+\end{equation*}
+in the \mmpm\ final state.
+
+
+\begin{table}[!ht]
+\centering
+\caption[The predicted and observed number of events in the dilepton final states at $\sqrt{s}=5.02$\,\TeV]{
+The predicted and observed numbers of dilepton events obtained after applying the full selection.
+The values are given for the individual sources of background, \ttbar\ signal, and data.
+The uncertainties are of statistical nature~\citeTH{topobs_CMS_jhep}.
+}
+\begin{tabular}{lcc}
+\toprule
+Source                  & \empm\ & \mmpm      \\
+\midrule
+  \tW\             & 0.92 $\pm$ 0.02  &   0.29 $\pm$ 0.01\\
+   Non-W/Z leptons      & 1.0  $\pm$ 0.9   &   0.04 $\pm$ 0.01\\
+   Z/$\gamma^{*}$       & 1.6  $\pm$ 0.2   &   1.1  $\pm$ 0.8\\
+  \WV                   & 0.44 $\pm$ 0.02  &   0.15 $\pm$ 0.01\\ 
+  \midrule
+  \ttbar\ signal         & 18.0 $\pm$ 0.3   &   6.4 $\pm$ 0.2  \\
+  \midrule
+  Total                 & 22.0  $\pm$ 0.9   &  7.9 $\pm$ 0.8\\
+  \midrule
+  Observed data         & 24		   &   7\\
+\bottomrule
+\end{tabular}
+\label{tab:yields_dilepton}
+
+\end{table}
+
+
+\begin{table}[!ht]
+\caption[Summary of the individual contributions to the systematic uncertainty in the $\stt$ measurement for the dilepton final states at $\sqrt{s}=5.02$\,\TeV]{
+Summary of the individual contributions to the systematic
+uncertainty in the $\stt$ measurements for the dilepton final states. The relative uncertainty $\Delta\stt /\stt$ (in \%),
+as well as the absolute uncertainty in \stt, $\Delta\stt$ (in pb), are presented. The statistical and total uncertainties are also given, 
+where the latter are the quadrature sum of the statistical and systematic uncertainties~\citeTH{topobs_CMS_jhep}.}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+                                     & \multicolumn{2}{c}{\empm}  & \multicolumn{2}{c}{\mmpm}   \\
+\cmidrule(l){2-3} \cmidrule(l){4-5}
+Source                               & $\Delta\stt /\stt$ (\%)   & $\Delta\stt$ (pb)  &  $\Delta\stt /\stt$ (\%)  &  $\Delta\stt$ (pb) \\
+\midrule
+Electron efficiency                & 1.4  & 1.0   & ---  &  --- \\
+Muon efficiency                    & 3.0  & 2.3   & 6.1  &  3.6 \\
+Jet energy scale                     & 1.3  & 1.0   & 1.3  &  0.7 \\
+Jet energy resolution                & \hspace{-4.1mm}$<0.1$ & \hspace{-4.1mm}$<0.1$  & \hspace{-4.1mm}$<0.1$ & \hspace{-4.1mm}$<0.1$ \\
+Missing transverse momentum          & ---  & ---   & 0.7  &  0.4 \\
+
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (PS)     & 1.2  & 0.9   & 1.7  & 1.0 \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (ME)     & 0.2  & 0.1   & 1.1  & 0.6 \\
+Hadronization model of \ttbar\ signal & 1.2  & 0.9   & 5.2  & 3.1 \\
+PDF                                  & 0.5  & 0.4   & 0.4  & 0.2 \\
+
+MC sample size & 1.4  & 1.1   & 2.4  & 1.4 \\
+
+\tW background                 &  1.4 & 1.1   & 1.6  & 0.9 \\
+WV background                        &  0.7 & 0.5   & 0.9  & 0.5 \\
+Z/$\gamma^{*}$ background            &  2.7 & 2.1   & 15   & 9.1 \\
+Non-W/Z background                   &  2.5 & 1.9   & 0.7  & 0.4 \\
+\midrule
+Total systematic uncertainty         & \multirow{2}{*}{ 5.8 } & \multirow{2}{*}{ 4.4 }  & \multirow{2}{*}{ 18 }  & \multirow{2}{*}{ 11 } \\
+(w/o integrated luminosity)          &        &        &      &  \\
+\midrule 
+Integrated luminosity                &   2.3  &   1.8  &  2.3 &  1.4 \\
+\midrule
+Statistical uncertainty              &  25  &  19  & 48 & 29 \\
+\midrule
+Total uncertainty                    &  25  &  19  & 52  & 31 \\
+\bottomrule
+\end{tabular}
+\label{tab:breakdown_comb}
+\end{table}
+
+
+
+The acceptance, as estimated from MC simulation, is found to be $\mathcal{A} = 0.53~\pm~0.01$ ($0.37~\pm~0.01$) in the \empm (\mmpm) final state. The statistical uncertainty (from MC simulation) is included in the uncertainty in $\mathcal{A}$. By extrapolating to the full phase space, the inclusive \ttbar\ cross section is measured to be 
+\begin{equation*}
+\stt  =  77 \pm 19\,(\stat) \pm  4\,(\syst) \pm 2\,(\lumi)\,{\mathrm{pb}}\, ,
+\end{equation*}
+in the \empm\ final state, and
+\begin{equation*}
+\stt  =  59 \pm 29\,(\stat) \pm 11\,(\syst) \pm 1\,(\lumi)\,{\mathrm{pb}}\, ,
+\end{equation*}
+in the \mmpm\ final state. 
+Table~\ref{tab:breakdown_comb} summarizes the 
+relative and absolute statistical and
+systematic uncertainties from different sources contributing to \stt. 
+The separate total systematic uncertainty without the uncertainty in the integrated luminosity, the part attributed to the integrated luminosity, and the statistical
+contribution are added in quadrature to obtain the total uncertainty.
+The cross sections, measured with a relative uncertainty of 25 and 52\%, are in agreement with the SM prediction (Eq.\,(\ref{eq:theory})) within the large uncertainty in the measurements.
+

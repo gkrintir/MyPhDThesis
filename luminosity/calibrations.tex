@@ -1,0 +1,389 @@
+\section{Calibration corrections}
+\label{sec:calibrations}
+
+\subsection{Concept and formalism of constant separation LSC scan}
+\label{sec:lsc}
+
+ \begin{figure}[!tb]
+   \centering
+   \subfloat[]{\label{trims:a}\includegraphics[width=0.47\textwidth]{figures/luminosity/B1_trim.png}}\quad
+   \subfloat[]{\label{trims:b}\includegraphics[width=0.47\textwidth]{figures/luminosity/B2_trim.png}}
+   \caption{
+     The beam-separation scans---here a LSC scan of constant separation  type---are performed automatically by the operators of LHC moving independently one beam (a) stepwise across the other (b).
+     The nominal displacement of the beams at the IP (black line) is achieved based on a local distortion of the orbit using a pair of steering dipoles located on either side of the IP.
+     The acquisition is performed while the magnets are completely idle, i.e., when the applied magnet currents (colored lines) are stable.
+   }
+   \label{fig:trims}
+ \end{figure}
+
+The ability to measure the convolved beam sizes depends upon the precise knowledge of the distance by which the beams are separated during the scans.
+If the nominal scale for beam displacement differs from the true displacement scale, a systematic error related to length scale can be introduced. 
+At each scan point, the absolute beam separation is controlled  by a set of closed orbit bumps applied locally near the considered IP using steering correctors (Fig.~\ref{fig:trims}). 
+During dedicated LSC calibration measurements, that are typically performed using the vdM protocol, i.e., the same optics configuration, both beams are moved 
+in five equidistant steps first in $x$ and then in $y$ keeping their nominal separation constant.
+% or displacing them over a range of up to $\pm3\,\sigma_{\rm{b}}$ in $x$ and $y$, respectively. 
+%In either simultaneous parallel translation, the beams remain in collision, and thus the position of the luminous region should follow the beam positions irrespective of the bunch shapes. 
+The nominal beam displacement entered into the accelerator control system can be thereby calibrated against the measured displacement of the luminous centroid. 
+To enhance the accuracy of the beam separation derived from the \texttt{LHC} orbit knobs a correction is applied that is determined by measuring the luminous region movement 
+using the tracker characterized by great resolution (Table~\ref{tab:TrackerGeom}). Since each of the four bump amplitudes (two beams in two transverse directions) 
+depends on different magnet and lattice functions, in principle, LSC scans can independently determine these four calibration constants. 
+However, since for the vdM scans the beams are moved symmetrically (as opposed to one beam at a time), only the average  length scale matters 
+to first order for calibrating the absolute separation.
+
+The beams are offset from one another by about one $\sigma_{\textrm{b}}$, and then moved in equidistant steps; 
+differences in the amounts by which the beams have been moved translate in rate differences as the scan progresses. 
+More specifically, if $x^{0}_{i}$ and $x_{i}$ are the nominal and actual horizontal beam displacements, respectively, the LSC correction factors 
+for the beam 1 and 2,  $\alpha_{1}$ and $\alpha_{2}$, are defined through 
+\begin{equation}
+\label{eq:LSC_perbeam}
+x_{i} \equiv \alpha_{i} x^{0}_{i}\ ,
+\end{equation}
+where ideally $\alpha_{i}=1$. At the start of the scan, the two beams are positioned as shown in Fig.~\ref{fig:BeamPos}, i.e., at zero and at a value of $\alpha_2s_{0}$, respectively, 
+where $s_{0}$ is the nominal beam separation, while, as the scan progresses, both beams are moved by a nominal amount of $\Delta^{j}$ at the $j$th step, meaning
+\begin{equation}
+\label{eq:trans_beam1}
+x^{j}_{1} = \alpha_{1} \Delta^{j}\ ,
+\end{equation}
+and
+\begin{equation}
+\label{eq:trans_beam2}
+x^{j}_{2} = \alpha_{2} (s_{0}+\Delta^{j})\ .
+\end{equation}
+The average position of the two beams, which is the position of the luminous region, reads
+\begin{equation}
+\label{eq:trans_avg}
+\bar{x}^{j} = \left(\frac{\alpha_{1} + \alpha_{2}}{2}\right)\Delta^{j} + \frac{\alpha_{2}s_{0}}{2} \equiv \bar{\alpha}\Delta^{j} + s'_{0} \ ,
+\end{equation}
+while the distance between the two beams is given by
+\begin{equation}
+\label{eq:beam_sep}
+\Delta x^{j} =  \alpha_{2} (s_{0}+\Delta^{j}) - \alpha_{1} \Delta^{j} = (\alpha_{2}-\alpha_{1})\Delta^{j} +  \alpha_{2}s_{0}  \equiv \epsilon \Delta^{j} + 2s'_{0} \ .
+\end{equation}
+The observed rate, $\mu(\Delta^{j})$, is related to $\mu_\textrm{vis}$, i.e., the rate when beams are fully aligned, via
+\begin{equation}
+\label{eq:rate_sep}
+\mu(\Delta^{j}) \overset{\textrm{Eq.}(\ref{eq:lumidefgen})}{\simeq} \mu_\textrm{vis} \left(1-\frac{s_{0}\epsilon}{\Sigma_{x,y}^{2}}\Delta^{j}\right) \ ,
+\end{equation}
+where a Taylor expansion of the $\Delta^{j}$ variable is assumed using the fact that $\left(\Delta x^{j}\right)^2 \simeq s_0^2+2s_0\epsilon\Delta^{j}$ and $\epsilon \ll 1$.
+It becomes thus obvious from Eqs.\,(\ref{eq:trans_avg}) and\,\ref{eq:rate_sep} that the values for $\bar{\alpha}$ and $\epsilon$ can be obtained 
+by fitting the measured $\bar{x}^{j}$ and $\mu(\Delta^{j})$, respectively, as a function of the beam separation $\Delta^{j}$.
+These values can in turn be related to $\alpha_{1}$ and $\alpha_{2}$ via
+\begin{equation}
+\label{eq:alpha1}
+\alpha_{1} = \bar{\alpha} - \frac{\epsilon}{2}
+\end{equation}
+and 
+\begin{equation}
+\label{eq:alpha2}
+\alpha_{2} = \bar{\alpha} + \frac{\epsilon}{2}\ ,
+\end{equation}
+respectively.
+%In the standard \texttt{vdM} scan sequence one beam is offset in the ``positive''
+%direction and the other beam is offset in the ``negative'' direction, 
+%so that the maximum beam separation can be achieved for a given machine aperture. 
+For all data points for which the nominal offsets of beam 1 and 2 are set to $-\Delta^{j}/2$ and  $+\Delta^{j}/2$, respectively, the true beam separation is given by
+\begin{equation}
+\label{eq:beam_sep_true}
+\Delta x^{j} =  \alpha_{2} \Delta^{j} - (-\alpha_{1} \Delta^{j}) = \bar{\alpha}\Delta^{j}\ .
+\end{equation}
+In other words, the actual beam separation is just the nominal beam separation scaled by the LSC constant $\bar{\alpha}$;  the sign of the offset is irrelevant.
+
+\begin{figure*}[tbh]
+\centering
+\subfloat[]{\label{LSCY1:a}
+  \includegraphics[width=0.47\textwidth]{figures/luminosity/LScalib_X_1.pdf}
+}\quad
+  \subfloat[]{\label{LSCY1:b}
+  \includegraphics[width=0.47\textwidth]{figures/luminosity/LScalib_Y_1.pdf}
+}
+ \caption[Examples of the measured beamspot positions as a function of the beam centroid offsets]{\label{fig:LSCY1}
+   Examples of the measured beamspot positions as a function of the beam centroid
+   offsets are shown for a horizontal (left) and a vertical (right) LSC scans. The
+   points are fitted with a first-order polynomial to derive the LSC calibration constant~\citeTH{CMS-PAS-LUM-16-001}.}
+\end{figure*}
+
+
+The data recorded during
+the two vertical and horizontal LSC scans, explained in Section~\ref{sec:ExpSetup},
+are used. The procedure to derive the LSC calibration constants follows the
+method already used in previous analyses \cite{Zanetti:1357856, CMS-PAS-LUM-12-001}.
+The beamspot movement as a function of the nominal offset of the beam centroid is
+fitted with a first-order polynomial and a calibration constant extracted.
+This is depicted in Fig.~\ref{fig:LSCY1} for LSC scans in the horizontal and vertical
+direction.
+
+The fit results for the two LSC scans in both the transverse coordinates are summarized in
+Table~\ref{tab:LS_calib}.
+These corrections are applied directly to beam--beam separation in the scan curves; their effect
+found to reduce the measured beam width (horizontally and vertically). The measured visible cross section 
+was reduced by approximately 1\% with this correction.
+A total uncertainty of 0.2\% is assigned accounting for the maximum difference between the forward and backward LSC scans (0.1\%) and 
+a potential mismodeling owing to missing higher-order terms in the fitting function. 
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{l||c|c}
+    \toprule
+    {}   & X  & Y \\
+    \midrule
+    forward LSC scan   &  $0.9951 \pm 0.0007$ & $0.9945 \pm 0.0007$ \\
+    backward LSC scan  &  $0.9960 \pm 0.0007$ & $0.9954 \pm 0.0006$ \\
+    \bottomrule
+  \end{tabular}
+  \caption[Results of the length-scale calibration for the horizontal and vertical scans]{
+    Results of the length-scale calibration for the two horizontal and vertical
+    LSC scans in the \myDate vdM program~\citeTH{CMS-PAS-LUM-16-001}. Errors are of statistical nature. 
+    The average of all four calibration constants is found to be 0.993 with negligible uncertainty for the \mypPbDate vdM program~\citeTH{CMS-PAS-LUM-17-002}.
+    \label{tab:LS_calib}}
+\end{table}
+
+\subsection{Orbit drift}
+
+\begin{figure*}[tbh]
+\centering
+  \includegraphics[width=0.65\textwidth]{figures/luminosity/orbit_drift.pdf}
+ \caption[Orbit drift as measured by the \texttt{DOROS} beam position monitor in Fill 4634]{\label{fig:OrbitDrift}
+   Difference between the two vertical and horizontal beam orbits from before and after each scan as measured
+   by the \texttt{DOROS} beam position monitor in \mum\ is shown~\citeTH{CMS-PAS-LUM-16-001}.}
+\end{figure*}
+Slow orbit drifts can distort the individual scan curves as well as result in slight movement of the beams
+out of collision between consecutive scans, thereby biasing the measured interaction rate at the peak of the scan. In
+addition, at each scan step, the actual beam separation may be affected by random jitter of the beam positions from
+their nominal setting, which in turn induces fluctuations in the luminosity measured at each scan point.
+No significant orbit drifts of the beams away from their fixed orbit position were observed during the
+scans that enter into the \sigmaVis calculation. Figure~\ref{fig:OrbitDrift} shows the difference of the beam orbits from before and after
+each scan. All horizontal (vertical) drifts, as estimated by the \texttt{DOROS} beam position monitor, are within about $(-3,+4)$\,\mum. 
+%By randomly distributing the drift of 6\mum~over the 25 separation steps and assigning at what separation step the major drift happened, 
+%a decreased effective area of at most 0.4\% was found.
+Assuming that the major part of the horizontal drift happened instantly during the $\mathrm{X}_2$ scan, a decreased effective beam overlap cross section of at most 0.4\% was found.
+Alternative assumptions about the horizontal drift occurring continuously or smoothly over the 25 separation steps were disproved, for systematically producing on average a larger effective 
+beam overlap cross section.  
+% except for beam 1 horizontal position that
+%shifted by $\sim$4 \mum during the second scan. The size of the effective area obtained in this scan
+%is smaller compared to the other three scans by about {\bf FIXME}\%.
+%The orbit drift as estimated by the DOROS BPM is studied in simulation and found to cause a decreased
+%effective area of that size.
+%The vertical and horizontal beam orbit drifts during the scans can have an impact of at most 0.4\%~\cite{CMS-PAS-LUM-15-001}.
+This is taken as uncertainty, and no further corrections are applied.
+
+
+\subsection{Impact of nonfactorizable beam shape}
+\label{sec:xyCor}
+
+
+The assumption made for the vdM method that the proton bunch densities are factorizable in $x$ and $y$, 
+i.e., that the $x$ ($y$) shape measured at a working point $\Delta y_0$ ($\Delta x_0$) does not depend on the working point position,
+is not valid for the required precision in general and may result in a biased estimate of the beam overlap integral~\cite{Aaij:2014ida}. 
+Short of input from beam--gas imaging measurements~\cite{Barschel:1693671,BGV_1,BGV_2}, a standard technique so far has been the modeling of the transverse density distributions of the two
+beams by fitting the evolution, during either vdM or the specifically-tailored BI scans, 
+not only of the luminosity itself but also of the position, orientation and shape of its spatial distribution. 
+The latter can be reflected in the distribution of the reconstructed primary vertices. 
+Luminosity profiles can be then generated for simulated vdM or BI scans using these fitted beam parameters, 
+and the impact of nonfactorization in the single-beam distributions is determined from the difference between the ``true'' luminosity from the simulated overlap integral and the ``measured'' 
+luminosity from the fits to the two-dimensional simulated luminosity profiles assuming factorization.
+
+To estimate the size of this potential bias in the \myDate scans,
+the two-dimensional distributions of reconstructed vertices in the transverse plane recorded during the four BI scans are exploited~\cite{Salfeld-Nebgen:2138397}. 
+Considering a BI scan in $x$ in consecutive scan steps $\Delta x$, the density of the accumulated vertices for a given vertex
+reconstruction resolution $V$ can be expressed based on arbitrary bunch proton densities $\rho_1$ and $\rho_2$ as
+%at a given point
+%the fit model of the vertex distributions is derived as follows:
+\begin{align}
+\label{eq:deriveFitModel2}
+\sum_{n} n^{vtx}(x, y; n\Delta x) & \propto \sum_{n} \rho_1(x,y) \rho_2(x+n\Delta x,y) \Delta x \otimes V \nonumber \\
+ & =  \bigg[  \sum_{n} \rho_1(x,y) \rho_2(x+n\Delta x,y) \Delta x \bigg] \otimes V \nonumber \\
+ & \approx  \bigg[  \int_{\Delta x} \rho_1(x,y) \rho_2(x+\Delta x,y) \,\mathrm{d}(\Delta x)\bigg] \otimes V \nonumber \\
+ & =  \rho_1(x,y) (\mathcal{M}_x \rho_2)(y) \otimes V\, .
+\end{align}
+The $x$ coordinate is thus integrated out and the bunch proton density of the ``moving'' beam appears marginalized in the direction of the scan, meaning that the two-dimensional 
+vertex distribution constrains the bunch proton density of the beam at rest (``stationary''). 
+Taking four scans of this kind in total, i.e, scanning one beam over the other in $x$ and $y$ and vice versa, proton densities are fully constrained.
+
+
+Using the fit model of Eq.\,(\ref{eq:deriveFitModel2}) per BCID, the \myDate analysis is performed using simultaneously all four vertex distributions accumulated during the BI scans, 
+while the distributions of vertex positions are constructed from the first two vdM scan pairs for the \mypPbDate analysis. 
+The bunch proton or lead densities are approximated to be of double-Gaussian type
+\begin{equation}
+\label{eq:dgmodel1}
+\rho_i (x,y) = w_i g_W(x,y) + (1-w_i) g_N(x,y)\, ,
+\end{equation}
+for which the two components $g_N$ and $g_W$ incorporate a correlation parameter, $r$, and are of the form
+\begin{equation}
+\label{eq:sgmodel1}
+ g_j(x,y) = \frac{1}{2\pi \sigma_{j,x} \sigma_{j,y} \sqrt{1-r_j^2}} \exp{\bigg( -\frac{1}{2(1-r_j^2)}\Big[  \frac{x^2}{\sigma_{j,x}^2}+\frac{y^2}{\sigma_{j,y}^2}-\frac{2r_jxy}{\sigma_{j,x}\sigma_{\
+j,y}}\Big]\bigg) }\, .
+\end{equation}
+
+\begin{figure*}[tbh]
+\centering
+\subfloat[]{\label{LSCY1:a}
+  \includegraphics[width=0.47\textwidth]{figures/luminosity/Fill4634_res_central_DG_bcid2389_X1.pdf}
+}\quad
+  \subfloat[]{\label{LSCY1:b}
+  \includegraphics[width=0.47\textwidth]{figures/luminosity/Fill4634_comb_central_DG_bcid2389_X1.pdf}
+}
+ \caption[Pull distributions based on two-dimensional proton density models built from a combination of Gaussian pdf]{\label{fig:LSCY1}
+   By measuring the positions of the interaction vertices with the tracker during the dedicated BI scans, the transverse bunch densities of the two 
+   colliding beams can be reconstructed. The pull distribution (a) based on two-dimensional proton density models built 
+   from a combination of Gaussian pdf, as well as its projection to radial and angular coordinates (b), 
+   are shown using the data collected during the $\mathrm{IX1}$ scan for BCID 2389~\citeTH{CMS-PAS-LUM-16-001},
+   The pull distributions indicate a good agreement between the fitted model predictions and the recorded data.
+}
+\end{figure*}
+
+Simulated vdM scans with the extracted bunch densities are performed and compared with the beam overlap integrals obtained taking the nonfactorizability into account.
+Based on the per-BCID comparison (Table~\ref{tab:beamimaging}), a maximum difference of 1.4\% in the visible cross section is observed in the \myDate analysis. 
+This difference is taken as the systematic uncertainty associated with the luminosity estimate independent of $x$--$y$ correlations in the proton densities.
+The resolution in the position of a reconstructed PV strongly depends on the number of tracks  used  to  fit  the  vertex. 
+A  track-splitting  method (see Section~\ref{sec:vertex})  is  employed  for  measuring  the vertex resolution  as  a  function  of  the  number  of  tracks  associated  with  the  vertex.  
+For the \mypPbDate vdM conditions, the vertex resolution becomes comparable to the expected size of $\sigma_{\textrm{b}}$ only for primary vertices using at least 50 
+vertex-associated tracks (Fig.~\ref{fig:vtx_res}). The BCID-averaged correction amounts to 2.3 (2.9)\% for the Pbp (pPb) period.
+
+\begin{table}[htb]
+\caption[Effect of the nonfactorizability of bunch proton densities on the effective beam overlap cross section]{
+  Comparison of the effective beam overlap cross sections from the simulated vdM \myDate scans---with bunch proton densities extracted using Eq.\,(\ref{eq:dgmodel1}) 
+  to the beam images (Eq.\,(\ref{eq:deriveFitModel2}))---against the beam overlap integrals incorporating genuine nonfactorizabilities~\citeTH{CMS-PAS-LUM-16-001}. 
+  Multiple simulated experiments are performed, and hence the associated statistical uncertainty is negligible. \label{tab:beamimaging}}
+\begin{center}
+\begin{tabular}{c||c|c|c}
+\toprule
+ BCID &  $A_{\textrm{eff}}$ [mm$^2$] & True integral [mm$^2$] &  $\frac{(\textrm{True}\ \textrm{integral}-A_{\textrm{eff}})}{A_{\textrm{eff}}}$[$\%$]\\%& $A_{eff}$ Beam Overlap [mm$^2$] \\
+\midrule
+%&  $\Sigma_x$ & $\Sigma_y$ & Overlap &  $\Sigma_x$ & $\Sigma_y$ & Overlap \\
+%\hline
+644  & 0.0641 & 0.0646 & 0.8 \\%& 6.55 \\
+1215 & 0.0637 & 0.0642 & 0.8 \\%& 6.55\\
+2269 & 0.0637 & 0.0646 & 1.4 \\%& \\
+2389 & 0.0641 & 0.0649 & 1.2 \\%& \\
+2589 & 0.0639 & 0.0648 & 1.4 \\%& 6.55 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+\begin{figure*}[tbh]
+    \centering
+    \subfloat[][]{\includegraphics[width=0.35\paperwidth]{figures/luminosity/resolution_x_PAZeroBias1_2016.pdf}}
+    \subfloat[][]{\includegraphics[width=0.35\paperwidth]{figures/luminosity/resolution_y_PAZeroBias1_2016.pdf}}
+    \caption[Primary vertex transverse resolution using zero-bias events in \mypPbDate vdM analysis]{
+    Primary vertex transverse resolution in the horizontal (a) and vertical (b) direction using zero-bias events in \mypPbDate vdM analysis as a function of the track multiplicity ($N_{\textrm{tracks}}$).
+    The reconstructed tracks associated with primary vertices are selected based on the high-purity requirement (Table~\ref{tab:TrackSelection}),
+    while vertices within a radial (longitudinal) distance of 24 (2)\,$\mathrm{cm}$ are retained.
+    After the track-splitting, the low event count at higher $N_{\textrm{tracks}}$ causes fit instabilities.   
+    The curve shows the results of the resolution fitted using a three-parameter function of the form $A/N_{\textrm{tracks}}^B+C$~\citeTH{CMS-PAS-LUM-17-002}.
+    Errors are retained from the covariance matrix of the fit applied after the track-splitting procedure.
+    }
+    \label{fig:vtx_res}
+\end{figure*}
+
+\subsection{Beam--beam effects}
+\label{sec:beambeam}
+
+\begin{figure*}[tbh]
+\centering
+\subfloat[]{\label{BB:a}
+  \includegraphics[width=0.47\textwidth]{figures/luminosity/BeamBeam.pdf}
+ }\quad
+ \subfloat[]{\label{BB:b}
+   \includegraphics[width=0.47\textwidth]{figures/luminosity/DynamicBeta_light_4634_644_Scan_4_Scan_2.pdf}
+}
+ \caption[beam--beam deflection as a function of the nominal beam displacement in \myDate vdM analysis]{\label{fig:BB}
+   Example of the intensity-dependent orbit kicks and tune shifts induced by long-range beam--beam interactions distorting (a) the nominal beam displacement  and 
+   (b) the luminosity scan curves~\citeTH{CMS-PAS-LUM-16-001}.}
+\end{figure*}
+
+When charged-particle bunches collide, the strength of the mutual electromagnetic forces of the two colliding positively-charged bunches
+changes as a function of separation and, if uncorrected, can bias the results obtained from the vdM
+scans in two separate ways. 
+The amplitude and the beam-separation dependence of the so-called ``beam–dynamical'' interaction depend on the beam energy, the number of betatron oscillations and 
+the unperturbed $\beta$-functions as well as the bunch intensities and transverse beam sizes.
+The two beams repel each other (beam--beam deflection), and their electromagnetic repulsion induces a mutual angular kick that distorts their closed orbits 
+by a fraction of a micrometer and modulates the actual transverse separation at the IP. 
+Figure~\ref{BB:a} shows an example of the beam deflection as a function of the nominal separation,
+calculated analytically using the procedure from Ref.~\cite{Kozanecki:1581723}. 
+A correction to the beam--beam separation
+in the scan curves is applied per scan and bunch crossing accordingly, resulting in an overall correction
+of about 1\% on the visible cross section.  The uncertainty of this calculation is dominated by
+the $\beta^{\ast}$ uncertainty, which is known with a precison of about 20\%~\cite{beta_beating}.  The uncertainty of this beam--beam correction is thus 0.2\%. 
+
+Apart from the beam--beam deflection, the electromagnetic forces give rise to mutual defocusing (``dynamic-$\beta$'') effects
+ of the colliding bunch densities varying as a function of their relative separation. 
+The resulting fractional change in the value of the $\beta$ function at the considered IP, or equivalently the optical demagnification between the \texttt{LHC} arcs 
+and the collision point,  modifies the collision rate at each scan step and hence distorts the shape of the scan curve. 
+This effect, however, is expected to be small, and is modeled (Fig.~\ref{BB:b})  using  the  \textsc{mad-x} optics code assuming bunch parameters representative of a baseline vdM scan, and then 
+rescaled using the measured intensities and convolved beam sizes per colliding-bunch pair. 
+An uncertainty of 0.5\% is assigned to cover the possible impact on the visible
+cross section measurement. 
+The overall uncertainty due to beam--beam effects is thus 0.6\% in the \myDate vdM analysis.
+
+A conservative uncertainty due to the beam--beam effect is assigned that equals the correction,  i.e.,  0.3\%, in the \mypPbDate vdM analysis. 
+The dynamic-$\beta$ effect is also expected to be small in both Pbp and pPb periods, owing to the low bunch intensities, and a conservative uncertainty of 0.5\% is assigned 
+to cover the possible impact on the visible cross section measurement, and hence the overall uncertainty due to beam--beam effects is at the same level in the \mypPbDate as in the \myDate vdM analysis.
+
+
+\subsection{Bunch current corrections and normalization}
+ 
+
+The \texttt{LHC} beam currents are measured in a three-step process resulting from different capabilities of the available instrumentation. 
+Since the bunch population can significantly vary from one bunch to another, we utilize the \texttt{FBCT} or \texttt{BQM} to measure the single-bunch intensities $N_{\mathrm{FBCT},\,\mathrm{BQM}}^j$. 
+The sum of the individual bunch currents is then normalized such that it matches the total current $N_{\mathrm{DCCT}}$ measured by the DCCT with an accuracy of 0.3\%.
+Finally, corrections are applied to account for the spurious charge present in a given BCID.
+
+Spurious charges can be present in the LHC, either belonging to noncolliding bunch slots at a level below the \texttt{FBCT} threshold (``ghosts'') or 
+leaking out from the nominally filled RF bucket into a nearby bucket (``satellites'').  
+Figure~\ref{fig:GhostsAndSatellites} shows an example distribution for the longitudinal beam charge distribution over the RF buckets of 2.5\,$\mathrm{ns}$ length 
+that are equidistantly distributed over the \texttt{LHC} circumference. 
+Ghost contributions enter in the total beam intensity measurement from \texttt{DCCT}, while satellite charges contribute to the per-bunch-slot granularity current measurement 
+without resulting in a measurable luminosity~\cite{spurious}. 
+This may introduce an error in the measurement of the bunch
+populations  and,  via the  bunch  population product,  in  the  determination of  the  luminosity
+calibration factor.   Therefore,  the \texttt{FBCT} or \texttt{BQM} measurements of the bunch population is also corrected according to the following formula
+\begin{equation}\label{eq:currents}
+N^j_{1,2}=N_{\mathrm{FBCT},\,\mathrm{BQM}}^j (1-f_{\mathrm{sat}}^j)\frac{N_{\mathrm{DCCT}}(1-f_{\mathrm{ghost}})}{\sum\limits_{j} N_{\mathrm{FBCT},\,\mathrm{BQM}}^j}\, ,
+\end{equation}
+with $f_{\mathrm{ghost}}$ and $f_{\mathrm{sat}}^j$ the fraction of ghost charge out of the
+total beam current and the fraction of satellite charge in bunch $j$, respectively.
+The spurious charge is measured by \texttt{LDM}. 
+
+\begin{figure*}[tbh]
+\centering
+  \includegraphics[width=0.65\textwidth]{figures/luminosity/GhostsAndSatellites.png}
+ \caption[Example of a longitudinal beam profile at \texttt{LHC} as seen by \texttt{LDM} device]{\label{fig:GhostsAndSatellites}
+   %http://cds.cern.ch/record/1427728/files/ATS-Note-2012-029-PERF.pdf
+   Longitudinal beam profile monitoring of beam 1 at \texttt{LHC} as seen by \texttt{LDM}~\cite{spurious}, 
+   which measures synchrotron radiation photons emitted by the beams.
+   The RF-bucket structure is split into nominally filled, satellite, and ghost bins.
+   Conventionally, RF buckets that lie within the $12.5$\,$\mathrm{ns}$ range around the center of a nominally filled bunch are considered as satellite bunches, 
+   while buckets accommodated outside this range are lumped altogether in the ghost charge.
+}
+\end{figure*}
+
+The \texttt{LDM} data for Fill 4634 indicate that the satellite charges were insignificant, below 0.002\% for both beams,
+and have no detectable effect on our measurement. The ghost charges, however, present nonnegligible values 
+and, in particular for beam 1, show a very strong time dependence that has to be taken into account.
+The ghost contributions are estimated to be constant at $\sim$0.3\% for beam 2, while for beam 1 they increase 
+from 0.8\% to 2.4\% between the first vdM and the last BI scan. 
+A measurement of ghost charge is provided independently by the \texttt{LHCb} Collaboration, via the rate of beam--gas collisions occurring in nominally empty bunch slots, 
+that confirms the findings from \texttt{LDM} (Fig.~\ref{fig:Ghosts}). 
+The ghost charges present nonnegligible values also for \mypPbDate analysis, and, in particular, for the Pb beam, show a very strong time dependence that has to be taken into account.  
+The ghost contributions are estimated to be constant at $\sim 0.5$\,($\sim 0.3$)\% for the proton beam in the Pbp (pPb) period, while for the Pb beam they increase from 
+1.0 to 1.2 (1.0 to 1.3)\% between the first and the last vdM scan in Pbp (pPb) period.
+
+The correction to the overall visible cross section is $1.8\pm 0.2$\% in the \myDate analysis, and is found to be $1.3\pm 0.7$\,($1.2\pm 0.6$)\% in the Pbp (pPb) period.  
+The uncertainty safely takes into account the maximum  observed difference between the measurements from \texttt{LDM} and \texttt{LHCb}. 
+The \texttt{DCCT} accuracy of $0.3$\% is taken as an additional systematic uncertainty.
+
+\begin{figure*}[tbh]
+\centering
+\subfloat[]{\label{Ghosts:a}
+  \includegraphics[width=0.65\textwidth]{figures/luminosity/ghostCharges_LDM_BGI_fill_4634.png}}
+\\
+  \subfloat[]{\label{Ghosts:b}
+    \includegraphics[width=0.65\textwidth]{figures/luminosity/ghostCharges_LDM_BGI_fill_5527.png}}
+ \caption[Spurious-charge fractions for beam 1 and 2 as a function of time for Fills 4634 and 5527]{\label{fig:Ghosts}
+   Ghost-charge fractions separately for beam 1 and 2 as a function of time for Fills 4634 (a) and 5527 (b) comparing the measurements based on the number of beam--gas interactions (BGI) recorded by \texttt{LHCb}~\cite{CERN-THESIS-2018-049} and the longitudinal profile of the synchrotron radiation monitors. 
+   The total systematic uncertainty in BGI measurements stems from the trigger efficiency that is fully correlated between the beams.
+   The unbunched population, i.e., the signal level at RF edges, is not subtracted from \texttt{LDM} measurements.
+   The \texttt{FBCT}---normalized to the first valid \texttt{LHCb} ghost-charge value per beam---is subtracted from the \texttt{DCCT} measurement and is superimposed in (a).
+}
+\end{figure*}

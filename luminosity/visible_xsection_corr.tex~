@@ -1,0 +1,100 @@
+\subsection{Extraction of the visible cross section}
+\label{sec:PCCxsection}
+
+The size of the beam overlap is measured by fitting the luminometer rate measurements, normalized by the bunch current product, as a function of beam--beam separation.  
+The scan curves are fitted with a double-Gaussian model with an additional constant term, whose purpose is to subtract pedestals from the background rates.
+A more accurate estimate of the constant term is obtained measuring the beam overlap by simultaneously fitting the PCC and reconstructed PV (``vertex counting'') rate measurements;
+PCC data are available only during the \myDate vdM scan program.
+The effective horizontal and vertical widths of the beam ($\Sigma_x$ and $\Sigma_y$) as well as the normalized rates ($R_x$, $R_y$) are obtained per scan per BCID. 
+For each BCID the visible cross sections are then measured using
+\begin{equation}
+\sigmaVis = 2\pi \Sigma_x \Sigma_y \mu_{\textrm{vis}}\, ,
+\end{equation}
+where
+\begin{equation}
+\mu_{\textrm{vis}} = \frac{1}{2}(R_x + R_y)\, ,
+\end{equation}
+with $R_{x,y}$ denoting the amplitudes of the fitted scan curves, i.e.,  $R_{x} \equiv R(\Delta x=0, \Delta y_0)$ and $R_{y} \equiv R(\Delta x_0, \Delta y=0)$.
+
+Example fits for BCID 1215 in $\mathrm{Y}_3$ and $\mathrm{X}_3$ are shown in Figs.~\ref{fig:pccXYFits} and \ref{fig:vtxXYFits} for PCC and vertex counting, respectively, during the \myDate vdM program. For vertex selection in the vertex counting method the standard \texttt{CMS} definition of good vertices (see Section~\ref{sec:tracking}) is applied. 
+The fitted $\Sigma_x$ and $\Sigma_y$ parameters are shown in Fig.~\ref{fig:SimFit_Sigma}, while the resulting \sigmaVis are illustrated in Fig.~\ref{fig:SimFit_PCCResultsUnCorr}. 
+For the \myDate vdM program all luminometers produce compatible estimates: the percent differences between any two luminometers are statistically consistent with zero. 
+For the \mypPbDate vdM program the percent differences between any two luminometers is consistent with zero at the level of 0.5 and 0.2\% in the Pbp and pPb period, respectively, 
+while a scan-to-scan variation is also assigned based on the root-mean-square of the measured \sigmaVis, which is found to be 0.6 (1.0)\% in the Pbp (pPb) period, respectively.
+
+
+\begin{figure*}[tbh]
+\begin{minipage}{.5\linewidth}
+\centering
+ \subfloat[]{\label{pccXYFits:a}\includegraphics[scale=0.3]{figures/luminosity/SimCapSigma_PCC_PCCAndVtx_FittedGraphs_13.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{pccXYFits:b}\includegraphics[scale=0.3]{figures/luminosity/SimCapSigma_PCC_PCCAndVtx_FittedGraphs_19.pdf}}
+\end{minipage}\par\medskip
+ \caption[Examples of the fitted scan curves based on the pixel-cluster counting method in the \myDate vdM period]{
+   Examples of fitted scan curves, i.e., normalized rates recorded based on the PCC method as a function of the beam separation ($\Delta$) in (a) $\mathrm{Y}_3$ and (b) $\mathrm{X}_3$ scans
+   in the \myDate vdM period~\citeTH{CMS-PAS-LUM-16-001}.  
+   The applied fit model is represented as the green and red, blue, and black curves corresponding to the two Gaussian components, the constant term, and their sum, respectively. 
+   The values and the statistical uncertainty in the fitted parameters are shown in the legend, along with the reduced $\chi^2$. 
+   The bottom panels include the residuals, i.e., the difference between the measured and fitted values divided by the statistical uncertainty.
+   The fit is performed simultaneously with the rates of Fig.~\ref{fig:vtxXYFits}.
+}
+\label{fig:pccXYFits}
+\end{figure*}
+
+\begin{figure*}[tbh]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{vtxXYFits:a}\includegraphics[scale=0.3]{figures/luminosity/SimCapSigma_TrkVtx_PCCAndVtx_FittedGraphs_13.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{vtxXYFits:b}\includegraphics[scale=0.3]{figures/luminosity/SimCapSigma_TrkVtx_PCCAndVtx_FittedGraphs_19.pdf}}
+\end{minipage}\par\medskip
+\caption[Examples of the fitted scan curves based on the vertex counting method in the \myDate vdM period]{
+  Examples of fitted scan curves, i.e., normalized rates recorded based on the vertex counting method as a function of the beam separation ($\Delta$) in (a) $\mathrm{Y}_3$  and  (b) $\mathrm{X}_3$
+  scans in the \myDate vdM period~\citeTH{CMS-PAS-LUM-16-001}.
+  The applied fit model is represented as the green and red, blue, and black curves corresponding to the two Gaussian components, the constant term, and their sum, respectively. 
+  The values and the statistical uncertainty in the fitted parameters are shown in the legend, along with the reduced $\chi^2$. 
+  The bottom panels include the residuals, i.e., the difference between the measured and fitted values divided by the statistical uncertainty.
+  The fit is performed simultaneously with the rates of Fig.~\ref{fig:pccXYFits}.
+}
+\label{fig:vtxXYFits}
+\end{figure*}
+
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SimFit_Sigma_Chi2Norm:a}\includegraphics[scale=0.4]{figures/luminosity/plots_SimCapSigma_PCCAndVtx_4634_14.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SimFit_Sigma_Chi2Norm:b}\includegraphics[scale=0.4]{figures/luminosity/plots_SimCapSigma_PCCAndVtx_4634_13.pdf}}
+\end{minipage}\par\medskip
+
+\caption[The measured convolved beam sizes from the PCC method in the \myDate vdM period]{
+  The extracted $\Sigma_{x/y}$ (a,b) from the PCC method as a function of BCID (a) and scan sequence (b) in the \myDate vdM period~\citeTH{CMS-PAS-LUM-16-001}.
+  The sequential naming convention adheres to the horizontal and vertical scan sequence as illustrated in Fig.~\ref{fig:BeamPos}.
+}
+\label{fig:SimFit_Sigma}
+\end{figure}
+
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SimFit_PCCResultsUnCorr:a}\includegraphics[width=\textwidth]{figures/luminosity/xsecsPerBCID_PCC.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SimFit_PCCResultsUnCorr:b}\includegraphics[width=\textwidth]{figures/luminosity/xsecsPerScan_PCC.pdf}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[]{\label{SimFit_PCCResultsUnCorr:c}\includegraphics[width=0.55\textwidth]{figures/luminosity/xsecs_PCC.pdf}}
+\caption[The measured visible cross section from the PCC method in the \myDate vdM period]{
+  The weighted average of PCC \sigmaVis per BCID (a) and scan (b), and separately in each BCID and scan (c) in the \myDate vdM period~\citeTH{CMS-PAS-LUM-16-001}.
+  Errors are statistical only.}
+\label{fig:SimFit_PCCResultsUnCorr}
+\end{figure}

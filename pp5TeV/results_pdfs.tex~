@@ -1,0 +1,162 @@
+\section{\QCD\ analysis}
+\label{sec:pdfs}
+
+To illustrate the impact of the \stt measurements at $\sqrts = 5.02$\,\TeV on the knowledge of the proton PDFs the results are used in a \QCD\ analysis at 
+NNLO, together with the combined measurements of neutral- and charged-current cross sections for deep inelastic electron- and positron-proton 
+scattering (DIS) at \texttt{HERA}~\cite{Abramowicz:2015mha}, and the \texttt{CMS} measurement~\cite{Khachatryan:2016pev} of the muon charge asymmetry in W boson 
+production at $\sqrt{s}=8$\,\TeV. 
+The precise \texttt{HERA} DIS data are directly sensitive to the valence and sea quark distributions and probe the gluon distribution through scaling violations. 
+The latter data set is used to check the feasibility of improving the constraints on the light-quark distributions. 
+
+Version 2.0.0 of \textsc{xFitter}~\cite{Alekhin:2014irh, herafitter}, an open-source \QCD-analysis framework for PDF 
+determination, is employed, with the partons evolved using the Dokshitzer--Gribov--Lipatov--Altarelli--Parisi 
+equations~\cite{Gribov:1972ri,Altarelli:1977zs,Curci:1980uw,Furmanski:1980cm,Moch:2004pa,Vogt:2004mw} 
+at NNLO, as implemented in the {$\mathrm{QCDNUM 17-01/13}$} program~\cite{Botje:2010ay}. The treatment and the choices for the central values 
+and variations of the c and b quark masses, the strong coupling, and the strange-quark content fraction of the proton follow that of 
+earlier \texttt{CMS} analyses, e.g., Ref.~\cite{Khachatryan:2016pev}. The $\mu_\textrm{R},\mu_\textrm{F}$ scales are set to the four-momentum transfer 
+in the case of the DIS data (restricted to $\mathrm{Q}^2_{\textrm{min}}>3.5$\,\GeV$^2$), the W boson mass for the muon charge asymmetry results, and the top quark mass in the case of \stt.
+
+The systematic uncertainty in all three measurements of \stt and their correlations are treated the same way as in 
+the combination described in Section~\ref{sec:comb}. The theoretical predictions for \stt are obtained at NNLO using the 
+\textsc{Hathor} (v2.1) calculation~\cite{Aliev:2010zk}, assuming $m_{\textrm{top}}= 172.5$\,\GeV.
+The bin-to-bin correlations of the experimental uncertainty in the muon charge asymmetry and DIS 
+measurements are taken into account. The theoretical predictions for the muon charge asymmetry are obtained as 
+described in Ref.~\cite{Khachatryan:2016pev}. 
+
+The procedure for the determination of the PDFs follows the approach of \HERAPDF as used in the \QCD\ analysis of Ref.~\cite{Khachatryan:2016pev}. 
+ The parametrized PDFs are the gluon distribution, $x\Pg$, the valence quark distributions, $x\cPqu_v$, $x\cPqd_v$, and 
+the $\cPqu$-type and $\cPqd$-type antiquark distributions, $x\overline{U}$, $x\overline{D}$. The relations $x\overline{U} = x\cPaqu$ 
+and $x\overline{D} = x\cPaqd + x\cPaqs$ are assumed at the initial scale of the \QCD\ evolution $\mathrm{Q}_0^2$ = 1.9\,\GeV$^2$. At this scale, the parametrizations are of the form: 
+\begin{align}
+\begin{split}
+%\begin{eqnarray}
+x\Pg(x) &= A_\Pg x^{B_\Pg}\times(1-x)^{C_{\Pg}}\times (1+D_\Pg x)\ ,
+%\label{eq:g}\\
+\\
+x\cPqu_v(x) &= A_{\cPqu_v}x^{B_{\cPqu_v}}\times(1-x)^{C_{\cPqu_v}}\times(1+D_{\cPqu_v}x+E_{\cPqu_v}x^2)\ ,
+%\label{eq:uv}\\
+\\
+x\cPqd_v(x) &= A_{\cPqd_v}x^{B_{\cPqd_v}}\times(1-x)^{C_{\cPqd_v}}\ ,
+%\label{eq:dv}\\\
+\\
+x\overline{U}(x)&= A_{\overline{U}}x^{B_{\overline{U}}}\times (1-x)^{C_{\overline{U}}}\times (1+E_{\overline{U}}x^2)\ ,
+%\label{eq:Ubar}\\
+\\
+x\overline{D}(x)&= A_{\overline{D}}x^{B_{\overline{D}}}\times (1-x)^{C_{\overline{D}}}\ .
+%\label{eq:Dbar}
+%\end{eqnarray}
+\end{split}
+\label{eq:PDF_param}
+\end{align}
+
+The normalization parameters $A_{\cPqu_v}$, $A_{\cPqd_v}$, and $A_\cPg$ are determined by the \QCD\ sum 
+rules, the $B$ parameters are responsible for the small-$x$ behavior of the PDFs, and the $C$ parameters describe the shape of 
+the distribution as $x \to 1$. Additional constraints $B_{\overline{U}} = B_{\overline{D}}$ and 
+$A_{\overline{U}} = A_{\overline{D}}(1 - f_\cPqs)$ are imposed, with $f_\cPqs$ being the strangeness 
+fraction, $\cPaqs/( \cPaqd + \cPaqs)$, which is set to $0.31\pm0.08$ as in Ref.~\cite{Martin:2009ad}, 
+consistent with the value obtained using the \texttt{CMS} measurements of W+c production~\cite{Chatrchyan:2013mza}.  
+
+\begin{table}[!tb]
+\centering
+\renewcommand{\arraystretch}{1.25}
+\normalsize
+\caption[The quality ($\chi^2$ goodness of fit) of the overall \QCD\ analysis including the \stt measurements at $\sqrt{s}=5.02$\,\TeV]{
+Partial $\chi^2$ per number of data points, $n_{\textrm{dp}}$, and the global $\chi^2$ per 
+degrees of freedom, $n_{\text{dof}}$, as obtained in the \QCD\ analysis of DIS data, the \texttt{CMS} muon charge asymmetry measurements, and the \stt results at $\sqrts = 5.02$\,\TeV\ from this analysis. 
+For the \texttt{HERA} measurements, the energy of the proton beam ($E_{\Pp}$) is listed for each data set, with the electron/positron energy of $27.5\,\mathrm{GeV}$. 
+The correlated part of the global $\chi^2$ value is also given. 
+The sources of correlated systematic uncertainty in the \stt measurement are treated as nuisance parameters; for each parameter, a penalty term is added to the $\chi^2$~\citeTH{topobs_CMS_jhep}.
+}
+
+\begin{tabular}[!ht]{l | c}
+\toprule
+Data sets   & Partial $\chi^2/n_{\textrm{dp}}$ \\
+\midrule
+\texttt{HERA} neutral current,  $\Pep \Pp$,  $E_{\Pp}=920\,\textrm{GeV}$ &  $449/377$  \\
+\texttt{HERA} neutral current,  $\Pep \Pp$,  $E_{\Pp}=820\,\textrm{GeV}$ &  $71/70$ \\
+\texttt{HERA} neutral current,  $\Pep \Pp$,  $E_{\Pp}=575\,\textrm{GeV}$ &  $224/254$ \\
+\texttt{HERA} neutral current,  $\Pep \Pp$,  $E_{\Pp}=460\,\textrm{GeV}$ &  $218/204$ \\
+\texttt{HERA} neutral current,  $\Pem \Pp$,  $E_{\Pp}=920\,\textrm{GeV}$ &  $218/159$ \\
+\texttt{HERA} charged current,  $\Pep \Pp$,  $E_{\Pp}=920\,\textrm{GeV}$ &  $43/39 $ \\
+\texttt{HERA} charged current,  $\Pem \Pp$,  $E_{\Pp}=920\,\textrm{GeV}$ &  $53/42 $ \\
+\texttt{CMS} $\mathrm{W}^\pm$ muon charge asymmetry  &  $2.4/11$ \\
+\texttt{CMS} \stt, \empm, 5.02\,\TeV & $1.03 /1$ \\
+\texttt{CMS} \stt, \mmpm, 5.02\,\TeV & $0.01 /1$ \\
+\texttt{CMS} \stt, $\ell$+jets, 5.02\,\TeV & $0.70 /1$ \\
+\midrule
+Correlated $\chi^2$                                 & $100$ \\
+Global $\chi^2/n_{\text{dof}}$                         & $1387/1145$\\
+\bottomrule
+\end{tabular}
+
+\label{chi2_pdffit_table}
+\end{table}
+
+The predicted and measured cross sections for all the data sets, together with their corresponding uncertainties, are used to build a global $\chi^2$, 
+minimized to determine the PDF parameters~\cite{Alekhin:2014irh, herafitter}. 
+The parameters are selected by first fitting with all $D$ and $E$ parameters set to zero, 
+and then including them independently one at a time in the fit. The improvement in the global $\chi^2$ of the fit is monitored, 
+and the procedure is terminated when no further improvement is found.  
+Using the measured values for \stt allows the addition of a new free parameter, $D_{\cPqu_v}$, in Eq.\,(\ref{eq:PDF_param}), as compared to 
+the analysis in Ref.~\cite{Khachatryan:2016pev}, leading to a 14-parameter fit. The results of the fit are given in Table~\ref{chi2_pdffit_table}.
+
+The quality of the overall fit can be judged based on the global $\chi^2$ divided by the number of degrees of freedom, $n_{\textrm{dof}}$. 
+For each data set included in the fit, the partial $\chi^2$ divided by the 
+number of the measurements (data points), $n_{\textrm{dp}}$, is also provided. The correlated part of $\chi^2$, also given in Table~\ref{chi2_pdffit_table}, 
+quantifies the influence of the correlated systematic uncertainty in the fit. 
+The global and partial $\chi^2$ values indicate a general agreement among all the data sets. 
+The somewhat high $\chi^2/n_{\textrm{dp}}$ values for the combined DIS data are very similar to those observed in 
+Ref.~\cite{Abramowicz:2015mha}, where they are investigated in detail. 
+
+\begin{figure}[!ht]
+\center
+   \includegraphics[width=0.6\textwidth]{figures/pp5TeV/gluon_pdf.pdf}
+\setlength{\unitlength}{1cm}
+\caption[The uncertainty in the gluon PDF of the proton as a function of $x$ at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$ including \stt data at $\sqrt{s}=5.02$\,\TeV]{
+The relative uncertainty in the gluon distribution function of the proton as a function of $x$ at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$ from a 
+\QCD\ analysis using the \texttt{HERA} DIS and \texttt{CMS} muon charge asymmetry measurements (hatched area), and also including the \texttt{CMS} \stt results 
+at $\sqrts = 5.02$\,\TeV\ (solid area). 
+The relative uncertainty is found after the two gluon distributions have been normalized to unity.
+The solid line shows the ratio of the gluon distribution function found from the fit with the \texttt{CMS} \stt measurements included to that found without~\citeTH{topobs_CMS_jhep}.}
+\label{PDFs_gluon}
+\end{figure}
+
+
+The experimental uncertainty in the measurements are propagated to the extracted \QCD\ fit parameters using 
+the MC method~\cite{Giele:1998gw, Giele:2001mr}. In this method, 400 replicas of pseudo-data are 
+generated with the measured values for \stt allowed to vary within the statistical and systematic uncertainties, and taking into account their correlations (Table~\ref{tab:inputs}). 
+For each replica, the PDF fit is performed, and the uncertainty is estimated as the RMS around the central value. 
+In Fig.~\ref{PDFs_gluon}, the ratio and the relative uncertainty in the gluon distributions, as obtained in the 
+\QCD\ analyses with and without the measured values for \stt at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$, are shown. A moderate reduction of the uncertainty in the 
+gluon distribution at $x \gtrsim 0.1$ is observed, once the measured values for \stt are included in the fit. 
+The uncertainty in the valence quark distributions remains unaffected (Fig.~\ref{fig:PDFs_light_and_gluon}).
+All changes in the central values of the PDFs are well within the fit uncertainty.
+The latter is determined using the tolerance criterion of $\Delta\chi^2=1$.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\label{PDFs_light_and_gluon:a}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_6_2}}
+\subfloat[][]{\label{PDFs_light_and_gluon:b}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_7_2}}
+\subfloat[][]{\label{PDFs_light_and_gluon:c}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_1_2}}\\
+\subfloat[][]{\label{PDFs_light_and_gluon:d}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_6_4}}
+\subfloat[][]{\label{PDFs_light_and_gluon:e}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_7_4}}
+\subfloat[][]{\label{PDFs_light_and_gluon:f}\includegraphics[width=0.32\textwidth]{figures/pp5TeV/mc_1_4_prelim}}
+\caption[Central values and uncertainties in the gluon and valence quark PDFs of the proton as a function of $x$ at $\mu^2_{\textrm{F}}=10^2$ and $10^5\,\mathrm{GeV}^2$ including \stt data at $\sqrt{s}=5.02$\,\TeV]{
+  The valence quark (a,\,b,\,d,\,e) and gluon (c,\,f) distribution functions of the proton and their relative uncertainties (bottom panels)
+  as a function of $x$ at $\mu^2_{\textrm{F}}=10^2$ and $10^5\,\mathrm{GeV}^2$ from a 
+  \QCD\ analysis using the \texttt{HERA} DIS and \texttt{CMS} muon charge asymmetry measurements (hatched area), and also including the \texttt{CMS} \stt results at $\sqrts = 5.02$\,\TeV\ (solid area)~\citeAN{AN-16-358}. 
+}
+\label{fig:PDFs_light_and_gluon}
+\end{figure}
+
+
+Possible effects from varying the model input parameters and the initial PDF parametrization are 
+investigated in the same way as in the similar analysis of Ref.~\cite{Khachatryan:2016pev}.
+The modeling uncertainty arises from the variations in the values assumed for the c quark mass, the strangeness fraction, and the value of $\mathrm{Q}^2_{\textrm{min}}$ imposed on the \texttt{HERA} data. 
+The parametrization uncertainty is estimated by varying the functional form of the PDFs with the parameters $D$ and $E$ added or removed one at a time, and the value of $\mathrm{Q}_0^2$. 
+The two cases when the measured values for \stt are included or excluded from the fit are considered, resulting in the same associated model 
+and parametrization uncertainties.
+
+In conclusion, the \stt measurements at $\sqrts = 5.02$\,\TeV\ provide improved uncertainty in the gluon PDF at high $x$, though the impact is 
+small, owing to the large experimental uncertainty.
+

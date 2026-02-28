@@ -1,0 +1,735 @@
+\section{The Large Hadron Collider complex }
+\label{sec:lhc}
+
+
+\subsection{Performance and achievements of synchrotron accelerators }
+\label{sec:synch}
+
+Within a synchrotron accelerator, charged particles  can gain energy from a high amplitude alternating $\vec{E}$ field 
+that is contained in metallic chambers, i.e., radiofrequency (RF) cavities, while they are steered and focused by magnets. 
+At relativistic velocities $\upsilon=\beta c$, such an extra factor in the magnetic force makes a large difference in the scale of the needed magnetic compared to electric field: 
+A magnetic field of 1\,$\mathrm{T}$ would be equivalent to a gargantuan electric field of $3\times 10^{8}$\,$\mathrm{V m^{-1}}$~\cite{acceleration}.
+Producing such an electric field is far beyond current technical limits, meaning magnetic fields are copiously used to steer the beams. 
+The physical fundamentals of beam steering and focusing are the so-called ``beam optics.''
+
+Although the advantage of directing two beams of approximately equal energy at each other with respect to fixed-target collisions (regarding usable energy) had been early realized, 
+the low particle intensities obtained in accelerators in the late 1950s rendered colliders an impractical option.
+This changed in 1957 (Fig.~\ref{hadroncolliders_a}), when the idea of stacking particles into circular accelerators was first put forward with an alternating-gradient accelerator~\cite{altgradient}.
+Collider storage rings can in principle be designed for a variety of particle species.
+
+Two main categories of synchrotron accelerators can be distinguished in the field of collider physics, namely hadron and lepton colliders.
+For instance, the Large Electron-Positron collider (\texttt{LEP}) was the previous large-scale project at \texttt{CERN}, i.e., 
+an electron–positron accelerator that was constructed between 1984 and 1989 and whose ring circumference was almost 27\,$\mathrm{km}$. 
+The synchrotron radiation produced from bending the particle trajectory is highly dependent on the mass to charge ratio as
+\begin{equation}
+P  \propto \frac{E^4 p}{\rho^2m^4}\, ,
+\label{eq:synch_radiation}
+\end{equation}
+where $P$ is the power radiated from the steered particle, $E$ is the energy of the particle, $\rho$ is the radius of curvature of the trajectory, 
+and $m$ is the rest mass of the particle. 
+The energy loss due to synchrotron radiation was 3\% per turn in the \texttt{LEP} apparatus; were the \texttt{RF} cavities turned off, the beam would be lost only in a fraction of a turn. 
+To counteract the energy loss RF cavities were extensively installed, rendering \texttt{LEP} the largest circular lepton collider built so far. 
+For the specific case of protons, the emitted radiation is approximately eight orders of magnitude 
+lower, for the same beam energy and accelerator size, relative to electrons. 
+After \texttt{LEP} was dismantled, the construction of a hadron collider in the same tunnel started in 2001 (Fig.~\ref{hadroncolliders_b}), although 
+the main idea for a multi-TeV hadron collider to investigate the origin of mass and to search 
+for signs of unification beyond the SM was initially conceived in the late 1970s and early 1980s.
+
+\begin{figure}[tb]
+\begin{minipage}{.3\paperwidth}
+\centering
+\subfloat[]{\label{hadroncolliders_a}\includegraphics[scale=0.2]{figures/apparatus/hadroncolliders.png}}
+\end{minipage}%
+\begin{minipage}{.45\paperwidth}
+\centering
+\subfloat[]{\label{hadroncolliders_b}\includegraphics[scale=0.22]{figures/apparatus/LHC_area.png}}
+\end{minipage}%
+\caption[\texttt{CERN} geographical layout and overview of hadron-hadron colliders]{\label{fig:hadroncolliders} 
+  (a)
+  Overview of pp and \ppbar\ colliders, their beam energies and major achievements~\cite{lhc_chapter1}.
+  The nominal \texttt{LHC} design aims at proton beam energies of 7\,\TeV.
+  (b)
+  \texttt{LHC} is a two-ring superconducting hadron accelerator. The 26.7\,$\mathrm{km}$ tunnel has eight straight sections and eight arcs,
+  and lies between 45 and 170\,$\mathrm{m}$ below the surface on a plane inclined at 1.4\% sloping towards the L\'eman lake~\cite{cern_layout}.  
+  Approximately 90\% of its length is immersed in molasse rock, and the remaining 10\% lies in limestone under the Jura mountain.  
+  There are two transfer tunnels, each approximately 2.5\,$\mathrm{km}$ long, linking \texttt{LHC} to the \texttt{CERN} accelerator complex that acts as injector.
+  }
+\end{figure}
+
+
+The Large Hadron Collider (\texttt{LHC}) is a hadron accelerator with a circumference of 26.7\,$\mathrm{km}$ designed to run at a nominal collision energy of 14\,\TeV, 
+approximately 7 times higher than that of the Tevatron collider. The key objective of \texttt{LHC} is 
+  the exploration of the SM in the TeV energy range and the search for potential new physics signatures.
+The \texttt{LHC} design parameters, as shown in Table~\ref{table:lhc_lep2_tevatron}, had meanwhile evolved significantly over the following years 
+in a continuous comparison and competition with the Superconducting Super Collider (\texttt{SSC}) project---nicknamed the ``Desertron''---in the United States 
+leading to a tenfold increase of the \texttt{LHC} performance from the first design projections~\cite{lhc_proj} to the nominal performance specification~\cite{lhc_design}.
+The maximum achieved energy, or more precisely, the beam momentum is given by the maximum bending field strength, and it follows a fairly clear exponential trend as a function of time, 
+as also shown in Fig.~\ref{hadroncolliders_a}. Hadron accelerators can reach higher energies than their lepton counterparts, as Eq.\,(\ref{eq:synch_radiation}) delineates. 
+For that reason, they are deemed better suitable to explore new energy regimes, albeit the collisions are intrinsically more complex. 
+The use of protons implies that the collisions occur actually between the proton constituents that carry only a fraction of the total proton beam energy. 
+Aiming at having at least 10\,TeV collision energy requires proton beam energies well above 1\,\TeV.
+
+
+\begin{table}[ht]
+\makebox[\textwidth][c]{ 
+  \footnotesize
+  \begin{tabular}{ l|| p{2cm} | p{2.5cm} | p{2cm}  }
+   \toprule
+   Parameter   & \texttt{LHC} & \texttt{LEP2} & Tevatron  \\
+   \midrule
+    Colliding species   & p,p & $\mathrm{e^{+}}$,$\mathrm{e^{-}}$ & $\mathrm{p}$,$\mathrm{\overline{p}}$\\
+    \midrule
+    Dipole field at top energy (T) & 8.33 & 0.11 & 4.4 \\
+    Momentum at collisions (TeV) & 7 & 0.1 & 0.98 \\
+    \midrule
+    %\midrule
+    Number of bunches per beam & 2\,808 & 4 & 36 \\
+    %\midrule
+    Particles per bunch ($\times 10^{11}$) & 1.15 & 4.2 & 2.9, 0.8 \\
+    %\midrule
+    Typical beam size in the ring ($\mu\mathrm{m}$) & 200-300 & 1\,800/140 (H/V) & 500 \\
+    Beam size at IP ($\mu\mathrm{m}$) & 16 & 200/3 (H/V) & 24 \\
+    Peak luminosity ($\mathrm{cm}^{-2}\mathrm{s}^{-1}$) & $10^{34}$ & $10^{32}$ & $4.3\times 10^{32}$ \\
+    \midrule
+    %\midrule
+    Fraction of energy lost in synchr.rad. per turn & $10^{-9}$ & 3\%  & $10^{-11}$ \\
+    Total current per beam (A) & 0.58 & 0.003 & 0.08 \\
+    %\midrule
+    Total energy stored in each beam ($\mathrm{MJ}$) & 362 & 0.03 & 0.9 \\
+    \bottomrule
+  \end{tabular}
+}
+  \caption[The main \texttt{LHC} parameters compared to \texttt{LEP2} and Tevatron colliders]{ 
+    The main \texttt{LHC} parameters are compared to its predecessor during the final operational phase, i.e., \texttt{LEP2}, and Tevatron. 
+    The   total   number   of   bunches   in   the   \texttt{LHC}   ring was reduced from the initial 2\,835~\cite{lhc_yellow} to 2808~\cite{lhc_design}, translated  into  
+    a  modest  reduction  in luminosity.
+    Synchrotron radiation from protons at \texttt{LHC} energies becomes noticeable but is not a limitation.
+    The \texttt{LHC} is built with superconducting NbTi magnets that operate at superfluid \ce{^{4}_{2}He+} temperature of 1.9\,$\mathrm{K}$ and allow fields up to 8.33\,$\mathrm{T}$.
+    The notations ``H'' and ``V,'' that are used in the beam size, stand for the horizontal and vertical plane, respectively. 
+    %The design \texttt{LHC} parameters for the magnetic field and beam intensity are particularly ambitious. Comparison of \texttt{LHC} and \texttt{LEP2} design beam parameters.
+  }
+\label{table:lhc_lep2_tevatron}
+\end{table}
+
+\subsection{Delivering collisions to the seven \texttt{LHC} experiments}
+\label{sec:synch}
+During the 1992 workshop ``Towards the LHC Experimental Program'' in Evian,
+proto-collaborations presented ``expressions of interest'' describing their detector plans~\cite{evian1992}. 
+The interest in contributing to the \texttt{LHC} experimental program was enormous: 12 proposals were made in total, out of which four intended for general-purpose experiments, 
+three meant for b-flavor and heavy ion physics, respectively, while two additional proposals were targeting to neutrino physics. 
+\texttt{LHC} beams could in principle collide at eight points. Four of these coincided with the four big experiments at \texttt{LEP},
+ while the remaining four points had to be used for the ``beam-cleaning'' system to ensure high performance by reducing troublesome beam halo. 
+Another was reserved for the beam dump where protons can be absorbed, once the circulating beams are no longer required. 
+
+It was clear from the beginning that only two new general-purpose experiments would be accepted at \texttt{LHC}, 
+one of them potentially being a toroidal apparatus like the Apparatus with SuperCOnducting Toroids (\texttt{ASCOT}) and the Experiment for Accurate Gamma, Lepton and Energy
+measurements (\texttt{EAGLE}). Therefore, these two proto-collaborations, in a voluntary move, merged to form A Toroidal LHC ApparatuS (\texttt{ATLAS}) in 1992. 
+Among the remaining general-purpose experiments, \texttt{ATLAS} and Compact Muon Solenoid (\texttt{CMS}) were invited to provide detailed technical proposals by 1994. 
+\texttt{ATLAS} and \texttt{CMS} were finally accepted in January 1996, and later approved for construction on 31st of January 1997 with an expenditure 
+ceiling of 475\,$\mathrm{MCHF}$~\cite{terascale_chapter21} (1995 currency rate). 
+The resulted four big experiments, i.e., \texttt{ALICE}, \texttt{ATLAS}, \texttt{CMS} and \texttt{LHCb}, were followed 
+by three smaller, more focused proposals for experiments: The \texttt{TOTEM} experiment (LoI 1997) 
+is investigating the total pp cross section, elastic pp scattering and diffraction dissociation; \texttt{MoEDAL} (LoI 1998) is searching 
+for magnetic monopoles and other exotic phenomena; \texttt{LHCf} (LoI 2003), finally, uses very forward particles created in pp collisions to simulate cosmic rays.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[scale=1.5]{figures/apparatus/lhc_pre.png}
+\caption[The \texttt{CERN} accelerator complex]{\label{fig:cern} 
+  The accelerator complex at \texttt{CERN} is a succession of machines with increasingly higher energies~\cite{BRUNING2012705}; 
+  two beams circulate in \texttt{LHC} following  a  clockwise  and an anticlockwise direction. They are accelerated up to the record energy of 6.5\,\TeV. 
+  Most of the other accelerators in the chain have their own experimental halls, where their beams are used for experiments at lower energies.
+  In addition to accelerating protons, the \texttt{CERN} complex can also accelerate lead ions by first passing them through \texttt{LINAC3} and then \texttt{LEIR} 
+  before continuing on the same path as protons.
+
+
+}
+\end{figure}
+
+The acceleration of protons at the \texttt{CERN} complex is performed in stages as they pass through the different accelerators
+along the injector chain, shown Fig.~\ref{fig:cern}. The protons are generated by a duoplasmatron source from
+which they are extracted with an energy of 100\,$\mathrm{keV}$ and injected into \texttt{LINAC2}\,\footnote{The Linear accelerator 4 (\texttt{Linac4}) 
+is designed is scheduled to become the source of proton beams for \texttt{LHC} after the long shutdown 2}, i.e., an 80\,$\mathrm{m}$ long
+linear accelerator with an extraction energy of 50\,\MeV. During the acceleration process in the \texttt{LINAC} the
+proton beam is also bunched using RF cavities. Once extracted from the \texttt{LINAC} the protons are injected into
+the Proton Synchrotron Booster (\texttt{PS Booster}), a 157\,$\mathrm{m}$ circular accelerator complex capable of accelerating protons
+up to 1.4\,\GeV, which consists of a stack of four separate rings. From the \texttt{PS Booster} the particles are injected into
+the Proton Synchrotron (\texttt{PS}), a 628\,$\mathrm{m}$ ring where they are accelerated up to an energy of 26\,\GeV. All these
+machines are installed at ground level. At this point the beams are sent in an underground machine, the Super
+Proton Synchrotron (\texttt{SPS}), which is a 6.9\,$\mathrm{km}$ circular accelerator lying 50\,$\mathrm{m}$ under the surface. They are
+then accelerated to 450\,\GeV, corresponding to the \texttt{LHC} injection energy. The injection of the \texttt{LHC} beams from the \texttt{SPS} is
+done in IR2 for beam 1, going clockwise, and IR8 for beam 2, going counter-clockwise. All these accelerators
+are linked through transfer lines which allow for the particles to travel from one machine to the other.
+
+The \texttt{LHC} has also been designed to collide heavy ions that follow a slightly different path relative to protons. 
+They are produced from a highly-purified lead sample---enriched with the isotope \ce{^{208}Pb}---heated to a temperature of about 800\degree\,$\mathrm{C}$ 
+where the lead vapor is ionized by  an  electron  current. 
+The \ce{^{208}_{27}Pb+} ion state is selected and accelerated to a energy of 4.2\,\MeV\ (per nucleon) before it is directed towards a carbon foil, 
+the latter stripping most of them to \ce{^{208}_{54}Pb+}. 
+The formed \ce{^{208}_{54}Pb+} beam is first accumulated, then accelerated to 72\,\MeV\ in the Low Energy Ion Ring (\texttt{LEIR}), which transfers it to the \texttt{PS} (5.9\,\GeV), 
+and finally sent to the \texttt{SPS} (177\,\GeV) fully stripped to \ce{^{208}_{82}Pb+}, and after passing through a second foil. 
+The SPS finally injects the beams to the \texttt{LHC}, that accelerates them to the record beam energy of 6.5\,$Z$\,\TeV.
+
+The original design of \texttt{LHC} did not foresee the operation with species other than protons or \ce{^{208}_{82}Pb^{82+}} ions, let alone a mixed particle mode.
+However,  the \texttt{CERN} heavy ion injectors and \texttt{LHC}  have demonstrated the feasibility of asymmetric (see Section~\ref{sec:pPb}) and xenon-xenon, i.e., 
+a medium-mass nuclear species, collisions. In 2017, high-intensity xenon (\ce{^{129}_{54}Xe+}) beams were produced in the injector chain, and brought into collision 
+at a nucleon-nucleon centre-of-mass energy (\rootsNN) of 5.44\,\TeV~\cite{XeXe}. During 6\,$\mathrm{h}$ of stable XeXe collisions about 3\,\invmub were delivered to ATLAS and CMS, 
+while fractions of 1\,\invmub were delivered to \texttt{ALICE} and \texttt{LHCb} because of the larger demagnification values.
+Such production outcome is comparable to the 10\,\invmub of PbPb collisions delivered per experiment in the first one month-long heavy ion run in 2010~\cite{PbPb_2010}. 
+%The XeXe integrated luminosity suffices to a sample large enough for new physics results had been already presented, 
+ Since this was probably the last time---at least for several years---that a species other than Pb would be available from the injector complex
+valuable data were acquired on the beam-cleaning and collimation efficiency with lighter ions~\cite{XeXe_clean,XeXe_clean_2}.
+In 2018, for the very first time, operators injected and accelerated not just atomic nuclei but partially stripped \ce{^{208}_{82}Pb^{81+}} ions into \texttt{LHC}.
+ This represents a proof-of-principle test for broadening the present \texttt{CERN} research program making use of such a novel concept of light source~\cite{CERN_egamma}.
+
+\subsection{Fundamental principles of synchrotron accelerators}
+\label{sec:acc_principles}
+
+\subsubsection{Transverse particle motion}
+\label{sec:vertical_motion}
+
+If  a  particle  is  deflected  in  the presence of a magnetic  field,  the Lorentz and the centripetal force---directed perpendicular to the direction of motion---are always equal.  
+Using a Taylor expansion, the magnetic field transverse components, $B_x\hat{x}$ and $B_y\hat{y}$ (Fig.~\ref{sync_coordinate_a}), can be expressed as a function of a dipolar and quadrupolar term:
+\begin{equation}
+B_x=B_x(0,0)+\frac{\partial B_x}{\partial y}y+\mathcal{O}(y^2)\ 
+\label{eq:betax}
+\end{equation}
+and 
+\begin{equation}
+B_y=B_y(0,0)+\frac{\partial B_y}{\partial x}x+\mathcal{O}(x^2)\, ,
+\label{eq:betay}
+\end{equation}
+respectively. The total bending angle ($\theta$) of a circular accelerator is $2\pi$, and the integrated dipole field is
+\begin{equation}
+\int_{s_1}^{s_2} Bdl=\frac{2\pi p}{q}=2\pi B \rho\, .
+\label{eq:dipole}
+\end{equation}
+This defines the curvature ($\rho$) of a particle with charge $q$ and momentum $p$ in the magnetic field of strength $B$, 
+from which the so-called ``beam rigidity'' ($B\rho$) can be derived:
+\begin{equation}
+B[\mathrm{T}]\rho[\mathrm{m}]  \approx \frac{p [\GeV]}{0.3}\, .
+\label{eq:rigidity}
+\end{equation}
+Since synchrotron radiation for hadrons is less of an issue than leptons, the maximum attainable energy in hadron colliders is limited by the magnetic field strengths 
+available for bending and focusing the particles on their circular design trajectory. 
+In the case of \texttt{LHC}, the magnetic bending radius is determined by the \texttt{LHC} tunnel and it is restricted to $\rho=2\,804$\,$\mathrm{m}$. 
+To fulfill the designed proton beam momentum of 7\,\TeV the maximum required magnetic dipole field has to be at least 8.33\,$\mathrm{T}$ (Eq.\,(\ref{eq:rigidity})). 
+This relatively high field can only efficiently be provided by superconducting magnets. 
+%Warm magnet technology, due to cooling issues of the resistive coils and saturation of iron yokes, is effectively limited to fields up to about 2\,T.
+The accelerator lattice is designed to mainly provide bending and focusing fields for a reference particle of a defined particle species.
+For particles of the main beam species (monoisotopic case), dispersive effects arise only from momentum offsets. 
+For particles of other species, additional dispersive offsets are caused by the different mass and charge with respect to the reference isotopes \ce{^{$A_0$}_{$Z_0$}$\textrm{X}_0$+} 
+(see Section~\ref{sec:pPb}).
+
+\begin{figure}[tb]
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{sync_coordinate_a}\includegraphics[scale=0.60]{figures/apparatus/figures_frenet_serret.png}}
+\end{minipage}%
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{sync_coordinate_b}\includegraphics[scale=0.60]{figures/apparatus/figures_phase_space_ellipse.png}}
+\end{minipage}%
+\caption[The trajectory coordinates in the Frenet--Serret frame and their motion in phase space]{
+  (a) The trajectory coordinates with respect to the Frenet--Serret frame~\cite{CERN_YR228}. 
+  An ideal particle is performing transverse oscillations, as indicated by the dotted line, around the design orbit.
+  (b) 
+  The motion of a single particle, at an arbitrary longitudinal location s, defines an ellipse in phase space $(x,x')$ characterized by the parameters $\alpha$, $\beta$, and $\gamma$~\cite{CERN_YR228}.
+  The beam emittance, i.e., the area in the $(x,x')$ space that contains 68.3\% of an ensemble of particles, equals to the area $\pi\varepsilon=\alpha^2$ enclosed by the ellipse of a single particle; 
+  the beam width and divergence can be then proven to be $\sqrt{\beta\varepsilon}$ and $\sqrt{\gamma\varepsilon}$, respectively.
+}
+\label{fig:sync_coordinate}
+\end{figure}
+
+To describe the particle trajectories in a synchrotron, the task for solving the equation of motion relative to the design orbit is simplified using a comoving coordinate system, 
+known as the ``Frenet--Serret'' coordinate system (Fig.~\ref{sync_coordinate_a}).
+Around the accelerator, the focusing properties ($K$) of dipoles and quadrupoles are not constant but depend on $s$.
+However, $K(s)$ is periodic with the lattice period ($L$), e.g., $L$  can be the circumference of the accelerator, 
+leading to a second order homogeneous differential equation for the transverse motion of a particle in the magnetic structure of an accelerator
+\begin{equation}
+x''(s)+K(s)x(s)=0\, .
+\label{eq:Hill}
+\end{equation}
+This type of motion with non constant but periodic restoring force is described by the so-called ``Hill equation,''
+and its general solution is a quasi-harmonic ``betatron'' oscillation:
+\begin{equation}
+x(s)=\sqrt{\varepsilon\beta(s)}\mathrm{cos}(\psi(s)+\phi)\, .
+\label{eq:Hill_solution}
+\end{equation}
+The amplitude and phase of the oscillation depend on the exact position in the ring; $\varepsilon$ and $\phi$ are integration constants that  
+can be defined from an initial position $x_{0}$ and angle $x'_{0}$ at location $s(0)=s_{0}$ and $\psi(0) = 0$.
+The so-called ``beta function,'' $\beta(s)$, is also a periodic function of $L$, $\beta(s+L)=\beta(s)$, and is determined numerically by the focusing properties of the lattice;
+the value of the $\beta$ function at the IP is colloquially known as $\beta^{*}$.
+The number of betatron oscillations per turn, i.e., the machine ``tune,''
+\begin{equation}
+\mathrm{Q}=\frac{\psi(s)}{2\pi}=\frac{1}{2\pi}\oint_L \frac{\mathrm{d}s}{\beta(s)}\, ,
+\label{eq:tune}
+\end{equation}
+is of great importance for beam stability, since it regulates the orbit response around the ring for dipole field (terms of $\mathrm{sin}(\pi \mathrm{Q})$) and gradient (terms of $\mathrm{sin}(2\pi \mathrm{Q})$) errors.
+With the trajectory at any point of the ring expressed in terms of position and angle, $\varepsilon$ can be calculated at any point as
+\begin{equation}
+\varepsilon=\gamma(s)x(s)^2+2\alpha(s)x'(s)+\beta(s)x'(s)^2\, ,
+\label{eq:ellipsis}
+\end{equation}
+where two commonly used functions
+\begin{equation}
+\alpha(s)=-\frac{1}{2}\frac{\partial \beta(s)}{\partial s}\, ,
+\label{eq:alpha}
+\end{equation}
+and
+\begin{equation}
+\gamma(s)=\frac{1+\alpha(s)^2}{\beta(s)}\, ,
+\label{eq:gamma}
+\end{equation}
+have been introduced.
+The quantities $\beta(s)$, $\alpha(s)$ and $\gamma(s)$ are the so-called ``Twiss parameters,'' also referred to as the optical functions, since 
+they are defined by the magnetic lattice of the machine that transforms the beam equivalently to a lattice of lenses in classical optics. 
+The evolution of an initial set of Twiss parameters is equivalent to the transformation of the particle coordinates described by transfer matrices for the individual beamline elements of 
+length $L$ and strength $K$, i.e., the transfer matrices of a drift space ($\mathcal{M}_\mathrm{D}, K = 0$), a focusing ($\mathcal{M}_\mathrm{Q,f} , K > 0$) and defocusing ($\mathcal{M}_\mathrm{Q,d}, K < 0$) quadrupole.
+
+The parametric representation in the $(x,x')$ space (Fig.~\ref{sync_coordinate_b}) defines a constant of motion in the absence of nonconservative forces; 
+the area of the ellipse $\pi \varepsilon$ is a phase space invariant. 
+This constant describes the amplitude of a single particle, and it can be further generalized to an intrinsic beam property. 
+Assuming a Gaussian profile for the particle distribution in the accelerator, normalized to unity, the area in the $(x,x')$ space that contains 68.3\% of 
+an ensemble of particles, i.e., the ``beam emittance'' (Fig.~\ref{fig:emit_CMS}), is defined as
+\begin{equation}
+\epsilon_{x}=\langle x^2 \rangle\langle x'^2 \rangle-\langle xx' \rangle^2\, 
+\label{eq:emittance}
+\end{equation}
+such that the standard deviation of the Gaussian distribution corresponds to
+\begin{equation}
+\sigma_{x}=\langle x^2 \rangle=\sqrt{\epsilon \beta_{x}}\ 
+\label{eq:sigma_x}
+\end{equation}
+and 
+\begin{equation}
+\sigma_{x'}=\langle x'^2 \rangle=\sqrt{\epsilon \beta_{x}\gamma_{x}}\ 
+\label{eq:sigma_xprime}
+\end{equation}
+in $x$ and $x'$, respectively. 
+In Eq.\,(\ref{eq:emittance}) the symbols $\langle\rangle$ denote the expectation value over the considered ensemble, while $\sigma_{x}$ and $\sigma_{x'}$ are referred to as the beam size and divergence, respectively. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\columnwidth]{figures/apparatus/Ev_emitanceX_Y.pdf}
+\caption[Example of the measured beam emittance using the convolved beam widths from \texttt{CMS}]{\label{fig:emit_CMS} 
+  The (normalized) beam emittance values in the horizontal and transverse plane per bunch crossing identification number calculated based on the model of Ref.~\cite{lpc_lumi}, and using 
+  as inputs the convolved beam widths measured by \texttt{CMS}~\cite{cms_emit}. The bunch length values are the published entries in the logging database from \texttt{LHC}, 
+  whereas the nominal values of the crossing angle,the relativistic factor, and $\beta^{*}$ are used.
+}
+\end{figure}
+
+\subsubsection{Longitudinal particle motion}
+\label{sec:longitudinal_motion}
+
+Charged particles are traveling on two design orbits in opposite directions and are colliding at the interaction point(s) (IP(s)).
+The  RF  system  of a synchrotron is  required  to operate  in  three  different  modes~\cite{rf_desc}.  
+\textit{It  must  capture  and  accumulate  in  stationary buckets  (closed  trajectories  in  longitudinal  phase  space)  successive  groups  of
+bunches  from  its  injector;  accelerate  these  bunches  in  moving  buckets  up  to  the
+design  energy;  and  finally  store  them,  for  several  hours,  while  maintaining  a
+minimum  ratio  of  bunch-to-bucket   area.  In  the  storage  mode,  it  provides  the
+nominal  energy  gain  per  turn  required  to  make  up  for  synchrotron   radiation
+losses   and   for   the  power   loss  due   to   voltages   induced   in   the   impedance
+presented  to  the  beam  by  the  vacuum  chamber  and  accelerating  structures}.
+More specifically, the angular radiofrequency, $\omega_\textrm{RF}$, needs to be synchronous to the angular revolution frequency, $\omega_{\textrm{r}}$. 
+Synchronous particles need to repeatedly arrive at the cavity with the same phase. This implies that $\omega_\textrm{RF}$ has to be an integer multiple of $\omega_{\textrm{r}}$
+\begin{equation}
+\omega_\textrm{RF}=h\omega_{\textrm{r}}\, ,
+\label{eq:t_gain}
+\end{equation}
+where $h$ is  an  integer  and  is  called  the ``harmonic  number.''   As  a  consequence,  the  number  of  stable synchronous particle locations equals the harmonic number $h$; 
+they are equidistantly spaced around the circumference of the accelerator. 
+All synchronous particles have the same nominal energy and follow the nominal trajectory.
+
+For synchrotron accelerators, the metric that regulates the stability of the longitudinal motion is the scale of the so-called ``transition energy.''
+This energy is a property of the transverse lattice and is linked to the stability of the revolution frequency, $\omega_{\textrm{r}}$, for particles with a small momentum deviation relative to the synchronous particle; the 
+momentum-dependent change of velocity and path-length compensate each other at the transition energy.
+Yet, the change of revolution frequency with momentum offsets is opposite below and above transition, featuring a confining range for stable longitudinal oscillations, as described in the following.
+
+\subsubsection{Dispersion effects in longitudinal and transverse dynamics}
+\label{sec:longitudinal_motion}
+
+If a particle is slightly shifted in momentum relative to a synchronous particle, it will have a different velocity and orbit, hence orbit length. 
+The ``momentum compaction'' parameter quantifies the relative change in orbit length, $\Delta L/L$, with momentum, i.e., 
+\begin{equation}
+\alpha_\textrm{C}=\frac{\Delta L/L}{\Delta p/p}\, .
+\label{eq:mom_compaction}
+\end{equation}
+At the transition energy there is no change of the revolution frequency for particles with a small momentum deviation. Below or above this critical point the longitudinal oscillations are governed by the so-called ``slip factor,'' $\eta$, which is given by
+\begin{equation}
+\eta=\left( \frac{1}{\gamma^2}-\alpha_\textrm{C}\right)\, .
+\label{eq:slip_factor}
+\end{equation}
+
+From the definition of $\eta$, it is clear that an increase in momentum is linked to the opposing effects of
+\begin{enumerate}[topsep=0pt]
+\item a higher revolution frequency below the transition energy ($\eta>0$) resulting to an increase of velocity 
+\item a lower revolution frequency above the transition energy ($\eta<0$) resulting to an increase of path length.
+\end{enumerate}
+Since the change in revolution frequency with momentum is opposite below and above transition, this is reflected on the range for stable oscillations. 
+For small phase deviations, $\Delta\phi$, with respect to the synchronous particles, the conditions for longitudinal stability can be derived assuming 
+constant $R_{\textrm{s}},p_{\textrm{s}},\eta, \omega_{\textrm{r,\,s}}$ parameters
+\begin{equation}
+\frac{\mathrm{d^2}\phi}{\mathrm{d}t^2} + \frac{\Omega^2_{\textrm{r,\,s}}}{\Delta\phi}=0\, .
+\label{eq:synch_oscillation}
+\end{equation}
+Eq.\,(\ref{eq:synch_oscillation}) corresponds to an harmonic oscillator equation of motion with
+\begin{equation}
+\Omega_{\textrm{r,\,s}} = \frac{h\eta\omega_{\textrm{r,\,s}}qV_0\mathrm{cos}\phi_{\textrm{s}}}{2\pi R_{\textrm{s}}p_{\textrm{s}}}
+\label{eq:synch_freq}
+\end{equation}
+the so-called ``synchrotron angular frequency.''
+Stability is obtained when $\Omega_{\textrm{r,\,s}}$ is a real number so that $\Omega^2_{\textrm{r,\,s}}>0$.  
+Since most of the terms in Eq.\,(\ref{eq:synch_freq}) are positive, this finally reduces to
+\begin{equation}
+\eta\mathrm{cos}\phi_{\textrm{s}}>0\, ,
+\label{eq:synch_condition}
+\end{equation}
+rendering the stable region for the synchronous phase dependent on the energy with respect to the transition energy (Fig.~\ref{fig:separatrix}). 
+%The conditions for stability are summarized in.
+
+ In the case of \texttt{LHC}, the momentum compaction factor is of the order of $10^{-4}$, and the zero-crossing condition of Eq.\,(\ref{eq:slip_factor})
+implies $\gamma_\textrm{Tr}=\frac{1}{\alpha_\textrm{C,Tr}}\sim 100$ meaning LHC operates always above transition.
+The cavities at \texttt{LHC} operate at $f_{\textrm{RF}}=400$\,$\mathrm{MHz}$ that is a multiple of the revolution frequency $f_{\textrm{r}}=11\,245.5$\,$\mathrm{Hz}$~\cite{PbPb_2011} with an harmonic 
+number $h=35\,640$ (Eq.\,(\ref{eq:t_gain})). 
+The harmonic number defines the maximum number of longitudinally stable regions, referred to as ``buckets,'' that can be used to capture, store and accelerate particle species. 
+The collectivity of those species inside a bucket is called ``bunch.''
+At \texttt{LHC} only about every tenth bucket will nominally capture a bunch, which accordingly corresponds to a bunch spacing of about 25\,$\mathrm{ns}$.
+
+\begin{figure}[tb]
+\centering
+\includegraphics[width=0.6\columnwidth]{figures/apparatus/separatrix.png}
+\caption[The separatrix and the RF bucket within a longitudinal electric field]{\label{fig:separatrix} 
+ The applied longitudinal electric field as a function of the particle phase $\phi$. 
+ Particles that arrive later (1) than the reference particle receive a larger energy transfer, while those arriving before the reference particle (2) receive a smaller energy kick.
+ The restoring force vanishes when $\phi$ approaches $\phi$-$\phi_{\textrm{s}}$, and becomes nonrestoring either above or below the transition point (Eq.\,(\ref{eq:slip_factor})). 
+ This phase space trajectory---the separatrix---separates the region of stable motion from the unstable region, contrary to the area within the separatrix---the RF bucket---which 
+ corresponds to the maximum acceptance in phase space for a stable motion~\cite{CERN_YR228}.
+}
+\end{figure}
+
+\subsection{LHC layout and global structure }
+\label{sec:lhc_layout}
+
+
+A circular collider project can follow two distinct design options: either the collider features collisions between particles and antiparticles with opposite charges, 
+allowing an efficient accelerator design where both beams share the same vacuum chamber and magnetic elements, e.g., in \texttt{LEP}, $\mathrm{Sp\overline{p}S}$ and Tevatron colliders, 
+or the collider features separate vacuum and magnet systems for the two counter-rotating beams, e.g., in the ISR or RHIC collider, allowing collisions between 
+a wider range of particle species and larger number of bunches resulting in higher luminosity. 
+Hadron colliders relying on particle and antiparticle collisions are intrinsically limited by the rate at which antiparticles can be generated. 
+The high-luminosity requirements  at \texttt{LHC}, i.e., luminosity in excess of $10^{34}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$, exclude the use of $\mathrm{\overline{p}}$, 
+and hence require a two-ring design with separate magnet and vacuum systems for the two counter-rotating beams.
+
+\begin{figure}[!ht]
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{lhc_layout_dipole:a}\includegraphics[width=0.3\paperwidth]{figures/apparatus/lhc_layout_v2.png}}
+\end{minipage}%
+\begin{minipage}{.45\linewidth}
+\centering
+\subfloat[]{\label{lhc_layout_dipole:b}\includegraphics[width=0.3\paperwidth]{figures/apparatus/lhc_dipole.jpg}}
+\end{minipage}%
+\caption[Schematic layout of the \texttt{LHC} and its dipole magnet cryostat]{
+  (a) Schematic layout of the \texttt{LHC} with its eight straight sections and two-ring design~\cite{BRUNING2012705}.
+  There are four experimental insertions of similar design (IR1, 2, 5 and 8) that allow particles of the same (proton or nucleus) 
+  or unequal (proton and nucleus) charge to be focused and eventually collide.
+  The other four long straight sections are used for collimation (IR3 and 7), acceleration using RF cavities (IR4) and beam extraction (IR6).
+  The two counter-rotating beams are conventionally called beam 1 and 2, which circulate in clockwise and counter-clockwise directions, respectively.
+  (b) Schematic cross section of the \texttt{LHC} dipole magnet cryostat with its two separate vacuum chambers and magnet coils for the two 
+  counter-rotating beams, and the common infrastructure for the powering and cooling of the magnet~\cite{BRUNINGNATURE}.
+}
+\label{fig:lhc_layout_dipole}
+\end{figure}
+
+The \texttt{LHC} apparatus is designed as a two ring-like accelerator bearing an eightfold symmetry (Fig.~\ref{lhc_layout_dipole:a}) with separate
+magnet fields and beam chambers, and with common straight sections intercepted by the experimental caverns, where the beams collide.
+The interaction regions (IRs) consist of separation dipole magnets (not highlighted in Fig.~\ref{lhc_layout_dipole:a}) and main quadrupoles left and right 
+of the interaction point (IP), i.e., the symmetry point of the IR. 
+Three magnets on either side of the IP, the triplets (\texttt{T}), are situated only in the common region and are used for the final focusing. 
+The triplets thus affect both beams, whereas the rest of the quadrupoles act separately on each beam.
+The remaining matching section (\texttt{MS}) and the dispersion suppressor (\texttt{DS}) consist of magnets with separate beam pipes for each ring. 
+\texttt{LHC} consists of a total of 9\,593 superconducting magnets out of which 1\,232 are dipoles of about 15\,$\mathrm{m}$ long equally shared over the eight arcs, and 392 main quadrupoles. 
+Because of spatial restrictions imposed by the same tunnel that hosted \texttt{LEP}, it was thought beneficial \texttt{LHC} to use twin magnets, i.e., 
+two sets of coils and beam channels sharing the mechanical structure and cryostat, as illustrated in Fig.~\ref{lhc_layout_dipole:b}. 
+
+
+The IRs host the RF cavities (IR4), which accelerates the beams and keeps them bunched, 
+the beam dump (IR6) system, used for extraction from the \texttt{LHC}, and cleaning devices (IR3 and 7), which are critical for the machine protection~\cite{collimation}. 
+The  two  beams counter-rotate around the ring in two separate beam pipes; beam 1 is injected at IR2 and circulates clockwise, while beam 2 is injected at IR8 
+and travels counter-clockwise. To provide collisions and data of high quality to the experiments with the desired rates the beam parameters have to be precisely controlled, e.g., Refs.~\cite{instrumentation_overview,instrumentation_status}.
+
+The  arcs (Fig.~\ref{lhc_arc_IR:a})  are separated by IRs and extend over most of the length of each 3.3\,$\mathrm{km}$ long sectors.
+They are built by periodically repeating 23 times a common lattice, the so-called ``FODO'' cell (107\,$\mathrm{m}$ long), that is composed of a horizontally 
+focusing quadrupole (\texttt{MQ}), three dipoles (\texttt{MB}), a vertically focusing quadrupole and another three dipoles~\cite{lhc_design}. 
+The main bending magnets and quadrupoles are further equipped with sextupoles (\texttt{MS}), octupoles (\texttt{MO}), higher order (\texttt{MCO}) and orbit correctors (\texttt{MCB}) 
+for adjustments of the various beam parameters around the ring. 
+The magnets, equipped with their helium vessel and end covers, constitute the ``cold masses,'' which, in normal operation, contain superfluid helium at 1.9\,$\mathrm{K}$ and 0.13\,$\mathrm{MPa}$, 
+and are thermally insulated from the vacuum enclosure. 
+
+\begin{figure}[!ht]
+\begin{minipage}{.99\linewidth}
+\centering
+\subfloat[]{\label{lhc_arc_IR:a}\includegraphics[scale=0.25]{figures/apparatus/LHC_arc.png}}
+\end{minipage}%
+\\
+\begin{minipage}{.99\linewidth}
+\centering
+\subfloat[]{\label{lhc_arc_IR:b}\includegraphics[scale=0.25]{figures/apparatus/Focus_IP.png}}
+\end{minipage}%
+\caption[Schematic layout of the \texttt{LHC} lattice structure and IR5 insertion]{
+  (a) Schematic layout of the \texttt{LHC} lattice structure.
+  Each element installed in the LHC tunnel has its individual identification, constructed following a special convention as part of the \texttt{LHC} methodical accelerator design (MAD) 
+  sequence~\cite{CERN-AB-2003-024}.
+  (b) 
+  The low values of the $\beta$ function at the IPs of the experiments are generated with the help of a triplet quadrupole assembly (\texttt{Q1} to \texttt{Q3}). 
+  The free space around the IPs that is reserved for the experiments is $\pm 23$\,$\mathrm{m}$~\cite{BRUNING2012705}.
+  The two rings share the same vacuum chamber, the same low-$\beta$ triplet (superconducting) magnets, 
+  and the \texttt{D1} separation dipole (warm) magnets. 
+  The remaining region is comprised of a second dipole (\texttt{D2}), a superconducting magnet operating at a cryogenic temperature due to lower radiation levels, 
+  and four matching quadrupole magnets (\texttt{Q4} to \texttt{Q7}, the latter not highlighted).
+}
+\label{fig:lhc_arc_IR}
+\end{figure}
+
+
+The \texttt{LHC} has four IRs of very similar design but with different beam optics: 
+two diametrically opposite insertions at IR1 (IR5) for ``high-''luminosity collisions in \texttt{ATLAS} (\texttt{CMS}),
+and ``medium-'' and ``low-''luminosity operation at IR8 (\texttt{LHCb}) and 2 (\texttt{ALICE} ), respectively. 
+The lower luminosity operation should be only considered as a relative term, e.g., the \texttt{LHCb} experiment nominally obtains about the same luminosity as 
+the \texttt{CDF} and \texttt{D{\O}} detectors at Tevatron (Table~\ref{table:lhc_lep2_tevatron}).
+All four experimental IRs have similar designs and are equipped with dipoles and main quadrupoles 
+symmetrically (asymmetrically) placed left and right of the IPs (IP8), as shown in Fig.~\ref{lhc_arc_IR:b} for IR5. 
+
+More specifically, the beam separation is steered by six dipole orbit corrector magnets per plane and beam. 
+Two of them (\texttt{D2} in Fig.~\ref{lhc_arc_IR:b}) are located further away from the IP and act on each beam separately. They are used for fine-tuning of the offsets. 
+The other magnets are installed closer to the IP and affect both beams at the same time. 
+By creating a local distortion in the beam orbit, which is called ``closed orbit bump,'' the \texttt{D1} magnets are able to steer the beam separation---the cornerstone of the absolute luminosity calibration scans---and generate a crossing angle ($\theta_\textrm{C}$) between the colliding bunches. 
+The values of $\theta_\textrm{C}$, that lies in the vertical (horizontal) plane for IP1 and 2 (IP5 and 8) to minimize the impact of beam--beam effects 
+(see Section~\ref{sec:beambeam}), can be chosen large enough to minimize parasitic long-range encounters since the beams traverse a common vacuum chamber for about 120\,$\mathrm{m}$. 
+
+
+\subsubsection{LHC filling schemes and magnetic cycle}
+\label{sec:cycle}
+As discussed in Section~\ref{sec:longitudinal_motion}, there is a chain of 35\,640 RF buckets around \texttt{LHC} which could potentially be filled with bunches. 
+In the nominal pp filling scheme, bunches are spaced by 25\,$\mathrm{ns}$, meaning 3\,564 potential slots are available, each given a unique bunch crossing identifier (BCID).
+The injection from \texttt{SPS} has a bunch train structure, i.e., a specific number of equally spaced bunches. 
+Between the trains, short gaps for the injection kicker magnets must be accounted for, and a 3\,$\mu\mathrm{s}$ abort gap is kept free for a safe abort of the \texttt{LHC} beam. 
+In general, not all bunches are ``paired,'' i.e., colliding in both beams in the same BCID, but different groups of BCIDs can be defined, e.g., ``empty'' BCIDs without a proton or ion bunch. 
+By convention, the first BCID after the abort gap is numbered as 1. 
+
+A schematic view of the bunch distribution for the nominal pp filling scheme is given in Fig.~\ref{filling_LHC_a}. 
+The scheme involves 12 injections from \texttt{SPS} with each cycle consisting of either three or four batches from the pre-injectors. 
+The order of \texttt{SPS} cycles is \textit{333\,\,334\,\,334\,\,334} meaning  that  the  first  \texttt{SPS}  cycle  injected  into  \texttt{LHC}  
+contains $3 \times 72$ batches  from  the  pre-injectors,  while the  6th, 9th  and  the last  contain  four  batches.  
+With  each  \texttt{SPS}  cycle  taking 21.6\,$\mathrm{s}$ to complete, filling of each \texttt{LHC} ring takes around 4\,$\mathrm{min}$.
+In practice, \texttt{LHC} is flexible to operate with several different filling schemes meant for various purposes. 
+In addition to the nominal 25\,$\mathrm{ns}$ spacing for protons, the bunch-splitting in \texttt{PS} allows different bunch spacing: 50\,$\mathrm{ns}$ (physics operation for Run 1 and part of Run 2 but with beams 
+of reduced intensity and transverse emittance), 75\,$\mathrm{ns}$ (initial period of physics operation) and greater than 75\,$\mathrm{ns}$ (very first machine commissioning). 
+
+The nominal filling scheme for ions is optimized to cope with space charge problems in the injector chain. 
+The baseline scheme has been based on 100\,$\mathrm{ns}$ bunch spacing, although relatively  few  bunches  are  actually  at  this  spacing. 
+Figure~\ref{filling_LHC_b}  illustrates  such a  rather  complex  scheme; there  are  891  possible  bunch  positions  in  \texttt{LHC} with  a  total  of  592  filled  bunches. 
+In that case, bunches are fabricated four at a time in the pre-injectors. The  \texttt{SPS}  constructs trains by taking several set of bunches injected 
+with a spacing of 225\,$\mathrm{ns}$. These are then accelerated and delivered to the \texttt{LHC}. The order of \texttt{SPS} cycles is: \textit{8\,13\,13\,\,12\,13\,13\,\,12\,13\,13\,\,12\,13\,13}. 
+Hence,  the  majority  of  \texttt{SPS}  cycles  involves  13  sets  of  four  bunches  transferred  from  the  pre-injectors to the \texttt{LHC}. 
+As there are a large number of injections per \texttt{SPS} cycle, each cycle lasts about 54\,$\mathrm{s}$. With 12 \texttt{SPS} cycles it will take around 10\,$\mathrm{min}$ to fill one \texttt{LHC} ring.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[]{\label{filling_LHC_a}\includegraphics[width=0.35\paperwidth]{figures/apparatus/25ns_scheme.png}}
+\centering
+\subfloat[]{\label{filling_LHC_b}\includegraphics[width=0.35\paperwidth]{figures/apparatus/100ns_scheme.png}}
+\caption[Schematic of the nominal bunch disposition around \texttt{LHC} for protons and ions]{\label{fig:filling_LHC} 
+Schematic of the nominal bunch disposition around one \texttt{LHC} ring for the 25\,$\mathrm{ns}$ proton (a) and 100\,$\mathrm{ns}$ heavy ion (b) filling schemes; ``b'' indicates a position 
+with beam and ``e'' indicates an empty bunch~\cite{filling_LHC}.
+}
+\end{figure}
+
+The evolution of the main beam parameters during a physics Fill is illustrated in Fig.~\ref{fig:cycle}. 
+Note that the luminosity is just plotted for illustration since the beams are kept separated until the end of the ``squeeze.'' 
+The beams are injected at large $\beta^{*}$ values and then are ``ramped'' to high energy before squeezed at IP1 and 5 to a smaller $\beta^{*}$. 
+During ramping the longitudinal momentum of the particles increases, while the transverse component is left unchanged, leading to a reduction of the transverse
+emittance. A smaller beam emittance, in turn, leads to a higher luminosity, while during the squeeze $\beta^{*}$ gets decreased, increasing luminosity production further.
+Measurements indicated that the emittances are typically preserved during the \texttt{LHC} ramp and squeeze, whereas possible increasing and decreasing emittances 
+during the same stages are mainly caused by a nonmonotonically changing $\beta$ function. 
+The knowledge of the latter is thus required in order to measure the beam emittance. 
+Differences in time spent for each stage relative to Run 1 are fairly  small~\cite{nominal_cycle_LHC},  which  is  an  indication  that  the long shutdown 1 did not affect 
+the operational performance  of \texttt{LHC}. 
+The   feasibility   of   combining   the  energy  ramp  with  the  betatron  squeeze  has been technically proved during a machine development study~\cite{CERN-ACC-NOTE-2015-0023}, 
+while this method was first applied to the combined 2.51\,\TeV\ ramp with a squeeze  to $\beta^{*}=4$\,$\mathrm{m}$ in November 2015. 
+Merging  the two  operations has resulted in  a  considerable gain (up  to about 10\,$\mathrm{min}$) for each magnetic cycle, reducing the \texttt{LHC} turnaround, i.e., 
+the time  needed  to  establish  physics (``stable  beams'') conditions after a ``beam dump'' has occurred.
+  
+\begin{figure}[tb]
+\centering
+\includegraphics[scale=0.3]{figures/apparatus/magnetic_cycle.png}
+\caption[The magnetic cycle of \texttt{LHC}]{\label{fig:cycle} 
+  The \texttt{LHC} operation cycle is a defined protocol that ensures safe operation, and is characterized from the dipole magnetic field and dipole magnet current, 
+  that both receive their maximum values of 8.33\,$\mathrm{T}$ and 11.7\,$\mathrm{kA}$, respectively, at physics conditions.
+  The associated evolution of the nominal beam parameters (energy, luminosity, and beam size, the latter as defined in Eq.\,(\ref{eq:sigma_x}) assuming $\epsilon_\textrm{N}=3.75$\,\mum) 
+  is also shown for the different operation stages (here simplified), whose relative duration is indicated by the double-headed arrows.
+  The luminosity represents the maximum achievable pp luminosity, in case the beams were to collide head-on at IP1 and 5.
+}
+\end{figure}
+
+\subsection{Proton-nucleus collisions at \texttt{LHC}}
+\label{sec:pPb}
+
+In  the  first  stage (2010--2011~\cite{PbPb_2011})  of  its  heavy ion  program,  \texttt{LHC}  
+collided  lead (\ce{^{208}_{82}Pb+}) nuclei  to  study  the  properties  of  hot 
+nuclear  matter  at  extreme  energy  densities.  The  second  
+stage  of  this  program (2011--2013~\cite{pPb_2013_alt}),  following  the  pattern  at  the Relativistic Heavy Ion Collider (\texttt{RHIC}),  
+was  expected  to  be  a  crucial  control  experiment  in  which  the nuclear  matter  is  instead studied  by  colliding  lead  ions  with protons; 
+deuterons offer no particular advantage and are not readily available at \texttt{LHC}.   
+At  first  sight,  pPb  collisions at \texttt{LHC} thus appear analogous to the successful dAu collisions at \texttt{RHIC}. 
+For hybrid collisions to properly occur at IPs though, it is necessary  to  inject  a  proton  beam  with  the  same  bunch  
+pattern  as a typical  ion  beam, meaning that the  existing  p  and  Pb injector  chains  have to
+to operate  in  tandem efficiently; the  two-in-one  magnet  design   of  \texttt{LHC}  imposes   different  revolution  frequencies  for  the  two  different mass-to-charge-ratio species; 
+beam   dynamics  and  the   potential  performance  of  \texttt{LHC} should be reevaluated.
+
+The multistage collimation system~\cite{collimation_2} is designed to intercept protons at large amplitudes relative to primary collimators that scatter them into secondary and tertiary collimators, 
+where they should eventually be absorbed. In heavy ion operation, although the stored beam energy is considerably smaller than for protons, the collimation 
+is less efficient due to the yield of effectively off-momentum ion fragments in the primary collimators. 
+These fragments with different magnetic rigidity can be further subject to fragmentation processes, and hence a large variety of different ion types 
+can be produced through the interaction with the collimator material. 
+Owing to the large cross sections for the involved fragmentation processes (few hundred Barns~\cite{hermes}), it is crucial to measure and understand ion loss patterns. 
+
+The cleaning performance is described by a local inefficiency (``loss map'') which is the ratio of the number of lost particles at  any  location  
+of  the  ring  in  a  given  length  over the total number of lost particles. 
+The required local cleaning inefficiency at 7\,\TeV\ is about $10^{-5}$\,$\mathrm{m}^{-1}$ for the nominal intensity~\cite{coll_eff}. 
+Figure~\ref{coll_rigid:a} displays exemplary loss maps for \ce{^{208}_{82}Pb+}~\cite{coll_Pb} and p~\cite{coll_p} beams at $3.5$\,$Z$\,\TeV\
+having almost identical collimator settings and optics. Both distributions are dominated by losses in the betatron collimators at IR7, 
+followed by the momentum collimators in IR3 and the dump protection devices in IR6. 
+The different loss patterns in the IR2 region is due to the different optical configuration used in the two measurements. 
+
+\begin{figure}[!ht]
+\centering
+\subfloat[]{\label{coll_rigid:a}\includegraphics[width=0.35\paperwidth]{figures/apparatus/collimation_eff.png}}
+\centering
+\subfloat[]{\label{coll_rigid:b}\includegraphics[width=0.35\paperwidth]{figures/apparatus/rigidity_shift.png}}
+\caption[Qualification loss maps with proton and lead beams, and the orbit displacement]{\label{fig:coll_rigid}
+(a) The representation of the local cleaning inefficiency as a function of the longitudinal position is referred to as a ``loss map.''
+All Beam Loss Monitoring signals are cleaned from the background and normalized to the highest signal. The vertical dashed lines mark the \texttt{LHC} octants.
+(b) Proton  momentum, $p_{\textrm{p}}$, shift  required  to  equalize p and Pb revolution frequencies during the energy ramp. 
+For $p_{\textrm{p}} \lesssim 2.7 $\,\TeV,   the   orbit  displacement exceeds the normally accepted limits at \texttt{LHC}, imposing a lower limit on collision energy for pPb collisions. 
+Injection and part of the ramp must be thus performed  with  unlocked RF systems  and  different  revolution  frequencies   for   the   two   beams~\cite{rigidity}.
+}
+\end{figure}
+
+Following  the  high  integrated  luminosity  accumulated at $\rootsNN=2.76$\,\TeV in the first two PbPb collision runs in 2010~\cite{PbPb_2010} and 2011~\cite{PbPb_2011}, respectively, the 
+\texttt{LHC}  heavy ion  physics  community  requested  a  first  run  with proton-nucleus collisions. This almost unprecedented mode of 
+collider operation had not been foreseen in the baseline design 
+of  the  \texttt{LHC}  whose  two-in-one  magnet  design (see Section~\ref{sec:lhc_layout}) imposes equal rigidity, and hence unequal revolution frequencies per se for asymmetric colliding species. 
+
+Equal-rigidity configuration using deuteron-Gold collisions at \texttt{RHIC} has been considered in the initial injection setup, 
+taking advantage of the two independent rings each comprised of single aperture  magnets. 
+However, in  such  condition, it has been later realized that unequal frequencies  between  the  two  beams modulate long-range  beam--beam  forces  creating  
+untunable  beam  losses  during the  acceleration ramp. 
+
+To equalize the RF  frequencies at \texttt{LHC}, and hence  allow the beams to encounter each other at the  same  position  every  turn, implies  
+that  the  lead  ion  has  to  move  to  the inside  of  the  ring  to  compensate  for  being  slower,  and equivalently,  the  proton  beam  
+has  to  move  to  the  outside of  the  other ring to  travel  a  larger  distance  to  compensate  for being  faster (Fig.~\ref{coll_rigid:b}).  
+The  amount  of  orbit  shift  depends  on  the beam energy, and for instance, at  injection  energy, each  beam  should  have been moved  outside  the  reference  orbit  by about 70\,$\mathrm{mm}$,  
+clearly  out  of  reach   given  the  dimensions   of   the   beam   pipe. 
+This difficult exercise,  called  ``RF  frequency  lock  and  cogging,'' had therefore to be performed at flat top energies, 
+and doubts  were long  extant  as  to  whether \texttt{LHC}  would  ever  deliver collisions with asymmetric species. 
+
+\begin{table}[htbp]
+\centering
+\caption[Comparison of the \texttt{LHC} design and achieved beam parameters for proton and \ce{^{208}_{82}Pb+} beams]{\label{tab:design_vs_achieved} 
+Beam-related parameters in various \texttt{LHC} running periods. Since asymmetric collisions were not included in the \texttt{LHC} design, the physics case~\cite{pPb_opportunities} was based 
+on a luminosity  $\mathcal{L}_{\textrm{peak}}=1.15 \times 10^{29}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$ at a beam energy of 7\,Z\,\TeV.
+We can thus refer to these values as the ``design'' parameters, similarly to those in pp and PbPb collisions. 
+%The 2015 operational period with heavy ions started with a reference proton run at 2.51\,\TeV\ to obtain the same center-of-mass energy as in the pPb run of 2013. 
+%For the same reason, the ensuing PbPb operation was carried out at an energy of 6.37\,Z\,\TeV.
+Relevant quantities refer to IP1 and 5, while the values of $\mathcal{L}_{\textrm{peak}}$ correspond to conditions of stable  beams.
+The final performance values in the 2018 PbPb run are under evaluation.
+}
+\resizebox{\textwidth}{!}{\begin{tabular}{cc||cc|cc|cc|cc}
+\toprule
+\multicolumn{2}{c||}{\multirow{2}{*}{Parameter}} & \multicolumn{2}{c|}{Design} & \multicolumn{2}{c|}{PbPb} & \multicolumn{2}{c|}{pPb} & \multicolumn{2}{c}{pp} \\\cline{3-10}
+          & & \multicolumn{1}{c}{~~PbPb~~} &\multicolumn{1}{c|}{~~pp~~}  & \multicolumn{1}{c}{~~2011~~} &\multicolumn{1}{c|}{~~2015~~}
+ &\multicolumn{1}{c}{~~2013~~} &\multicolumn{1}{c|}{~~2016~~} &\multicolumn{1}{c}{~~2015~~} &\multicolumn{1}{c}{~~2018~~}
+\\
+\midrule
+    $E$ &(TeV) &  7\,$Z$ & 7  &  3.5\,$Z$  & 6.37\,$Z$   &   4\,$Z$ & 6.5\,$Z$  & 6.5 & 6.5     \\
+    $n_\textrm{b}$ &  &  592 & 2808   & 358 & 518   &   338 & 540  & 2244 & 2556      \\
+    $N_\textrm{\ce{^{208}_{82}Pb+},\,p}$ & ($\times 10^{8},\,\times 10^{11}$) &  0.7  &  1.15 & 1.2 & 1.9   &   1.4 & 2.1  & 1.1 & 1.4      \\
+    $\varepsilon_{\textrm{N}}$ & (\mum) &  1.5   &  3.75 & 2.0 & 2.1   &  2.0  & 1.6         & 3.5 & 2.2   \\
+    $\beta^{*}$ & (m)     &  0.5 & 0.55  &  0.1 &  0.8   &  0.8 & 0.6 & 0.8 & 0.25 \\
+                            $E_{\textrm{S}}$ & (MJ)  &  3.81 & 360  &  1.98 & 8.60 &   2.77 & 9.70 &  277 & 320  \\
+    $\mathcal{L}_{\textrm{peak}}$ & ($\times 10^{27},\,\times 10^{34}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$)      &  1   &  1 & 0.5 & 3   &  116 & 850   & 0.5 & 2.0 \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+After a successful  pilot  physics  Fill  in  2012~\cite{pPb_2012},  \texttt{LHC}  provided its four major experiments with approximately 31\,\invnb of pPb  luminosity  
+at an unprecedented nucleon-nucleon center-of-mass energy of  5.02\,\TeV\ in  early  2013~\cite{pPb_2013},  with  several  variations  of  the  operating  conditions.
+The gain of about a factor of 25 in collision energy relative to previous asymmetric systems has been one of the largest leaps in the history of particle accelerators. 
+Together with a ``reference'' pp run at 2.76\,\TeV, they rendered the very last physics operation  before the long shutdown 1 (Table~\ref{tab:design_vs_achieved}).
+
+For five of the \texttt{LHC} experiments, the second proton-nucleus collision run in 2016 offered the tremendous opportunity to answer a range of crucial 
+physics questions~\cite{pPb_opportunities} arising from unexpected discoveries, e.g., collective phenomena in small systems reminiscent to the creation of the \QGP\ state of matter~\cite{cms_ridge_pp7,cms_ridge_pPb5,cms_ridge_pp13}. 
+Unlike earlier runs, the requirements for the 2016 proton-nucleus run, and hence operating conditions,  were dissimilar~\cite{pPb_2016_plans} among  
+the  different  experiments, in terms of collision energy, 
+luminosity, and pileup. Luminosity  sharing  deemed a  critical  issue  to  be  solved since these requests appeared mutually incompatible within the available one month of operation. 
+Nevertheless, a plan to satisfy most requirements was implemented successfully exploiting the different beam lifetimes at two nucleon-nucleon center-of-mass energies of 5.02 and 8.16\,\TeV, 
+a variety of luminosity sharing and filling schemes, the later further complicated by the separate proton and heavy ion injection, and reversal of beam directions. 
+
+Despite the complex strategy for repeated recommissioning and operation of \texttt{LHC} the longest ever Fill (numbered 5510) was achieved with luminosity leveled for almost 38\,$\mathrm{h}$. 
+The peak luminosity also surpassed the ``design'' value by a factor 7.8 (Table~\ref{tab:design_vs_achieved}), and the amount of integrated luminosity substantially exceeded 
+the requests of the majority of the experiments. 
+With the improvements in the performance of the injector complex and transmission efficiency into \texttt{LHC}~\cite{pPb_inj}, average Pb bunch intensities of  ions 
+and normalized transverse emittances of about  $2.1\times 10^{8}$ and 1.6\,\mum, respectively, were achieved at 6.5\,$Z$\,\TeV.
+
+Table~\ref{table:pbLHC_2016} summarizes all primary goals of the 2016 pPb run along with further useful data sets delivered parasitically, 
+and Fig.~\ref{fig:pPbLHC} demonstrates the integrated luminosity performance achieved at all heavy ion periods at \texttt{LHC} so far.
+
+\begin{table}[!ht]
+\makebox[\textwidth][c]{ 
+  \footnotesize
+  \begin{tabular}{ l || p{3cm} | p{4cm} | p{4cm}  }
+   \toprule
+   \rootsNN   & Experiment & Planned luminosity & Delivered luminosity   \\
+   \midrule
+    \multirow{3}{*}{5.02\,\TeV\ pPb}   & \texttt{ALICE} & $7\times10^8$ min.-bias events & $7.8\times10^8$ min.-bias events\\
+                                    & \texttt{ATLAS},\texttt{CMS}   & - & $>0.4$\,\invnb \\
+                                    & \texttt{LHCb}   & - & \texttt{SMOG}~\cite{Aaij:2014ida} p\ce{^{4}_{2}He+}, etc.\\
+    \midrule
+    \multirow{1}{*}{8.16\,\TeV\ Pbp}   & \texttt{ATLAS}, \texttt{CMS} & 100\,\invnb & $>180$\,\invnb\\
+    \midrule
+    \multirow{2}{*}{8.16\,\TeV\ pPb}   & \texttt{ALICE}, \texttt{LHCb} & 10\,\invnb & 14,13\,\invnb\\
+                                    & \texttt{LHCf}   & ($9-12$\,$\mathrm{h}$)$\times 10^{28}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$ & 9.5\,$\mathrm{h}$\\
+    \midrule
+    \multirow{1}{*}{8.16\,\TeV\ Pbp}   & \texttt{ALICE}, \texttt{LHCb} & 10\,\invnb & 25,19\,\invnb\\
+   \bottomrule
+  \end{tabular}
+}
+\caption[Data sets, both primary and additional goals, delivered in the 2016 proton-nucleus runs]{
+  Different activities including primary and additional goals were carried out during the various phases of the 2016 proton-nucleus run. 
+  More specifically, it involved two nucleon-nucleon center-of-mass energies, i.e., 5.02 and 8.16\,\TeV, and different particle species circulating in the two rings. 
+  Protons and \ce{^{208}_{82}Pb+} ions were injected in beam 1 and 2, respectively, for both energies, and beam species were switched once the required integrated luminosity was reached. 
+  All these changes in machine configuration took place in about one month, achieving a return to 5.02\,\TeV\ operation to fulfill additional requests.
+  The peak luminosity exceeded the ``design'' value by a factor 7.8~\cite{pPb_2016}, and the long-term integrated luminosity goal of 100\,\invnb~\cite{pPb_opportunities} has been substantially surpassed 
+  in some \texttt{LHC} experiments.}
+\label{table:pbLHC_2016}
+\end{table}
+
+\begin{figure}[!ht]
+\begin{minipage}{.38\paperwidth}
+\centering
+\subfloat[]{\label{pPbLHC:a}\includegraphics[scale=0.2]{figures/apparatus/CCnew6_01_17_ext.png}}
+\end{minipage}%
+\begin{minipage}{.38\paperwidth}
+\centering
+\subfloat[]{\label{pPbLHC:b}\includegraphics[scale=0.2]{figures/apparatus/PbPb_LHC.png}}
+\end{minipage}%
+\caption[Integrated luminosity for proton-nucleus and nucleus-nucleus collisions at \texttt{LHC}]{\label{fig:pPbLHC} 
+  Integrated luminosity delivered to the four major experiments at \texttt{LHC} using (a) proton-nucleus and (b) nucleus-nucleus collisions during Run 1 and 2.
+  Following up on a feasibility test and pilot physics Fill in October 2011 and September 2012, respectively, the first one month-long run took place in January 2013, 
+  meaning asymmetric proton-nucleus collisions remain a novel mode of operation at \texttt{LHC}. 
+  As in most years, the \texttt{LHC} apparatus was reconfigured for a month-long heavy ion run; 2016 was devoted to colliding beams of protons and \ce{^{208}_{82}Pb+} ions.
+  Despite such novelty, the accelerator team succeeded in delivering enormous data sets to all major \texttt{LHC} experiments for the investigation of nuclear matter~\cite{pPb_2016}.
+}
+\end{figure}
+

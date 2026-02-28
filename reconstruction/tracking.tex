@@ -1,0 +1,343 @@
+\section{Hit, track, and primary vertex reconstruction}
+\label{sec:tracking}
+
+The scientific goals of \texttt{CMS} impose stringent requirements on the performance of the tracking system. 
+Reconstructing tracks in a high-occupancy  environment  is  challenging; it requires to  attain  high track-finding efficiency while keeping the fraction of ``fake'' tracks small.  
+Fake tracks are falsely reconstructed tracks that may be formed from a combination of unrelated (random) hits or from a genuine particle trajectory that gets badly reconstructed 
+from the inclusion of spurious hits.  In addition, the data acquisition system of the strip detector, which runs algorithms on off-detector electronics (modules of the front-end driver (FED)~\cite{fed}),  must control throughput level sufficiently fast to be used not only for offline event reconstruction, but also for the \texttt{CMS} HLT.
+
+Hits created by charged particles crossing the tracker’s sensitive layers must be reconstructed.  
+The algorithms used to reconstruct tracks from these hits, along with the performance obtained in terms of track-finding efficiency, the proportion of fake tracks, 
+and track parameter resolution, are explained in Ref.~\cite{cms_tracking_paper}. 
+
+Primary vertices from collisions are distributed over the luminous region colloquially known as the ``beamspot.''
+This is intimately linked to tracking since, on the one hand, the beamspot and primary vertices are found using reconstructed tracks, and on the other hand, 
+an approximate knowledge of their positions is needed before track finding can be initiated.
+
+\subsection{Hit reconstruction performance }
+\label{sec:hit}
+
+``Local'' reconstruction consists of clustering zero-suppressed signals above specified thresholds in pixel and strip channels into hits,  and then 
+estimating the cluster positions and their uncertainties~\footnote{In PbPb collisions, the number of produced particles depends strongly on the geometrical overlap of the Pb ions.  
+As a consequence, to avoid bias, the tracker is read out without hardware zero suppression with the latter being performed offline.}.
+As a result, information for only a small fraction of the channels in any given event is retained for offline storage.
+The  hit  efficiency  is  the  probability  to  find  a  cluster  in  a  given  silicon  sensor  that  has  been
+traversed by a charged particle. 
+In the pixel tracker, the average efficiency for reconstructing hits is typically $>$99\% (Fig.~\ref{hitEffPixel:a}), albeit the hit efficiency depends on the instantaneous luminosity, as shown 
+in Fig.~\ref{hitEffPixel:b}. The systematic uncertainty in these measurements is estimated to be below 0.5\%~\cite{cms_pix}. 
+Several sources of loss can be identified, e.g., the limited size of the internal buffer of the readout chips causing a dynamic inefficiency that increases with the instantaneous luminosity, 
+readout errors signaled by the FED modules depending on the rate of beam-induced background, etc. 
+
+
+\begin{figure}[!ht]
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{hitEffPixel:a}\includegraphics[scale=0.23]{figures/reconstruction/HitEfficiency_vs_BunchCrossing60_SelectedNBx_pu12to15_Lay2_2015Data.pdf}}
+\end{minipage}%
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{hitEffPixel:b}\includegraphics[scale=0.23]{figures/reconstruction/HitEfficiency_vs_InstLumi_LayersDisks_2016Data_Update2.pdf}}
+\end{minipage}%
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{hitEffPixel:c}\includegraphics[scale=0.23]{figures/reconstruction/SiStripHitEff_CompareRuns_GoodModules_forapproval.png}}
+\end{minipage}%
+  \caption[The average hit efficiency for layers or disks in the \texttt{CMS} silicon pixel and strip detectors]{
+    Hit efficiency for different \texttt{LHC} pp filling schemes as a function of (a) the bunch crossing identification number for the second barrel layer and (b) instantaneous luminosity 
+    for all barrel and forward disks of the silicon pixel detector~\cite{cms_pix}.
+    (c) Hit efficiency of the silicon strip detector planes. 
+    During late 2015 and early 2016, the strip tracker observed a loss of hits due to the saturation of the APV25 readout chip~\cite{cms_strips}.
+    Measurements on last detector planes, i.e., \texttt{TOB {\normalfont{L6}}} and \texttt{TEC {\normalfont{D9}}}, have been omitted because of the bias (underestimation) induced by the analysis method.
+    %The \pt is required to be $> 1$\,GeV, and the tracks are required to be reconstructed with a minimum number of hits in the strip detector. 
+    %Hits from the pixel layer under study are not removed when the tracks are reconstructed. 
+    %To minimize any potential bias, all tracks are always required to have hits in the other two pixel layers, ensuring thereby that they would be found even without using the studied layer.  
+    %A restrictive selection is applied to the impact parameter to reduce false tracks and tracks from secondary interactions. 
+    %The efficiency in the strip tracker is measured using tracks that have a minimum of eight hits in the pixel and strip detectors. Where two hits are found in one of the closely-spaced double layers, which consist
+    %of $r\phi$ and stereo modules, both hits are counted separately.
+    %The efficiency in any given layer is determined using only the subset of tracks that have at least one hit in
+    %subsequent layers, further away from the beam spot.
+    %This requirement ensures that the particle traverses the layer under study, but
+    %also means that the efficiency cannot be measured in the outermost layers of the TOB
+    %(layer~6) and the TEC (layer~9).
+  }
+    \label{fig:hitEffPixel}
+
+\end{figure}
+
+The overall hit efficiency in the strip tracker is about 99.8\% (Fig.~\ref{hitEffPixel:c}). 
+This number is compatible with the 0.2\% fraction of defective channels observed during the construction of the strip tracker~\cite{cms_tracking_paper}. 
+During late 2015 and early 2016, the higher instantaneous luminosity values at \texttt{LHC} increased the detector occupancy. 
+Charges generated near the back-plane of the sensitive volume of the thicker silicon sensors is inefficiently collected by the APV25 readout chip~\cite{APV_chip}, 
+and corrections are applied to compensate for the cluster barycenter shift along the direction perpendicular to the sensor plane. 
+The increased detector occupancy saturated the APV25 readout chip, that integrates the collected charge in a narrow time window near the back-plane 
+of the thicker silicon sensors, resulting in high deadtime and a further loss of hits. 
+After having changed the drain speed of the pre-amplifier, thus allowing for faster recovery, the efficiency was fully recovered.
+
+
+\subsection{Track reconstruction performance }
+\label{sec:track}
+
+Tracking algorithms reconstruct charged particles over the full pseudorapidity range of the tracker
+$\lvert \eta \rvert<2.5$,  finding tracks with \pt as low as 0.1\,\GeV,  or produced as far as 60\,$\mathrm{cm}$ from  the  beam  line.
+Initially, it was thought that track finding should be seeded using hits in the outer layers of the tracker, where the channel occupancy is relatively low~\cite{CMS:1998aa}.  
+However, later it has been broadly perceived that the pixel tracker is better suited to this purpose featuring high granularity, and hence providing algorithms with excellent 
+resolution in the three spatial dimensions and an even lower channel occupancy, despite  the higher track density~\cite{cms_tracking_paper}.  
+In addition, many particles lose a significant fraction of their energy interacting with the tracker material. 
+To ensure high efficiency the track finding process uses trajectory seeds created in the inner region of the tracker, facilitating the reconstruction of 
+low-momentum tracks that are deflected by the strong magnetic field before reaching the outer part of the tracker.
+
+In a typical \texttt{LHC} event containing jets, the track-finding procedure yields a significant fraction of fake tracks.
+ The fake rate can be reduced substantially through quality requirements. 
+Tracks are selected on the basis of the number of layers that have hits, whether the estimated $\chi^2/\textrm{dof}$ of their fit is good, and how compatible they are with originating from
+a primary interaction vertex. The selection criteria can be summarized as~\cite{cms_tracking_paper}
+\begin{itemize}
+\item A requirement on the minimum number of layers in which the track has at least one associated hit. This differs from
+selections based on the number of hits on the track, because more than one hit in a given layer can be assigned to a track,
+as in the case of layers with overlapping sensors or double-sided layers in which two sensors are mounted back-to-back.
+\item A requirement on the minimum number of layers in which the track has an associated three-dimensional hit, i.e., in the pixel tracker or matched hits in the strip tracker.
+\item A requirement on the maximum number of layers intercepted by the track containing no assigned hits, not
+counting those layers inside its innermost hit or outside its outermost hit, nor those layers where no hit was expected because
+the module was known to be malfunctioning.
+\item $\chi^2/\textrm{dof} < \alpha_0 N_\text{layers}$.
+\item $\lvert d_0^\textrm{BS} \rvert /\delta d_0 < \left( \alpha_3 N_\text{layers}\right)^\beta$.
+\item $\lvert z_0^\textrm{PV} \rvert /\delta z_0 < \left( \alpha_4 N_\text{layers}\right)^\beta$.
+\item $\lvert d_0^\textrm{BS} \rvert /\sigma_{d_0}(\pt) < \left( \alpha_1 N_\text{layers}\right)^\beta$.
+\item $\lvert z_0^\textrm{PV} \rvert /\sigma_{z_0}(\pt,\eta) < \left( \alpha_2 N_\text{layers}\right)^\beta$.
+\end{itemize}
+
+The parameters $\alpha_i$ and $\beta$ are configurable constants. The track's impact parameters
+are $d_0^\textrm{BS}$ and $z_0^\textrm{PV}$, where $d_0^\textrm{BS}$ is the distance from the center of the
+beamspot in the plane transverse to the beam line and $z_0^\textrm{PV}$ is the distance along the beamline from the closest pixel vertex;
+the impact parameter uncertainties, $\delta d_0$ and $\delta z_0$, are calculated from the covariance
+matrix of the fitted track trajectory.
+The ``high-purity'' track selection criteria provide stringent requirements that reduce the efficiency and fake rate and are listed in Table~\ref{tab:TrackSelection} for each iteration.
+
+\begin{table}[htbp]
+\centering
+\caption[]
+{\label{tab:TrackSelection} Parameter values~\cite{cms_tracking_paper} used in selecting high-purity tracks reconstructed in each step; 
+the number of layers that contain hits assigned to tracks, the parameter $\alpha_0$ that controls selection criteria based on $\chi^2/\textrm{dof}$, 
+the parameters $\alpha_i$ and $\beta$ that define the compatibility of impact parameters with the interaction point.  
+Iterations 2 and 3 use two paths that emphasize track quality (Trk) or primary vertex compatibility (PV).
+A track produced by these iterations is retained if it passes either of these criteria.
+These quality criteria are adjusted to maintain high efficiency and low fake rate as a function of track \pt and $N_\text{layers}$.
+%were initially optimized based on \texttt{QCD} multijet events as a function of track \pt and $N_\text{layers}$,
+%so as to maximize the modified significance of genuine (non-fake) tracks. As data taking conditions have evolved, the parameters have been 
+}
+\resizebox{\textwidth}{!}{\begin{tabular}{@{~}c@{~}@{~}c@{~}|c|c|c|c|c|c|c|c}
+\toprule
+\multicolumn{1}{c}{\multirow{2}{*}{Iteration}} & \multicolumn{1}{c|}{\multirow{2}{*}{$\beta$}} & \multicolumn{1}{c|}{Min layers} & \multicolumn{1}{c|}{Min 3D layers} & \multicolumn{1}{c|}{Max lost layers} & \multicolumn{1}{c|}{$\alpha_0$} 
+%\cline{2-13}
+  & \multicolumn{1}{c|}{$\alpha_1$} & \multicolumn{1}{c|}{$\alpha_2$} & \multicolumn{1}{c|}{$\alpha_3$} & \multicolumn{1}{c}{$\alpha_4$} \\%\cline{3-7}
+        &    &\multicolumn{1}{c|}{~~~~} & \multicolumn{1}{c|}{~~~~}
+& \multicolumn{1}{c|}{~~~~} & \multicolumn{1}{c|}{~~~~} &\multicolumn{1}{c|}{~~~~}  &\multicolumn{1}{c|}{~~~~} & \multicolumn{1}{c|}{~~~~} &\multicolumn{1}{c}{~~~~} \\
+\midrule
+    0 \& 1 &  4  &  4  &  4   &2   &  0.9    & 0.30   &  0.35  &  0.40   &  0.40   \\
+    2 Trk  &  4  &  5  &  3   &1   &  0.5    & 0.90   &  0.90  &  0.90   &  0.90   \\
+    2 PV  &  3  &  3  &  3   &1   &  0.9    & 0.85   &  0.80  &  0.90   &  0.90   \\
+    3 Trk  &  4  &  5  &  4   &1   &  0.5    & 1.00   &  1.00  &  1.00   &  1.00   \\
+    3 PV  &  3  &  3  &  3   &1   &  0.9    & 0.90   &  0.90  &  1.00   &  1.00   \\
+    4      &  3  &  6  &  3   &0   &  0.3    & 1.00   &  1.00  &  1.00   &  1.00   \\
+    5      &  3  &  6  &  2   &0   &  0.25   & 1.20   &  1.10  &  1.20   &  1.10   \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+For prompt, charged particles of $\pt > 1$\,\GeV, under typical \texttt{LHC} conditions and in simulated inclusive \ttbar\ events (Fig.~\ref{fig:trkeff}), 
+the average track reconstruction efficiency, i.e., the fraction of reconstructed tracks that can be associated with the corresponding simulated charged particles, 
+is expected approximately to be 92 (94)\,\% in the barrel region of the phase-0 (phase-I) tracker. 
+It decreases to about 80 (85)\% at higher pseudorapidity with most of the inefficiency caused by hadrons undergoing nuclear interactions in the tracker material. 
+In the same \pt range, the fraction of falsely reconstructed tracks, i.e., 
+the fraction of reconstructed tracks that are not associated with any simulated particle, is at the few percent level.
+In the central region, tracks with $1 < \pt < 100$\,\GeV\ have a resolution in \pt of better than 1.5\%.
+In this momentum range, the resolution in the track parameters is dominated by multiple scattering.
+The resolution in their transverse and longitudinal impact parameters remains approximately constant at 
+160 and 180 (90 and 100)\,\mum\, respectively, in the central region of the phase-0 (phase-I) tracker, while it progressively deteriorates towards higher pseudorapidity.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\textwidth}
+\centering
+\subfloat[]{\label{trkeff:a}\includegraphics[scale=0.30]{figures/reconstruction/ttbar_pu35_phase0_phase1_efficiency_eta.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\centering
+\subfloat[]{\label{trkeff:b}\includegraphics[scale=0.30]{figures/reconstruction/ttbar_pu35_phase0_phase1_efficiency_pt.pdf}}
+\end{minipage}\par\medskip
+\caption[Track reconstruction efficiency as a function of the simulated track $\eta$ and \pt]{
+  Track reconstruction efficiency---the number of reconstructed tracks sharing at least 75\% of their assigned hits with the simulated particles divided by the total number of generated particles---as 
+  a function of the simulated track (a) $\eta$ and (b) \pt~\cite{cms_strips}.
+  The phase-I pixel detector (installed in 2017) exhibits an improved performance relative to the phase-0 detector all over the $\eta$ and studied \pt spectrum.
+  The reconstructed tracks are simulated based on \PYTHIA (v.8~\cite{Sjostrand:2007gs,Sjostrand:2014zea}) using the 4C tune~\cite{4Ctune}, and are required to meet the ``high-purity'' requirement (Table~\ref{tab:TrackSelection}).
+  The number of pileup interactions superimposed on each simulated \ttbar\ event is randomly generated from a Poisson distribution with a mean value of 35.
+}
+\label{fig:trkeff}
+\end{figure}
+
+\subsection{Primary vertex reconstruction performance }
+\label{sec:vertex}
+
+The goal of primary vertex (PV) reconstruction is to measure the location, and the associated
+uncertainty, of all hadron-hadron, hadron-nucleus, or nucleus-nucleus interaction vertices in each event, including the event vertex from the hard scattering
+and any vertices from pileup (PU) collisions, using the available reconstructed tracks.  
+It consists of three main steps
+\begin{itemize}
+\item selecting the tracks
+\item clustering the tracks that appear to originate from the same interaction vertex
+\item fitting the position of each vertex using its associated tracks.
+\end{itemize}
+The identification of the event vertex from the hard scattering is a key element for the reconstruction and identification of b jets among others.
+The  vertex  position  is  estimated  with  an adaptive vertex fit~\cite{cms_tracking_paper} using a collection of tracks compatible with originating from the same
+interaction. During Run 1 operations, with an average of 21 additional pp collisions per bunch crossing, the event PV was identified 
+as the reconstructed vertex with the largest $\sum \pt^2$ of its associated tracks. 
+When the number of additional interactions in the same bunch crossing increases, the chosen PV is not always identified correctly as
+the vertex corresponding to the hard interaction. 
+%Since the performance of b jet identification algorithms is sensitive to the choice of the PV, 
+
+A more robust method has been developed to meet the requirements associated with higher PU. 
+The recently introduced technique~\cite{TDR-15-02} consists of replacing the individual tracks contributing to $\sum \pt^2$ by pseudojets, i.e.,
+by clustering the tracks originating from the same vertex using the anti-$k_{\textrm{T}}$ jet clustering algorithm (see Section~\ref{sec:jets}) with a distance parameter of 0.4. 
+For each primary vertex, $\sum \pt^2$ is computed by using these jets as well as the \ptmiss at the PV (``track \ptmiss'') in order to account for neutral particles. 
+Different weights are applied to pseudojets and missing transverse momentum because of the experimental precision in determining their \pt magnitude.
+The PV with the largest weighted $\sum \pt^2$ is then chosen as the one corresponding to the hard scattering, 
+and the jets associated with it are used to quantify the performance of the b tagging algorithms.
+
+The  efficiency  for  choosing  the  right  PV  depends on the event kinematics. 
+It can  be  estimated  in  the  simulation  by comparing its reconstructed $z$ position to that of the generated hard interaction. 
+Figure~\ref{fig:PVeff} displays simulated \ttbar\ events with \textsc{MadGraph5}~\cite{mg5} interfaced to \PYTHIA~(v6.424~\cite{Sjostrand:2006za}, 
+and using the $\mathrm{Z}2^{*}$~\cite{Chatrchyan:2013gfi,Khachatryan:2015pea} tune) for three detector scenarios~\cite{TDR-15-02}: phase-I detector with an average pileup of 50 
+(blue squares), phase-I-``aged,'' i.e., with modeling of the effects of radiation damage after 1\,\invab\ of integrated luminosity, 
+and phase-II (green circles) detectors with an average PU of 140 (red triangles) separately considered for the PV sorting algorithms in Run 1 (open symbols) and 2 (full symbols).
+The Run 1 algorithm for PV sorting would be indeed significantly less efficient. 
+The pixel-detector extension in phase II will provide an improved efficiency for the PV choice in the forward region $2.4<\lvert \eta \rvert<3.0$ compared to the phase-I-aged detector configuration.
+
+\begin{figure}[ht!]
+   \begin{center}
+     \includegraphics[width=1.\textwidth,center]{figures/reconstruction/CMS-Phase-II-TP_Figure_009-011.pdf}
+     
+      \caption[Primary vertex choice efficiency as a function of the simulated jet \pt]{
+        Efficiency in choosing the correct PV of the hard interaction as a function of the leading jet \pt progressively 
+        from central (left) to forward (right) $\lvert \eta \rvert$ regions for \ttbar\ events simulated with \textsc{MadGraph5}~\cite{mg5} interfaced to \PYTHIA~(v6.424~\cite{Sjostrand:2006za}, 
+        and using the $\mathrm{Z}2^{*}$~\cite{Chatrchyan:2013gfi,Khachatryan:2015pea} tune) for three detector scenarios~\cite{TDR-15-02}.
+        }
+      \label{fig:PVeff}
+   \end{center}
+\end{figure}
+
+
+The resolution in the position of a reconstructed PV strongly depends on the number of tracks used to fit the vertex and the \pt of those tracks.  
+A track-splitting method~\cite{cms_tracking_paper} is employed for measuring the resolution as a function of the number of tracks associated to the vertex.
+The tracks used in any given vertex are split into two equal sets. 
+During the splitting procedure, the tracks are first sorted in descending \pt order, and then combinatorially paired starting from the track with the largest \pt.
+For each pair, tracks are randomly assigned to one or the other set of tracks.
+This ensures that the two sets of tracks have, on average, the
+same kinematic properties.  These two sets of tracks
+are then fitted independently with an adaptive vertex fitter.
+Finally, to extract the resolution the distributions in the difference of the fitted vertex positions for a
+given number of tracks are parameterized using a single Gaussian distribution, whose fitted root-mean-square (RMS) width is divided by a factor of $\sqrt{2}$, 
+because the two used subsets should nominally have the same resolution.
+The range of the fit is constrained to be within twice the RMS of the distributions.
+
+Results from a study of the PV resolution in transverse and longitudinal directions as a function of the number of tracks associated with the vertex,
+using jet-enriched simulated data samples, are shown in Fig.~\ref{fig:pvtx_respt}.
+The resolution approaches $10$\,\mum\ in $x$ and $y$, and it is about $12$\,\mum\ in $z$ for primary vertices using at least 50 tracks.
+For zero- or minimum-bias events, the resolutions are worse across the full range of the number of tracks used to fit the vertex, 
+and less than about $20$ and $25$\,\mum\ in transverse and longitudinal directions, respectively, for primary vertices reconstructed using at least 50 tracks.
+
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\textwidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.30]{figures/reconstruction/ttbar_pu35_phase0_phase1_vertex_resolution_xy_ntrk.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.30]{figures/reconstruction/ttbar_pu35_phase0_phase1_vertex_resolution_z_ntrk.pdf}}
+\end{minipage}\par\medskip
+\caption[Primary vertex transverse and longitudinal resolution as a function of the track multiplicity]{
+  Primary vertex transverse (a) and longitudinal (b) resolution in events simulated with \PYTHIA (v.8~\cite{Sjostrand:2007gs,Sjostrand:2014zea}) using the 4C tune~\cite{4Ctune}
+  as a function of the number of tracks used in the adaptive vertex fit~\cite{cms_track_eff}.
+  The reconstructed tracks associated to primary vertices are selected with the high-purity requirement of Ref.~\cite{cms_tracking_paper}, 
+  while vertices within a radial (longitudinal) distance of 24 (2)\,$\mathrm{cm}$ are retained.
+  The phase-I pixel detector (installed in 2017) exhibits an improved performance relative to the phase-0 2016. 
+}
+\label{fig:pvtx_respt}
+\end{figure}
+
+
+\subsection{Reconstruction of the \texttt{LHC} luminous region}
+\label{sec:beamspot}
+
+The measurement and continuous monitoring of the luminous region, where the two LHC beams collide at a given interaction point, play a crucial role both for the trigger selection 
+and the event reconstruction. 
+Studying the luminous region is of great interest for the experiments given the interplay between the yearly integrated luminosity performance and the detector event reconstruction efficiency, 
+which depends on pileup, and are routinely performed to optimize parameters, like the levelling time or Fill duration, for different filling scheme scenarios, e.g., Ref.~\cite{TUPIK089}. 
+Given the size of transverse (longitudinal) dispersion, typically a few\,\mum\,(cm), the position of the luminous region provides an excellent estimate of the position of the interaction point. 
+This is of primary importance especially for the track reconstruction; the beamspot position is used to constrain the track fitting, when the primary vertices 
+of the event are not yet determined, and to constrain the track clustering in the longitudinal direction for reconstructing the primary vertices of the event. 
+The precise determination of the beamspot position allows to monitor real-time the position of the beams, and hence minimizing the radiation dose in the tracker
+and providing the accelerator operators with valuable feedback.
+To keep the exposure to ionizing radiation uniform in $\phi$ it is desirable to keep the beam at the center of the tracking detector.
+Last but not least, the beamspot parameters, as measured in data, are deployed to MC event sample simulation of the PV distribution.
+
+\begin{figure}[!ht]
+\begin{tabularx}{0.6\paperwidth}{>{\raggedleft \arraybackslash}X
+                             >{\raggedright\arraybackslash}X}
+\subfloat[]{\includegraphics[scale=0.16,valign=T]{figures/reconstruction/beamspot_param_1.png}}
+&
+\subfloat[]{\includegraphics[scale=0.17,valign=T]{figures/reconstruction/beamspot_param_2.png}}
+\end{tabularx}
+\caption[Reference frame used in the extraction of the position and size of the luminous region at the interaction point]{
+  The position and size of the luminous region at the interaction point~\citeAN{AN-15-195} are measured 
+  with respect to the \texttt{CMS} reference frame centered on the mechanical support of the tracker. 
+  Transverse (a) and longitudinal (b) distributions of the collision region can be parameterized by Gaussian functions with typical widths of the order of few \mum\ and cm, respectively, and 
+  are accompanied by potential beam offsets in $x$, $y$ and $z$ from the nominal center of the detector; angles spanning the detector $z$ axis and the interaction vertex 
+  should also be encoded, and are distributed according to $\beta^{*}$ and beam emittance.
+}
+\label{fig:stored_energy_protection}
+\end{figure}
+
+The measured beamspot parameters are the coordinates of the center ($x^{\textrm{BS}}$, $y^{\textrm{BS}}$, and $z^{\textrm{BS}}$), 
+the widths ($\sigma_x$, $\sigma_y$, and $\sigma_z$), and the derivatives (slopes) with respect to the $z$ axis ($\frac{\mathrm{d}x}{\mathrm{d}z}$ and $\frac{\mathrm{d}y}{\mathrm{d}z}$), 
+and can be determined in two ways~\cite{Miao:1061285}.
+The first method is through the reconstruction of primary vertices, which maps out the collisions as a function of $x$, $y$, and $z$, 
+hence the shape of the beamspot.  The position of the center and the size of the luminous region is determined through a fit to the three-dimensional distribution of vertex positions.
+The second method, inherited from \texttt{CDF} (e.g., Refs.~\cite{cdf_d0phi_1} and~\cite{cdf_d0phi_2}), utilizes the correlation between the impact parameter ($d_{0}$) and azimuthal angle ($\phi$) of tracks originating from the same PV. 
+When the center of the beamspot is displaced relative to its expected position, i.e., when the beam is displaced with respect to the detector coordinate system, 
+the $d_{0}$-$\phi$ distribution exhibits a sinusoidal modulation that can be fitted with a parameterization including the beamspot parameters as:
+\begin{linenomath}
+\begin{equation}
+   d_{0}(\phi, z_0) = x^{\textrm{BS}} \sin\phi + \frac{\mathrm{d}x}{\mathrm{d}z} \sin\phi\,  (z_0-z^{\textrm{BS}})
+                  - y^{\textrm{BS}} \cos\phi - \frac{\mathrm{d}y}{\mathrm{d}z} \cos\phi\,  (z_0-z^{\textrm{BS}}).
+\end{equation}
+\end{linenomath}
+The two methods are typically checked against each other to provide consistent results, and a combination of both methods is required to measure the full set of beamspot parameters. 
+
+The beamspot can be measured with a per-lumisection (LS) granularity, i.e., short periods of about 23\,$\mathrm{s}$ each, to protect against effects from orbit drifts. 
+Such granularity is crucial for dedicated measurements of the predicted beam displacement at the IP (see Section~\ref{sec:lsc}).
+A more precise estimate of the beamspot parameters is typically required though, and hence a weighted average is calculated combining measurements from coarser time intervals, the latter colloquially referred to as Intervals of Validity (IOV). This means a consecutive operation can be viewed as an ordered IOV sequence, each with its own beamspot measurement.
+
+Representative $z^{\textrm{BS}}$ and $\sigma_z$ measurements are shown in Fig.~\ref{fig:bs_coordinates_2015} for the 2015 pp period at 13\,\TeV. 
+The results are consistent with those expected from the \texttt{LHC} tuning that centered the $z^{\textrm{BS}}$ coordinate to zero from Fill 4386 onward. 
+The longitudinal width has been measured to be typically between four and five\,$\mathrm{cm}$. 
+Its reduction throughout a Fill can be explained in terms of emittance evolution (shrinkage), that has been independently detected 
+by dedicated ``emittance'' scans and transverse beam profile monitors~\cite{michi}, and is consistent with the high synchrotron radiation damping at 13\,\TeV~\cite{fanouria_2016}. 
+The longitudinal width is practically unaffected by the absence of the magnetic field because of its larger magnitude, 
+whereas the transverse widths exhibit much larger variations between 0 and 3.8\,$\mathrm{T}$~\cite{BS_CMS}.
+
+\begin{figure}[!ht]
+  \begin{center}
+    \subfloat[]{\includegraphics[width=1.\textwidth]{figures/reconstruction/abcd/BS_plot_full_by_time_run2015_Z.pdf}}\\
+    \subfloat[]{\includegraphics[width=1.\textwidth]{figures/reconstruction/abcd/BS_plot_full_by_time_run2015_sigmaZ.pdf}}\\
+     \caption[Measured position and size of the luminous region at IP5 using proton-proton collisions at $\sqrt{s}=13$\,\TeV]{
+       Examples of measured beamspot parameters, $z^{\textrm{BS}}$ and $\sigma_z$, at IP5 using pp collisions at $\sqrt{s}=13$\,\TeV~\cite{BS_CMS}. 
+       Data were recorded with the \texttt{CMS} magnet at 3.8 (black dots), 2.8 (green dots) or 0\,$\mathrm{T}$ (red dots).
+       The absence of the magnetic field, and hence the partial loss of information about \vecptmiss, impacts all the errors of the beamspot parameters returned by the fit methods. 
+       The widths are affected too since they are strongly correlated with the primary vertex errors.
+       Low pileup Fills---4266, 4268, and 4269 at the end of August---are more prone to larger statistical uncertainty due to the lower number of reconstructed tracks.
+       %Fills 4495 to 4511 have been injected with magnified $\beta^*$ optics of 9\,121\,cm. 
+       %During fill 4410, the low online filter rate caused instabilities in the fit performance.
+       The error bars indicate the statistical uncertainty of the employed fit methods.
+     }
+    \label{fig:bs_coordinates_2015}
+  \end{center}
+\end{figure}

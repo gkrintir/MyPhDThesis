@@ -1,0 +1,3767 @@
+%%%%%%%%%%%%%%%   Start of Preface    %%%%%%%%%%%%%%%%%%
+@Unpublished{HI_NewPhys,
+     author    = "{Bruce, R. and others}",
+     title     = "{New physics searches with heavy ion collisions at the LHC}",
+     note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+     year      = "2018",
+     url       = {https://inspirehep.net/record/1709994}}
+     
+%%%%%%%%%%%%%%%   End of Preface      %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Abstract   %%%%%%%%%%%%%%%%%%
+@article{bottomobs,
+	Author = {Herb, S.W. and others},
+	Doi =  {10.1103/PhysRevLett.39.252},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {252},
+        Volume = {39},
+	Title = {Observation of a dimuon resonance at 9.5\,{GeV} in 400-{GeV} proton-nucleus collisions},
+	year = {1977},
+	url = {https://inspirehep.net/record/120368}}
+@article{topevidence_CDF_prl,
+	Author = {Abe, F. W. and others},
+	Collaboration = {CDF},
+	Doi =  {10.1103/PhysRevLett.73.225},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {225},
+        Volume = {73},
+	Title = {Evidence for top quark production in $\ppbar$ collisions at $\sqrt{s}=1.8$\,{TeV}},
+	year = {1994},
+	url = {https://inspirehep.net/record/373362}}
+@article{topevidence_CDF_prd,
+	Author = {Abe, F. W. and others},
+	Collaboration = {CDF},
+	Doi =  {10.1103/PhysRevD.50.2966},
+	Journal = {Phys. Rev. D},
+	Pages = {2966},
+        Volume = {50},
+	Title = {Evidence for top quark production in $\ppbar$ collisions at $\sqrt{s}=1.8$\,{TeV}},
+	year = {1994},
+	url = {https://inspirehep.net/record/372952}}
+@article{topobs_CDF,
+	Author = {Abe, F. W. and others},
+	Collaboration = {CDF},
+	Doi =  {10.1103/PhysRevLett.74.2626},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {2626},
+        Volume = {74},
+	Title = {Observation of top quark production in $\ppbar$ collisions with the {Collider} {Detector} at {Fermilab}},
+	year = {1995},
+	url = {https://inspirehep.net/record/393084}}
+@article{topobs_D0,
+	Author = {Abachi, S. and others},
+	Collaboration = {D{\O}},
+	Doi =  {10.1103/PhysRevD.50.2966},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {2632},
+        Volume = {74},
+	Title = {Observation of the top quark},
+	year = {1995},
+	url = {https://inspirehep.net/record/393099}}
+@article{topobs_CMS_prl,
+	Author = {Sirunyan, A. M. and others},
+	Collaboration = {CMS},
+	Doi =  {10.1103/PhysRevLett.119.242001},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {242001},
+        Volume = {119},
+	Title = {Observation of top quark production in proton-nucleus collisions},
+	year = {2017},
+	url = {https://inspirehep.net/record/1624694}}
+%%%%%%%%%%%%%%%   End of Abstract    %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Introduction Chapter  %%%%%%%%%%%%%%%%%%
+@article{Englert:1964et,
+	Author = {Englert, F. and Brout, R.},
+	Doi = {10.1103/PhysRevLett.13.321},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {321},
+	Title = {{Broken symmetry and the mass of gauge vector mesons}},
+	Volume = {13},
+	Year = {1964},
+	Url = {https://dx.doi.org/10.1103/PhysRevLett.13.321}}
+
+@article{Higgs:1964ia,
+	Author = {Higgs, P. W.},
+	Doi = {10.1016/0031-9163(64)91136-9},
+	Journal = {Phys. Lett.},
+	Pages = {132},
+	Title = {{Broken symmetries, massless particles and gauge fields}},
+	Volume = {12},
+	Year = {1964},
+	Url = {https://dx.doi.org/10.1016/0031-9163(64)91136-9}}
+
+@article{Higgs:1964pj,
+	Author = {Higgs, P. W.},
+	Doi = {10.1103/PhysRevLett.13.508},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {508},
+	Title = {{Broken symmetries and the masses of gauge bosons}},
+	Volume = {13},
+	Year = {1964},
+	Url = {https://dx.doi.org/10.1103/PhysRevLett.13.508}}
+@article{Guralnik:1964eu,
+	Author = {Guralnik, G. S. and Hagen, C. R. and Kibble, T. W. B.},
+	Doi = {10.1103/PhysRevLett.13.585},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {585},
+	Title = {{Global conservation laws and massless particles}},
+	Volume = {13},
+	Year = {1964},
+	Url = {https://dx.doi.org/10.1103/PhysRevLett.13.585}}
+
+@article{Higgs:1966ev,
+	Author = {Higgs, P. W.},
+	Doi = {10.1103/PhysRev.145.1156},
+	Journal = {Phys. Rev.},
+	Pages = {1156},
+	Title = {{Spontaneous symmetry breakdown without massless bosons}},
+	Volume = {145},
+	Year = {1966},
+	Url = {https://dx.doi.org/10.1103/PhysRev.145.1156}}
+@article{Kibble:1967sv,
+	Author = {Kibble, T. W. B.},
+	Doi = {10.1103/PhysRev.155.1554},
+	Journal = {Phys. Rev.},
+	Pages = {1554},
+	Title = {{Symmetry breaking in non-Abelian gauge theories}},
+	Volume = {155},
+	Year = {1967},
+	Url = {https://dx.doi.org/10.1103/PhysRev.155.1554}}
+	
+@article{Aad:2012tfa,
+      author         = "Aad, G. and others",
+      title          = "{Observation of a new particle in the search for the Standard Model Higgs boson with the ATLAS detector at the LHC}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett. B",
+      volume         = "716",
+      pages          = "1",
+      doi            = "10.1016/j.physletb.2012.08.020",
+      year           = "2012",
+      url            = "https://inspirehep.net/record/1124337"
+}
+@article{Chatrchyan:2012ufa,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Observation of a new boson at a mass of 125\,GeV with the
+                        CMS experiment at the LHC}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett. B",
+      volume         = "716",
+      pages          = "30",
+      doi            = "10.1016/j.physletb.2012.08.021",
+      year           = "2012",
+      url            = "https://inspirehep.net/record/1124338"
+}
+
+@article{Chatrchyan:2013lba,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Observation of a new boson with mass near 125 GeV in pp collisions at $\sqrt{s}$ = 7 and 8\,TeV}",
+      collaboration  = "{CMS}",
+      journal        = "JHEP",
+      volume         = "06",
+      pages          = "081",
+      doi            = "10.1007/JHEP06(2013)081",
+      year           = "2013",
+      url            = "https://inspirehep.net/record/1224273"
+}
+
+@Unpublished{higgs_couplings,
+     author    = "{CMS Collaboration}",
+     title     = "{Combined measurements of Higgs boson couplings in proton-proton collisions at $\sqrt{s}=13$\,{TeV}}",
+     note  = "submitted to \textit{Eur. Phys. J. C}",
+     year = "2018",
+     url = {https://inspirehep.net/record/1696607}}
+     
+@article{ua1_blunder,
+	Author = {Arnison, G. and others},
+	Collaboration = {UA1},
+	Doi =  {10.1016/0370-2693(84)91410-2},
+	Journal = {Phys. Lett. B},
+	Pages = {493},
+        Volume = {147},
+	Title = "{Associated production of an isolated, large-transverse-momentum lepton (electron or muon), and two jets at the CERN $\ppbar$ collider}",
+	year = {1984},
+	url = {https://inspirehep.net/record/205116}}
+@article{aleph,
+	Author = "{ALEPH and DELPHI and L3 and OPAL and SLD Collaborations and LEP Electroweak Working Group, and SLD Electroweak and Heavy Flavour Groups}",
+	Doi =  {10.1016/j.physrep.2005.12.006},
+	Journal = {Phys. Rept.},
+	Pages = {257},
+        Volume = {427},
+	Title = "{Precision electroweak measurements on the Z}",
+	year = {2006},
+	url = {https://inspirehep.net/record/691576}}
+
+@article{global_EW_fit,
+	Author = {Haller, J. and others},
+	Group = {Gfitter},
+	Doi =  {10.1140/epjc/s10052-018-6131-3},
+	Journal = {Eur. Phys. J. C},
+	Pages = {675},
+        Volume = {78},
+	Title = "{Update of the global electroweak fit and constraints on two-Higgs-doublet models}",
+	year = {2018},
+	url = {https://inspirehep.net/record/1658767}}
+@article{atlas_cms_h_mass,
+	Author = "{ATLAS and CMS Collaborations}",
+	Doi =  {10.1103/PhysRevLett.114.191803},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {191803},
+        Volume = {114},
+	Title = "{Combined measurement of the Higgs boson mass in pp collisions at $\sqrt{s}=7$ and 8\,{TeV} with the ATLAS and CMS experiments}",
+	year = {2015},
+	url = {https://inspirehep.net/record/1356276}}
+@article{atlas_h_mass,
+	Author = {Aad, G. and others},
+	Collaboration = {ATLAS},
+	Doi =  {10.1103/PhysRevD.90.052004},
+	Journal = {Phys. Rev. D},
+	Pages = {052004},
+        Volume = {90},
+	Title = "{Measurement of the Higgs boson mass from the $\mathrm{H}\rightarrow \gamma\gamma$ and $\mathrm{H}\rightarrow ZZ^{*} \rightarrow 4\ell$ channels with the ATLAS detector using 25\,$\mathrm{fb^{-1}}$ of pp collision data}",
+	year = {2014},
+	url = {https://inspirehep.net/record/1300650}}
+@article{cms_h_mass,
+	Author = {Khachatryan, V. and others},
+	Collaboration = {CMS},
+	Doi =  {10.1140/epjc/s10052-015-3351-7},
+	Journal = {Eur. Phys. J. C},
+	Pages = {212},
+        Volume = {75},
+	Title = "{Precise determination of the mass of the Higgs boson and tests of compatibility of its couplings with the standard model predictions using proton collisions at 7 and 8\,TeV}",
+	year = {2015},
+	url = {https://inspirehep.net/record/1335811}}
+
+@article{higgs_inflation,
+	Author = {Fumagalli, J. and Mooij, S. and Postma, M.},
+	Doi =  {10.1007/JHEP03(2018)038},
+	Journal = {JHEP},
+	Pages = {038},
+        Volume = {1803},
+	Title = "{Unitarity and predictiveness in new Higgs inflation}",
+	year = {2018},
+	url = {https://inspirehep.net/record/1638325}}
+
+@Unpublished{topmass_world,
+     author    = "{ATLAS and CDF and CMS and D{\O} Collaborations}",
+     title     = "{First combination of {Tevatron} and {LHC} measurements of the top quark mass}",
+     note  = "{ATLAS-CONF-2014-008, CDF-NOTE-11071, CMS-PAS-TOP-13-014, D{\O}-NOTE-6416, FERMILAB-TM-2582-E}",
+     year = "2014",
+     url = {https://inspirehep.net/record/1286320}}
+
+@article{vacuum_stability_1,
+	Author = {Buttazzo, D. and others},
+	Doi =  {10.1007/JHEP12(2013)089},
+	Journal = {JHEP},
+	Pages = {089},
+        Volume = {1312},
+	Title = "{Investigating the near-criticality of the Higgs boson}",
+	year = {2013},
+	url = {https://inspirehep.net/record/1242456}}
+
+@article{vacuum_stability_2,
+	Author = {Salvio, A. and Strumia, A. and Tetradis, N. and Urbano, A.},
+	Doi =  {10.1007/JHEP09(2016)054},
+	Journal = {JHEP},
+	Pages = {054},
+        Volume = {1609},
+	Title = "{On gravitational and thermal corrections to vacuum decay}",
+	year = {2016},
+	url = {https://inspirehep.net/record/1479980}}
+
+@article{gao,
+	Author ={Gao, J. and Papanastasiou, A.S.},
+	Doi =  {10.1103/PhysRevD.96.051501},
+	Journal = {Phys. Rev. D},
+	Pages = {051501},
+        Volume = {96},
+	Title = "{Top quark pair production and decay at high precision}",
+	year = {2017},
+	url = {https://inspirehep.net/record/1601291}}
+
+@inproceedings{poncelet,
+        Author = {Poncelet, R. and others},
+	Title = {{NNLO} {$\mathrm{QCD}$} top quark pair production and decay},
+	booktitle  = "Proc. of the 11th International Workshop on Top Quark Physics (TOP2018)",
+	address    = "Bad Neuenahr, Germany",
+	month       = Sep,
+	year = {2018}}
+
+@article{tsinikos,
+	Author ={Pagani, D. and Tsinikos, I. and Zaro, M.},
+	Doi =  {10.1140/epjc/s10052-016-4318-z},
+	Journal = {Eur. Phys. J. C},
+	Pages = {479},
+        Volume = {76},
+	Title = "{The impact of the photon PDF and electroweak corrections on $\mathrm{t\overline{t}}$ distributions}",
+	year = {2016},
+	url = {https://inspirehep.net/record/1468062}}
+
+@article{jr14,
+	Author ={Jimenez-Delgado, P. and Reya, E.},
+	Doi =  {10.1103/PhysRevD.89.074049},
+	Journal = {Phys. Rev. D},
+	Pages = {074049},
+        Volume = {89},
+	Title = "{Delineating parton distributions and the strong coupling}",
+	year = {2014},
+	url = {https://inspirehep.net/record/1284991}}
+
+@article{mlm,
+	Author ={Alwall, J. and others},
+	Doi =  {10.1140/epjc/s10052-007-0490-5},
+	Journal = {Eur. Phys. J. C},
+	Pages = {473},
+        Volume = {53},
+	Title = "{Comparative study of various algorithms for the merging of parton showers and matrix elements in hadronic collisions}",
+	year = {2008},
+	url = {https://inspirehep.net/record/753397}}
+
+@article{sherpa,
+	Author ={Gleisberg, T. (SLAC) and others},
+	Doi =  {10.1088/1126-6708/2009/02/007},
+	Journal = {JHEP},
+	Pages = {007},
+        Volume = {0902},
+	Title = "{Event generation with \textsc{sherpa}\,1.1}",
+	year = {2009},
+	url = {https://inspirehep.net/record/803708}}
+
+@article{alice,
+	Author ={Adam, J. and others},
+	Collaboration = "{ALICE}",
+	Doi =  {10.1038/nphys4111},
+	Journal = {Nature Phys.},
+	Pages = {535},
+        Volume = {13},
+	Title = "{Enhanced production of multistrange hadrons in high-multiplicity proton-proton collisions}",
+	year = {2017},
+	url = {https://inspirehep.net/record/1471838}}
+
+@techreport{cms_tuning_1,
+      title         = "Investigations of the impact of the parton shower tuning in \textsc{pythia}\,8 in the modeling of $\mathrm{t\overline{t}}$ at $\sqrt{s}=8$ and 13\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-TOP-16-021",
+      year          = "2016",
+      reportNumber  = "CMS-PAS-TOP-16-021",
+      url           = "https://inspirehep.net/record/1500109",
+      type          = "CMS Physics Analysis Summary"
+}
+
+@Unpublished{cms_tuning_2,
+     author    = "{CMS Collaboration}",
+     title     = "{Study of the underlying event in top quark pair production in pp collisions at 13\,{TeV}}",
+     note  = "submitted to \textit{Eur. Phys. J. C}",
+     year = "2018",
+     url = {https://inspirehep.net/record/1663395}}
+
+@techreport{cms_tuning_3,
+      title         = "Extraction and validation of a new set of {CMS} \textsc{pythia8} tunes from underlying-event measurements",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-GEN-17-001",
+      year          = "2016",
+      reportNumber  = "CMS-PAS-GEN-17-001",
+      url           = "https://inspirehep.net/record/1691618",
+      type          = "CMS Physics Analysis Summary"
+}
+@Unpublished{CMS-PAS-TOP-17-001,
+      title         = "Measurement of the $\mathrm{t\overline{t}}$ production cross section, the top quark mass, and the strong coupling constant using dilepton events in pp collisions at $\sqrt{s}=13$\,{TeV}",
+      author        = "{CMS Collaboration}",
+      note  = "submitted to \textit{Eur. Phys. J. C}",
+     year = "2018",
+     url = {https://inspirehep.net/record/1711626}}
+
+@article{tevatron_review,
+      author         = "Bandurin, D. and others",
+      title          = "Review of physics results from the {Tevatron}",
+      journal        = "Int. J. Mod. Phys. A",
+      volume         = "30",
+      year           = "2015",
+      pages          = "01541001",
+      doi            = "10.1142/S0217751X15410018",
+      url            = "https://inspirehep.net/record/1317643"
+}
+@inproceedings{evian_boyd,
+        Author = {Boyd, J. and Schwick, C.},
+	Title = {Luminosity measurements and systematics},
+	booktitle  = "Proc. of the 8th Evian Workshop",
+	address       = "Evian Les Bains, France",
+	month       = Dec,
+	year = {2017},
+	url            = "https://indico.cern.ch/event/663598"
+	}
+@misc{lpc_lumi_val,
+       author         = "Pojer, M. and others",
+       howpublished   = "LHC Coordination information page",
+       Url            = {https://twiki.cern.ch/twiki/bin/viewauth/LhcMachine/LhcCoordinationMain}}
+}
+@article{Pumplin:2002vw,
+      author         = "Pumplin, J. and others",
+      title          = "New generation of parton distributions with
+                        uncertainties from global {$\mathrm{QCD}$} analysis",
+      journal        = "JHEP",
+      volume         = "0207",
+      year           = "2002",
+      pages          = "012",
+      doi            = "10.1088/1126-6708/2002/07/012",
+      url            = "https://inspirehep.net/record/581996"
+}
+@article{Seymour:2013qka,
+      author         = "Seymour, M.H. and Siodmok, Andrzej",
+      title          = "Constraining {MPI} models using $\sigma_{\rm eff}$ and recent {Tevatron} and {LHC} underlying-event data",
+      journal        = "JHEP",
+      volume         = "1310",
+      year           = "2013",
+      pages          = "113",
+      doi            = "10.1007/JHEP10(2013)113",
+      url            = "https://inspirehep.net/record/1243440"
+}
+
+@article{nnpdf20_1,
+      author         = "Ball, R. D. and others",
+      title          = "Parton distributions with $\mathrm{QED}$ corrections",
+      collaboration  = "NNPDF",
+      journal        = "Nucl. Phys. B",
+      volume         = "0877",
+      year           = "2013",
+      pages          = "290",
+      doi            = "10.1016/j.nuclphysb.2013.10.010",
+      url            = "https://inspirehep.net/record/1246369"
+}
+
+@article{nnpdf20_2,
+      author         = "Ball, R. D. and others",
+      title          = "Unbiased global determination of parton distributions and their uncertainties at {NNLO} and at {LO}",
+      collaboration  = "NNPDF",
+      journal        = "Nucl. Phys. B",
+      volume         = "855",
+      year           = "2012",
+      pages          = "153",
+      doi            = "10.1016/j.nuclphysb.2011.09.024",
+      url            = "https://inspirehep.net/record/918528"
+}
+
+@misc{cms_summary_SM,
+       Collaboration  = "CMS",
+       howpublished    = "Summaries of {CMS} cross section measurements",
+       Url            = {https://cern.ch/go/pNj7}}
+}
+
+@article{husemann,
+	Author = {Husemann, U.},
+	Doi =  {10.1016/j.ppnp.2017.03.002},
+	Journal = {Prog. Part. Nucl. Phys.},
+	Pages = {48},
+        Volume = {95},
+	Title = "{Top quark physics: Status and prospects}",
+	year = {2018},
+	url = {https://inspirehep.net/record/1589840}}
+
+@article{topmass_ljets,
+     author    = {Sirunyan, A. M. and others},
+     Collaboration  = "{CMS}",
+     title     = "Measurement of the top quark mass with lepton+jets final states using pp collisions at $\sqrt{s} = 13$\,{TeV}",
+     Doi =  {10.1140/epjc/s10052-018-6332-9},
+     Journal = {Eur. Phys. J. C},
+     Pages = {78},
+     Volume = {891},
+     year   = "2018",
+     url  = "https://inspirehep.net/record/1671499"
+}
+
+@inproceedings{Zimmermann,
+        Author = {Zimmermann, F.},
+	url = {https://inspirehep.net/record/557207},
+        number        = "{CERN}-SL-2001-009-AP",
+	Title = {Luminosity limitations at hadron colliders},
+	booktitle  = "Proc. of the 18th International Conference on High-Energy Accelerators (HEACC 2001)",
+	pages = {TU-08},
+	address    = "Tsukuba, Japan",
+	month       = Mar,
+	year = {2001}}
+
+@misc{hl_lhc,
+       Collaboration  = "HL-LHC",
+       howpublished    = {The High Luminosity LHC (HL-LHC) project},
+       Url            = {https://hilumilhc.web.cern.ch}
+}
+@misc{eRHIC,
+       Collaboration  = "eRHIC",
+       howpublished    = {{eRHIC}: {An} electron-ion collider at {BNL}},
+       Url            = {https://wiki.bnl.gov/eic/index.php/Main_Page}
+}
+@misc{fcc,
+       Collaboration  = "FCC",
+       howpublished    = {The Future Circular Collider (FCC) study},
+       Url            = {https://fcc.web.cern.ch/Pages/default.aspx}
+}
+@mastersthesis{krintiras_msc,
+     author    = "Krintiras, {\relax G.K}",
+     title     = "Higher-order azimuthal anisotropy of {$\Lambda + \overline{\Lambda}$} hyperons in {PbPb} collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=2.76$}\,{TeV} measured by {ALICE} at {LHC}",
+     school    = "University of {Amsterdam}",
+     year      = "2015",
+     number    = "",
+     note      = "",
+     url       = "https://esc.fnwi.uva.nl/thesis/centraal/files/f1500767949.pdf"
+}
+@article{lattice,
+      author         = "Karsch, F.",
+      title          = "The phase transition to the quark gluon plasma: {Recent} results from lattice calculations",
+      journal        = "Nucl. Phys. A",
+      volume         = "590",
+      year           = "1995",
+      pages          = "367",
+      doi            = "10.1016/0375-9474(95)00248-Y",
+      url            = "https://inspirehep.net/record/393363"
+}
+
+@article{bjorken,
+      author         = "Bjorken, J.D.",
+      title          = "Highly relativistic nucleus-nucleus collisions: {The} central rapidity region",
+      journal        = "Phys. Rev. D",
+      volume         = "27",
+      year           = "1983",
+      pages          = "140",
+      doi            = "10.1103/PhysRevD.27.140",
+      url            = "https://inspirehep.net/record/178853"
+}
+
+@article{quenching,
+      author         = "Chatrchyan, S. and others",
+      title          = "Observation and studies of jet quenching in {PbPb} collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=2.76$}\,{TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev. C",
+      volume         = "84",
+      year           = "2011",
+      pages          = "024906",
+      doi            = "10.1103/PhysRevC.84.024906",
+      url            = "https://inspirehep.net/record/889010"
+}
+
+@Unpublished{quenching_b,
+     author    = "{CMS Collaboration}",
+     title     = "Measurement of nuclear modification factors of {$\Upsilon (1{\mathrm S})$}, {$\Upsilon (2{\mathrm S})$}, and {$\Upsilon (3{\mathrm S})$} mesons in {PbPb} collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=5.02$}\,{TeV}",
+     note  = "submitted to \textit{Phys. Lett. B}",
+     year = "2018",
+     url = "https://inspirehep.net/record/1674529"
+}
+
+@article{heavy_flavor,
+      author         = "Aleksander, K. and Lansberg, J. P. and Schienbein, I. and Shao, H.-S.",
+      title          = "Gluon shadowing in heavy-flavor production at the {LHC}",
+      journal        = "Phys .Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      pages          = "052004",
+      doi            = "10.1103/PhysRevLett.121.052004",
+      url            = "https://inspirehep.net/record/1644102"
+}
+
+@article{dijets,
+      author         = "Sirunyan, A. M. and others",
+      title          = "Gluon shadowing in heavy-flavor production at the {LHC}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "121",
+      year           = "2018",
+      pages          = "062002",
+      doi            = "10.1103/PhysRevLett.121.062002",
+      url            = "https://inspirehep.net/record/1672941"
+}
+
+@article{npdf_param,
+      author         = "Hirai, M. and Kumano, S. and Nagai, T.-H.",
+      title          = "Determination of nuclear parton distribution functions and their uncertainties at next-to-leading order",
+      journal        = "Phys. Rev. C",
+      volume         = "76",
+      year           = "2007",
+      pages          = "065207",
+      doi            = "10.1103/PhysRevC.76.065207",
+      url            = "https://inspirehep.net/record/761288"
+}
+
+@inproceedings{paakkinen,
+        Author = {Eskola, K. J. and Paakkinen, P. and Hannu Paukkunen, H.},
+	Title = {Impact of {CMS} dijets in 5.02\,{TeV} {pPb} and {pp} collisions on {EPPS16} nuclear {PDF}s},
+	booktitle  = "Proc. of the  International Conference on Hard and Electromagnetic Probes of High-Energy Nuclear Collisions (Hard Probes 2018)",
+	address    = "Aix-Les-Bains, France",
+	month       = Sep,
+        url            = "https://inspirehep.net/record/1708894",
+	year = {2018}}
+
+@article{jezo,
+      author         = "Je{\u z}o, T. and others",
+      title          = "An {NLO+PS} generator for $\mathrm{t\overline{t}}$ and W$\mathrm{t}$ production and decay including nonresonant and interference effects",
+      journal        = "Eur. Phys. J. C",
+      volume         = "76",
+      year           = "2016",
+      pages          = "691",
+      doi            = "10.1140/epjc/s10052-016-4538-2",
+      url            = "https://inspirehep.net/record/1476366"
+}
+
+@unpublished{herwig7,
+      author         = "Cormier, K. and others",
+      title          = "{Parton shower and matching uncertainties in top quark pair production with {Herwig} 7}",
+      year           = "2018",
+      note           = "{CERN}-TH-2018-219",
+      url            = "https://inspirehep.net/record/1698475"
+}
+
+%%%%%%%%%%%%%%%   End of Introduction Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Apparatus Chapter  %%%%%%%%%%%%%%%%%%
+@book{acceleration,
+  title = {Particle Accelerator Physics},
+  booktitle = {Particle Accelerator Physics},
+  publisher = {Springer International Publishing},
+  year = {2015},
+  author = {Wiedemann, H.},
+  Doi           = {10.1007/978-3-319-18317-6},
+  isbn          = {978-3-319-18317-6},
+  edition = {4}}
+@incollection{lhc_chapter1,
+  pages = {1},
+  title = {Background and History},
+  author = {Sch\"orner-Sadenius, Th.},
+  Doi           = {10.1007/978-3-319-15001-7\_1},
+  crossref = {lhc}}
+@incollection{lhc_chapter5,
+  pages = {139},
+  title = {Studies of quantum chromodynamics at the {LHC}},
+  author = {Carli, T. and Rabbertz, K. and Schumann, S.},
+  Doi           = {10.1007/978-3-319-15001-7\_5},
+  crossref = {lhc}}
+@book{lhc,
+  title = {The Large Hadron Collider},
+  booktitle = {The Large Hadron Collider},
+  publisher = {Springer International Publishing},
+  year = {2015},
+  editor = {Sch\"orner-Sadenius, Th.},
+  Doi           = {10.1007/978-3-319-15001-7},
+  isbn          = {978-3-319-15001-7},
+  edition = {1}}
+
+@incollection{terascale_chapter21,
+  pages = {415-430},
+  title = {Funding of High Energy Physics},
+  author = {Ehret, K.},
+  crossref = {terascale}}
+  
+@book{terascale,
+  title = {Physics at the Terascale},
+  booktitle = {Physics at the Terascale},
+  publisher = {Wiley},
+  year = {2011},
+  editor = {Brock, I. and Sch\"orner-Sadenius, Th.},
+  Doi           = {10.1002/9783527634965},
+  isbn          = {978-3-527-63497-2},
+  edition = {1}}
+
+@misc{cern_layout,
+       Author  = "{CERN Site Management and Buildings Department}",
+       howpublished    = {CERN Geographic Information System},
+       Url            = {https://maps.cern.ch/}
+}
+@article{altgradient,
+	Author = {Kerst, D. W. and others},
+	Doi =  {10.1103/PhysRev.102.590},
+	Journal = {Phys. Rev.},
+	Pages = {590},
+        Volume = {102},
+	Title = {Attainment of very high energy by means of intersecting beams of particles},
+	year = {1956}}
+
+@article{evian1992,
+	Author = {Fraser, G.},
+	Journal = {CERN Courier},
+	Pages = {1},
+	Number = {4},
+        Volume = {32},
+	Title = {Evian debut},
+	year = {1992},
+	url = {https://cds.cern.ch/record/1732019}
+	}
+@article{BRUNING2012705,
+        title = {The {Large} {Hadron} {Collider}},
+        journal = {Prog. Part. Nucl. Phys.},
+        volume = {67},
+        pages = {705},
+        year = {2012},
+        doi = {10.1016/j.ppnp.2012.03.001},
+	url = "https://inspirehep.net/record/1119913",
+        author = {Br\"uning, O. and Burkhardt, H. and Myers, S.}}
+@article{BRUNINGNATURE,
+        title = {Building a behemoth},
+        journal = {Nature},
+        volume = {448},
+        pages = {285},
+        year = {2007},
+        doi = {10.1038/nature06077},
+	url = "https://inspirehep.net/record/760218",
+        author = {Br\"uning, O. and Collier, P.}}
+@inproceedings{lhc_proj,
+        Author = {Asner, A. and others},
+	url = {https://inspirehep.net/record/202859},
+        number        = "{CERN}-DIR-TECH-84-01",
+	Slaccitation = {%%CITATION = CERN-LHCC-97-10;%%},
+	Title = {{Large} {Hadron} {Collider} in the {LEP} tunnel: {A} feasibility study of possible options},
+	booktitle  = "Proc. of the 1st ICFA Seminar on Future Perspectives in High Energy Physics",
+	pages = {207},
+	address    = "Tsukuba, Japan",
+	month       = May,
+	year = {1984}}
+@book{lhc_yellow,
+  title = "The {Large Hadron Collider}: Conceptual design",
+  booktitle = "The {Large Hadron Collider}: Conceptual design",
+  publisher = {CERN},
+  year = {1995},
+  editor = {Pettersson, T.S. and Lef\`evre, P.},
+  url = {https://inspirehep.net/record/402898}}
+@book{lhc_design,
+  title = {{LHC} {Design} {Report}},
+  booktitle = {{LHC} {Design} {Report}},
+  publisher = {CERN},
+  year = {2004},
+  editor = {Br\"uning, O. and others},
+  Doi           = {10.5170/CERN-2004-003-V-1},
+  isbn          = {978-9-290-83224-9},
+  edition = {v.1: {The} {LHC} main ring},
+  url = {https://inspirehep.net/record/656250}}
+@article{lhc_desing_2008,
+	Author = {Evans, L. R and Bryant, P.},
+	Doi = {10.1088/1748-0221/3/08/S08001},
+	Journal = {JINST},
+	Pages = {S08001},
+        Volume = {3},
+	Note = {This report is an abridged version of the {LHC} design report \textit{CERN-2004-003}},
+	Title = {{LHC} machine},
+	year = {2008},
+	url = {https://inspirehep.net/record/796247}}
+
+@techreport{fwd_shielding,
+      author        = "Huhtinen, M.",
+      title         = "{Optimization of the CMS forward shielding}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-NOTE-2000-068",
+      month         = "",
+      year          = "2007",
+      reportNumber  = "CMS-NOTE-2000-068",
+      url           = "https://inspirehep.net/record/876279",
+      type          = "CMS Note"
+}
+
+@phdthesis{damping,
+     author    = "Kuhn, M.",
+     title     = "Transverse emittance measurement and preservation at the {LHC}",
+     school    = {University of Hamburg},
+     year      = {2016},
+     note      = "{CERN-THESIS}-2016-149",
+     url       = "https://inspirehep.net/record/1503525"
+}
+@inproceedings{michi,
+	Author = {Hostettler, M. and Papotti, G.},
+	title = {Beam-size estimation from luminosity scans at the {LHC} during 2015 proton physics operation},
+	booktitle  = "Proc. of the 7th International Particle Accelerator Conference (IPAC 2016)",
+	address       = "Busan, Korea",
+	month       = "May",
+	pages  = "MOPMR025",
+	year = {2016},
+	url = "https://inspirehep.net/record/1469586"}
+@inproceedings{fanouria_2016,
+	Author = {Antoniou, F. and others},
+	title = {{LHC} luminosity modeling for {Run 2}},
+	booktitle  = "Proc. of the 7th International Particle Accelerator Conference (IPAC 2016)",
+	address       = "Busan, Korea",
+	month       = May,
+	pages  = "TUPMW002",
+	year = {2016},
+	url = "https://inspirehep.net/record/1469916"}
+
+
+@article{collimation,
+	Author = {Schmidt, R. and others},
+	Doi = {10.1088/1367-2630/8/11/290},
+	Journal = {New J. Phys.},
+	Pages = {290},
+        Volume = {8},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Protection of the {CERN} {Large} {Hadron} {Collider}},
+	year = {2006},
+	url = {https://inspirehep.net/record/736682}}
+@inproceedings{collimation_2,
+	Author = {Wenninger, J.},
+	title = {Machine protection and operation for {LHC}},
+	booktitle  = "Proc. of the 2014 Joint International Accelerator School: Beam Loss and Accelerator Protection",
+	address       = "Newport Beach, USA ",
+	month       = Nov.,
+	pages  = "377",
+	year = {2014},
+	url = "https://inspirehep.net/record/1480415"}
+@inproceedings{rf_desc,
+	Author = {Raka, E.},
+	title = {{RF} system considerations for \texit{a} {Large} {Hadron} {Collider}},
+	booktitle  = "Proc. of the 1988 US Particle Accelerator School",
+	address       = "New York, USA",
+	month       = Aug.,
+	pages  = "288",
+	year = {1988},
+	url = "https://inspirehep.net/record/271117"}
+@misc{lpc_lumi,
+       Author  = "{LHC Program Coordination}",
+       howpublished    = {Luminosity calculator},
+       Url            = {https://lpc.web.cern.ch/lumi2.html}
+}
+@inproceedings{instrumentation_overview,
+	Author = {Gasior, M. and others},
+	title = {Introduction to beam instrumentation and diagnostics},
+	booktitle  = "Proc. of the {CAS}-{CERN} {Accelerator} {School}: {Advanced} {Accelerator} {Physics} {Course}",
+	address       = "Trondheim, Norway",
+	month       = Aug.,
+	year = {2014},
+	url = "https://inspirehep.net/record/1416004"}
+@inproceedings{instrumentation_status,
+	Author = {Trad, G. and others},
+	title = {Status of the beam instrumentation at the {LHC}},
+	booktitle  = "Proc. of the 7th Evian Workshop",
+	address       = "Evian Les Bains, France",
+	month       = Dec.,
+	year = {2017},
+	url = "https://inspirehep.net/record/1635446"}
+@inproceedings{XeXe,
+	author = {Schaumann, M. and others},
+	title = {First xenon-xenon collisions at {LHC}},
+	booktitle  = "Proc. of the 9th International Particle Accelerator Conference (IPAC'18)",
+	address    = "Vancouver, BC, Canada",
+	month       = Apr.,
+	pages = {MOPMF039},
+	year = {2018},
+	url = "https://inspirehep.net/record/1691330"}
+@inproceedings{XeXe_clean,
+	author = {Fuster-Mart{\' i}nez, N. and others},
+	title = {Cleaning performance of the collimation system with {Xe} beams at the {LHC}},
+	booktitle  = "Proc. of the 9th International Particle Accelerator Conference (IPAC'18)",
+	address    = "Vancouver, BC, Canada",
+	month       = Apr.,
+	pages = {MOPMF038},
+	year = {2018},
+	url = "https://inspirehep.net/record/1691329"}
+
+@inproceedings{CERN_egamma,
+	author = {Krasny, M. and others},
+	title = {The {CERN} {Gamma} {Factory} initiative: {An} ultra-high intensity gamma source },
+	booktitle  = "Proc. of the 9th International Particle Accelerator Conference (IPAC'18)",
+	address    = "Vancouver, BC, Canada",
+	month       = Apr.,
+	pages = {WEYGBD3},
+	year = {2018},
+	url = "https://inspirehep.net/record/1690500"}
+@phdthesis{XeXe_clean_2,
+      author        = "Rossi, R.",
+      title         = "Experimental assessment of crystal collimation at the {Large} {Hadron} {Collider}",
+      school        = "Sapienza University of Rome",
+      address       = "",
+      number        = "{CERN}-THESIS-2017-424",
+      month         = "",
+      year          = "2016",
+      note          = "{CERN}-THESIS-2017-424",
+      url           = "https://cds.cern.ch/record/2644175"
+}
+@inproceedings{PbPb_2010,
+	author = {Arduini, G. and others},
+	title = {First run of the {LHC} as a heavy ion collider},
+	booktitle  = "Proc. of the 2nd International Particle Accelerator Conference (IPAC'11)",
+	address    = "San Sebasti\'an, Spain",
+	pages = {TUPZ016},
+	month       = Sep.,
+	year = {2011},
+	url = "https://inspirehep.net/record/1183213"}
+@inproceedings{PbPb_2011,
+	author = {Jowett, J. M. and others},
+	title = {Heavy ions in 2012 and the program up to 2022},
+	booktitle  = "Proc. of Chamonix 2012 workshop on LHC Performance",
+	address    = "Chamonix, France",
+	pages = {200},
+	month       = Feb.,
+	year = {2012},
+	url = "https://cds.cern.ch/record/1492972"}	
+@techreport{pPb_2012,
+	author = {Alemany, R. and others},
+	title = {First proton-nucleus collisions at {LHC}: {The} {pPb} pilot physics},
+	number = "{CERN}-ATS-Note-2012-094 MD",
+	year = {2012},
+	url = "https://cds.cern.ch/record/1496101"}
+@inproceedings{pPb_2013,
+	author = {Jowett, J. M. and others},
+	title = {Proton-nucleus collisions at {LHC}},
+	booktitle  = "Proc. of the 4th International Particle Accelerator Conference (IPAC'13)",
+	address    = "Shanghai, China",
+	pages = {MOODB201},
+	month       = May,
+	year = {2013},
+	url = "https://inspirehep.net/record/1336732"}
+@inproceedings{pPb_2013_alt,
+	author = {Manglunki, D. and others},
+	title = {The first {LHC} {pPb} run: {Performance} of the heavy ion production complex},
+	booktitle  = "Proc. of the 4th International Particle Accelerator Conference (IPAC'13)",
+	address    = "Shanghai, China",
+	pages = {WEPEA061},
+	month       = May,
+	year = {2013},
+	url = "https://inspirehep.net/record/1338947"}
+@inproceedings{pPb_2016,
+	author = {Jowett, J. M. and others},
+	title = {The 2016 {proton}-nucleus run at {LHC}},
+	booktitle  = "Proc. of the 8th International Particle Accelerator Conference (IPAC'17)",
+	address    = "Copenhagen, Denmark",
+	pages = {TUPVA014},
+	doi = {10.18429/JACoW-IPAC2017-TUPVA014},
+	month       = May,
+	year = {2017},
+	url = "https://inspirehep.net/record/1626343"}
+@inproceedings{PbPb_2015,
+	author = {Jowett, J. M. and others},
+	title = {The 2015 heavy ion run of the {LHC}},
+	booktitle  = "Proc. of the 7th International Particle Accelerator Conference (IPAC'16)",
+	address    = "Busan, Korea",
+	pages = {TUPMW027},
+	doi = {10.18429/JACoW-IPAC2016-TUPMW027},
+	month       = May,
+	year = {2016},
+	url = "https://inspirehep.net/record/146993"}
+@article{superconductivity,
+	Author = {Bottura, L. and others},
+	Doi =  {10.1109/TNS.2015.2485159},
+	Journal = {IEEE Trans. Nucl. Sci.},
+	Pages = {751},
+        Volume = {63},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Superconducting Magnets for Particle Accelerators},
+	year = {2016},
+	url = {https://inspirehep.net/record/1466589}}
+
+@inproceedings{CERN_YR228,
+	author = {Kain, V.},
+	title = {Beam dynamics and beam losses: {Circular} machines},
+	booktitle  = "Proc. of the 2014 Joint International Accelerator School: Beam Loss and Accelerator Protection",
+	address    = "Newport Beach, USA",
+	pages = {21},
+	month         = nov,
+	year = {2014},
+	doi = "10.5170/CERN-2016-002.21",
+	url = "https://inspirehep.net/record/1480005"}
+
+@inproceedings{CERN-AB-2003-024,
+  author        = "Grote, H. and Schmidt, F.",
+  title         = "{MAD-X: An upgrade from MAD8}",
+  booktitle     = "Proc. of Particle Accelerator Conference 2003 (PAC03)",
+  address       = "Portland, USA",
+  month         = May,
+  year          = "2003",
+  pages         = "3497",
+  url           = "https://inspirehep.net/record/624489"
+}
+
+@inproceedings{CERN-2016-002.159,
+  author        = "Bertarelli, A.",
+  title         = "{Beam-induced damage mechanisms and their calculation}",
+  booktitle     = "Proc. of the 2014 Joint International Accelerator School: Beam Loss and Accelerator Protection",
+  address       = "Newport Beach, USA",
+  month         = nov,
+  year          = "2014",
+  pages         = "159",
+  doi           = "10.5170/CERN-2016-002.159",
+  url           = "https://inspirehep.net/record/1480409"
+}
+
+@techreport{filling_LHC,
+        Author = {Bailey, R. and Collier, P.},
+	url = {https://cds.cern.ch/record/691782},
+        number        = "LHC-PROJECT-NOTE-323",
+	Slaccitation = {%%CITATION = CERN-LHCC-97-10;%%},
+	Title = {Standard filling schemes for various {LHC} operation modes},
+	year = {2003}}
+
+@inproceedings{nominal_cycle_LHC,
+  author        = "Solfaroli, M.",
+  title         = "{{LHC} nominal cycle}",
+  booktitle     = "Proc. of the 6th Evian Workshop",
+  address       = "EVIAN, France",
+  month         = Dec,
+  year          = "2015",
+  pages         = "45",
+  url           = "https://inspirehep.net/record/1637700"
+}
+
+@techreport{CERN-ACC-NOTE-2015-0023,
+        Author = {Wenninger, J. and others},
+	url = {https://cds.cern.ch/record/2049886},
+        number        = "{CERN}-ACC-NOTE-2015-0023",
+	Slaccitation = {%%CITATION = CERN-LHCC-97-10;%%},
+	Title = {First beam test of a combined ramp and squeeze at {LHC}},
+	year = {2015}}
+
+@article{pPb_opportunities,
+	Author = {Salgado, C.A. and others},
+	Doi = {10.1088/0954-3899/39/1/015010},
+	Journal = {J. Phys. G.},
+	Pages = {015010},
+        Volume = {39},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {{Proton-nucleus} collisions at the {LHC}: {Scientific} opportunities and requirements},
+	year = {2012},
+	url = {https://inspirehep.net/record/900635}}
+@article{coll_Pb,
+  author        = "Hermes, P. D. and others",
+  title         = "{Measured and simulated heavy ion beam loss patterns at the {CERN Large Hadron Collider}}",
+  Journal       = {Nucl. Instr. Meth. Phys. Res. A},
+  year          = "2016",
+  pages         = "73",
+  Volume        = {819},
+  doi           = {10.1016/j.nima.2016.02.050},
+  url           = "https://inspirehep.net/record/1426958"
+}
+@phdthesis{hermes,
+      author        = "Hermes, P. D.",
+      title         = "{Heavy ion collimation at the {Large} {Hadron} {Collider}: Simulations and measurements}",
+      school        = "University of M{\"u}nster",
+      address       = "",
+      number        = "{CERN}-THESIS-2016-230",
+      month         = "",
+      year          = "2016",
+      note          = "{CERN}-THESIS-2016-230",
+      url           = "https://cds.cern.ch/record/2241364"
+}
+@article{coll_p,
+  author        = "Bruce, R. and others",
+  title         = "{Simulations and measurements of beam loss patterns at the {CERN Large Hadron Collider}}",
+  Journal       = {Phys. Rev. ST Accel. Beams},
+  year          = "2014",
+  pages         = "081004",
+  Volume        = {17},
+  doi           = {10.1103/PhysRevSTAB.17.081004},
+  url           = "https://inspirehep.net/record/1315859"
+}
+@inproceedings{rigidity,
+  author        = "Jowett, J. M. and Carli, C.",
+  title         = "{The {LHC} as a proton-nucleus collider}",
+  booktitle     = "Proc. of the  10th  European Particle Accelerator Conference (EPAC 2006)",
+  address       = "Edinburgh, UK",
+  month         = "June",
+  year          = "2006",
+  pages         = "550",
+  url           = "https://inspirehep.net/record/727796"
+}
+@inproceedings{coll_eff,
+  author        = "Assmann, R. and others",
+  title         = "{The final collimation system for the {LHC}}",
+  booktitle     = "Proc. of the  10th  European Particle Accelerator Conference (EPAC 2006)",
+  address       = "Edinburgh, UK",
+  month         = June,
+  year          = "2006",
+  pages         = "986",
+  url           = "https://inspirehep.net/record/727805"
+}
+@inproceedings{pPb_2016_plans,
+  author        = "Alemany-Fernandez, R.",
+  title         = "{Plans for the ion run in 2016}",
+  booktitle     = "Proc. of the  LHC Performance Workshop (Chamonix 2016)",
+  address       = "Chamonix, France",
+  month         = Jan,
+  year          = "2016",
+  url           = "https://chamonix-2016.web.cern.ch"
+}
+@inproceedings{pPb_inj,
+  author        = "Fern\'andez, A.R. and others",
+  title         = "{Performance of the {CERN} injector complex and transmission studies into the {LHC} during the second proton-lead run}",
+  booktitle     = "Proc. of the  8th International Particle Accelerator Conference (IPAC 2017)",
+  address       = "Copenhagen, Denmark",
+  month         = May,
+  year          = "2017",
+  pages         = "TUPVA128",
+  doi           = {10.18429/JACoW-IPAC2017-TUPVA128},
+  url           = "https://inspirehep.net/record/1626325"
+}
+@article{cms_paper,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/3/08/S08004},
+	Journal = {JINST},
+	Pages = {S08004},
+        Volume = {3},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {The {CMS} experiment at the {CERN} {LHC}},
+	year = {2008},
+	url = {https://inspirehep.net/record/796887}}
+@article{cms_ridge_pp7,
+	Author = {Khachatryan, V. and others},
+	Collaboration = {CMS},
+	Doi = {10.1007/JHEP09(2010)091},
+	Journal = {JHEP},
+	Pages = {091},
+        Volume = {09},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Observation of long-range near-side angular correlations in proton-proton collisions at the {LHC}},
+	year = {2010},
+	url = {https://inspirehep.net/record/870473}}
+
+@article{cms_ridge_pp13,
+	Author = {Khachatryan, V. and others},
+	Collaboration = {CMS},
+	Doi = {10.1103/PhysRevLett.116.172302},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {172302},
+        Volume = {116},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Measurement of long-range near-side two-particle angular correlations in pp collisions at $\sqrt{s}=13$\,{TeV}},
+	year = {2016},
+	url = {https://inspirehep.net/record/1397173}}
+@article{cms_ridge_pPb5,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1016/j.physletb.2012.11.025},
+	Journal = {Phys. Lett. B},
+	Pages = {795},
+        Volume = {718},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Observation of long-range near-side angular correlations in proton-lead collisions at the {LHC}},
+	year = {2013},
+	url = {https://inspirehep.net/record/1191899}}
+@article{CRAFT,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/5/03/T03001},
+	Journal = {JINST},
+	Pages = {T03001},
+        Volume = {5},
+	Slaccitation = {%%CITATION = JINST,3,S08004;%%},
+	Title = {Commissioning of the {CMS} experiment and the {Cosmic Run at Four Tesla}},
+	year = {2010},
+	url = {https://inspirehep.net/record/837869}}
+@misc{fsq,
+       Collaboration  = "CMS",
+       howpublished    = {Forward and small-$x$ {$\mathrm{QCD}$} physics publications},
+       Url            = {https://cms-results.web.cern.ch/cms-results/public-results/publications/FSQ/index.html}
+}
+
+@techreport{CMS:1997fm,
+        Author = "{CMS Collaboration}",
+	url = {https://inspirehep.net/record/455671},
+        number        = "{CERN}-LHCC-97-10",
+	Slaccitation = {%%CITATION = CERN-LHCC-97-10;%%},
+	Title = {{CMS}, the magnet project: Technical design report},
+	year = {1997},
+	type          = "Scientific Committee Paper"
+	}
+
+@techreport{CMS:1998aa,
+	Author = "{CMS Collaboration}",
+	url = {https://inspirehep.net/record/492301},
+        number        = "{CERN}-LHCC-98-006",
+	Slaccitation = {%%CITATION = CERN-LHCC-98-06;%%},
+	Title = {The {CMS} tracker system project: Technical design report},
+	Year = {1998},
+	type          = "Scientific Committee Paper"
+	}
+
+@techreport{CMS:2000aa,
+	Author = "{CMS Collaboration}",
+	url = {https://inspirehep.net/record/1614063},
+	number        = "{CERN}-LHCC-2000-01",
+	Title = {The {CMS} tracker: {Addendum} to the technical design report},
+	Year = {2000},
+	type          = "Scientific Committee Paper"
+	}
+
+@article{cms_tracking_paper,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/9/10/P10009},
+	Journal = {JINST},
+	Pages = {P10009},
+        TITLE       = "Description and performance of track and primary vertex reconstruction with the {CMS} tracker",
+   	Volume = {9},
+	Year = {2014},
+	url = {https://inspirehep.net/record/1298029}}
+@article{hadrography,
+      author         = {Sirunyan, A. M. and others},
+      Collaboration = {CMS},
+      title          = "{Precision measurement of the structure of the {CMS} inner tracking system using nuclear interactions}",
+      Doi = {10.1088/1748-0221/13/10/P10034},
+      Journal = {JINST},
+      Pages = {P10034},
+      Volume = {13},
+      year           = "2018",
+      url            = "https://inspirehep.net/record/1682069"
+}
+
+@inproceedings{APV_chip,
+  author        = "French, M. J. and others",
+  title         = "{Design and results from the {APV25}, a deep sub-micron {CMOS} front-end chip for the {CMS} tracker}",
+  booktitle     = "Proc. of the  4th International Symposium on Development and Application of Semiconductor Tracking Detectors",
+  address       = "Hiroshima, Japan",
+  month         = "Mar",
+  year          = "2000",
+  volume        = {466},
+  pages         = "359",
+  doi           = "10.1016/S0168-9002(01)00589-7",
+  url           = "https://inspirehep.net/record/563299"
+}
+@techreport{CMS:1997ema,
+	Author = "{CMS Collaboration}",
+	number = {CERN-LHCC-97-033},
+	Title = {The {CMS} electromagnetic calorimeter project: {Technical} design report},
+	url = {https://inspirehep.net/record/1614057},
+	Year = {1997},
+	type          = "Scientific Committee Paper"
+	}
+
+@techreport{CMS:2002xia,
+        Author = "{CMS Collaboration}",
+	number        = "{CERN}-LHCC-2002-02",
+	Slaccitation = {%%CITATION = CERN-LHCC-2002-027;%%},
+	Title = {Addendum to the {CMS ECAL} technical design report: {Changes} to the {CMS ECAL} electronics},
+	url = {https://cds.cern.ch/record/581342},
+	Year = {2002},
+	type          = "Scientific Committee Paper"
+	}
+@article{ecal_7TeV,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/8/09/P09009},
+	Journal = {JINST},
+	Pages = {P09009},
+	Title = {{Energy calibration and resolution of the {CMS} electromagnetic calorimeter in pp collisions at $\sqrt{s} = 7$\,TeV}},
+	Volume = {8},
+	Year = {2013},
+	url = {https://inspirehep.net/record/1237915}}
+@article{Adzic:2007mi,
+	Author = {Adzic, P. and others},
+	Doi = {10.1088/1748-0221/2/04/P04004},
+	Journal = {JINST},
+	Pages = {P04004},
+	Reportnumber = {CERN-CMS-NOTE-2006-148},
+	Slaccitation = {%%CITATION = JINST,2,P04004;%%},
+	Title = {{Energy resolution of the barrel of the CMS electromagnetic calorimeter}},
+	Volume = {2},
+	Year = {2007},
+	url = {https://inspirehep.net/record/753174}}
+
+@article{1748-0221-8-03-C03020,
+	Author = {Bialas, W. and Petyt, D. A.},
+	Doi = {10.1088/1748-0221/8/03/C03020},
+	Journal = {JINST},
+	Pages = {C03020},
+	Title = {Mitigation of anomalous {APD} signals in the {CMS ECAL}},
+	Volume = {8},
+	Year = {2013},
+	url = {https://inspirehep.net/record/1228756}}
+
+@techreport{CMS:1997tfa,
+	Author = "{CMS Collaboration}",
+	number = "{CERN}-LHCC-97-31",
+	url = {https://inspirehep.net/record/1614058},
+	Slaccitation = {%%CITATION = CERN-LHCC-97-31;%%},
+	Title = {{CMS}: The hadron calorimeter technical design report},
+	Year = {1997},
+	type          = "Scientific Committee Paper"
+	}
+	
+@article{ehcal_test_beam,
+        author = {S. Abdullin and others},
+	Collaboration = {{CMS HCAL/ECAL}},
+	Doi = {10.1140/epjc/s10052-009-0959-5},
+	Journal = {Eur. Phys. J. C},
+	Pages = {359},
+	Title = {The {CMS} barrel calorimeter response to particle beams from 2 to 350\,{GeV}},
+	Volume = {60},
+	Year = {2009},
+	url = {https://inspirehep.net/record/826181},
+	note = {Erratum: \textit{Eur. Phys. J. C}, 61 (2009) 353}}
+
+@article{hcal_noise,
+	Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/5/03/T03014},
+	Journal = {JINST},
+	Pages = {T03014},
+	Title = {Identification and filtering of uncharacteristic noise in the {CMS} hadron calorimeter},
+	Volume = {5},
+	Year = {2010},
+	url = {https://inspirehep.net/record/837890}}
+
+@techreport{CMS:1997dma,
+        Author = "{CMS Collaboration}",
+	Number = {CERN-LHCC-97-32},
+	url = {https://inspirehep.net/record/1614056},
+	Slaccitation = {%%CITATION = CERN-LHCC-97-32;%%},
+	Title = {{CMS}: The muon project technical design report},
+	Year = {1997},
+	type          = "Scientific Committee Paper"	
+	}
+
+@article{cms_muon_paper,
+        Author = {Chatrchyan, S. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/8/11/P11002},
+	Journal = {JINST},
+	Pages = {P11002},
+ 	Title = {The performance of the {CMS} muon detector in proton-proton collisions at {$\sqrt{s} = 7$ TeV} at the {LHC}},
+	Volume = {8},
+	Year = {2013},
+	url = {https://inspirehep.net/record/1240504}}
+@article{cms_muon_paper_13TeV,
+        Author = {Sirunyan, A. M. and others},
+	Collaboration = {CMS},
+	Doi = {10.1088/1748-0221/13/06/P06015},
+	Journal = {JINST},
+	Pages = {PP06015},
+ 	Title = {Performance of the {CMS} muon detector and muon reconstruction with proton-proton collisions at $\sqrt{s} = 13$\,{TeV}},
+	Volume = {13},
+	Year = {2018},
+	url = {https://inspirehep.net/record/1667449}}
+
+@inproceedings{RAMSES,
+  author        = "Scibile, L. and others",
+  title         = "{The {LHC} {Radiation} {Monitoring} {System} for the {Environment} and {Safety}}: {From} design to operation",
+  booktitle     = "Proc. of the  10th  European Particle Accelerator Conference (EPAC 2008)",
+  address       = "Genoa, Italy",
+  month         = "Jun",
+  year          = "2008",
+  volume        = {0806233},
+  pages         = "MOPD030",
+  url           = "https://inspirehep.net/record/794553"
+}
+%%%%%%%%%%%%%%%   End of Apparatus Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Reconstruction Chapter  %%%%%%%%%%%%%%%%%%
+
+@article{cms_trigger,
+        Author = {Khachatryan, V. and others},
+	Collaboration = {CMS},
+	Journal = {JINST},
+	Pages = {P01020},
+ 	Title = {The {CMS} trigger system},
+	Volume = {12},
+	Year = {2017},
+	Doi = {10.1088/1748-0221/12/01/P01020},
+	url = {https://inspirehep.net/record/1485699}}
+
+@article{cms_trigger_Run2,
+        Author = {Dev, N. and others},
+	Journal = {JINST},
+	Pages = {C02014},
+ 	Title = {The CMS Level-1 electron and photon trigger: For Run 2 of LHC},
+	Volume = {12},
+	Year = {2017},
+	Doi = {10.1088/1748-0221/12/02/C02014},
+	url = {https://inspirehep.net/record/1513693}}
+	
+@inproceedings{daq_upgrade,
+  author        = "Andre, J-M",
+  title         = "{File-based data flow in the {CMS} Filter Farm}",
+  booktitle     = "Proc. of the 21st International Conference on Computing in High Energy and Nuclear Physics (CHEP2015)",
+  address       = "Okinawa, Japan",
+  month         = apr,
+  year          = "2015",
+  volume        = {664},
+  pages         = "082033",
+  doi           = "10.1088/1742-6596/664/8/082033",
+  	url = {https://inspirehep.net/record/1414057}
+}
+
+@book{l1_upgrade,
+     title     = {{CMS} technical design deport for the level-1 trigger upgrade},
+     booktitle     = {{CMS} technical design report for the level-1 trigger upgrade},
+     publisher = {The {LHC} experiments {Committee}},
+     year      = {2013},
+     editor = {Tapper, A. and Acosta, D.},
+     isbn      = {9789290833901},
+     url       ={https://inspirehep.net/record/1261310}
+}
+@article{Fruhwirth:1987fm, 
+	author = "Fruehwirth, R.",
+        title = {Application of {Kalman} filtering to track and vertex fitting},
+        journal = "Nucl. Instrum. Meth. A",
+	volume = 262,
+	pages = 444,
+	year = 1987,
+	doi = "10.1016/0168-9002(87)90887-4",
+	url = {https://inspirehep.net/record/259509}}
+
+@misc{cms_pix,
+       Collaboration  = "CMS",
+       howpublished    = "Run {2} pixel performance plots for data and simulation",
+       Url            = {https://twiki.cern.ch/twiki/bin/view/CMSPublic/PixelOfflinePlots2016}}
+}
+@misc{cms_strips,
+       Collaboration  = "CMS",
+       howpublished    = "{CMS} silicon strip performance results 2016",
+       Url            = {https://twiki.cern.ch/twiki/bin/view/CMS/StripsOfflinePlots2016}
+}
+@misc{cms_track_eff,
+       Collaboration  = "CMS",
+       howpublished    = "{CMS} tracking {POG} performance plots for 2017 with {phase-I} pixel detector",
+       Url            = {https://twiki.cern.ch/twiki/bin/view/CMSPublic/TrackingPOGPerformance2017MC}
+}
+@techreport{TDR-15-02,
+      author        = "Contardo, D. and others",
+      title         = "{Technical proposal for the {phase-II} upgrade of the {CMS} detector}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-TDR-15-02",
+      month         = "",
+      year          = "2015",
+      reportNumber  = "CMS-TDR-15-02",
+      url           = "https://inspirehep.net/record/1614097"
+      type          = "Scientific Committee Paper"
+}
+@article{4Ctune,
+        Author = {Corke, R. and Sj{\"o}strand, T.},
+	Journal = {JHEP},
+	Pages = {032},
+ 	Title = {Interleaved parton showers and tuning prospects},
+	Volume = {1103},
+	Year = {2011},
+	Doi = {10.1007/JHEP03(2011)032},
+	url = {https://inspirehep.net/record/875856}}
+	
+@inproceedings{TUPIK089,
+	author = {Medrano, L. M. and others},
+	title = {Studies on luminous region, pileup and performance for {HL-LHC} scenarios},
+	booktitle  = "Proc. of the 8th International Particle Accelerator Conference (IPAC'17)",
+	address    = "Copenhagen, Denmark",
+	month       = May,
+	pages = "TUPIK089",
+	year = {2017},
+	doi = {10.18429/JACoW-IPAC2017-TUPIK089},
+	url = "https://inspirehep.net/record/1626355"
+	}
+@techreport{Miao:1061285,
+      author        = "Miao, T. and others",
+      title         = "{Beam-position determination using tracks}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-NOTE-2007-021",
+      month         = "",
+      year          = "2007",
+      reportNumber  = "CMS-NOTE-2007-021",
+      url           = "https://inspirehep.net/record/764607",
+      type          = "CMS Note"
+}
+@article{cdf_d0phi_1,
+        Author = {Ashmanskas, W. and others},
+	Journal = {Part. Nucl. Lett.},
+	Pages = {12},
+ 	Title = "{CDF} Silicon Vertex Tracker: {Tevatron} {Run 2} Preliminary Results",
+	Volume = {5},
+	Year = {2002},
+	url = {https://www1.jinr.ru/Pepan_letters/panl_5_2002.html}}
+@article{cdf_d0phi_2,
+        Author = {Bardi, A. and others},
+	Doi = {10.1142/9789812776464\_0019},
+	Journal = {Nucl. Instrum. Meth. A},
+	Pages = {178},
+ 	Title = "The {CDF} online silicon vertex tracker",
+	Volume = {485},
+	Year = {2002},
+	url = {https://inspirehep.net/record/568551}}
+@techreport{BS_CMS,
+      author        = "{CMS Collaboration}",
+      title         = "Beamspot measurements in 2016",
+      institution   = "",
+      address       = "",
+      number        = "CMS-DP-2016-051",
+      month         = "",
+      year          = "2016",
+      reportNumber  = "CMS-DP-2016-051",
+      url           = "https://cds.cern.ch/record/2285428",
+      type          = "CMS Detector Performance Summary"
+}
+@article{fed,
+        Author = {Foudas, C. and others},
+	Doi = {10.1109/TNS.2005.860173},
+	Journal = {EEE Trans. Nucl. Sci.},
+	Pages = {2836},
+ 	Title = {The {CMS} tracker readout front-end driver},
+	Volume = {52},
+	Year = {2005},
+	url = {https://inspirehep.net/record/605990}}
+
+@article{pdg_2018,
+        Author = {Tanabashi, M. and others},
+	group  = "Particle Data",
+	Doi = {10.1103/PhysRevD.98.030001},
+	Journal = {Phys. Rev. D},
+	Pages = {030001},
+ 	Title = {The Review of Particle Physics (2018)},
+	Volume = {98},
+	Year = {2018},
+	url = {https://pdg.lbl.gov}}
+@article{aleph_PF,
+        Author = {Buskulic, D. and others},
+	Collaboration  = "ALEPH",
+	Doi = {10.1016/0168-9002(95)00138-7},
+	Journal = {Nucl. Instrum. Meth. A},
+	Pages = {481},
+ 	Title = {Performance of the {ALEPH} detector at {LEP}},
+	Volume = {360},
+	Year = {1995},
+	Url = "https://inspirehep.net/record/381617"
+	}
+@article{cms_PF,
+        Author = {Sirunyan, A. M. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/12/10/P10003},
+	Journal = {JINST},
+	Pages = {P10003},
+ 	Title = {Particle-flow reconstruction and global event description with the {CMS} detector},
+	Volume = {12},
+	Year = {2017},
+	url={https://inspirehep.net/record/1605397}}
+
+@inproceedings{dataformats_CMS,
+      author         = "Petrucciani, G. and Rizzi, A. and Vuosalo, C.",
+      title          = "Mini-{AOD}: {A} new analysis data format for {CMS}",
+      booktitle      = "{Proc. of the 21st International Conference on Computing in High Energy and Nuclear Physics (CHEP2015)}",
+      address        = "Okinawa, Japan",
+      month          = "Apr",			
+      year           = "2015",
+      url            = "https://inspirehep.net/record/1414028",
+      pages          = "072052",
+      doi            = "10.1088/1742-6596/664/7/072052"
+}
+@article{epos_lhc,
+        Author = {Pierog, T. and others},
+	Doi = {10.1103/PhysRevC.92.034906},
+	Journal = {Phys. Rev. C},
+	Pages = {034906},
+ 	Title = {{EPOS} {LHC}: {Test} of collective hadronization with data measured at the {CERN} {Large} {Hadron} {Collider}},
+	Volume = {92},
+	Year = {2015},
+	url = {https://inspirehep.net/record/1236629}}
+@articel{geant4,
+      author         = "Agostinelli, S. and others",
+      title          = "\textsc{Geant}4 --- a simulation toolkit",
+      collaboration  = "\textsc{Geant}4",
+      journal        = "Nucl. Instrum. Meth. A",
+      volume         = "506",
+      year           = "2003",
+      pages          = "250",
+      doi            = "10.1016/S0168-9002(03)01368-8",
+      url            = "https://inspirehep.net/record/593382",
+}
+
+@article{cms_eles,
+        Author = {Khachatryan, V. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/10/06/P06005},
+	Journal = {JINST},
+	Pages = {P06005},
+ 	Title = {Performance of electron reconstruction and selection with the {CMS} detector in proton-proton collisions at $\sqrt{s} =8$\,{TeV}},
+	Volume = {10},
+	Year = {2015},
+	url ={https://inspirehep.net/record/1343791}}
+
+@techreport{CMS-DP-2018-028,
+      title         = "Jet energy scale and resolution performance with 13\,{TeV} data collected by {CMS} in 2016",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-DP-2018-02",
+      year          = "2018",
+      reportNumber  = "CMS-DP-2018-02",
+      url           = "https://cds.cern.ch/record/2622157",
+      type          = "CMS Detector Performance Summary"
+}	
+@article{puppi,
+        Author = {Bertolini, D., and Harris, P. and Low, M. and Tran, N.},
+	Doi = {10.1007/JHEP10(2014)059},
+	Journal = {JHEP},
+	Pages = {059},
+ 	Title =  {Pileup {Per} {Particle} {Identification}},
+	Volume = {10},
+	Year = {2014},
+	url={https://inspirehep.net/record/1307411}}
+@techreport{CMS-PAS-JME-16-003,
+      title         = "Jet algorithms performance in 13 {TeV} data",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-JME-16-003",
+      year          = "2017",
+      reportNumber  = "CMS-PAS-JME-16-003",
+      url           = "https://inspirehep.net/record/1519093",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{CMS-PAS-JME-16-004,
+      title         = "Performance of missing energy reconstruction in 13\,{TeV} pp collision data using the {CMS} detector",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-JME-16-004",
+      year          = "2016",
+      reportNumber  = "CMS-PAS-JME-16-004",
+      url           = "https://inspirehep.net/record/1479660",
+      type          = "CMS Physics Analysis Summary",
+}
+@article{cms_jets,
+        Author = {Khachatryan, V. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/12/02/P02014},
+	Journal = {JINST},
+	Pages = {P02014},
+ 	Title = {Jet energy scale and resolution in the {CMS} experiment in pp collisions at 8\,{TeV}},
+	Volume = {12},
+	Year = {2017},
+	url ={https://inspirehep.net/record/1475475}}
+@article{pp_inel,
+        Author = {Sirunyan, A. M. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1007/JHEP07(2018)161},
+	Journal = {JHEP},
+	Pages = {161},
+ 	Title = {Measurement of the inelastic proton-proton cross section at $\sqrt{s} = 13$\,{TeV}},
+	Volume = {1807},
+	Year = {2018},
+	url ={https://inspirehep.net/record/1653948}}
+@article{antikt,
+        Author = {Cacciari, M. and Salam, G.P. and Soyez, G.},
+	Doi = {10.1088/1126-6708/2008/04/063},
+	Journal = {JHEP},
+	Pages = {063},
+ 	Title = {The anti-\kt jet clustering algorithm},
+	Volume = {0804},
+	Year = {2008},
+	url ={https://inspirehep.net/record/779080}}
+@article{fastjet_manual,
+        Author = {Cacciari, M. and Salam, G.P. and Soyez, G.},
+	Doi = {10.1140/epjc/s10052-012-1896-2},
+	Journal = {Eur. Phys. J. C},
+	Pages = {1896},
+ 	Title = {$\textsc{FastJet}$ user manual},
+	Volume = {72},
+	Year = {2012},
+	url ={https://inspirehep.net/record/955176}}
+@article{fastjet_pileup,
+        Author = {Cacciari, M. and Salam, G.P.},
+	Doi = {10.1016/j.physletb.2007.09.077},
+	Journal = {Phys. Lett. B},
+	Pages = {119},
+ 	Title = {Pileup subtraction using jet areas},
+	Volume = {659},
+	Year = {2008},
+	url ={https://inspirehep.net/record/755413}}
+@article{ghosts,
+        Author = {Cacciari, M. and Salam, G. P. and Soyez, G.},
+	Doi = {10.1088/1126-6708/2008/04/005},
+	Journal = {JHEP},
+	Pages = {005},
+ 	Title = {The catchment area of jets},
+	Volume = {0804},
+	Year = {2008},
+	url ={https://inspirehep.net/record/779079}}
+@article{cms_dijets,
+	Author = {Sirunyan, A. M. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1103/PhysRevLett.121.062002},
+	Journal = {Phys. Rev. Lett.},
+	Pages = {062002},
+ 	Title = {Constraining gluon distributions in nuclei using dijets in proton-proton and proton-lead collisions at $\sqrt{s_{_{\mathrm{NN}}}}=5.02$\,{TeV}},
+	Volume = {121},
+	Year = {2018},
+	url ={https://inspirehep.net/record/1672941}}
+
+@article{cms_photons,
+	Author = {Khachatryan, V. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/10/08/P08010},
+	Journal = {JINST},
+	Pages = {P08010},
+ 	Title = {Performance of photon reconstruction and identification with the {CMS} detector in proton-proton collisions at $\sqrt{s}=8$\,{TeV}},
+	Volume = {10},
+	Year = {2015},
+	url ={https://inspirehep.net/record/1343792}}
+
+@inproceedings{Tosi:2017nzv,
+      author         = "Tosi, N.",
+      title          = "The {CMS} beam halo monitor at the {LHC}: {Implementation} and first measurements",
+      booktitle      = "{Proc. of the 5th International Beam Instrumentation Conference (IBIC 2016)}",
+      address        = "Barcelona, Spain",
+      month          = "Sep.",			
+      year           = "2017",
+      url            = "https://inspirehep.net/record/1639624",
+      pages          = "TUPG20",
+      doi            = "10.18429/JACoW-IBIC2016-TUPG20",
+      SLACcitation   = "%%CITATION = INSPIRE-1639624;%%"
+}
+@article{cms_bjets_Run1,
+	Author = {Chatrchyan, S. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/8/04/P04013},
+	Journal = {JINST},
+	Pages = {P04013},
+ 	Title = {Identification of b quark jets with the {CMS} experiment},
+	Volume = {8},
+	Year = {2013},
+	url ={https://inspirehep.net/record/1203133}}
+	
+@article{cms_bjets_Run2,
+	Author = {Sirunyan, A. M. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1088/1748-0221/13/05/P05011},
+	Journal = {JINST},
+	Pages = {P05011},
+ 	Title = {Identification of heavy-flavor jets with the {CMS} detector in pp collisions at 13\,{TeV}},
+	Volume = {13},
+	Year = {2018},
+	url ={https://inspirehep.net/record/1644362}}
+
+@article{cms_bjets_IVF,
+	Author = {Khachatryan, V. and others},
+	Collaboration  = "CMS",
+	Doi = {10.1007/JHEP03(2011)136},
+	Journal = {JINST},
+	Pages = {1103},
+ 	Title = {Measurement of $\mathrm{B\overline{B}}$ angular correlations based on secondary vertex reconstruction at $\sqrt{s}=7$\,{TeV}},
+	Volume = {136},
+	Year = {2011},
+	url ={https://inspirehep.net/record/889807}}
+	
+%%%%%%%%%%%%%%%   End of Reconstruction Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Luminosity Chapter  %%%%%%%%%%%%%%%%%%
+@article{ada,
+      author         = "L. Bonolis",
+      title          = "{Bruno Touschek vs. machine builders: {AdA}, the first matter-antimatter collider}",
+      journal        = "Riv. Nuovo Cim.",
+      volume         = "28N11",
+      year           = "2005",
+      pages          = "1",
+      doi            = "10.1393/ncr/i2005-10006-x",
+      url            = "https://inspirehep.net/record/706626",
+      SLACcitation   = "%%CITATION = ARXIV:1405.1849;%%"
+}
+@article{totem,
+      author         = "Antchev, G.  and others",
+      title          = "{Luminosity-independent measurements of total, elastic and inelastic cross sections at $\sqrt{s} = 7$\,{TeV} }",
+      collaboration  = "TOTEM",
+      journal        = "EPL",
+      volume         = "101",
+      year           = "2013",
+      pages          = "21004",
+      doi            = "10.1209/0295-5075/101/21004",
+      reportNumber   = "{CERN}-PH-EP-2012-353",
+      url            = "https://inspirehep.net/record/1220864",
+      SLACcitation   = "%%CITATION = ARXIV:1405.1849;%%"
+}
+@article{opal,
+      author         = "Abbiendi, G. and others",
+      title          = "{Precision luminosity for $\mathrm{Z}^{0}$ lineshape measurements with a silicon-tungsten calorimeter}",
+      collaboration  = "OPAL",
+      journal        = "Eur. Phys. J. C",
+      volume         = "14",
+      year           = "2000",
+      pages          = "373",
+      doi            = "10.1007/s100520000353",
+      eprint         = "9910066",
+      archivePrefix  = "arXiv",
+      primaryClass   = "hep-ex",
+      reportNumber   = "{CERN}-PH-EP-2014-087",
+      url            = "https://inspirehep.net/record/509391",
+      SLACcitation   = "%%CITATION = ARXIV:1405.1849;%%"
+}
+@article{ADAMCZYK201480,
+title = "Measurement of the luminosity in the {ZEUS} experiment at {HERA II}",
+journal = "Nucl. Instrum. Meth. A",
+volume = "744",
+pages = "80",
+year = "2014",
+doi = "10.1016/j.nima.2014.01.053",
+url = "https://inspirehep.net/record/1237232",
+author = "Adamczyk, L. and others",
+collaboration = "ZEUS",
+}
+@article{BALAGURA2011634,
+title = "Notes on van der {Meer} scan for absolute luminosity measurement",
+journal = "Nucl. Instrum. Meth. A",
+volume = "654",
+pages = "634",
+year = "2011",
+doi = "10.1016/j.nima.2011.06.007",
+url = "https://inspirehep.net/record/891611",
+author = " Balagura, V.",
+}
+
+@techreport{vanderMeer:296752,
+      author        = "van der Meer, S.",
+      title         = "{Calibration of the effective beam height in the {ISR}}",
+      institution   = "",
+      address       = "",
+      number        = "{CERN}-ISR-PO-68-31",
+      year          = "1968",
+      url           = "https://inspirehep.net/record/1098817"
+}
+@article{Witold_overview,
+title = "Luminosity determination at proton colliders",
+journal = "Prog. Part. Nucl. Phys.",
+volume = "81",
+pages = "97",
+year = "2015",
+doi = "10.1016/j.ppnp.2014.11.002",
+url = "https://inspirehep.net/record/1357777",
+author = "Grafstr{\"o}m, P. and Kozanecki, W."
+}
+@article{ISR_UCLouvain,
+title = "Measurement of small-angle antiproton-proton and proton-proton elastic scattering at the {CERN} intersecting storage rings",
+journal = "Nucl. Phys. B",
+volume = "262",
+pages = "689",
+year = "1985",
+doi = "10.1016/0550-3213(85)90511-5",
+url = "https://inspirehep.net/record/214689",
+author = "Amos, N.A. and others",
+}
+
+@techreport{cms_emit,
+      title         = "Emittance scans for {CMS} luminosity calibration in 2017",
+      author        = "{CMS Collaboration}",
+      number        = "CMS-DP-2018-011",
+      year          = "2018",
+      reportNumber  = "CMS-DP-2018-011",
+      url           = "https://cds.cern.ch/record/2306378",
+      type          = "CMS Detector Performance Summary"
+}
+@article{Abelev:2014epa,
+      author         = "Abelev, B. B. and others",
+      title          = "{Measurement of visible cross sections in proton-lead
+                        collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=5.02$}\,{TeV} in van der
+                        Meer scans with the ALICE detector}",
+      collaboration  = "ALICE",
+      journal        = "JINST",
+      volume         = "9",
+      year           = "2014",
+      pages          = "P11003",
+      doi            = "10.1088/1748-0221/9/11/P11003",
+      SLACcitation   = "%%CITATION = ARXIV:1405.1849;%%",
+      url           = "https://inspirehep.net/record/1294934/"
+}
+@techreport{ALICE-PUBLIC-2017-002,
+      title         = "{ALICE} luminosity determination for pp collisions at $\sqrt{s}=8$\,{TeV}",
+      author        = "{ALICE Collaboration}",
+      number        = "ALICE-PUBLIC-2017-002",
+      year          = "2017",
+      reportNumber  = "ALICE-PUBLIC-2017-002",
+      url           = "https://cds.cern.ch/record/2255216",
+}
+@article{Aad:2013ucp,
+      author         = "Aad, Georges and others",
+      title          = "{Improved luminosity determination in pp collisions at $\sqrt{s}$ = 7\,{TeV} using the ATLAS detector at the LHC}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "73",
+      year           = "2013",
+      pages          = "2518",
+      doi            = "10.1140/epjc/s10052-013-2518-3",
+      SLACcitation   = "%%CITATION = ARXIV:1302.4393;%%",
+      url           = "https://inspirehep.net/record/1219960"
+}
+
+@techreport{CMS-PAS-LUM-13-001,
+      title         = "{CMS} luminosity based on the pixel-cluster counting: {Summer} 2013 update",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-13-001",
+      year          = "2013",
+      reportNumber  = "CMS-PAS-LUM-13-001",
+      url           = "https://inspirehep.net/record/1260876",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{ALICE-PUBLIC-2016-005,
+      title         = "{ALICE} luminosity determination for pp collisions at $\sqrt{s} =$ 5 {TeV}",
+      author        = "{ALICE Collaboration}",
+      number        = "ALICE-PUBLIC-2016-005",
+      institution   = "",
+      address       = "",
+      year          = "2017",
+      reportNumber  = "ALICE-PUBLIC-2016-005",
+      url           = "https://cds.cern.ch/record/2202638",
+}
+@techreport{ALICE-PUBLIC-2016-002,
+      title         = "{ALICE} luminosity determination for pp collisions at $\sqrt{s} =$ 13 {TeV}",
+      author        = "{ALICE Collaboration}",
+      number        = "ALICE-PUBLIC-2016-002",
+      institution   = "",
+      address       = "",
+      year          = "2016",
+      reportNumber  = "ALICE-PUBLIC-2016-002",
+      url           = "https://cds.cern.ch/record/2160174",
+}
+@techreport{CMS-PAS-LUM-16-001,
+      title         = "{{CMS} luminosity calibration for the pp reference run at  $\sqrt{s} =$ 5.02 {TeV}}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-16-001",
+      year          = "2016",
+      reportNumber  = "CMS-PAS-LUM-16-001",
+      url           = "https://inspirehep.net/record/1501075",
+      type          = "CMS Physics Analysis Summary",
+}
+
+@techreport{CMS-PAS-LUM-17-001,
+      title         = "{CMS} luminosity measurements for the 2016 data taking period",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-17-001",
+      year          = "2017",
+      reportNumber  = "CMS-PAS-LUM-17-001",
+      url           = "https://inspirehep.net/record/1519242",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{CMS-PAS-LUM-17-002,
+      title         = "{CMS} luminosity measurement using 2016 proton-nucleus collisions at nucleon-nucleon center-of-mass energy of 8.16\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-17-002",
+      year          = "2018",
+      reportNumber  = "CMS-PAS-LUM-17-002",
+      url           = "https://inspirehep.net/record/1681215",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{CMS-PAS-LUM-17-004,
+      title         = "{CMS} luminosity measurement for the 2017 data-taking period at $\sqrt{s}=13$\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-17-004",
+      year          = "2018",
+      reportNumber  = "CMS-PAS-LUM-17-004",
+      url           = "https://inspirehep.net/record/1677076",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{CMS-PAS-LUM-15-001,
+      title         = "{CMS} luminosity measurement for the 2015 data taking period",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-LUM-15-001",
+      year          = "2015",
+      reportNumber  = "CMS-PAS-LUM-15-001",
+      url           = "https://inspirehep.net/record/1427340",
+      type          = "CMS Physics Analysis Summary",
+}
+
+@techreport{LHC-PROJECT-Report-1019,
+      title         = "Absolute luminosity from machine parameters",
+      author        = "Burkhardt, H and Grafstr{\"o}m, P",
+      institution   = "",
+      address       = "",
+      number        = "LHC-PROJECT-Report-1019",
+      year          = "2007",
+      reportNumber  = "LHC-PROJECT-Report-1019",
+      url           = "https://inspirehep.net/record/763718"
+}
+
+@inproceedings{CERN-ATS-2009-071,
+  author        = "Lamont, M. and others",
+  title         = "Luminosity optimization and calibration at {LHC}",
+  booktitle     = "Proc. of Particle Accelerator Conference 2009 (PAC09)",
+  address       = "Vancouver, BC, Canada",
+  month         = may,
+  year          = "2009",
+  pages         = "2513",
+  url           = "https://cdsweb.cern.ch/record/1211822"
+}
+@inproceedings{fanouria_overview,
+  author        = "Papadopoulou, S. and others",
+  title         = "Modeling and measurements of bunch profiles at the {LHC}",
+  booktitle     = "Proc. of the 8th International Particle Accelerator Conference (IPAC'17)",
+  address       = "Copenhagen, Denmark",
+  month         =  May,
+  year          = "2017",
+  pages         = "TUPVA044",
+  doi           = "10.1088/1742-6596/874/1/012008",
+  url           = "https://inspirehep.net/record/1611150"
+}
+@inproceedings{fanouria,
+  author        = "Antoniou, F. and others",
+  title         = "Can we predict luminosity?",
+  booktitle     = "Proc. of the 7th Evian Workshop on LHC beam operation",
+  address       = "Evian Les Bains, France",
+  month         = Dec,
+  year          = "2016",
+  pages         = "125",
+  url           = "https://inspirehep.net/record/1635435"
+}
+@techreport{CERN-ACC-NOTE-2017-0029,
+      title         = "{MD468}: {Electron} cloud reference fills and dependence on the bunch intensity",
+      author        = "Iadarola, G. and others",
+      institution   = "",
+      address       = "",
+      number        = "{CERN}-ACC-NOTE-2017-0029",
+      year          = "2007",
+      reportNumber  = "{CERN}-ACC-NOTE-2017-0029",
+      url           = "https://cds.cern.ch/record/2260999"
+}
+@inproceedings{ecloud,
+  author        = "Mether, L. and Dijkstalf, P. and Iadarola, G. and Rumolo, G.",
+  title         = "Electron cloud in 2016: {Cloudy} or clear?",
+  booktitle     = "Proc. of the 7th Evian Workshop on LHC beam operation",
+  address       = "Evian Les Bains, France",
+  month         = Dec,
+  year          = "2017",
+  pages         = "147",
+  url           = "https://inspirehep.net/record/1635438"
+}
+@techreport{Barschel:1425904,
+      author        = "Barschel, C. and others",
+      title         = "{Results of the LHC DCCT calibration studies}",
+      month         = "",
+      number        = "{CERN}-ATS-Note-2012-026 PERF",
+      year          = "2012",
+      reportNumber  = "{CERN}-ATS-Note-2012-026 PERF",
+      url           = "https://cds.cern.ch/record/1425904",
+}
+@techreport{Belohrad:1267400,
+      author        = "Belohrad, D. and others",
+      title         = "{The LHC Fast BCT system: A comparison of design
+                       parameters with initial performance}",
+      institution   = "{CERN}",
+      address       = "Geneva",
+      number        = "{CERN}-BE-2010-010",
+      month         = "May",
+      year          = "2010",
+      reportNumber  = "{CERN}-BE-2010-010",
+      url           = "https://cds.cern.ch/record/1267400",
+}
+@inproceedings{bqm,
+      author        = "Papotti,  G and Bohl, T and Follin, F and Wehrle, U",
+      title         = "{Longitudinal beam measurements at the {LHC}: The {LHC} {Beam} {Quality} {Monitor}}",
+      booktitle     = "Proc. of the 2nd International Particle Accelerator Conference, (IPAC 2011)",
+      volume        = "C110904",
+      year          = "2011",
+      pages         = "1852",
+      url           = "https://inspirehep.net/record/1183208"
+}
+@article{PhysRevSTAB.15.032803,
+  title = {Longitudinal density monitor for the {LHC}},
+  author = {Jeff, A. and others},
+  journal = {Phys. Rev. ST Accel. Beams},
+  volume = {15},
+  pages = {032803},
+  year = {2012},
+  doi = {10.1103/PhysRevSTAB.15.032803},
+  url = {https://link.aps.org/doi/10.1103/PhysRevSTAB.15.032803}
+}
+@article{Gasior:1476070,
+      author        = "Gasior, M and Olexa, J and Steinhagen, RJ",
+      title         = "{{BPM} electronics based on compensated diode detectors:
+                       {Results} from development systems}",
+      journal       = "Conf. Proc.",
+      number        = "{CERN}-ATS-2012-247",
+      volume        = "C1204151",
+      pages         = "MOPG010",
+      month         = "Apr",
+      year          = "2012",
+      reportNumber  = "{CERN}-ATS-2012-247",
+      url           = "https://cds.cern.ch/record/1476070",
+}
+@TECHREPORT{CMS_AN_2006-027,
+     AUTHOR       = "Belotelov, I. and Golutvin, I. and Bourilkov, D. and Lanyov, A. and Rogalev, E. and Savina, M. and Shmatov, S.",
+     TITLE        = "Search for {ADD} extra dimensional gravity in dimuon channel with the {CMS} Detector",
+     TYPE      = "CMS Note",
+     NUMBER       = "2006/076",
+     URL          = "https://cdsweb.cern.ch/record/962045",
+     YEAR         = "2006"
+     }
+@TECHREPORT{CMS_NOTE_2006-106,
+     AUTHOR       = "Aldaya, M. and Arce, P. and Caballero, J. and de la Cruz, B. and Garcia-Abia, P. and Hernandez, J. M. and Josa, M. I. and Ruiz, E.",
+     TITLE        = "Discovery potential and search strategy for the standard model {Higgs} boson in the {$H\to ZZ^\star\to 4\mu$} decay channel using a mass-independent analysis",
+     TYPE      = "CMS Note",
+     NUMBER       = "2006/106",
+     URL          = "https://cdsweb.cern.ch/record/962058",
+     YEAR         = "2006"}
+
+@inproceedings{Kornmayer2016304,
+title = "{The {CMS} {Pixel} {Luminosity} {Telescope}}",
+booktitle = "Proceedings of the 13th Pisa Meeting on Advanced Detectors: Frontier Detectors for Frontier Physics",
+volume = "824",
+number = "",
+pages = "304",
+year = "2016",
+address    = "La Biodola, Italy",
+month         = "May",
+url = "https://inspirehep.net/record/1458032",
+author = "Kornmayer, A."
+}
+
+@inproceedings{Lujan:2017kvh,
+      author         = "Lujan, P.",
+      title          = "Performance of the {Pixel} {Luminosity} {Telescope} for
+                        luminosity measurement at {CMS} during {Run 2}",
+      booktitle      = "{Proceedings of the European Physical Society Conference on High Energy Physics, (EPS-HEP 2017)}",
+      journal        = "",
+      volume         = "314",
+      year           = "2017",
+      pages          = "504",
+      month          = "Jul",
+      address        = "Venice, Italy",
+      url = "https://inspirehep.net/record/1664774"
+}
+@inproceedings{Zagozdzinska:2015,
+      author         = "Zagozdzinska, A. A. and others",
+      title          = "New {Fast} {Beam} {Conditions} {Monitoring} ({BCM1F}) system for {CMS}",
+      booktitle      = "{Proceedings of the Topical Workshop on Electronics for Particle Physics (TWEPP15)}",
+      journal        = "",
+      volume         = "11",
+      year           = "2015",
+      pages          = "C01088",
+      month          = "Oct",
+      address        = "Lisbon, Portugal",
+      url            = "https://inspirehep.net/record/1418560"
+}
+@phdthesis{Hempel:2017nvn,
+      author         = "Hempel, M.",
+      title          = "Development of a novel diamond based detector for
+                        machine induced background and luminosity measurements",
+      school         = "DESY",
+      year           = "2017",
+      url            = "https://inspirehep.net/record/1611774",
+      doi            = "10.3204/PUBDB-2017-06875",
+      note           = "{DESY-THESIS-2017-030}",
+      SLACcitation   = "%%CITATION = DESY-THESIS-2017-030;%%"
+}
+@inproceedings{bptx,
+      author         = "Bell, A. J.",
+      title          = "Beam and radiation monitoring for {CMS}",
+      booktitle      = "{Proceedings of the 2008 IEEE Nuclear Science Symposium, Medical Imaging Conference and 16th International Workshop on Room-Temperature Semiconductor X-Ray and Gamma-Ray Detectors (NSS/MIC 2008/RTSD 2008)}",
+      journal        = "",
+      volume         = "",
+      year           = "2008",
+      pages          = "2322",
+      month          = "Oct",
+      address        = "Dresden, Germany",
+      url            = "https://inspirehep.net/record/1398863"
+}
+
+@Article{beta_beating,
+     author    = "Tomas, R. and others",
+     title     = "{CERN} {Large} {Hadron} {Collider} optics model, measurements, and corrections",
+     journal   = "Phys. Rev. ST Accel. Beams",
+     volume    = "13",
+     year      = "2010",
+     pages     = "121004",
+     doi       = "10.1103/PhysRevSTAB.13.121004",
+     url       = "https://inspirehep.net/record/882698"
+}
+@Article{Brandt:1997gi,
+     author    = "Brandt, A. and others",
+     collaboration = "UA8",
+     title     = "Measurements of single diffraction at $\sqrt{s} =$ 630\,{GeV}:
+                  Evidence for  a nonlinear $\alpha(t)$ of the pomeron",
+     journal   = "Nucl. Phys. B",
+     volume    = "514",
+     year      = "1998",
+     pages     = "3",
+     SLACcitation  = "%%CITATION = HEP-EX 9710004;%%",
+     doi       = "10.1016/S0550-3213(97)00813-4"
+}
+@ARTICLE{Buchmuller:1986zs,
+     AUTHOR       = "Buchm{\"u}ller, W. and Wyler, D.",
+     TITLE        = "Constraints on {SU(5)}-type leptoquarks",
+     JOURNAL      = "Phys. Lett. B",
+     VOLUME       = "177",
+     YEAR         = "1986",
+     pages        = "377",
+     SLACcitation  = "%%CITATION = PHLTA,B191,442;%%",
+     doi          = "10.1016/0370-2693(86)90771-9"}
+@Article{PTDR2,
+     author    = "{CMS Collaboration}",
+     title     = "{CMS} technical design report, volume {II}: {Physics}
+                  performance",
+     journal   = "J. Phys. G",
+     volume    = "34",
+     year      = "2007",
+     pages     = "995",
+     doi       = "10.1088/0954-3899/34/6/S01",
+     type          = "Scientific Committee Paper"
+     SLACcitation  = "%%CITATION = JPHGB,G34,995;%%"
+}
+% PAS are now TECHREPORTS. Same for Notes. A formatted list of PASs is located in [svn]/utils/branches/dev/general/pasBib-tech.bib
+@TECHREPORT{CMS-PAS-JME-10-003,
+      AUTHOR      = "{CMS Collaboration}",
+      COLLABORATION = {CMS},
+      TITLE       = "Jet performance in pp collisions at $\sqrt{s}$=7 {TeV}",
+      URL         = "https://inspirehep.net/record/925285",
+      TYPE     = "CMS Physics Analysis Summary",
+      NUMBER      = "CMS-PAS-JME-10-003",
+      YEAR        = "2010"
+}
+% An evergreen:
+@article{Beringer:1900zz,
+      author         = "{Particle Data Group} and Beringer, J. and others",
+      title          = "{Review of Particle Physics}",
+      journal        = "Phys. Rev. D",
+      volume         = "86",
+      pages          = "010001",
+      doi            = "10.1103/PhysRevD.86.010001",
+      year           = "2012",
+      SLACcitation   = "%%CITATION = PHRVA,D86,010001;%%",
+}
+%
+% An example of a document which only appears on arXiv. This one could alternatively be cited as a TECHREPORT using any of the various laboratory report numbers when hosted on a lab server:
+% reportNumber   = "{CERN}-PH-EP-2010-095, FERMILAB-TM-2480-PPD, LEPEWWG-2010-01, TEVEWWG-2010-01, ALEPH-2010-001-PHYSICS-2010-001, CDF-NOTE-10338, D0-NOTE-6130, DELPHI-DELPHI-2010-001-PHYS-952, L3-NOTE-2837, OPAL-PR432, SLAC-PUB-14301",
+%
+@UNPUBLISHED{LEPewkfits,
+     author = "{ALEPH and CDF and D{\O} and DELPHI and L3 and OPAL and SLD Collaborations and the LEP Electroweak Working Group and the Tevatron Electroweak Working Group, and the SLD Electroweak and Heavy Flavor Groups}",
+     title     = "Precision electroweak measurements and constraints on
+the {Standard Model}",
+     URL       = "https://lepewwg.web.cern.ch/LEPEWWG",
+     eprint    = "1012.2367",
+     archivePrefix = "arXiv",
+     primaryClass  =  "hep-ex",
+     year  = "2010",
+     SLACcitation  = "%%CITATION = 1012.2367;%%"
+}
+
+@article{Khachatryan:2010mp,
+     author    = "Khachatryan, V. and others",
+     collaboration = "CMS",
+     title     = "Search for pair production of first-generation scalar leptoquarks in pp collisions at $\sqrt{s} = 7$\,{TeV}",
+     journal        = "Phys. Rev. Lett.",
+      volume         = "106",
+      pages          = "201802",
+      doi            = "10.1103/PhysRevLett.106.201802",
+      year           = "2011",
+     url = "https://inspirehep.net/record/881886"
+}
+@article{CMS-PAPER-MUO-10-004,
+     author    = "Chatrchyan, S. and others",
+     collaboration = "CMS",
+     title     = "Performance of CMS muon reconstruction in pp collision events at {$\sqrt{s} = 7$\,TeV}",
+     journal        = "JINST",
+      volume         = "7",
+      pages          = "P10002",
+      doi            = "10.1088/1748-0221/7/10/P10002",
+      year           = "2012",
+      url = "https://inspirehep.net/record/1118729"
+}
+@article{ATLAS:2011aa,
+      Author = {Aad, G. and others},
+      Collaboration = {ATLAS},
+      journal        = "Phys. Rev. Lett.",
+      volume         = "108",
+      pages          = "111802",
+      doi            = "10.1103/PhysRevLett.108.111802"
+      year           = "2012",
+      Title = {Search for the {H}iggs boson in the {$H\to$WW(*)$\to \ell^+ \nu \ell^- \overline{\nu}$} decay channel in pp collisions at $\sqrt{s}$ = 7 {TeV} with the {ATLAS} detector},
+      url = "https://inspirehep.net/record/1080891"
+}
+% Misc
+@Article{Sjostrand:2006za,
+      author         = "Sj{\"o}strand, Torbj{\"o}rn and Mrenna, Stephen and Skands, Peter",
+      title          = "{\textsc{pythia}}\,6.4 physics and manual",
+      journal        = "JHEP",
+      volume         = "0605",
+      pages          = "026",
+      doi            = "10.1088/1126-6708/2006/05/026",
+      year           = "2006",
+      url            = "https://inspirehep.net/record/712925"
+}
+@inproceedings{Zanetti:1357856,
+      author        = "Zanetti, Marco",
+      title         = "{Beams scan based absolute normalization of the CMS
+                       luminosity measurement. CMS 2010 luminosity determination}",
+      booktitle     ="Proceedings of the LHC Lumi Days: LHC Workshop on LHC Luminosity Calibration",
+      address       = "Geneva, Switzerland",
+      volume        = "",
+      pages         = "69",
+      number        = "",
+      year          = "2011",
+      month         = "Jan",
+      reportNumber  = "{CERN}-Proceedings-2011-001",
+      url           = "https://cds.cern.ch/record/1357856",
+
+}
+@techreport{CMS-PAS-LUM-12-001,
+      title         = "{CMS luminosity based on the pixel-cluster counting: Summer 2012 update}",
+      institution   = "",
+      collaboration = "CMS",
+      address       = "",
+      number        = "CMS-PAS-LUM-12-001",
+      year          = "2012",
+      reportNumber  = "CMS-PAS-LUM-12-001",
+      url           = "https://inspirehep.net/record/1260806",
+      type          = "CMS Physics Analysis Summary",
+}
+@techreport{Kozanecki:1581723,
+      author        = "Kozanecki, W and Pieloni, T and Wenninger, J",
+      title         = "{Observation of beam--beam deflections with {LHC} orbit data}",
+      institution   = "",
+      address       = "",
+      number  = "{CERN}-ACC-NOTE-2013-0006",
+      month         = "",
+      year          = "2013",
+      reportNumber  = "{CERN}-ACC-NOTE-2013-0006",
+      url           = "https://cds.cern.ch/record/1581723",
+}
+@article{Aaij:2014ida,
+      author         = "Aaij, Roel and others",
+      title          = "{Precision luminosity measurements at {LHCb}}",
+      collaboration  = "LHCb",
+      journal        = "JINST",
+      volume         = "9",
+      year           = "2014",
+      pages          = "P12005",
+      doi            = "10.1088/1748-0221/9/12/P12005",
+      url           = "https://inspirehep.net/record/1319638"
+}
+@article{Salfeld-Nebgen:2138397,
+      author        = "Klute, Markus and Medlock,
+                       Catherine Aiko and Salfeld-Nebgen, Jakob",
+      title         = "{Beam-imaging and luminosity calibration}",
+      journal        = "JINST",
+      volume         = "12",
+      year           = "2017",
+      pages          = "P03018",
+      doi            = "10.1088/1748-0221/12/03/P03018",
+      url            = "https://inspirehep.net/record/1427292"}
+@phdthesis{Barschel:1693671,
+      author        = "Barschel, C.",
+      title         = "{Precision luminosity measurement at {LHCb} with beam--gas imaging}",
+      school        = "RWTH Aachen University",
+      address       = "",
+      number        = "{CERN-THESIS-2013-301}",
+      month         = "",
+      year          = "2014",
+      note          = "{CERN-THESIS-2013-301}",
+      url           = "https://inspirehep.net/record/1339684"
+}
+@inproceedings{BGV_1,
+        Author = {Rihl, M.},
+	url = {https://inspirehep.net/record/1513522},
+	doi = "10.1016/j.nima.2016.04.051",
+	Title = "{Imaging the {LHC} beams with silicon and scintillating fibre vertex detectors}",
+	booktitle  = "Proc. of the 14th Vienna Conference on Instrumentation (VCI 2016)",
+	pages = {575},
+	address    = "Vienna, Austria",
+	month       = Feb,
+	year = {2015}}
+
+@inproceedings{BGV_2,
+        Author = {Alexopoulos, A., and others},
+	Title = "{First {LHC} transverse beam-size measurements with the {Beam} {Gas} {Vertex} detector}",
+	booktitle  = "Proc. of the 8th International Particle Accelerator Conference (IPAC'17)",
+        address    = "Copenhagen, Denmark",
+	month       = May,
+	year = {2017},
+	pages = {TUOAB1},
+	doi = "10.18429/JACoW-IPAC2017-TUOAB1",
+        url = {https://inspirehep.net/record/1611202}
+}
+
+@techreport{spurious,
+      author        = "Alici, A. and others",
+      title         = "{Study of the LHC ghost charge and satellite bunches for luminosity calibration}",
+      institution   = "",
+      address       = "",
+      number        = "{CERN}-ATS-Note-2012-029 PERF",
+      year          = "2012",
+      url           = "https://cds.cern.ch/record/1427728",
+}
+@phdthesis{CERN-THESIS-2018-049,
+      author        = "Rihl, M.",
+      title         = "{Development of a nondestructive beam-profile monitor based on scintillating fibre planes and {SIPM}s}",
+      school        = "Vienna Technical University",
+      address       = "",
+      number        = "{CERN-THESIS-2018-049}",
+      month         = "",
+      year          = "2018",
+      note          = "{CERN-THESIS-2018-09}",
+      url           = "https://cds.cern.ch/record/2318275"
+}
+
+%%%%%%%%%%%%%%%   End of Luminosity Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of pp 5.02TeV Chapter  %%%%%%%%%%%%%%%%%%
+
+@article{gluon_vs_tt,
+      author         = "Czakon, M. and Mangano, M.L. and Mitov, A. and Rojo, J.",
+      title          = "{Constraints on the gluon PDF from top quark pair production at hadron colliders}",
+      journal        = "JHEP",
+      volume         = "1307",
+      year           = "2013",
+      pages          = "167",
+      doi            = "10.1007/JHEP07(2013)167",
+      url            = "https://inspirehep.net/record/1225789"
+}
+
+@article{ATLAStt12,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the top quark pair production cross section with {ATLAS} in the single lepton channel}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett. B",
+      volume         = "711",
+      year           = "2012",
+      pages          = "244",
+      doi            = "10.1016/j.physletb.2012.03.083",
+      url            = "https://inspirehep.net/record/1083794"
+}
+@article{polemass,
+      COLLABORATION = "CMS",
+      TITLE       = "Determination of the top quark pole mass and strong coupling constant from the $\mathrm{t}\overline{\mathrm{t}}$ production cross section in pp collisions at {$\sqrt{s} = 7$\,TeV}",
+      AUTHOR      = "Chatrchyan, Serguei and others",
+      JOURNAL     = "Phys. Lett. B",
+      VOLUME      = "728",
+      PAGES       = "496",
+      DOI         = "10.1016/j.physletb.2013.12.009",
+      NOTE        = {Erratum: \textit{Phys. Lett. B}, 738 (2014) 526},
+      YEAR        = "2013",
+      URL         = "https://inspirehep.net/record/1241819"
+}
+@article{Sirunyan:2017azo,
+      author         = "Sirunyan, Albert M and others",
+      title          = "{Measurement of double-differential cross sections for top quark pair production in pp collisions at $\sqrt{s}=8$\,TeV and impact on parton distribution functions}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "77",
+      year           = "2017",
+      pages          = "459",
+      doi            = "10.1140/epjc/s10052-017-4984-5",
+      url            = "https://inspirehep.net/record/1516191/"
+}
+@article{Khachatryan:2015uqb,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement of the top quark pair production cross
+                        section in proton-proton collisions at $\sqrt{s} =$ 13
+                        TeV}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev. Lett.",
+      volume         = "116",
+      year           = "2016",
+      pages          = "052002",
+      doi            = "10.1103/PhysRevLett.116.052002",
+      url            = "https://inspirehep.net/record/1398582"a
+}
+@article{ATLAStt13TeV2,
+      author         = "Aaboud, Morad and others",
+      title          = "{Measurement of the $\mathrm{t \overline{t}}$ production cross section
+                        using $\mathrm{e} \mu$ events with b-tagged jets in pp collisions at
+                        $\sqrt{s}$ = 13 TeV with the ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Phys. Lett. B",
+      volume         = "761",
+      year           = "2016",
+      pages          = "136",
+      doi            = "10.1016/j.physletb.2016.08.019",
+      url            = "https://inspirehep.net/record/1468168"
+}
+
+@article{ATLAStt6,
+      author         = "Aad, Georges and others",
+      title          = "{Measurement of the $\mathrm{t \overline{t}}$ production
+                        cross section using $\mathrm{e} \mu$ events with $\rm{b}$-tagged jets
+                        in pp collisions at $\sqrt{s}=7$ and 8 TeV with the
+                        ATLAS detector}",
+      collaboration  = "ATLAS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "74",
+      year           = "2014",
+      pages          = "3109",
+      doi            = "10.1140/epjc/s10052-014-3109-7",
+      url            = "https://inspirehep.net/record/1301856"
+}
+
+@article{Khachatryan:2016yzq,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurements of the \ttbar\ production cross section in
+                        lepton+jets final states in pp collisions at 8 TeV and
+                        ratio of 8 to 7 TeV cross sections}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "77",
+      year           = "2017",
+      pages          = "15",
+      eprint         = "1602.09024",
+      doi            = "10.1140/epjc/s10052-016-4504-z",
+      url            = "https://inspirehep.net/record/1424842"
+}
+
+@article{Khachatryan:2016mqs,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement of the \ttbar\ production cross section in
+                        the e$\mu$ channel in proton-proton collisions at $\sqrt{s} =
+                        7$ and $8$ TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "08",
+      year           = "2016",
+      pages          = "029",
+      doi            = "10.1007/JHEP08(2016)029",
+      url            = "https://inspirehep.net/record/1426692"
+}
+
+@article{CMS-PAS-TOP-16-005,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Measurement of the $\mathrm{t \overline{t}}$ production cross
+                        section using events in the $\mathrm{e} \mu$ final state
+                        in pp collisions at $\sqrt{s} = $ 13 TeV}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "77",
+      year           = "2017",
+      pages          = "172",
+      doi            = "10.1140/epjc/s10052-017-4718-8",
+      url            = "https://inspirehep.net/record/1497736/"
+}
+
+@article{CMS-PAS-TOP-16-006,
+     COLLABORATION = "CMS",
+      TITLE       = "Measurement of the $\mathrm{t}\overline{\mathrm{t}}$ production cross section
+  using events with one lepton and at least one jet in pp collisions at {$\sqrt{s}=13$\,TeV}",
+      AUTHOR      = "Sirunyan, Albert M. and others",
+      JOURNAL     = "JHEP",
+      VOLUME      = "09",
+      PAGES       = "051",
+      DOI         = "10.1007/JHEP09(2017)051",
+      YEAR        = "2017",
+      URL         = "https://inspirehep.net/record/1510260"      
+}
+@article{powheg,
+     author    = "Frixione, Stefano and Nason, Paolo and Oleari, Carlo",
+     title     = "{Matching NLO $\mathrm{QCD}$ computations with parton shower
+                  simulations: {The} \textsc{powheg} method}",
+     journal   = "JHEP",
+     volume    = "11",
+     year      = "2007",
+     pages     = "070",
+     doi       = "10.1088/1126-6708/2007/11/070",
+     url       = "https://inspirehep.net/record/760769"
+     
+}
+
+@article{powheg1,
+      author         = "Alioli, Simone and Nason, Paolo and Oleari, Carlo and Re,
+                        Emanuele",
+      title          = "{NLO single-top production matched with shower in \textsc{powheg}:
+                        $s$- and $t$-channel contributions}",
+      journal        = "JHEP",
+      volume         = "09",
+      pages          = "111",
+      doi            = "10.1088/1126-6708/2009/09/111",
+      note           = {Erratum: \textit{JHEP}, 09 (2009) 111},
+      year           = "2009",
+      url            ="https://inspirehep.net/record/826654"
+}
+
+@article{powheg2,
+      author         = "Alioli, Simone and Nason, Paolo and Oleari, Carlo and Re,
+                        Emanuele",
+      title          = "{A general framework for implementing NLO calculations in
+                        shower Monte Carlo programs: {The} \textsc{powheg} BOX}",
+      journal        = "JHEP",
+      volume         = "06",
+      pages          = "043",
+      doi            = "10.1007/JHEP06(2010)043",
+      year           = "2010",
+      url            = "https://inspirehep.net/record/845712"
+}
+
+@Article{powheg3,
+      author         = "Re, Emanuele",
+      title          = "Single-top {$Wt$-channel} production matched with parton
+                        showers using the \textsc{powheg} method",
+      journal        = "Eur. Phys. J. C",
+      volume         = "71",
+      pages          = "1547",
+      doi            = "10.1140/epjc/s10052-011-1547-z",
+      year           = "2011",
+      url            ="https://inspirehep.net/record/867473"
+}
+
+@Article{powheghvq,
+     author    = "Frixione, S. and Nason, P. and Ridolfi, G.",
+     title     = "{A positive-weight next-to-leading-order Monte Carlo for heavy flavor hadroproduction}",
+     journal   = "JHEP",
+     volume    = "0709",
+     year      = "2007",
+     pages     = "126",
+     doi       = "10.1088/1126-6708/2007/09/126",
+     url       ="https://inspirehep.net/record/756360"
+}
+
+@article{powhegdy,
+     author    = "Barz\`{e}, L. and others",
+     title     = "{Neutral current Drell--Yan with combined $\mathrm{QCD}$ and electroweak corrections in the \textsc{powheg} BOX}",
+     journal   = "Eur. Phys. J. C",
+     volume    = "73",
+     year      = "2013",
+     pages     = "2474",
+     doi       = "10.1140/epjc/s10052-013-2474-y",
+     url       = "https://inspirehep.net/record/1220256"
+}
+@article{amcatnlo,
+      author         = "Alwall, J. and others",
+      title          = "{The automated computation of tree-level and
+                        next-to-leading order differential cross sections, and
+                        their matching to parton shower simulations}",
+      journal        = "JHEP",
+      volume         = "07",
+      year           = "2014",
+      pages          = "079",
+      doi            = "10.1007/JHEP07(2014)079",
+      url            ="https://inspirehep.net/record/1293923"
+}
+
+
+@article{madspin,
+   author    = "Artoisenet, P. and Rikkert, F. and Olivier, M. and Robbert, R.",
+   title     = "{Automatic spin-entangled decays of heavy resonances in Monte Carlo simulations}",
+   journal   = "JHEP",
+   volume    = "03",
+   year      = "2013",
+   pages     = "015",
+   doi           = "10.1007/JHEP03(2013)015",
+   url           ="https://inspirehep.net/record/1207464"
+}
+
+
+@article{Sjostrand:2007gs,
+      author         = "Sj{\"o}strand, Torbj{\"o}rn and Mrenna, Stephen and Skands, Peter",
+      title          = "{A Brief Introduction to \textsc{pythia}\,8.1}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "178",
+      year           = "2008",
+      pages          = "852",
+      doi            = "10.1016/j.cpc.2008.01.036",
+      url            ="https://inspirehep.net/record/764903"
+}
+
+@article{Sjostrand:2014zea,
+      author         = "Sj{\"o}strand, Torbj{\"o}rn and others",
+      title          = "{An introduction to \textsc{pythia}\,8.2}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "191",
+      year           = "2015",
+      pages          = "159",
+      doi            = "10.1016/j.cpc.2015.01.024",
+      url            ="https://inspirehep.net/record/1321709"
+}
+
+@article{herwigpp,
+      author         = "B{\"a}hr, M. and others",
+      title          = "{\textsc{herwig++} physics and manual}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "58",
+      pages          = "639",
+      doi            = "10.1140/epjc/s10052-008-0798-9",
+      year           = "2008",
+      url            ="https://inspirehep.net/record/780833"
+}
+
+@article{fxfx,
+      author         = "Frederix, Rikkert and Frixione, Stefano",
+      title          = "{Merging meets matching in \textsc{mc@nlo}}",
+      journal        = "JHEP",
+      volume         = "12",
+      year           = "2012",
+      pages          = "061",
+      doi            = "10.1007/JHEP12(2012)061",
+      url            ="https://inspirehep.net/record/1188307"
+}
+@Article{nnpdf,
+     author    = "Demartin, F. and Forte, S. and Mariani, E. and Rojo, J. and Vicini, A.",
+     title     = "{Impact of parton distribution function and
+                  $\alpha_{\textrm{s}}$ uncertainties on Higgs boson production
+                  in gluon fusion at hadron colliders}",
+     journal   = "Phys. Rev. D",
+     volume    = "82",
+     year      = "2010",
+     pages     = "014002",
+     doi       = "10.1103/PhysRevD.82.014002",
+     url ="https://inspirehep.net/record/851137"
+}
+@article{Ball:2014uwa,
+      author         = "Ball, R. D. and others",
+      title          = "Parton distributions for the {LHC Run 2}",
+      collaboration  = "NNPDF",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2015",
+      pages          = "040",
+      doi            = "10.1007/JHEP04(2015)040",
+      url            ="https://inspirehep.net/record/1325552"
+      
+}
+@article{dEnterria:2015jna,
+      author         = "d'Enterria, David and Krajczar, Krisztian and
+                                              Paukkunen, Hannu",
+      title          = "{Top quark production in proton-nucleus and
+                        nucleus-nucleus collisions at LHC energies and beyond}",
+      journal        = "Phys. Lett. B",
+      volume         = "746",
+      year           = "2015",
+      pages          = "64",
+      doi            = "10.1016/j.physletb.2015.04.044",
+      url            = "https://inspirehep.net/record/1340855"
+}
+
+@techreport{CMS-PAS-FTR-13-025,
+      title         = "{Projections for heavy ions with HL-LHC}",
+      author        = "{CMS Collaboration}",
+      type          = "CMS Physics Analysis Summary",
+      number        = "CMS-PAS-FTR-13-025",
+      year          = "2013",
+      url           = "https://inspirehep.net/record/1260902"
+}
+
+
+@techreport{top16015,
+      title         = "First measurement of the top quark pair production cross section in proton-proton collisions at $\sqrt{s}=5.02$\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-TOP-16-015",
+      year          = "2015",
+      reportNumber  = "CMS-PAS-TOP-16-015",
+      url           = "https://inspirehep.net/record/1471008",
+      type          = "CMS Physics Analysis Summary",
+      note          = "Superseded in the paper \textit{JHEP 03 (2018) 115}"
+}
+
+@article{topobs_CMS_jhep,
+      author         = "Sirunyan, A. M. and others",
+      title          = "{Measurement of the inclusive $\mathrm{t\overline{t}}$ cross section in pp collisions at $\sqrt{s}=5.02$\,TeV using final states with at least one charged lepton}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "1803",
+      year           = "2018",
+      pages          = "115",
+      doi            = "10.1007/JHEP03(2018)115",
+      url            = "https://inspirehep.net/record/1635271"
+}
+
+
+@article{Khachatryan:2015pea,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Event generator tunes obtained from underlying-event and
+                        multiparton-scattering measurements}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "76",
+      year           = "2016",
+      pages          = "155",
+      doi            = "10.1140/epjc/s10052-016-3988-x",
+      url            = "https://inspirehep.net/record/1407839"
+}
+
+@article{Skands:2014pea,
+      author         = "Skands, Peter and Carrazza, Stefano and Rojo, Juan",
+      title          = "{Tuning \textsc{pythia}\,8.1: The Monash 2013 tune}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "74",
+      year           = "2014",
+      pages          = "3024",
+      doi            = "10.1140/epjc/s10052-014-3024-y",
+      url            = "https://inspirehep.net/record/1291955"
+}
+
+@inproceedings{Kidonakis:2013zqa,
+      author         = "Kidonakis, Nikolaos",
+      title          = "{Top quark production}",
+      booktitle      = "{Proc. of the Helmholtz International Summer School on Physics of Heavy Quarks and Hadrons (HQ 2013)}",
+      address        = "Dubna, Russia",
+      month          = "Jul",
+      year           = "2013",
+      pages          = "139",
+      doi            = "10.3204/DESY-PROC-2013-03/Kidonakis",
+      url            = "https://inspirehep.net/record/1263209"
+}
+
+@Article{fewz,
+     author    = "Melnikov, K. and Petriello, F.",
+     title     = "{Electroweak gauge boson production at hadron colliders through $O(\alpha_{\textrm{s}}^2)$}",
+     journal   = "Phys. Rev. D",
+     volume    = "74",
+     year      = "2006",
+     pages     = "114017",
+     doi       = "10.1103/PhysRevD.74.114017",
+     url       ="https://inspirehep.net/record/725573"
+}
+
+@Article{mcfm,
+     author    = "Campbell, J. M. and Ellis, R. K.",
+     title     = "{\textsc{mcfm} for the Tevatron and the LHC}",
+     journal   = "Nucl. Phys. Proc. Suppl.",
+     volume    = "205--206",
+     year      = "2010",
+     pages     = "10",
+     doi       = "10.1016/j.nuclphysbps.2010.08.011",
+     url       ="https://inspirehep.net/record/861954"
+}
+
+@article{top++,
+      author         = "Czakon, Michal and Mitov, Alexander",
+      title          = "{\textsc{top++}: {A} program for the calculation of the top pair
+                        cross section at hadron colliders}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "185",
+      year           = "2014",
+      pages          = "2930",
+      doi            = "10.1016/j.cpc.2014.06.021",
+      url            ="https://inspirehep.net/record/1082926"
+}
+
+@Article{mitov,
+     author    = "{M. Czakon,  P. Fiedler and A. Mitov}",
+     title     = "{Total top quark pair production cross section at hadron colliders through O($\alpha_{\textrm{s}}^4$)}",
+     journal   = "Phys. Rev. Lett.",
+     volume    = "110",
+     year      = "2013",
+     pages     = "252004",
+     doi       = "10.1103/PhysRevLett.110.252004",
+     url       ="https://inspirehep.net/record/1225282"
+}
+
+@article{Wenninger:2254678,
+      author = {Todesco, E. and Wenninger, J.},
+      title =  {{Large} {Hadron} {Collider} momentum calibration and accuracy},
+      journal = {Phys. Rev. Accel. Beams},
+      volume = {20},
+      pages = {081003},
+      year = {2017},
+      doi = {10.1103/PhysRevAccelBeams.20.081003},
+      url = "https://inspirehep.net/record/1618103"
+}
+
+@article{skethup,
+      author = {Sakuma, T. and McCauley, T.},
+      title =  {Detector and event visualization with {SketchUp} at the {CMS} experiment},
+      journal = {J. Phys. Conf. Ser.},
+      volume = {513},
+      pages = {022032},
+      year = {2014},
+      doi = {10.1088/1742-6596/513/2/022032},
+      url = "https://inspirehep.net/record/1265221"
+}
+@article{ispy,
+      author = {McCauley, T.},
+      title =  {A browser-based event display for the {CMS} experiment at the {LHC} using {WebGL}},
+      journal = {J. Phys. Conf. Ser.},
+      volume = {898},
+      pages = {072030},
+      year = {2017},
+      doi = {10.1088/1742-6596/898/7/072030},
+      url = "https://inspirehep.net/record/1638558"
+}
+
+@article{Cowan:2010js,
+       author     = "Cowan, G. and Cranmer, K. and Gross, E. and Vitells, O.",
+      title          = "Asymptotic formulae for likelihood-based tests of new  physics",
+      journal        = "Eur. Phys. J. C",
+      volume         = "71",
+      year           = "2011",
+      pages          = "1554",
+      doi            = "10.1140/epjc/s10052-011-1554-0",
+      note           = {Erratum: \textit{Eur. Phys. J. C}, 73 (2013) 2501},
+      url            ="https://inspirehep.net/record/860907"
+}
+
+@article{Lyons:1988rp,
+     author    = "Lyons, Louis and Gibaut, Duncan and Clifford, Peter",
+     title     = "{How to combine correlated estimates of a single physical quantity}",
+     journal   = "Nucl. Instrum. Meth. A",
+     volume    = "270",
+     year      = "1988",
+     pages     = "110",
+     doi       = "10.1016/0168-9002(88)90018-6",
+     url       ="https://inspirehep.net/record/22979"
+}
+
+@article{Lista:2014qia,
+      author         = "Lista, Luca",
+      title          = "{The bias of the unbiased estimator: {A} study of the
+                        iterative application of the BLUE method}",
+      journal        = "Nucl. Instrum. Meth. A",
+      volume         = "764",
+      year           = "2014",
+      pages          = "82",
+      doi            = "10.1016/j.nima.2014.07.021",
+      note           = {Erratum: \textit{Nucl. Instrum. Meth. A}, 773 (2015) 87},
+      url            ="https://inspirehep.net/record/1296116"
+}
+
+@article{Valassi:2013bga,
+      author         = "Valassi, Andrea and Chierici, Roberto",
+      title          = "{Information and treatment of unknown correlations in the
+                        combination of measurements using the BLUE method}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "74",
+      year           = "2014",
+      pages          = "2717",
+      doi            = "10.1140/epjc/s10052-014-2717-6",
+      url            ="https://inspirehep.net/record/1242645"
+}
+@article{Harland-Lang:2014zoa,
+      author         = "Harland-Lang, L. A. and Martin, A. D. and Motylinski, P.
+                        and Thorne, R. S.",
+      title          = "{Parton distributions in the LHC era: MMHT 2014 PDFs}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "75",
+      year           = "2015",
+      pages          = "204",
+      doi            = "10.1140/epjc/s10052-015-3397-6",
+      url            ="https://inspirehep.net/record/1334137"
+
+}
+@article{Dulat:2015mca,
+      author         = "Dulat, S. and others",
+      title          = "{New parton distribution functions from a global analysis
+                        of quantum chromodynamics}",
+      journal        = "Phys. Rev. D",
+      volume         = "93",
+      year           = "2016",
+      pages          = "033006",
+      doi            = "10.1103/PhysRevD.93.033006",
+      url            ="https://inspirehep.net/record/1377752"
+}
+
+@article{Alekhin:2017kpj,
+      author         = "Alekhin, S. and Bl{\"u}mlein, J. and Moch, S. and Placakyte,
+                        R.",
+      title          = "{Parton distribution functions, $\alpha_{\textrm{s}}$, and
+                        heavy quark masses for {LHC} {Run 2}}",
+      journal        = "Phys. Rev. D",
+      volume         = "96",
+      year           = "2017",
+      pages          = "014011",
+      doi            = "10.1103/PhysRevD.96.014011",
+      url            = "https://inspirehep.net/record/1510074"
+}
+
+@article{Abramowicz:2015mha,
+      author         = "{ZEUS and H1 Collaborations}",
+      title          = "{Combination of measurements of inclusive deep
+                  inelastic $\mathrm{e^{\pm}p}$ scattering cross
+                  sections and $\mathrm{QCD}$ analysis of HERA data}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "75",
+      year           = "2015",
+      pages          = "580",
+      doi            = "10.1140/epjc/s10052-015-3710-4",
+      url            ="https://inspirehep.net/record/1377206"
+}
+
+@article{Khachatryan:2016pev,
+      author         = "Khachatryan, V. and others",
+      title          = "{Measurement of the differential cross section and charge
+                        asymmetry for inclusive $\mathrm {p}\mathrm {p}\rightarrow
+                        \mathrm {W}^{\pm } + \mathrm{X}$ production at ${\sqrt{s}} = 8$ TeV}",
+      collaboration  = "CMS",
+      journal        = "Eur. Phys. J. C",
+      volume         = "76",
+      year           = "2016",
+      pages          = "469",
+      doi            = "10.1140/epjc/s10052-016-4293-4",
+      url            = "https://inspirehep.net/record/1426517"
+}
+
+@article{Aliev:2010zk,
+      author         = "Aliev, M. and Lacker, H. and Langenfeld, U. and Moch, S.
+                        and Uwer, P. and Wiedermann, M.",
+      title          = "{HATHOR: HAdronic Top and Heavy quarks crOss section
+                        calculatoR}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "182",
+      year           = "2011",
+      pages          = "1034",
+      doi            = "10.1016/j.cpc.2010.12.040",
+      url            = "https://inspirehep.net/record/860789"
+}
+
+@article{Alekhin:2014irh,
+      author         = "Alekhin, S. and others",
+      title          = "{HERAFitter, open source $\mathrm{QCD}$ fit project}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "75",
+      year           = "2015",
+      pages          = "304",
+      doi            = "10.1140/epjc/s10052-015-3480-z",
+      url            = "https://inspirehep.net/record/1322585"
+}
+@misc{herafitter,
+       Collaboration  = "xFitter",
+       howpublished    = {\url{https://www.xfitter.org}},
+       Url            = {www.xfitter.org}
+}
+
+
+@article{Gribov:1972ri,
+      author         = "Gribov, V. N. and Lipatov, L. N.",
+      title          = "{Deep inelastic ep scattering in perturbation theory}",
+      journal        = "Sov. J. Nucl. Phys.",
+      volume         = "15",
+      pages          = "438",
+      year           = "1972",
+      url            = "https://inspirehep.net/record/73449"
+}
+
+@article{Altarelli:1977zs,
+      author         = "Altarelli, G. and Parisi, G.",
+      title          = "{Asymptotic freedom in parton language}",
+      journal        = "Nucl. Phys. B",
+      volume         = "126",
+      pages          = "298",
+      doi            = "10.1016/0550-3213(77)90384-4",
+      year           = "1977",
+      url            = "https://inspirehep.net/record/119585"
+}
+
+@article{Curci:1980uw,
+      author         = "Curci, G. and Furmanski, W. and Petronzio, R.",
+      title          = "{Evolution of parton densities beyond leading order: The
+                        non-singlet case}",
+      journal        = "Nucl. Phys. B",
+      volume         = "175",
+      pages          = "27",
+      doi            = "10.1016/0550-3213(80)90003-6",
+      year           = "1980",
+      url            = "https://inspirehep.net/record/152873"
+}
+
+@article{Furmanski:1980cm,
+      author         = "Furmanski, W. and Petronzio, R.",
+      title          = "{Singlet parton densities beyond leading order}",
+      journal        = "Phys. Lett. B",
+      volume         = "97",
+      pages          = "437",
+      doi            = "10.1016/0370-2693(80)90636-X",
+      year           = "1980",
+      url            = "https://inspirehep.net/record/155291"
+}
+@article{Moch:2004pa,
+      author         = "Moch, S. and Vermaseren, J. A. M. and Vogt, A.",
+      title          = "{The three-loop splitting functions in $\mathrm{QCD}$: The
+                        non-singlet case}",
+      journal        = "Nucl. Phys. B",
+      volume         = "688",
+      pages          = "101",
+      doi            = "10.1016/j.nuclphysb.2004.03.030",
+      year           = "2004",
+      url            = "https://inspirehep.net/record/646539"
+}
+@article{Vogt:2004mw,
+      author         = "Vogt, A. and Moch, S. and Vermaseren, J. A. M.",
+      title          = "{The three-loop splitting functions in $\mathrm{QCD}$: The singlet
+                        case}",
+      journal        = "Nucl. Phys. B",
+      volume         = "691",
+      pages          = "129",
+      doi            = "10.1016/j.nuclphysb.2004.04.024",
+      year           = "2004",
+      url            = "https://inspirehep.net/record/648209"
+}
+@article{Botje:2010ay,
+      author         = "Botje, M.",
+      title          = "{$\mathrm{QCDNUM}$: Fast $\mathrm{QCD}$ evolution and convolution}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "182",
+      pages          = "490",
+      doi            = "10.1016/j.cpc.2010.10.020",
+      year           = "2011",
+      url            = "https://inspirehep.net/record/854529"
+}
+@article{Thorne:2006qt,
+      author         = "Thorne, R. S.",
+      title          = "{Variable-flavor number scheme for NNLO}",
+      journal        = "Phys. Rev. D",
+      volume         = "73",
+      pages          = "054019",
+      doi            = "10.1103/PhysRevD.73.054019",
+      year           = "2006",
+      url            = "https://inspirehep.net/record/709470"
+}
+
+@article{Martin:2009ad,
+      author         = "Martin, A. D and  Stirling, W. J. and  Thorne, R. S. and Watt, G.",
+      title          = "{Parton distributions for the LHC}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "63",
+      pages          = "189",
+      doi            = "10.1140/epjc/s10052-009-1072-5",
+      year           = "2009",
+      url            = "https://inspirehep.net/record/810127/"
+}
+
+@article{Chatrchyan:2013mza,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Measurement of the muon charge asymmetry in inclusive
+                        $\mathrm{pp \to W + \mathrm{X}}$ production at $\sqrt{s} = 7$\,TeV and an
+                        improved determination of light parton distribution
+                        functions}",
+      collaboration  = "CMS",
+      journal        = "Phys. Rev. D",
+      volume         = "90",
+      pages          = "032004",
+      doi            = "10.1103/PhysRevD.90.032004",
+      year           = "2014",
+      url            = "https://inspirehep.net/record/1273570"
+}
+
+@article{Giele:1998gw,
+      author         = "Giele, Walter T. and Keller, Stephane",
+      title          = "{Implications of hadron collider observables on parton
+                        distribution function uncertainties}",
+      journal        = "Phys. Rev. D",
+      volume         = "58",
+      year           = "1998",
+      pages          = "094023",
+      doi            = "10.1103/PhysRevD.58.094023",
+      url            = "https://inspirehep.net/record/468349"
+}
+
+@unpublished{Giele:2001mr,
+      author         = "Giele, Walter T. and Keller, Stephane A. and Kosower,
+                        David A.",
+      title          = "{Parton distribution function uncertainties}",
+      year           = "2001",
+      url            = "https://inspirehep.net/record/555079"
+}
+
+@article{Cranmer:2000du,
+      author         = "Cranmer, Kyle S.",
+      title          = "{Kernel estimation in high-energy physics}",
+      journal        = "Comput. Phys. Commun.",
+      volume         = "136",
+      year           = "2001",
+      pages          = "198",
+      doi            = "10.1016/S0010-4655(00)00243-5",
+      url            = "https://inspirehep.net/record/537082"
+}
+
+%%%%%%%%%%%%%%%   End of pp 5.02TeV Chapter  %%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%   Start of pPb 8.6TeV Chapter  %%%%%%%%%%%%%%%%%%
+
+@unpublished{dEnterria:2017dum,
+      author         = "d'Enterria, David",
+      title          = "{Top quark pair production cross sections at NNLO+NNLL in
+                        pPb collisions at $\rootsNN$ = 8.16 TeV}",
+       year           = "2017",
+      url            = "https://inspirehep.net/record/1608021"
+}
+
+@article{Aubert:1983xm,
+      author         = "Aubert, J. J. and others",
+      collaboration  = "EMC",
+      title          = "The ratio of the nucleon structure functions {$F_2^N$} for
+                        iron and deuterium",
+      journal        = "Phys. Lett. B",
+      volume         = "123",
+      year           = "1983",
+      pages          = "275",
+      doi            = "10.1016/0370-2693(83)90437-9",
+      url            = "https://inspirehep.net/record/188925"
+}
+
+@article{EPS09,
+      author         = "Eskola, K. J. and Paukkunen, H. and Salgado, C. A.",
+      title          = "{EPS09}: A new generation of {NLO} and {LO} nuclear parton
+                        distribution functions",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2009",
+      pages          = "065",
+      doi            = "10.1088/1126-6708/2009/04/065",
+      url            = "https://inspirehep.net/record/814088"
+}
+
+@article{EPPS16,
+      author         = "Eskola, K. J. and Paakkinen, Petja and Paukkunen, Hannu
+                        and Salgado, Carlos A.",
+      title          = "{EPPS16: Nuclear parton distributions with LHC data}",
+      journal        = "Eur. Phys. J. C",
+      volume         = "77",
+      year           = "2017",
+      pages          = "163",
+      doi            = "10.1140/epjc/s10052-017-4725-9",
+      url            = "https://inspirehep.net/record/1504944"
+}
+
+@article{Khachatryan:2015hha,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Study of W boson production in pPb collisions at
+                        {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=5.02$}\,{TeV}}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett. B",
+      volume         = "750",
+      year           = "2015",
+      pages          = "565",
+      doi            = "10.1016/j.physletb.2015.09.057",
+      url            = "https://inspirehep.net/record/1353541"
+}
+
+@techreport{W_8TeV,
+      title         = "Constraints on nuclear parton distributions from {W} boson production in {pPb} collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=8.16$}\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-HIN-17-007",
+      year          = "2018",
+      reportNumber  = "CMS-PAS-HIN-17-007",
+      type          = "CMS Physics Analysis Summary",
+      url           = "https://inspirehep.net/record/1673108"
+}
+@article{Khachatryan:2015pzs,
+      author         = "Khachatryan, Vardan and others",
+      title          = "{Study of Z boson production in pPb collisions at {$\sqrt{\smash [b]{s_{_{\mathrm {NN}}}}}=5.02$}\,{TeV}}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett. B",
+      volume         = "759",
+      year           = "2016",
+      pages          = "36",
+      doi            = "10.1016/j.physletb.2016.05.044",
+      url            = "https://inspirehep.net/record/1410832"
+}
+
+@article{Dainese:2016gch,
+      author         = "Dainese, A. and others",
+      title          = "Heavy ions at the {Future} {Circular} {Collider}",
+      journal        = "{CERN} Yellow Report",
+      year           = "2017",
+      pages          = "635",
+      doi            = "10.23731/CYRM-2017-003.635",
+      url            = "https://inspirehep.net/record/1455787"
+      
+}
+@article{Apolinario:2018,
+      author         = "Apolin\'ario, Liliana and others",
+      title          = "{Probing the time structure of the quark-gluon plasma with top quarks}",
+      year           = "2018",
+      journal        = "{Phys. Rev. Lett.}",
+      pages          = "232301",
+      volume         = "120",
+      doi            = "10.1103/PhysRevLett.120.232301",
+      url            = "https://inspirehep.net/record/1635270"
+      
+}
+@techreport{CMS-PHO-EVENTS-2016-009-19,
+      title         = "Events recorded by the {CMS} detector during the proton-lead collision run of 2016",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PHO-EVENTS-2016-009-19",
+      year          = "2016",
+      reportNumber  = "CMS-PHO-EVENTS-2016-009-19",
+      url           = "https://cds.cern.ch/record/2235235",
+      type          = "CMS Collection",
+}
+@article{Chatrchyan:2013gfi,
+      author         = "Chatrchyan, Serguei and others",
+      title          = "{Study of the underlying event at forward rapidity in pp
+                        collisions at $\sqrt{s}$ = 0.9, 2.76, and 7 TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "04",
+      year           = "2013",
+      pages          = "072",
+      doi            = "10.1007/JHEP04(2013)072",
+      url            = "https://inspirehep.net/record/1218372"
+}
+@phdthesis{SLAC-R-236,
+     AUTHOR       = "Oreglia, M. J.",
+     TITLE        = "A study of the reactions  $\psi^\prime \to \gamma \gamma \psi$",
+     SCHOOL       = "Stanford University",
+     note        = "{SLAC} Report {SLAC-R-236}, see Appendix {D}",
+     URL          = "https://inspirehep.net/record/158483"
+     YEAR         = "1980"
+}
+
+@inproceedings{roofit,
+      author         = "Verkerke, Wouter and Kirkby, David P.",
+      title          = "The {\sc RooFit} toolkit for data modeling",
+      booktitle      = "{Proc. of the 13th International Conference on Computing in High Energy and Nuclear Physics (CHEP03)}",
+      address        = "La Jolla, CA, USA",
+      month          = "March",
+      pages          = "MOLT007",
+      url            = "https://inspirehep.net/record/621398"
+}
+
+@article{mg5,
+      author         = "Alwall, J. and others",
+      title          = "{\textsc{MadGraph5}: Going beyond}",
+      journal        = "JHEP",
+      volume         = "1106",
+      year           = "2011",
+      pages          = "128",
+      doi            = "10.1007/JHEP06(2011)128",
+      url            = "https://inspirehep.net/record/912611"
+}
+
+@techreport{higgs_combine,
+      author         = "{ATLAS and CMS Collaborations and LHC Higgs Combination Group}",
+      title          = "{Procedure for the LHC Higgs boson search combination in Summer 2011}",
+      year           = "2011",
+      number        = "ATL-PHYS-PUB-2011-011, CMS-NOTE-2011-005",
+      year          = "2015",
+      reportNumber  = "ATL-PHYS-PUB-2011-011, CMS-NOTE-2011-005",
+      url           = "https://inspirehep.net/record/1196797",
+      type          = "{ATLAS/CMS joint note}",
+}
+
+@article{ct10,
+      author         = "Gao, J. and others",
+      title          = "{{CT10} next-to-next-to-leading order global analysis of {$\mathrm{QCD}$}}",
+      journal        = "Phys. Rev. D89",
+      volume         = "89",
+      year           = "2014",
+      pages          = "033009",
+      doi            = "10.1103/PhysRevD.89.033009",
+      url            = "https://inspirehep.net/record/1221243"
+}
+
+%%%%%%%%%%%%%%%   End of pPb 8.6TeV Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%   Start of Outro Chapter  %%%%%%%%%%%%%%%%%%
+@misc{pp5TeV2017_lumi,
+       Collaboration  = "CMS",
+       howpublished    = "Public {CMS} luminosity information",
+       Url            = {https://twiki.cern.ch/twiki/bin/view/CMSPublic/LumiPublicResults#2017_proton_proton_5_02_TeV_coll}}
+}
+@unpublished{atlas_pp_lumi,
+      author         = "{ATLAS Collaboration}",
+      title          = "Measurements of {W} and {Z} boson production in pp collisions at $\sqrt{s}=5.02$\,{TeV} with the {ATLAS} detector",
+      year           = "2018",
+      note           = "submitted to \textit{Eur. Phys. J. C}",
+      url            = "https://inspirehep.net/record/1699375"
+}
+
+@techreport{alice_pPb_lumi,
+      title         = "{ALICE} luminosity determination for {pPb} collisions at {$\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}=8.16$}\,{TeV}",
+      author        = "{ALICE Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "{ALICE}-PUBLIC-2018-002",
+      year          = "2018",
+      reportNumber  = "{ALICE}-PUBLIC-2018-002",
+      url           = "https://cds.cern.ch/record/2314660"
+}
+@article{lhcb_pPb_lumi,
+      author         = "Aaij, R. and others",
+      collaboration  = "{LHCb}",
+      title          = "Study of {$\Upsilon$} production in {pPb} collisions at {$\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}=8.16$}\,{TeV}",
+      journal        = "JHEP",
+      volume         = "1811",
+      pages          = "194",
+      year           = "2018",
+      doi            = "10.1007/JHEP11(2018)194",
+      url            = "https://inspirehep.net/record/1699106"
+}
+
+@techreport{FTR-18-015,
+     author    = "{CMS Collaboration}",
+     title     = "{Projection of measurements of differential $\mathrm{t\overline{t}}$ production cross sections in the e/$\mu$+jets channels in pp collisions at the {HL-LHC}}",
+     address       = "",
+     number        = "{CMS-PAS-FTR-18-015}",
+     year          = "2018",
+     reportNumber  = "{CMS-PAS-FTR-18-015}",
+     type          = "{CMS Physics Analysis Summary}",
+     url           = "https://inspirehep.net/record/1708974"
+}
+
+@techreport{TOP-18-004,
+     author    = "{CMS Collaboration}",
+     title     = "{Measurements of normalized multi-differential cross sections for top quark pair production in pp collisions at $\sqrt{s}=13$\,{TeV} and simultaneous determination of the strong coupling strength, top quark pole mass, and parton distribution functions}",
+      institution   = "",
+      address       = "",
+      number        = "{CMS-PAS-TOP-18-004}",
+      year          = "2018",
+      reportNumber  = "{CMS-PAS-TOP-18-004}",
+      type          = "{CMS Physics Analysis Summary}",
+      url           = "https://inspirehep.net/record/1704287"
+      }
+ @techreport{FTR-18-027,
+     author    = "{CMS Collaboration}",
+     title     = "{Constraining nuclear parton distributions with heavy ion collisions at the {HL-LHC} with the {CMS} experiment}",
+      institution   = "",
+      address       = "",
+      number        = "{CMS-PAS-FTR-18-027}",
+      year          = "2018",
+      reportNumber  = "{CMS-PAS-FTR-18-027}",
+      type          = "{CMS Physics Analysis Summary}",
+      url           = "https://cds.cern.ch/record/1709472"
+      }
+
+@techreport{WG1,
+     author    = "{Azzi, P. and others}",
+     title     = "{Standard model physics at the {HL-LHC} and {HE-LHC}}",
+      institution   = "",
+      address       = "",
+      number        = "{CERN-LPCC-2018-03}",
+      year          = "2018",
+      reportNumber  = "{CERN-LPCC-2018-03}",
+      note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+      url           = "https://cds.cern.ch/record/2650160"
+      }
+
+@Unpublished{WG5,
+     author    = "{Citron, Z. and others}",
+     title     = "{Future physics opportunities for high-density {\QCD} at the {LHC} with heavy ion and proton beams}",
+     note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+     year = "2018",
+     url           = "https://inspirehep.net/record/1709331"
+     }
+
+@techreport{HL-HE-LHC_Report,
+     author    = "{ATLAS and CMS Collaborations}",
+     title     = "{Report on the physics at the {HL-LHC} and perspectives for the {HE-LHC}}",
+      institution   = "",
+      address       = "",
+      number        = "{CERN-LPCC-2019-01}",
+      year          = "2018",
+      reportNumber  = "{CERN-LPCC-2019-01}",
+      note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+      url           = "https://cds.cern.ch/record/2651134/"
+      }
+      
+@misc{HL-LHC_Report,
+       author         = "Dainese, A. and others",
+       howpublished   = "The physics potential of {HL-LHC}",
+       note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+       Url            = {https://twiki.cern.ch/twiki/pub/LHCPhysics/HLHELHCWorkshop/report.pdf}}
+
+@misc{HE-LHC_Report,
+       author         = "Dainese, A. and others",
+       howpublished   = "The physics potential of {HE-LHC}",
+       note      = "submitted as input to the update of the {European} {Particle} {Physics} {Strategy} ({EPPS})",
+       Url            = {https://twiki.cern.ch/twiki/pub/LHCPhysics/HLHELHCWorkshop/HEreport.pdf}}
+%%%%%%%%%%%%%%%   End of Outro Chapter  %%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%   Start of Apendix Chapter  %%%%%%%%%%%%%%%%%%
+@Unpublished{puppi_cms,
+     author    = "{CMS Collaboration}",
+     title     = "{Pileup mitigation at CMS in 13\,TeV data using the 2016 data set}",
+     note  = "{JME-18-001} \textit{in preparation}",
+     year = "2018"}
+
+@article{inclusWZ3pb,
+      author         = "Khachatryan, V. and others",
+      title          = "{Measurements of inclusive W and Z cross sections in
+                        pp collisions at $\sqrt{s}=7$\,TeV}",
+      collaboration  = "CMS",
+      journal        = "JHEP",
+      volume         = "01",
+      year           = "2011",
+      pages          = "080",
+      doi            = "10.1007/JHEP01(2011)080",
+      url            = "https://inspirehep.net/record/881087"
+}
+@techreport{top15004,
+      title         = "Measurement of the $t$-channel single top quark cross section at 13\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "CMS-PAS-TOP-15-004",
+      year          = "2015",
+      reportNumber  = "CMS-PAS-TOP-15-004",
+      type          = "CMS Physics Analysis Summary",
+      url           = "https://inspirehep.net/record/1393357"
+}
+@article{top16003,
+      author         = "Sirunyan, A. M. and others",
+      title          = "{Cross section measurement of $t$-channel single top quark production in pp collisions at $\sqrt{s}=13$\,{TeV}}",
+      collaboration  = "CMS",
+      journal        = "Phys. Lett. B",
+      volume         = "72",
+      year           = "2017",
+      pages          = "752",
+      doi            = "10.1016/j.physletb.2017.07.047",
+      url           =  "https://inspirehep.net/record/1489193"}
+@inproceedings{qcd_mod,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://inspirehep.net/record/1458379},
+	Title = "{Constraining $\mathrm{QCD}$ multijet background in the $t$-channel single-top quark production at $\sqrt{s}=13$\,TeV}",
+	booktitle  = "Proc. of the 8th International Workshop on Top Quark Physics (TOP2015)",
+	pages = {059},
+	address    = "Ischia, Italy",
+	number        = "CMS-CR-2015-367",
+	month       = "Sep",
+	year = {2015}}
+@inproceedings{CR-17-176,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://inspirehep.net/record/1643827},
+	Title = "{Associated production of top quarks with the {H}iggs boson at $\sqrt{s}=13$\,TeV}",
+	booktitle  = "Proc. of the 25th International Workshop on Deep-Inelastic Scattering and Related Topics (DIS 2017)",
+	address    = "Birmingham, UK",
+	number        = "CMS-CR-2017-176",
+	month       = "Apr",
+	year = {2017}}
+
+@inproceedings{CR-18-013,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://inspirehep.net/record/1650460},
+	Title = "{Results on {TOP} physics from {CMS}}",
+	booktitle  = "Proc. of the  International Workshop on Future Linear Collider (LCWS2017) ",
+	address    = "Strasbourg, France",
+	number        = "CMS-CR-2018-013",
+	month       = "Oct",
+	year = {2017}}
+
+@inproceedings{CR-17-345,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://inspirehep.net/record/1643826},
+	Title = "{Study of the top quark production in complementary phase space regions and impact on {PDF}s in {CMS}}",
+	booktitle  = "Proc. of the  29th Rencontres de Blois on Particle Physics and Cosmology",
+	address    = "Blois, France",
+	number        = "CMS-CR-2017-345",
+	month       = "Jun",
+	year = {2017}}
+
+@inproceedings{CR-17-434,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://inspirehep.net/record/1643825},
+	Title = "{Observation of top quark production in proton-nucleus collision}",
+	booktitle  = "Proc. of the 10th International Workshop on Top Quark Physics (TOP2017)",
+	address    = "Braga, Portugal",
+	number        = "CMS-CR-2017-434",
+	month       = "Sep",
+	year = {2017}}
+
+@inproceedings{QM18,
+        Author = "Krintiras, {\relax G.K}",
+	url = {https://indico.cern.ch/event/656452/contributions/2871100/attachments/1648771/2636098/QM_Poster_GKKrintiras.pdf},
+	Title = "{Observation of top quark production in proton-nucleus collision}",
+	booktitle  = "Proc. of the 27th International Conference on Ultrarelativistic Nucleus-Nucleus Collisions (QM2018)",
+	address    = " Venice, Italy",
+	number        = "",
+	month       = "May",
+	year = {2018}}
+	
+@article{cousins_sig,
+      author         = "Cousins, R.D. and Linnemann, J.T. and Jordan, T.",
+      title          = "{Evaluation of three methods for calculating statistical significance when incorporating a systematic uncertainty into a test of the background-only hypothesis for a Poisson process}",
+      journal        = "Nucl. Instrum. Meth. A",
+      volume         = "595",
+      year           = "2008",
+      pages          = "480",
+      doi            = "10.1016/j.nima.2008.07.086",
+      url           =  "https://inspirehep.net/record/1600163"}
+%%%%%%%%%%%%%%%   End of Appendix Chapter  %%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%  Start of Internal Notes  %%%%%%%%%%%%%%%%%%
+@techreport{AN-15-114,
+      title         = "Measurement of the single top $t$-channel inclusive cross section at $\sqrt{s}$ = 13\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2015",
+      reportNumber  = "",
+      link          = "2015/114",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-15-195,
+      title         = "Beamspot determination in 2015 data",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2015",
+      reportNumber  = "",
+      link          = "2015/195",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-15-329,
+      title         = "Measurement of the single top $t$-channel inclusive cross section and charge ratio at $\sqrt{s}$ = 13\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2015",
+      reportNumber  = "",
+      link          = "2015/329",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-087,
+      title         = "Dijet pseudorapidity and mass measurement in pp and {pPb} collisions at {$\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}=5.02$}\,{TeV} with the {CMS} detector",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/087",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-098,
+      title         = "Inclusive $\mathrm{t \overline{t}}$ cross section in the dilepton final state at $\sqrt{s}$ = 5.02\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/098",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-048,
+      title         = "Dimuon performance studies in 2015 5.02\,{TeV} pp and {PbPb} data",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/048",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-110,
+      title         = "Electron reconstruction and identification for {PbPb} and reference pp collisions at 5.02\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/110",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-112,
+      title         = "Muons for single top $t$-channel cross section measurements at  $\sqrt{s}$ = 13\,{TeV}, selection optimization and scale factors",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/112",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-320,
+      title         = "Measurement of the top quark pair production cross section in proton-proton collisions at $\sqrt{s}=5.02$\,{TeV} using final states with exactly one isolated lepton",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/320",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-358,
+      title         = "Combination of the measurements of the top quark pair production cross section in pp collisions at $\sqrt{s}=5.02$\,{TeV} and impact on {PDF} constraints",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/358",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-369,
+      title         = "Measurement of the top quark pair production cross section in the dilepton channel in proton-proton collisions at $\sqrt{s}=5.02$\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/369",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-16-184,
+      title         = "Luminosity calibration for the pp reference run at $\sqrt{s}=5.02$\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2016",
+      reportNumber  = "",
+      link          = "2016/184",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-17-043,
+      title         = "First measurement of the top quark pair cross section using $\ell$+jets in {pPb} collisions at {$\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}=8.16$}\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2017",
+      reportNumber  = "",
+      link          = "2017/043",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-17-125,
+      title         = "Luminosity calibration for the {pPb} and {Pbp} runs at {$\sqrt{\smash[b]{s_{_{\mathrm{NN}}}}}=8.16$}\,{TeV}",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2017",
+      reportNumber  = "",
+      link          = "2017/125",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-17-137,
+      title         = "Muon performance studies in 2016 {pPb} data",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2017",
+      reportNumber  = "",
+      link          = "2017/137",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-17-240,
+      title         = "Luminosity normalization precision and stability of {CMS} data taken in 2015 and 2016",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2017",
+      reportNumber  = "",
+      link          = "2017/240",
+      type          = "CMS Internal Note",
+}
+@techreport{AN-18-186,
+      title         = "{CMS} luminosity calibration for the pp reference run at 5.02\,{TeV} in 2017",
+      author        = "{CMS Collaboration}",
+      institution   = "",
+      address       = "",
+      number        = "",
+      year          = "2018",
+      reportNumber  = "",
+      link          = "2018/186",
+      type          = "CMS Internal Note",
+}
+%%%%%%%%%%%%%%%   End of Internal Notes  %%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%   Do not edit below this line  %%%%%%%%%%%%%%%%%%
+@IEEEtranBSTCTL{myIEEEtran:BSTcontrol,
+  CTLuse_article_number     = "yes",
+  CTLuse_paper              = "yes",
+  CTLuse_forced_etal        = "no",
+  CTLmax_names_forced_etal  = "10",
+  CTLnames_show_etal        = "1",
+  CTLuse_alt_spacing        = "yes",
+  CTLalt_stretch_factor     = "4",
+  CTLdash_repeated_names    = "no",
+  CTLname_format_string     = "{f.~}{vv~}{ll}{, jj}",
+  CTLname_latex_cmd         = "",
+  CTLname_url_prefix        = "[Online]. Available:"
+}

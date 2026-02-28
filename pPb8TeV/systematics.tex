@@ -1,0 +1,51 @@
+
+The measurement of the inclusive cross section is affected by systematic uncertainties that are assessed individually and originate from detector effects or theory assumptions. 
+We describe in more detail the assessment of the systematic uncertainties below.
+
+\subsection{Experimental uncertainty}
+\label{subsec:expuncs}
+
+The uncertainties in the lepton trigger, reconstruction, and identification efficiencies are estimated with a tag-and-probe method (see Appendices~\ref{sec:tnp_eles} and~\ref{sec:tnp_mus}). 
+The total uncertainty is dominated by the dependency of charged lepton isolation on the underlying event.
+
+The uncertainty due to the calibration of the jet energy scale has been estimated by a change of 5\% in the jet energies, independent of the \pt and $\eta$ of the jet. 
+This takes into account a 3\%-level difference between the reconstructed and generated jet energy in MC events (Fig.~\ref{UE:a}), 
+and a 3\% residual calibration uncertainty from data~\cite{CMS-DP-2018-028}. 
+The uncertainty due to the limited accuracy of the jet energy resolution is determined by changing the JER correction from the nominal value within $\pm 1$ standard deviation, 
+depending on the \pt and $\eta$ of the jet. We assume the 13\,\TeV\ values given that the JER degradation is mostly induced by detector effects. 
+The parameterizations and associated uncertainties are described in Section~\ref{sec:jets} and Ref.~\cite{CMS-DP-2018-028}, respectively. 
+The effect on our analysis is estimated to be $<1\%$.
+
+Uncertainties in the background are included in the fit uncertainty, as the background normalization and distribution are determined \textit{in-situ}.  
+The b tagging efficiency is also considered as a separate source of experimental uncertainty in the measurement; is measured \textit{in-situ} and 
+bears the largest effect on the \ttbar\ cross section;
+
+The uncertainty in the integrated luminosity has been initially estimated to be 5\% at the time of the submission to the journal, 
+while the central value remained essentially unchanged~\citeTH{CMS-PAS-LUM-17-002}. 
+The 0.1\% uncertainty in the \texttt{LHC} beam energy~\cite{Wenninger:2254678} has a numerically insignificant effect on this measurement.
+
+\subsection{Theory uncertainty}
+\label{subsec:msigodeluncertainties}
+
+The modeling of the \ttbar\ signal events is an essential ingredient in the measurement as we rely on the expected acceptance and fraction of correct to wrong assignments. 
+The impact of theoretical assumptions in the modeling is determined by repeating the analysis selection using the NLO \POWHEG simulation. 
+The differences found are small, and are accounted for as a systematic uncertainty.
+
+The effect of the jet energy scale in the signal is included by varying the \mjj distributions by a multiplicative factor as
+\begin{equation}
+\widetilde{\mjj}=(1+\delta_{JSF} \times \theta_{JSF}) \times \mjj\, ,
+\label{eq:scaledmjj}
+\end{equation}
+where $\delta_{JSF}$ is the estimated effect of the jet energy scale on the invariant mass of the two jets in the event, 
+after propagating the jet energy scale uncertainty, and $\theta_{JSF}$ is a nuisance parameter, Gaussian-distributed with mean and width of zero and unity, respectively.
+
+The effect of the jet energy scale on the acceptance is estimated separately from its effect on the \mjj distributions,
+by counting the events that pass the preselection when the jet energy scale is varied according to its uncertainties. 
+This results in an additional 3\% uncertainty in the acceptance that is not correlated in the fit with the JES impact on the \mjj distribution since 
+it pertains an extrapolation from the fiducial to the full phase space.
+
+The uncertainty from the choice of free- and bound-proton PDF is determined by reweighting the sample of simulated \ttbar\ events according to the RMS of 
+the CT14 and EPPS16 replicas. Two extra variations of $\alpha_{\textrm{s}}(M_{\mathrm{Z}})$ are added in quadrature, to determine the total PDF uncertainty. 
+Variation of the $\mu_\textrm{R}/\mu_\textrm{F}$ scales in the \ttbar\ simulation is also taken into account.
+
+

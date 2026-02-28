@@ -1,0 +1,79 @@
+\section{Background estimation}
+\label{sec:bkg}
+
+\subsection{The $\ell$+jets final state}
+\label{sec:bkg_ljets}
+
+In the $\ell$+jets analysis, the contributions of all background processes are estimated from simulation, 
+excecpt for the \QCD\ multijet background. Owing to its large cross section,
+there is a nonnegligible contribution from the latter faking a \ttbar\ event with $\ell$+jets in the final state.
+Both the contribution from hard fragmentation of c and b quarks whose hadrons decay semileptonically,
+and the contribution from misidentified leptons, such as from either punch-through hadrons or collimated jets with a high electromagnetic fraction,
+can yield $\ell$+jets-like topologies.
+
+The estimation of the \QCD\ multijet background is separately performed for the events with 0, 1, or $\geq\ $2 b jets
+using a control region (CR) where either the muon candidate fails a looser isolation requirement ($I_\textrm{rel}^{\mu}<0.2$)
+or the electron candidate fails the identification criteria.
+The choice of the \QCD\ multijet control region has been made in such a way as to minimize the contamination attributable to the signal and W+jets events while retaining a large number of events in the sample for the estimation of this type of background.
+
+The initial normalization of the \QCD\ multijet contribution in the signal region (SR) is derived from the ``reduced-signal region'' (RSR) of $\ptmiss<20\,\GeV$. 
+Events in both the reduced-signal and control regions fulfilling this requirement are counted.
+After subtracting the expected contributions from non-\QCD\ processes,
+the ratio between the numbers of events observed in the reduced-signal region and in the control region,
+\begin{equation}
+N_{\textrm{SR}}(\QCD) = \left(N_{\textrm{CR}}\textrm{(obs)}-N_{\textrm{CR}}(\textrm{non-\QCD})\right)  \frac{N_{\textrm{RSR}}^{\ptmiss<20}\textrm{(obs)}-N_{\textrm{RSR}}^{\ptmiss<20}(\textrm{non-\QCD})}{N_{\textrm{CR}}^{\ptmiss<20}\textrm{(obs)}-N_{\textrm{CR}}^{\ptmiss<20}(\textrm{non-\QCD})}\, ,
+\label{eq:qcdest}
+\end{equation}
+is used as a transfer factor to normalize the \QCD\ multijet background estimate.
+In both the electron and muon final states, a 30\% uncertainty is assigned to the estimate of the expected contribution from non-\QCD\ processes, 
+estimated after varying the \QCD\ scales in the W+jets simulation. This uncertainty propagates as both normalization and shape uncertainty in the predicted distributions 
+for the \QCD\ multijet process. The variations are applied independently in the reduced-signal and control regions in order to determine an uncertainty envelope. 
+A more accurate normalization for the \QCD\ multijet contribution is obtained by the fit performed to extract the final cross section, described in Section~\ref{sec:res_ljets}.
+
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/metpt_0b_v2}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/metpt_1b_v2}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/metpt_2b_v2}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/metpt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/metpt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/metpt_2b}}
+\caption[Distributions of \ptmiss in $\mu$+jets and $\mathrm{e}$+jets final states at $\sqrt{s}=5.02$\,\TeV]{
+  Distributions of \ptmiss in SR for $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) final states.
+  From left to right, events with 0, 1 or at least 2 \cPqb-tagged jets are shown.
+  The ratio between data (Table~\ref{tab:muIsosamples}) and simulated distributions (Table~\ref{tab:mc_5TeV}) prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}. 
+}
+\label{fig:metmu}
+\end{figure}
+
+
+Figures~\ref{fig:metmu} shows the \ptmiss distributions in SR for $mu$+jets and $\mathrm{e}$+jets final states, respectively. 
+For validation the transverse mass (\mtw) of the lepton--\vecptmiss system,
+\begin{linenomath}\begin{equation}\label{eq:mt}
+\mtw = \sqrt{2\ptmiss \pt^{\mathrm{lepton}} (1 - \mathrm{cos}\Delta\phi)}\, ,
+\end{equation}\end{linenomath}
+is displayed in Fig.~\ref{fig:mtmu} for the same event categories and final states. 
+In both cases, the distributions in these exclusive events, i.e., requiring two non-\cPqb-tagged jets plus 0, 1 or at least 2 \cPqb-tagged jets, 
+a fair agreement is observed in both variables. 
+For higher number of \cPqb-tagged jets, the expected contamination from non-\QCD\ processes tends to be larger. 
+
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/mt_0b_v2}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/mt_1b_v2}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/mt_2b_v2}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/mt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/mt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/mt_2b}}
+
+\caption[Distributions of \mtw in $\mu$+jets and $\mathrm{e}$+jets final states at $\sqrt{s}=5.02$\,\TeV]{
+  Distributions of the \mtw variable in SR for $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) final states.
+  From left to right, events with 0, 1 or at least 2 \cPqb-tagged jets are shown.
+  The ratio between data (Table~\ref{tab:muIsosamples}) and simulated distributions (Table~\ref{tab:mc_5TeV}) prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}. 
+}
+\label{fig:mtmu}
+\end{figure}

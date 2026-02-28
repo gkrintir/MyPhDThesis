@@ -1,0 +1,551 @@
+\chapter{Measurement and optimization of the lepton efficiency} 
+\label{sec:tnp}
+
+The purpose of this Appendix is to describe the techniques and results of the electron and muon efficiency measurements, which have been included 
+in a series of analyses using pp and pPb collisions at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV, respectively.
+Simulated samples are used to derive the efficiency of the lepton trigger, isolation, reconstruction, and selection criteria, as a function of kinematic variables. 
+These lepton-muon efficiencies are also directly estimated from data in $\mathrm{Z}$ boson enriched samples (Table~\ref{tab:muIsosamples}) using the ``tag-and-probe'' technique. 
+To account for differences between data and simulation correction factors are computed from the ratio of the efficiencies measured 
+in data to those calculated from the simulation, in bins of lepton \pt and $\eta$. 
+For all considered cases, Drell--Yan events are simulated either at leading or at next-to-leading-order 
+with the use of \PYTHIA~(v6.424)~\cite{Sjostrand:2006za} or \POWHEG~(v2)~\cite{powheg,powheg2,powhegdy} and \amcatnlo~(v2.2.2)~\cite{amcatnlo} generators 
+interfaced to {\PYTHIA~(v8.205)}~\cite{Sjostrand:2014zea} for parton showering and hadronization (Tables~\ref{tab:mc_5TeV} and~\ref{tab:mc_pPb8TeV}), respectively.
+
+\begin{table}[!htbp]
+\vspace{0.2cm}
+\begin{center}
+\begin{tabular}{l||l|l}
+\toprule
+Run Period & Data set indicative description & Integrated luminosity \\
+\midrule
+pp, $\sqrt{s}=5.02$\,\TeV  &  \verb!SingleMuon_Run2015E!  & 27.4\,\invpb~\citeTH{CMS-PAS-LUM-16-001} \\
+pp, $\sqrt{s}=5.02$\,\TeV  &  \verb!SingleElectron_Run2015E!  & 27.4\,\invpb~\citeTH{CMS-PAS-LUM-16-001} \\
+pp, $\sqrt{s}=5.02$\,\TeV  &  \verb!DoubleElectron_Run2015E!  & 27.4\,\invpb~\citeTH{CMS-PAS-LUM-16-001} \\
+pPb, $\rootsNN=8.16$\,\TeV  &  \verb!SingleMuon_PARun2016C!  & 174\,\invnb~\citeTH{CMS-PAS-LUM-17-002} \\
+pPb, $\rootsNN=8.16$\,\TeV  &  \verb!SingleElectron_PARun2016C!  & 174\,\invnb~\citeTH{CMS-PAS-LUM-17-002} \\
+
+\bottomrule
+\end{tabular}
+\caption[Data samples used for lepton efficiency measurements at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV]{
+  Data samples used for lepton efficiency measurements collected with the \texttt{CMS} detector at the end of 2015 and 2016 period at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV, respectively.
+  The quoted values for the integrated luminosity correspond to the offline calibration, as described in Section~\ref{sec:lumi_5_and_8TeV}. 
+  }
+\label{tab:muIsosamples}
+\end{center}
+\end{table}
+
+\subsection{The tag-and-probe technique}
+\label{sec:tnp_method}
+
+The tag-and-probe (``TnP'') technique takes advantage of a known mass resonance to select (``tag'') particles of the desired type, and to study (``probe'') the efficiency 
+of a particular selection criterion on those particles. 
+More specifically, the TnP method utilizes \Zee\ (\Zmumu) decays as a high-purity source of unbiased electrons (muons) for computing electron (muon) efficiencies, following the method of Ref.~\cite{inclusWZ3pb}. 
+On the one hand, the tag lepton is the control lepton to which stringent selection criteria are applied; thus the fake rate for passing-tag selection criteria should be small. 
+The probe lepton, on the other hand, is the test lepton, whose selection criteria are varied and depend on the specifics of the selection being examined. By pairing these type of objects and imposing an invariant mass requirement on the TnP pair---in our case close to the Z boson pole mass~\cite{pdg_2018}---one ensures to collect a high purity sample. Combinatoric backgrounds can be eliminated through any typical background subtraction methods such as fitting or sideband subtraction. 
+
+By definition, to fulfill the tag (``T'') selection implies that the lepton also satisfies the criteria to be a passing probe. Passing-probe leptons (``P'') are not typically of tag quality, but still satisfy the selection criteria for which the efficiency is being measured. Failing-probe leptons (``F'') account for the remainder of the electrons, which fail the selection criteria. Therefore the above classification entails $3^{2}-3=6$ pair categories: ``TT,'' ``TP,'' ``TF,'' ``PP,'' ``PF,'' and ``FF.'' Defining $\rho_{\textrm{T}}$, $\rho_{\textrm{P}}$ and $\rho_{\textrm{F}}$ as the probability of a lepton to be the tag, the passing probe or the failing probe, respectively, one trivially receives that 
+\begin{gather}
+\rho_{\textrm{T}} + \rho_{\textrm{P}} + \rho_{\textrm{F}}=1\, ,
+\end{gather}
+with the efficiency to be simply given by
+\begin{gather}
+\varepsilon_{\textrm{tot}} = \rho_{\textrm{T}} + \rho_{\textrm{P}} \leq 1 \, .\label{Eq:1}
+\end{gather}
+With a sample of $N(\Zee,\mu\mu)$ events, and with $N_{\textrm{T}}$ the number of tag electrons out of $N$, $N_{\textrm{P}}$ the number of probe electrons out of $N$ etc., the true sample efficiency 
+$\varepsilon_{\textrm{true}}$ would be equal to
+\begin{gather}
+\varepsilon_{\texrm{true}} = \frac{N_{\textrm{T}}+N_{\textrm{P}}}{N_{\textrm{T}}+N_{\textrm{P}}+N_{\textrm{F}}}=\frac{N_{\textrm{T}}+N_{\textrm{P}}}{2N}\, .
+\end{gather}
+However, with the TnP method only a subset of the total $N$ events are being considered, namely the studied events are the ones correctly identified in data by virtue of having a very clean tag electron. For such a subset one instead is left with
+\begin{gather}
+\varepsilon = \frac{2N_{\textrm{TT}}+N_{\textrm{TP}}}{2N_{\textrm{TT}}+N_{\textrm{TP}}+N_{\textrm{TF}}}\, , \label{Eq:4}
+\end{gather} 
+where $N_{\textrm{TT}}$ is the number of tag--tag electrons out of $N$ etc. The factor of 2 in front of the TT events is due to the fact that electrons are not distinguishable in that case. 
+In the large sample limit of $N \rightarrow \infty$, the equation above reduces to Eq.\,(\ref{Eq:1}), i.e., the true sample efficiency. For the sake of brevity, we denote the nominator in Eq.\,(\ref{Eq:4}) as $N_{\textrm{P}}$ and the denominator as $N_{\textrm{tot}}=N_{\textrm{P}}+N_{\textrm{F}}$. In the present analysis, the estimation of \Zee\ (\Zmumu) signal events in the passing and failing samples is carried out via a simultaneous maximum likelihood fit to the dielectron (dimuon) invariant mass \mee\ (\mmumu) distributions in these two samples. 
+
+\begin{figure}[!ht]
+   \begin{center}
+     \includegraphics[scale=0.8]{figures/reconstruction/efficiencyfigures/data/fit/FitExampleRECOEtaMinus2Minus1point56PtLow30High40.pdf}
+     \caption[Example of tag and probe fit using \Zee\ events at $\sqrts = 5.02$\,\TeV]
+      {\label{fig:TnPExample}
+        Example of TnP fit using \Zee\ events at $\sqrts = 5.02$\,\TeV; the distributions---from top left to bottom left---are given as a function of tag--probe pair mass and 
+        correspond to passing, failing and all probes.
+        These examples correspond to the SC to RECO efficiency step (Table ~\ref{probe_tag_definitions}) for a probe of $40<\et<50$\,\GeV\ within the $-2.00<\eta<-1.56$ region. 
+        Results of the simultaneous fit over the tp and tf mass shapes are shown in the bottom right plot, using different parameterizations for signal and background.}
+   \end{center}
+\end{figure}
+
+\subsubsection{Arbitration in case of multiple candidates}
+After applying the selection on \mee\ (\mmumu), some events remain with more than one \Zee\ (\Zmumu) candidate. In case there are more than one \Zee\ (\Zmumu) candidates to select from, the following arbitration is made:
+
+\begin{itemize}
+  \item If there are two probe candidates in the event and if only one of them also passes the tag criteria then choose the one which passes the tag criteria.
+  \item If there are two probe candidates in the event and if both pass the tag criteria then choose the probe candidate with higher \pt.
+  \item If there are two probe candidates in the event and if both fail the tag criteria then choose one of them randomly.
+  \item If there are more than two probe candidates in the event then the event is rejected from further consideration.
+\end{itemize}
+
+It is thus evident that events, in which both electrons fulfill the tag criteria, contribute twice in the numerator and the denominator of Eq.\,(\ref{Eq:4}), for the tag criteria should be stricter relative to the passing probe criteria.
+
+\subsection{Electron efficiency}
+\label{sec:tnp_eles}
+
+The efficiency calculation for electrons is decomposed into three steps:
+
+\begin{itemize}
+\item \underline{Super Cluster (SC)} to Gaussian Sum Filter track-matched electron (``RECO''): the offline electron reconstruction efficiency, i.e., the probability that, given a SC is found, an electron is reconstructed and passes the offline selection.
+\item \underline{RECO} to the respective identification working point (``ID''): the efficiency to pass the selection criteria specific to the measurement, including identification,  isolation,  and conversion rejection,  given that the electron candidate has already passed the previous stage of the offline selection.
+\item \underline{ID} to the online trigger requirement (``HLT''): the efficiency of the reconstructed and selected offline electron to be matched to the HLT object(s) under study.
+\end{itemize}
+
+In that case then, the total efficiency measurement can be factorized into three sequential measurements, hence given by the product
+\begin{gather}
+\varepsilon = \varepsilon_{\textrm{SC}} \times \varepsilon_{\textrm{ID}} \times \varepsilon_{\textrm{HLT}} \label{effbreakdown}
+\end{gather}
+
+\subsubsection{Signal acceptance and candidate selection}
+
+It is required both electrons from \Zee\ decays to be within the ECAL fiducial area, i.e., within \ecal, but excluding the EB--EE transition region \betrans. 
+Both electrons should have \eT $>10$\,\GeV, where $\et=\sum_{i} E_i \sin\theta_i$; $E_i$ is the uncorrected energy seen by the calorimeters for the $i^{th}$ particle, 
+$\theta_i$ is the polar angle of particle $i$, and the sum contains all particles emitted into a fixed solid angle in the event.
+Additionally, \mee\  should be ``close'' to the nominal Z boson mass within a range of 60 $<$ \mee $<$ 120\,\GeV. Typically, the choice of this mass window is driven by two considerations:
+
+\begin{enumerate}
+  \item it should be consistent with the Z boson pole mass~\cite{pdg_2018}, while
+  \item it should be sufficiently broad that failing probes do not frequently fall outside the mass window.
+\end{enumerate}
+
+
+Ideally, unprescaled single-electron triggers are used with the lowest-\et threshold available. 
+However, such threshold had been set at $\et>40$\,\GeV\ under the operating conditions at $\sqrt{s}=5.02$\,\TeV, thus double-electron triggers were applied at HLT event selection level. 
+ The \Zee\ sample for electron efficiency extraction therefore makes use of events that satisfy a diphoton trigger with symmetric transverse energy \et thresholds of $\et=15\,\mathrm{GeV}$ covering the full tracker acceptance. Pairs of photon candidates above the \et threshold are accepted only if their invariant mass is above 50\,\GeV. The trigger selection requires a loose identification using cluster shower shapes and a selection based on the ratio of the hadronic to the electromagnetic energy of the photon candidates. 
+In Table ~\ref{table:HLTL1Measure} the complete list of HLT filters, along with their associated L1 seeds, is shown, while in Table ~\ref{tab:hltCuts} a detailed description of double-electron triggers is given.
+  
+\begin{table}[htbp]
+ \small
+ \begin{tabular}{l||l|l} 
+     \bottomrule
+     Run period & HLT filter & L1 filter seed \\
+     \midrule
+     pp, $\sqrt{s}=5.02$\,\TeV  &  \verb!DoublePhoton15_Eta2p5_Mass50_1000_R9SigmaHE!  & \verb!SingleEG20BptxAND! \\
+     pp, $\sqrt{s}=5.02$\,\TeV  &  \verb!SinglePhoton40_Eta3p1!  & \verb!SingleEG20BptxAND! \\
+     pPb, $\sqrt{s}=8.16$\,\TeV &  \verb!DoublePhoton15_Eta3p1_Mass50_1000!  & \verb!SingleEG14BptxAND! \\
+     pPb, $\sqrt{s}=8.16$\,\TeV &  \verb!SinglePhoton20_Eta3p1!  & \verb!SingleEG10BptxAND! \\
+     \bottomrule
+   \end{tabular}
+ \caption[List of unprescaled single- and double-electron online filters used for measuring the electron efficiencies at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV]
+{List of unprescaled single- and double-electron HLT filters, along with their L1 seeds,  used for measuring the electron efficiencies.
+ Electromagnetic (``EG'') energy deposits are reconstructed through the sum of the \et deposited in two neighboring groups of $5 \times 5$ ECAL crystals.
+ Events with at least one such reconstructed deposit above a certain \et threshold (10,\,14,\,20\,\GeV) are selected by the hardware level trigger.
+ In the HLT level, stricter quality criteria are imposed to reduce the online filtering to acceptable rates.
+ Coincidence with the bunch crossing signal sent by the \texttt{BPTX} (see Section~\ref{sec:bptx_trigger}) detector is required for all cases.
+}
+ \label{table:HLTL1Measure}
+\end{table}
+
+\begin{table}[htbp]
+    \makebox[\textwidth][c]{  
+    \begin{tabular}{l|l|l|lll}
+      \toprule
+      Category & $R_9$ (5$\times$5) & $\sigma_{\eta \eta}$ (5$\times$5) & $H/E$  \\
+      \midrule
+      Barrel & $>0.4$ & $<0.020$ & $<0.3$ \\
+      \midrule
+      Endcap & $>0.5$ & $<0.045$ & $<0.2$ \\
+      \midrule
+      \multicolumn{6}{c}{Other trigger requirements}\\
+      \midrule
+      \multicolumn{2}{c}{HLT seeded candidate ``1'' $\et > $ 15\,\GeV}  &\multicolumn{2}{|c|}{HLT
+      seeded candidate ``2'' $\et > $ 15\,\GeV} &
+      \multicolumn{2}{c}{$m_{\mathrm{1,2}} > $ 50\,\GeV}\\
+      \bottomrule
+    \end{tabular}
+  }
+ \caption[Trigger selection logic for the double-electron online filter at $\sqrt{s}=5.02$\,\TeV]{
+    Trigger selection logic for the double-electron HLT filters as listed in Table~\ref{table:HLTL1Measure}.
+    The HLT object is seeded by at least two L1 candidates having $\et>15$\,\GeV\ and combinatorially paired together.
+    Assuming each candidate mass to be that of the electron, any pair fulfilling a minimum invariant mass threshold of $m_{\mathrm{1,2}} > $ 50\,\GeV\ is retained for further trigger selection.
+    An upper bound of 1000\,\GeV\ was arbitrarily imposed.
+    The rate increase, in case one or both of the seeded legs lay outside the ECAL barrel region, was modulated in pp collisions by sequentially imposing the two candidates to have 
+    $R_9$>0.4 (0.5), $\sigma_{\eta \eta}<$0.02 (0.045) and $H/E$ $<$ 0.3 (0.2) in the barrel (endcap).
+    }
+   \label{tab:hltCuts}
+\end{table}
+
+Following are the definitions of tag, probe, and passing probe in each efficiency step. They are also summarized in Table~\ref{probe_tag_definitions}.
+
+\subsubsection{SC to RECO efficiency}
+
+\begin{itemize}
+\item \underline{Tag}: PF electron with  $\et>25$\,\GeV\ fulfilling the tight identification criteria 
+\item \underline{Probe}: SC
+\item \underline{Passing probe}: SC matched to a reconstructed GsfElectron
+\end{itemize}
+
+\subsubsection{RECO to ID efficiency}
+
+\begin{itemize}
+\item \underline{Tag}: PF electron with  $\et > 25$\,\GeV\ fulfilling the tight identification criteria 
+\item \underline{Probe}: PF electron
+\item \underline{Passing probe}: PF electron fulfilling the identification, isolation and conversion rejection criteria 
+\end{itemize}
+
+An overview of the electron kinematics and electron identification variables, the latter listed in Table~\ref{seltagandprobeeff}), 
+is shown in Figs.~\ref{fig:EleKinematicsAndIDppVars} and~\ref{fig:EleKinematicsAndIDpPbVars} comparing data with simulation 
+within a mass range of 60 $<$ \mee $<$ 120\,\GeV\ using pp and pPb collisions, respectively. 
+Good agreement is observed in the region defined by the kinematic and identification  requirements except for the isolation deposit variables because of the increased underlying event in the simulated pPb collisions (see Section~\ref{sec:pileup}).
+
+\subsubsection{ID to the HLT efficiency}
+
+\begin{itemize}
+\item \underline{Tag}: PF electron with  $\et >25$\,\GeV\ fulfilling the tight identification criteria 
+\item \underline{Probe}: PF electron fulfilling the the identification,  isolation and conversion rejection criteria 
+\item \underline{Passing probe}: PF electron having passed identification,  isolation and conversion rejection criteria, and geometrically matched 
+inside a cone of $\Delta R<0.3$ to the online trigger object.
+\end{itemize}
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/efficiencyfigures/data/fit/comb/passingCombLoose_AbsEtaBin0_FitXPt.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/efficiencyfigures/data/fit/comb/passingCombLoose_AbsEtaBin1_FitXPt.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/efficiencyfigures/data/fit/comb/passingCombLoose_AbsEtaBin3_FitXPt.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/efficiencyfigures/data/fit/comb/passingCombLoose_AbsEtaBin4_FitXPt.pdf}}
+\end{minipage}\par\medskip
+\caption[Electron efficiencies using a tag and probe technique at $\sqrts = 5.02$\,\TeV]
+{Factorized (Eq.\,(\ref{effbreakdown})) electron efficiencies measured in data as a function of probe 
+  \et in $0.00\leq |\eta|<1.00$ (a),  $1.00\leq |\eta|<1.44$ (b), $1.56\leq |\eta|<2.00$ (c) and $2.00\leq |\eta|<2.50$ (d) regions using the TnP 
+  technique (Table ~\ref{probe_tag_definitions} at $\sqrts = 5.02$\,\TeV.}
+\label{fig:FitCombLooseIDUnsignedEta}
+\end{figure}
+
+\begin{table}
+\footnotesize
+\makebox[\textwidth][c]{
+\begin{tabular}[h]{c|c|c|c||c|c|c|c||c|c|c|c}
+  \toprule
+  \multicolumn{4} {c||}{RECO} &  \multicolumn{4} {c||}{ID} &  \multicolumn{4} {c}{HLT} \\
+  \multicolumn{2}{c|}{Type} & \multicolumn{2}{c||}{Requirements}& \multicolumn{2}{c|}{Type} & \multicolumn{2}{c||}{Requirements}& \multicolumn{2}{c|}{Type} & \multicolumn{2}{c}{Requirements}  \\
+  Object & ID  & $E_{T}$ & HLT & Object & ID & $E_{T}$ & HLT & Object & ID & $E_{T}$ & HLT\\ \midrule
+   PF electron & \textit{t} &25& Table~\ref{tab:hltCuts} &  SE & \textit{t} &25&Table~\ref{tab:hltCuts} &  PF electron & \textit{t} &25& Table~\ref{tab:hltCuts} \\
+   \midrule
+   SC & \xmark  & 10 & \xmark  & PF electron & \xmark  & 10 & \xmark  & PF electron & \textit{l}/\textit{m} & 10 & \xmark  \\
+   \midrule
+   GSF electron & \xmark  & 10 & \xmark  & PF electron & \textit{l}/\textit{m}  & 10 & \xmark  & PF electron & \textit{l}/\textit{m} ($\Delta R<0.3$) & 10 &  Table~\ref{table:HLTL1Measure}\\
+
+\bottomrule
+\end{tabular}
+}
+\caption[Requirements for the selection of tag and probe particles for each step in the electron efficiency measurements at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV]
+{Requirements for the selection of tag and probe particles, along with them for tp, for each step in the electron efficiency measurement. 
+  The abbreviations l, m, and t stand for the loose, medium, and tight---the most stringent---conventions, respectively, in the electron identification (Table~\ref{seltagandprobeeff}).
+}
+\label{probe_tag_definitions}
+\end{table}
+
+
+To extract the signal yield of the tp and tf samples an unbinned maximum likelihood fit is performed to the \mee\ variable with different modeling for the signal and background. 
+The efficiency $\varepsilon$ enters as an explicit fit parameter, such that correlations are taken into account in the efficiency uncertainty extracted from the fit. 
+The floating parameters of the fit are
+\begin{enumerate}
+  \item $N_{\textrm{sig}}$: the number of signal tag and probe pairs,
+  \item $N^{\textrm{P}}_{\textrm{bkg}}$: the number of background tp pairs,
+  \item $N^{\textrm{F}}_{\textrm{bkg}}$: the number of background tf pairs,  
+  \item $\varepsilon$: the signal efficiency,
+  \item $2\times5$ parameters in the signal parameterization,
+  \item $2\times3$ parameters in the background parameterization (Eq.\,(\ref{eq:bkg_param})),
+  \label{parameters}
+\end{enumerate}
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/scalefactors/RECO_Comp5vs13TeV_EtaPos.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/scalefactors/RECO_Comp5vs13TeV_EtaNeg.png}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/scalefactors/ID_Comp5vs13TeV_EtaPos.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/scalefactors/ID_Comp5vs13TeV_EtaNeg.png}}
+\end{minipage}\par\medskip
+\caption[Data to simulation rations for the reconstruction and identification of electrons in the 5 and 13\,\TeV running conditions]
+{Data to simulation ratios in the 5 and 13\,\TeV running conditions are determined using the TnP technique as a function of the probe $p_{T}$ 
+  in $|\eta|<0.80$, $0.80\leq |\eta|<1.44$, $1.56\leq |\eta|<2.00$ and $2.00\leq |\eta|<2.50$ regions for the RECO (a,\,b) and ID (c,\,d) steps. 
+  The comparison is separately performed using the signed $\eta$ values at 13\,\TeV, i.e., $\eta>0$ (a,\,c) and  $\eta<0$ (b, d).}
+\label{fig:ScaleFactorsLooseIDUnsignedEta}
+\end{figure}
+
+The signal and background are extracted in the tp and tf samples through the following relations
+\begin{gather}
+\Npass\, , \\
+\Nfail\, ,
+\end{gather}
+where $P^{\textrm{P}}_{\textrm{sig}}(\mee)$ and $P^{\textrm{F}}_{\textrm{sig}}(\mee)$ are the signal probability density functions (pdfs) as a function of the \mee\  variable in the tp and tf samples respectively. $P^{\textrm{P}}_{\textrm{bkg}}(\mee)$ and $P^{\textrm{F}}_{\textrm{bkg}}(\mee)$ are the background pdfs as a function of the \mee\  variable, in the tp and tf samples respectively, 
+and are given by
+\begin{gather}
+P^{P}_{\textrm{bkg}}(\mee) = \RooCMSShape\, ,\label{eq:bkg_param}
+\end{gather}
+similarly for $P^{\textrm{F}}_{\textrm{bkg}}(\mee)$.
+
+In this approach, the tp and tf mass shapes for the signal is built based on a Crystal Ball (CB) pdf, whose parameters are allowed to float in the fit freely. 
+More specifically, defining \tinCB\ and \tzeroinCB, for our case the CB function equals to
+\begin{center}
+$f\propto$\RooCBExGaussShape \label{signal_param}
+\par\end{center}
+Such a CB pdf modified to include a Gaussian is empirically said to properly describe the detector simulation and the data quite well, for instance Fig.~\ref{fig:TnPExample} exhibits. 
+An empirical approach is considered as to what parameters of the line shape model are allowed to float. It is found that if we allow as many parameters as previously listed (also shown in Fig.~\ref{fig:TnPExample}) to float, the fit converges and uncertainties in each of the floating parameters are properly calculated \footnote{Exceptions were found for some low-$\et<20$\,\GeV\ bins.}.
+
+\begin{figure}[!ht]
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/elereco/scalefactors/passingRECO_Merge_XeTa}}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/elereco/scalefactors/passingRECO_Merge_XpT}}
+  \end{minipage}\par\medskip
+  \caption[Electron efficiency and data to simulation ratios for the reconstruction of electrons at $\rootsNN = 8.16$\,\TeV]
+  {Electron efficiency, as measured in data, and data to simulation ratios using the TnP technique,
+    as a function of the probe $\eta$ (a) or $p_{T}$ (b), for the RECO step at $\rootsNN = 8.16$\,\TeV.}
+\label{fig:ScaleFactorsEleReco}
+\end{figure}
+
+The electron efficiencies are estimated in bins of probe electron \et and $\lvert\eta\rvert$. The following bin edges have been coherently used over all efficiency steps:
+\begin{itemize}
+  \item probe electron $\et$\,(\GeV):  10, 20, 30, 40, 50, and 200
+  \item probe electron $\lvert\eta\rvert$: 0, 1.0, 1.4442, 1.56, 2.0, and 2.5 
+\end{itemize}
+The calculated one-dimensional event efficiencies and scale factors are shown in Figs.~\ref{fig:FitCombLooseIDUnsignedEta}--\ref{fig:ScaleFactorsLooseIDUnsignedEta} 
+and Figs.~\ref{fig:ScaleFactorsEleReco}--\ref{fig:ScaleFactorsLooseIDUnsignedEta} using pp and pPb collisions, respectively. 
+Overall, no dependency on the sign of the probe electron $\eta$ for all efficiency steps is found, meaning the results are given in unsigned probe electron $|\eta|$ bins. 
+Concerning the plateau of the used double-electron HLT, it is found already at  $\et=25$\,\GeV, assuming that there is no asymmetry dependence between the two trigger legs 
+in the efficiency factorization formula. The decreased double-electron HLT efficiency is because of the $|\eta|$ requirement on the L1 trigger seed. 
+Pertaining to the identification efficiencies at $\et>40$ and $>20$\,\GeV\ the loose and medium identification requirements retain about 90 and 70\% of the electrons, respectively. 
+For the $\et<20$\,\GeV\ bin, the low event count induces some instability to the fit, and hence bin-by-bin variations are observed for that region. 
+In addition, such variations are prominent for the barrel--endcap transition regions, albeit electrons falling inside such a window are excluded from any further consideration. 
+Finally, the combination of all efficiency steps using pp and pPb collisions are presented in Fig.~\ref{fig:FitCombLooseIDUnsignedEta} and Table~\ref{tab:effsummary}, respectively.
+
+In conclusion, data-based efficiencies suggest that excluding the barrel-endcap transition window and restricting the electron selection 
+in a phase space of $\et>40$ ($>20$)\,\GeV\ and within the $|\eta|<2.1$ region, 
+about 85 (63)\% of electrons are reconstructed, identified, and fulfilling the trigger requirements in pp (pPb) collisions.
+
+\begin{figure}[!ht]
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/eleid/scalefactors/passingID_Merge_XeTa}}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.36]{figures/reconstruction/eleid/scalefactors/passingID_Merge_XpT}}
+  \end{minipage}\par\medskip
+\caption[Measured efficiency and data to simulation ratios for the identification of electrons at $\rootsNN = 8.16$\,\TeV]
+{Electron efficiency, as measured in data, and data to simulation ratios using the TnP technique,
+  as a function of the probe $\eta$ (a) or \pt (b), for the ID step at $\rootsNN = 8.16$\,\TeV.}
+\label{fig:ScaleFactorsEleId}
+\end{figure}
+
+\subsection{Muon efficiency}
+\label{sec:tnp_mus}
+
+\begin{table}[!ht]
+\centering
+\begin{tabular}{l||l|l} 
+\toprule
+Run period & HLT filter & L1 filter seed \\
+     \midrule
+ pp, $\sqrt{s}=5.02$\,\Tev & \verb!SingleMuon15_HIL3!            & \verb!L1_SingleMu7_BptxAND!  \\
+ pPb, $\sqrt{s}=8.16$\,\TeV &  \verb!SingleMuon12_PAL3!          & \verb!L1_SingleMu7_BptxAND!  \\
+\bottomrule
+\end{tabular}
+\caption[List of unprescaled single-muon online filters used for measuring the muon efficiencies at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV]
+{
+List of unprescaled single-muon HLT filters, along with their L1 seeds, used for measuring the muon efficiencies
+}
+\label{tab:ListOfTrigsPP}
+\end{table}
+
+
+For the muon case, the efficiency is calculated requiring the tag muon to pass the HLT filters, as given in Table~\ref{tab:ListOfTrigsPP}. 
+For the muon component of the L1 trigger, \texttt{CSC} and \texttt{DT} chambers provide the trigger primitives constructed from hit patterns consistent 
+with muons that originate from the collision region, and \texttt{RPC} chambers provide hit information.
+At L1, muons are requested to be either standalone (\texttt{CSC}, \texttt{DT}, or \texttt{RPC}) or matched (\texttt{DT} to \texttt{RPC} or \texttt{CSC} to \texttt{RPC}) candidates.
+The L1 trigger was updated during 2016 and is further divided into three subsystems, i.e.,
+the barrel, endcap, and overlap muon track algorithms.
+The coincidence with a bunch crossing identified with the \texttt{BPTX} detector is required to ensure the presence of real collisions.
+Once an event is selected by the L1 filter, it proceeds to sequential HLT steps, that take as input the information from the preceding step and make use of more elaborate algorithms.
+
+The probe must be then a reconstructed muon forming a dimuon system with the tag, the latter of tight identification and isolation quality, and a pair mass in the range of 60--120\,\GeV. 
+The total single muon efficiency is factorized in four steps, for which the probe and the passing probes are described in Table~\ref{table:procedure}. 
+The fitting models observed to appropriately describe the data  are summarized also in the same Table; events are separately counted in all categories 
+according to the pass or fail status of the probe muon.
+
+\begin{table}[!ht]
+\makebox[\textwidth][c]{ 
+  \footnotesize
+  \begin{tabular}{ l | p{3cm} || p{3cm} || p{3cm} || p{3cm} }
+   \toprule
+   Efficiency step   & STA RECO & Inner tracking & ID  &  HLT \\
+   \midrule
+   $|\eta|$ bins                 & 0--1.2--1.8--2.1--2.4     &  0--2.4     & 0--1.2--1.8--2.1--2.4    & 0--1.2--1.8--2.1--2.4  \\ 
+   \midrule
+   \multicolumn{5}{c}{pp nominal fitting}\\
+    \midrule
+   Signal pdf                 &  Double Gaussian            & Double Gaussian             & CB+Gaussian      & CB+Gaussian \\
+   Background pdf                   &  1st order Chebyshev & 2nd order Chebyshev  & 1st order Chebyshev   & 1st order Chebyshev \\
+   Fit mass range (GeV)    &  $(60,\,120)$                  & $(60,\,120)$                       &  $(60,\,120)$                  &  $(60,\,120)$  \\
+   \bottomrule
+  \end{tabular}
+}
+  \caption[Summary of the fit configuration used to obtain the muon efficiencies for each step using the tag-and-probe technique at $\sqrt{s}=5.02$ and $\rootsNN = 8.16$\,\TeV]
+{Summary of the fit configuration used to obtain the muon efficiencies for each step using the TnP technique.}
+\label{table:procedure}
+\end{table}
+
+\textbf{Efficiency of standalone muon reconstruction}
+
+\begin{itemize}
+\item \textbf{Probe: } tracks within the fiducial volume fulfilling the same selection as the inner tracks associated to muons with at least five layers of the tracker including at least one pixel hit.
+\item \textbf{Passing probe: } probe matched with a standalone (STA) muon with at least one valid muon hit.
+\end{itemize}
+
+\textbf{Efficiency of inner track reconstruction}
+
+In principle, this constitutes a twofold process combining the inner tracking (geometrical matching between STA and inner track) with the global muon fit efficiencies. 
+The latter is highly efficient; hence the results reflect mostly the inner track efficiency, i.e.,
+
+\begin{itemize}
+\item \textbf{Probe: } STA muons with at least one valid muon hit.
+\item \textbf{Passing probe: } probe that is a global muon.
+\end{itemize}
+
+\textbf{Efficiency of muon identification and isolation selection}
+
+\begin{itemize}
+\item \textbf{Probe: } global muon.
+\item \textbf{Passing probe: } probe that satisfies all muon identification and isolation (``ID+ISO'') selection
+\end{itemize}
+
+\textbf{Efficiency of the event filter}
+
+\begin{itemize}
+\item \textbf{Probe: } global muon passing the ID+ISO muon selection
+\item \textbf{Passing probe: } probe geometrically matched to the single muon HLT filter
+\end{itemize}
+
+Table~\ref{tab:effsummary} summarizes the inclusive trigger and selection efficiencies measured for electrons and muons using pPb collisions at $\rootsNN = 8.16$\,\TeV. 
+These values are computed by convoluting the differentially measured efficiencies with the expected lepton \pt and $\eta$ distributions in the \PYTHIA \ttbar\ MC sample (Table~\ref{tab:mc_pPb8TeV}). 
+The values are also compatible between the Pbp and pPb running periods, and the residual difference is assigned as an additional systematic uncertainty.
+
+\begin{table}[!ht]
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+\multirow{2}{*}{Parameter} & \multicolumn{2}{c}{Final state}\\
+                           & $\mu$+jets & e+jets \\
+\hline
+$\varepsilon_{\textrm{RECO}}$      & $0.998$            & $0.95\pm0.01$ \\
+$\varepsilon_{\textrm{ID+ISO}}$    & $0.96\pm0.04$  & $0.69\pm0.03$ \\
+$\varepsilon_{\textrm{HLT}}$       & $0.95\pm0.01$  & $0.95\pm0.01$ \\
+\hline
+\end{tabular}
+\caption[Average lepton efficiencies as calculated from data separately in the $\mu$+jets and e+jets final states at $\rootsNN=8.16$\,\TeV]{
+  Average lepton efficiencies as calculated from data separately in the $\mu$+jets and e+jets final states at $\rootsNN=8.16$\,\TeV. 
+  For the combined identification and isolation efficiency an additional 4\% systematic uncertainty due to the presence of the underlying event is taken into account (see Section~\ref{sec:pileup}).}
+\label{tab:effsummary}
+\end{center}
+\end{table}
+
+
+Figure~\ref{fig:muhltidisoeff_pp} summarizes the results of the data- and MC-based efficiencies, as well as their ratio, 
+for the different muon requirements using pp collisions at $\sqrt{s}=5.02$\,\TeV. 
+The scale factors are overall consistent with unity in the $\pt>18\,\GeV$ and $|\eta|<2.1$ range. 
+The observed point-to-point deviations are well within an overall 3\% variation that is considered as the uncertainty due to the muon trigger and selection efficiency.
+
+\begin{figure}[!ht]
+ \begin{center}
+     \subfloat[]{\includegraphics[width=0.45\textwidth]{figures/reconstruction/SingleMuHighPt/idiso_MuID_etaabseta_PLOT_tag_HIL2Mu15_pass}}
+     \subfloat[]{\includegraphics[width=0.45\textwidth]{figures/reconstruction/SingleMuHighPt/idiso_MuID_ptpt_PLOT_tag_HIL2Mu15_pass}}\\
+     \subfloat[]{\includegraphics[width=0.45\textwidth]{figures/reconstruction/SingleMuHighPt/hltidiso_MuID_etaabseta_PLOT_tag_HIL2Mu15_pass}}
+     \subfloat[]{\includegraphics[width=0.45\textwidth]{figures/reconstruction/SingleMuHighPt/hltidiso_MuID_ptpt_PLOT_tag_HIL2Mu15_pass}}
+    \caption[Measured efficiency and data to simulation ratios for the identification of muons at $\sqrt{s} = 5.02$\,\TeV]{
+      Efficiency measurements for ID+ISO
+      (a,\,b) and the combined ID+ISO with HLT (c,\,d) requirements.
+      The results are separately summarized as a function of the probe muon $|\eta|$ (a,\,c)  or
+      \pt (b,\,d). For each plot, the absolute
+      efficiencies measured in data and expected in simulation, as well as the ratio of the two, 
+      are given. The red dashed band corresponds to the envelope derived using the
+      points for which the scale factor is determined with an
+      uncertainty $<15\%$, while the gray dashed band corresponds to
+      the final envelope considered in the pp analysis at the level of $3\%$, taking into account also the HLT efficiency measurements (Fig.~\ref{fig:hlt_mu_pp}). }
+    \label{fig:muhltidisoeff_pp}
+ \end{center}
+\end{figure}
+
+
+Figures~\ref{fig:mustatrkeff_pPb} and~\ref{fig:muhltidisoeff_pPb} summarize the results of the data- and MC-based efficiencies, as well as their ratio, 
+as a function of $\eta$ and $\pt$ when the probe is required to pass the tracking and ID+ISO requirements, respectively, using pPb collisions at $\rootsNN=8.16$\,\TeV.
+It can be noticed that the STA efficiency is found to be almost 100\% with negligible uncertainty. 
+Any uncertainty stemming from this assumption is expected to be negligible for the analysis. 
+As for the electrons, the ID+ISO requirement introduces a dependency on the simulated underlying event, i.e., a strong \pt dependency of the scale factor.
+
+\begin{figure}[!ht]
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/tpTreeStaEff_pPb+Pbp_RD_MC_Eta.pdf}}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/tpTreeTrkEff_pPbAndPbp_RD_MC_Eta.pdf}}
+  \end{minipage}
+\caption[Measured efficiency and data to simulation ratios for the reconstruction of muons at $\rootsNN = 8.16$\,\TeV]
+{Data- and MC-based efficiencies, as well their ratio, for the muon reconstruction as a function of the probe $|\eta|$ integrated at $\pt>15$\,\GeV.
+The dips in efficiency close to $\lvert 0.3 \rvert$ are due to the regions with less instrumentation between the central muon wheel and the two adjacent wheels.
+}
+\label{fig:mustatrkeff_pPb}
+\end{figure}
+
+
+
+
+\begin{figure}[!ht]
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/TN_tpTreeIDEff_pPb_RD_MC_Eta.pdf}}
+  \end{minipage}%\par\medskip
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/TN_tpTreeIDEff_pPb_RD_MC_PT.pdf}}
+  \end{minipage}\par\medskip
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/TN_tpTreeIsoEff_pPb_RD_MC_Eta.pdf}}
+  \end{minipage}
+  \begin{minipage}{.5\linewidth}
+    \centering
+    \subfloat[]{\includegraphics[scale=0.4]{figures/reconstruction/TN_tpTreeIsoEff_pPb_RD_MC_PT.pdf}}
+  \end{minipage}\par\medskip
+\caption[Measured efficiency and data to simulation ratios for the identification and isolation of muons at $\rootsNN = 8.16$\,\TeV]{
+  Comparison between the measured and expected identification (a,\,b) and the combined identification with isolation (c,\,d) muon efficiencies 
+  as a function of the probe $\eta$ (a,\,c) or \pt (b,\,d). 
+  The simulation is systematically higher than the data as a result of small imperfections in the model, 
+  which are revealed by the stringent requirements for a muon to satisfy tight identification criteria.
+}
+\label{fig:muhltidisoeff_pPb}
+\end{figure}
+
+

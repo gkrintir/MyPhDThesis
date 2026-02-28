@@ -1,0 +1,23 @@
+\chapter{Accelerator facilities and experimental apparatus}
+\minitoc
+
+\InitialCharacter{T}he Large Hadron Collider (\texttt{LHC}) is a hadron accelerator with a circumference of 26.7\,$\mathrm{km}$ designed to operate separately with proton and lead beams with energies of up to 7 and 7\,$Z$\,\TeV, respectively. It features four experimental insertions: two aiming at instantaneous luminosity of at least $10^{34}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$, 
+and the rest dedicated to ``medium'' ($\sim$\,$10^{32}$\,$\mathrm{cm}^{2}\mathrm{s}^{-1}$) and ``low'' ($\sim$\,$10^{29}$\,$\mathrm{cm}^{2}\mathrm{s}^{-1}$) interaction rates using pp collisions. 
+The \texttt{CERN} heavy ion injectors and \texttt{LHC} have demonstrated the feasibility of proton-lead as well as xenon-xenon collisions.
+Bunches can be injected into the \texttt{LHC} in every 10th of the 35\,640 RF buckets, a spacing conventionally referred to as ``25\,$\mathrm{ns}$,'' although 
+other spacings exist and can be any multiple of 25\,$\mathrm{ns}$. The minimum spacing between heavy ion bunches, as dictated from the injectors, is nominally 100\,$\mathrm{ns}$. 
+\texttt{LHC} has  very  tight  tolerances  on  nearly  all  beam  parameters,  meaning their  precise  measurement  is  crucial   for   controlling   and   understanding   the  apparatus. 
+With at least two   orders   of   magnitude   higher   stored   beam   energy   than   previous   colliders  machine  protection is also imperative.
+
+The Compact Muon Solenoid (\texttt{CMS}) detector is one of the two general-purpose experiments operating at \texttt{LHC}. 
+Its central feature is a superconducting solenoid of 6\,$\mathrm{m}$ internal diameter.  
+Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter, and a brass and scintillator hadron calorimeter, 
+each composed of a barrel and two endcap sections. Muons are detected in gas-ionization chambers embedded in the steel flux-return yoke outside the solenoid. 
+The forward hadron calorimeter uses steel as an absorber and quartz fibers as the sensitive material, and extend the coverage in the range $3.0 <\lvert \eta \rvert < 5.2$.
+
+\clearpage
+
+%\input{apparatus/introduction.tex}
+
+\input{apparatus/lhc.tex}
+\input{apparatus/cms.tex}

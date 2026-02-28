@@ -1,0 +1,27 @@
+%\input{mycommands.tex}
+
+\chapter{Introduction} 
+\minitoc
+
+
+\InitialCharacter{A}fter the discovery of the top quark more than 20 years ago, top quark production cross sections, increasingly dominated by gluon fusion processes with higher center-of-mass energies, 
+have been meticulously studied using hadron-hadron collisions. 
+The rich variety of results from the \texttt{LHC} experiments are complemented with increasingly accurate theoretical predictions of heavy quark production and decay. 
+Measurements of the top quark production provide a benchmark test of the standard model at energy scales much larger than those typically 
+involved for the other quarks. The large top quark mass ($m_{\textrm{top}}$), which lies remarkably close to the vacuum expectation value of the Higgs field, 
+sets a scale for higher order perturbative calculations in quantum chromodynamics (\QCD).
+
+The proton structure can be extensively probed combining measurements of top quark production at various center-of-mass energies since they exhibit sensitivity on different values 
+of Bjorken $x\gtrsim 2m_{\textrm{top}}/\sqrt{s}$, and hence can provide complementary information on the gluon distribution, as well as light quarks. 
+The energies and large data samples available at \texttt{LHC} have already allowed to measure various large-mass elementary particles, for the first time in nuclear collisions. 
+Compared to hadron-hadron collisions, and based on parametrizations of nuclear modifications to the free nucleon densities, 
+the inclusive top pair production is expected to be mildly enhanced because of an overall net gluon antishadowing, 
+with different regions of their differential distributions being depleted as a result of shadowing or \texttt{EMC}-effect corrections. 
+Novel physics opportunities are, in turn, opened up such as constraints of nuclear parton densities in less explored kinematic ranges, 
+and studies of the dynamics of heavy-quark energy loss in the quark-gluon plasma, a deconfined \QCD\ state of matter.
+
+\clearpage
+
+\input{introduction/introduction.tex}
+
+

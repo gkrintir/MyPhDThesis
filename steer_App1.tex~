@@ -1,0 +1,24 @@
+\chapter{Summary of the impacts and pulls of the most significant nuisance parameters in the $\ell$+jets final state at TeV} 
+\label{sec:postfit_impact}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.99\textwidth]{figures/pp5TeV/CMS-TOP-16-023_Figure-aux_002-a}
+\caption[Summary of the impacts and pulls of the most significant nuisance parameters in the $\ell$+jets final state at $\sqrt{s}=5.02$\,\TeV]{
+  Summary of the impacts and pulls of the most significant nuisance parameters used in the count analysis, when the fit is performed to the Asimov data set.
+  In each plot the left panel shows the post-fit pull (value and uncertainty) of each nuisance, while the right panel displays the estimated impact on the fit for the signal strength.
+  Only the first 30 nuisances are displayed, being their name shown at each row of the plots~\citeTH{topobs_CMS_jhep}.
+}
+\label{fig:postfit_impact:a}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.99\textwidth]{figures/pp5TeV/CMS-TOP-16-023_Figure-aux_002-b}
+\caption[Summary of the impacts and pulls of the most significant nuisance parameters in the $\ell$+jets final state at $\sqrt{s}=5.02$\,\TeV]{
+  Summary of the impacts and pulls of the most significant nuisance parameters used in the analysis of distributions, when the fit is performed to the Asimov data set.
+  In each plot the left panel shows the post-fit pull (value and uncertainty) of each nuisance, while the right panel displays the estimated impact on the fit for the signal strength.
+  Only the first 30 nuisances are displayed, being their name shown at each row of the plots~\citeTH{topobs_CMS_jhep}.
+}
+\label{fig:postfit_impact:b}
+\end{figure}

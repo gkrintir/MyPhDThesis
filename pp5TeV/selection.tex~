@@ -1,0 +1,207 @@
+\section{Event selection}
+\label{sec:evtSel}
+
+\begin{figure}[ht]
+  {
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/pp5TeV/display.png}
+    \caption[A pp collision featuring a $\ttbar\rightarrow \empm+X$ candidate event at $\sqrt{s}=5.02$\,\TeV]{
+      A pp collision featuring a $\ttbar\rightarrow \empm+X$ candidate event in the $\sqrt{s}=5.02$\,\TeV\ data sample recorded by \texttt{CMS}. 
+      Calorimetric energy deposits in \texttt{ECAL} (\texttt{HCAL}) are depicted as green (blue) bars with a height proportional to the magnitude of the deposit. 
+      Tracks are represented by orange (red) lines if reconstructed from tracker (combined tracker and muon system) hits. 
+      Apart from the beam pipe, the highlighted \texttt{CMS} detectors are the pixel and \texttt{ECAL} barrel, \texttt{ECAL} and \texttt{HCAL} endcaps, \texttt{HF} calorimeter, and part of 
+      the muon system along with the matching chambers, \texttt{CSC} and \texttt{DT} segments.
+      The measured kinematics of the reconstructed electron, muon, jets (yellow cones) and \ptmiss (not highlighted) can be found in Ref.~\citeTH{top16015}.
+      The superimposed model of the \texttt{CMS} detector~\cite{skethup} is imported in the browser-based event display of Ref.~\cite{ispy}.
+      %Reference: T McCauley 2017 J. Phys.: Conf. Ser. 898 072030 DOI
+      %https://inspirehep.net/record/1265221
+      %This images were created with ispy-webgl. The SketchUp model of the CMS detector was imported in ispy-webgl. The events were rendered by ispy-webgl. 
+    }
+    \label{fig:ppCollision_emu}
+  }
+\end{figure}
+
+The event sample is selected by a loose online trigger (see Section~\ref{sec:egm_trigger})
+ and further filtered
+offline to remove noncollision events, such as beam--gas interactions or cosmic rays.
+Collision events containing one high-\pt electron (muon) candidate are selected online by requiring
+values of  \et (\pt) greater than 40 (15)\,\GeV\ and of $\lvert\eta\rvert$ less than 3.1 (2.5).
+The measured trigger efficiency for each final state, relative to the final selection, is measured higher than 90\%, as shown in Figs.~\ref{fig:hlt_ele_pp} and ~\ref{fig:hlt_mu_pp}.
+
+In the $\ell$+jets analysis, electron candidates are selected if they have $\pt>40\,\mathrm{GeV}$ and $\lvert\eta\rvert<2.1$.
+Loose identification, including isolation, criteria (Table~\ref{seltagandprobeeff}) are applied to the electron candidates. 
+Electron candidates in the  $1.44<\lvert\eta\rvert<1.57$ region, i.e., in the transition region between the barrel and endcap sections of the \texttt{ECAL}, are excluded.
+The electron reconstruction in this region is less efficient, and hence the loss of signal acceptance is minimal.
+Muons are required to be of tight quality type (see Section~\ref{sec:muons}) and to have $\pt>25\,\mathrm{GeV}$ and $\lvert\eta\rvert<2.1$.
+Additional identification criteria are applied and $I_\textrm{rel}$ is required to be $<15\%$.
+ Events are rejected if they contain extra muons (electrons) identified using looser (veto) set of identification criteria and have $\pt>10$ ($>15$)\,\GeV\.
+
+The distinct signature of two b jets, expected in \ttbar\ decays, is rare in background events, and this is exploited in the $\ell$+jets analysis. 
+Backgrounds from W+jets, \QCD\ multijet, and Z/$\gamma^{*}$ events are handled counting the number of b-tagged jets in the selected events. 
+In addition, two light-flavor jets are expected to be produced in the decay of one of the W bosons for signal events.
+The correlation of these light jets carries a distinctive hallmark with respect to the main backgrounds.
+To that end, jets are selected if they have $\pt>30\,\mathrm{GeV}$ and $\lvert\eta\rvert<2.4$. 
+The flavor of the jets is identified using the CSVv2 algorithm with an operating point that yields a b jet identification efficiency of about 70\%, 
+and mistag probabilities of about 1\% and 15\% for light-flavor and c jets, respectively (Table~\ref{tab:OP}). 
+The event selection requires at least two non-b-tagged jets, i.e., failing the CSVv2\,\texttt{L} working point, to be identified as candidates from the W boson hadronic decay. 
+Additional jets passing the b quark identification criteria are counted and used to classify the selected events
+in none (0b), exactly one (1b), or at least two ($\geq\ $2b) tagged jet categories. 
+The efficiency of the b jet identification algorithm, as expected from Fig.~\ref{fig:btagging_eff_pp}, is measured {\it in situ}, simultaneously with the signal cross section.
+
+Dilepton events are required to contain at least one muon candidate at L3 trigger level. 
+No requirement on the presence of electron candidates is made at neither L1 nor HLT level owing to the relatively high-$\et$ threshold (40\,\GeV) of the lowest unprescaled trigger. 
+Electrons are selected offline if they have $\pt > 20\,\mathrm{GeV}$, $\vert\eta\rvert < 2.4$, and $I_\textrm{rel}<9$ (or $12$)$\%$ if  
+in the barrel (or one of the endcaps). As in the $\ell$+jets final state, electrons detected
+in the transition region between the barrel and endcap sections of the \texttt{ECAL} are excluded. 
+Muons are required to have $\pt > 18\,\mathrm{GeV}$, $\lvert\eta\rvert < 2.1$, and $I_\textrm{rel}<15\%$. 
+At least two jets satisfying the criteria  $\pt> 25\,\mathrm{GeV}$ and $\lvert\eta\rvert< 3$ are required. 
+Events are subsequently selected if they have a pair of leptons with opposite charge (\empm or \mmpm) passing the requirements listed above, as illustrated in Fig.~\ref{fig:ppCollision_emu}. 
+In events with more than one pair of leptons passing the above selection, the two leptons of opposite charge that yield the highest scalar \pt sum are selected.
+
+Candidate events with dilepton invariant masses of $\mll < 20$\,\GeV\ are removed to suppress events from decays of heavy-flavor resonances and low-mass Z/$\gamma^{*}$ processes. 
+Dilepton events with two muons in the final state are still dominated by the Z/$\gamma^{*}$ background. In order to suppress
+this contribution, events in the Z boson mass window of 76$\ <\ $\mll$ <\ $106\,\GeV\ are vetoed in this final state. 
+To further suppress the Z/$\gamma^{*}$ events a requirement on \ptmiss of $>35$\,\GeV\ is imposed (Fig.~\ref{met_mm_tt:d}). 
+
+In both the $\ell$+jets and dilepton analyses, events with $\tau$ leptons are considered as signal if they decay to electrons or muons that satisfy the selection requirements, 
+and are included in the simulation.
+
+
+Table~\ref{tab:cutFlow} summarizes the basic selection requirements that are applied in the $\ell$+jets and dilepton analysis. % in order to select a high purity \ttbar\ $\rightarrow$ \empm\ sample.
+
+
+\begin{table}[hbtp]
+\begin{center}
+\caption[Selection criteria applied in the  $\ell$+jets and dilepton final states for the inclusive \stt measurement at $\sqrt{s}$=5.02\,\TeV]{
+  Basic selection criteria applied in the three separate final states considered in the first measurement of the inclusive \stt in pp collisions at $\sqrt{s}$=5.02\,\TeV. 
+  Events in the mass range of 76$\ <\ $\mll$ <\ $106\,\GeV\ are additionally vetoed in the \mmpm final state.
+  Jets are reconstructed from the PF candidates using the anti-\kt clustering algorithm with a distance parameter of 0.4.
+}
+\label{tab:cutFlow} 
+\makebox[\textwidth][c]{ 
+\begin{tabular}{lcc|c}
+  \toprule
+Filter or physics object & $\ell$+jets  & \multicolumn{2}{c}{Dilepton} \\
+\midrule
+Trigger      & one $\mu$ (e) candidate, \pt$>$15 (\et$>$40)\,\GeV  & \multicolumn{2}{c}{one $\mu$ candidate, \pt$>$15\,\GeV}            \\
+Leptons      & exactly one $\mu$ or e & \empm                             &  \mmpm   \\
+\mll         & ---      & \multicolumn{2}{c}{$>$20\,\GeV}       \\
+\cPZ{} veto  & ---      & ---      & Yes                                      \\
+\ptmiss      & ---      & ---      & $>$35\,\GeV                                \\
+Jet multiplicity &  \multicolumn{3}{c}{ $\geq$~2}      \\
+\multirow{2}*{\cPqb{} tagging}  & CSVv2\,\texttt{L} (Table~\ref{tab:OP}) $\Rightarrow$ \\ 
+& 1$\ell$2j0b, 1$\ell$2j1b, and 1$\ell$2j2b  \\
+\bottomrule
+\end{tabular}}
+\end{center}
+\end{table}
+
+In the following, pre-fit control distributions for different variables in
+events with 0, 1 or at least 2 \cPqb-tagged jets and two non-\cPqb-tagged jets in the $\ell$+jets final state are shown. 
+The lepton \pt and $\eta$ are displayed in Figs.~\ref{fig:lpt} and~\ref{fig:leta}, respectively. 
+The shapes of the distributions are overall reasonably reproduced as well as the rates prior to any fit.
+The leading jet \pt and $\eta$ distributions are shown in Fig.~\ref{fig:jpt} and~\ref{fig:jeta}, accordingly.
+The scalar \pt sum of the selected jets ($H_{\textrm{T}}$) in the event is shown in Fig.~\ref{fig:ht}. 
+A slight trend of the jet \pt is observed in events without \cPqb-tagged jets that are dominated by the \PW+jets background process.
+
+\begin{figure}[htp]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/lpt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/lpt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/lpt_2b}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/lpt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/lpt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/lpt_2b}}
+\caption[Transverse momentum distributions for leptons in $\ell$+jets events with 0, 1 or at least 2 \cPqb-tagged jets at $\sqrts = 5.02$\,\TeV]
+{
+  Distributions for the lepton \pt in $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) events with 0 (a,\,d), 1 (b,\,e) or at least 2 (c,\,f) \cPqb-tagged jets,
+  using pp collisions at $\sqrts = 5.02$\,\TeV. 
+  The distributions from data (Table~\ref{tab:muIsosamples}) are compared to the sum of the expectations for the signal (\ttbar) and backgrounds (Table~\ref{tab:mc_5TeV}). 
+  The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+  The ratio between data and simulated distributions prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}.
+}
+\label{fig:lpt}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/leta_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/leta_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/leta_2b}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/leta_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/leta_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/leta_2b}}
+\caption[Pseudorapidity distributions for leptons in $\ell$+jets events with 0, 1 or at least 2 \cPqb-tagged jets at $\sqrts = 5.02$\,\TeV]{
+  Distributions for the lepton pseudorapidity in $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) events with 0 (a,\,d), 1 (b,\,e) or at least 2 (c,\,f) \cPqb-tagged jets,
+  using pp collisions at $\sqrts = 5.02$\,\TeV. 
+  The distributions from data (Table~\ref{tab:muIsosamples}) are compared to the sum of the expectations for the signal (\ttbar) and backgrounds (Table~\ref{tab:mc_5TeV}). 
+  The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+  The ratio between data and simulated distributions prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}.
+}
+\label{fig:leta}
+\end{figure}
+
+
+\begin{figure}[htp]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jpt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jpt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jpt_2b}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jpt_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jpt_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jpt_2b}}
+\caption[Transverse momentum distributions for jets in $\ell$+jets events with 0, 1 or at least 2 \cPqb-tagged jets at $\sqrts = 5.02$\,\TeV]
+{
+  Transverse momentum distributions for the two leading in \pt jets (a,\,d) or the leading in \pt \cPqb-tagged  jet (b,\,c,\,e,\,f) in $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) events
+  with 0 (a,\,d), 1 (b,\,e) or at least 2 (c,\,f) \cPqb-tagged jets, using pp collisions at $\sqrts = 5.02$\,\TeV. 
+  The distributions from data (Table~\ref{tab:muIsosamples}) are compared to the sum of the expectations for the signal (\ttbar) and backgrounds (Table~\ref{tab:mc_5TeV}). 
+  The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+  The ratio between data and simulated distributions prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}.
+}
+\label{fig:jpt}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jeta_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jeta_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/jeta_2b}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jeta_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jeta_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/jeta_2b}}
+\caption[Pseudorapidity distributions for jets in $\ell$+jets events with 0, 1 or at least 2 \cPqb-tagged jets at $\sqrts = 5.02$\,\TeV]
+{
+  Pseudorapidity distributions for the two leading in \pt jets (a,\,d) or the leading in \pt \cPqb-tagged  jet (b,\,c,\,e,\,f) in $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) events
+  with 0 (a,\,d), 1 (b,\,e) or at least 2 (c,\,f) \cPqb-tagged jets, using pp collisions at $\sqrts = 5.02$\,\TeV. 
+  The distributions from data (Table~\ref{tab:muIsosamples}) are compared to the sum of the expectations for the signal (\ttbar) and backgrounds (Table~\ref{tab:mc_5TeV}). 
+  The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+  The ratio between data and simulated distributions prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}.
+}
+\label{fig:jeta}
+\end{figure}
+
+\begin{figure}[htp]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/ht_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/ht_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_mu/ht_2b}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/ht_0b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/ht_1b}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/reconstruction/img/analysis_e/ht_2b}}
+\caption[Global event variable distributions in $\ell$+jets events with 0, 1 or at least 2 \cPqb-tagged jets at $\sqrts = 5.02$\,\TeV]
+{
+  Distributions for the scalar \pt sum of all jets  in $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) events
+  with 0 (a,\,d), 1 (b,\,e) or at least 2 (c,\,f) \cPqb-tagged jets, using pp collisions at $\sqrts = 5.02$\,\TeV. 
+  The distributions from data (Table~\ref{tab:muIsosamples}) are compared to the sum of the expectations for the signal (\ttbar) and backgrounds (Table~\ref{tab:mc_5TeV}). 
+  The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+  The ratio between data and simulated distributions prior to any fit is shown at the bottom of each figure. 
+  The hatched areas indicate the statistical uncertainty due to the finite event count in the simulated samples~\citeAN{AN-16-320}
+}
+\label{fig:ht}
+\end{figure}
+
+

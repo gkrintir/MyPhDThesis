@@ -1,0 +1,125 @@
+
+\subsection{Formalism of absolute luminosity from separating the beams}
+\label{sec:vdmScan}
+
+The bunch luminosity $\mathcal{L_{\textrm{b}}}$ produced by one colliding bunch pair, with time- and position-dependent density functions,
+$\rho_1(x,y,z,t)$ and $\rho_2(x,y,z,t)$, is given by~\cite{BALAGURA2011634}
+\begin{equation}
+\label{eq:lumidef}
+\mathcal{L_{\textrm{b}}} = K N_1 N_2 f_{\textrm{r}}\int_{-\infty}^{\infty}\rho_1(x,y,z,t)\rho_2(x,y,z,t) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\,\mathrm{d}t\, ,
+\end{equation}
+where $N_1$ and $N_2$ are the numbers of protons in the two colliding bunches respectively, \lhcOrbit is the bunch 
+orbit frequency around the \texttt{LHC} ring, and $\rho_{1,2}$ are the bunch proton densities normalized to unity at any time $t$. 
+While the bunch populations can be measured to good precision directly, a precise measurement of $\rho_{1,2}$ is difficult.
+\begin{figure*}[!tbh]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/luminosity/coordinates.png}
+  \caption[Definition of coordinates and beam trajectories typically used in luminosity measurement]{\label{fig:coordinates}
+    Definition of coordinates and beam trajectories~\cite{BALAGURA2011634}; 
+    the laboratory frame $xyz$ is defined such that the $x$ axis points in the direction of $\vec{v}_1+\vec{v}_2$,
+    the $y$ axis in that of $\vec{v}_1 \times \vec{v}_2$, and the $z$ axis in that of $\vec{v}_1 - \vec{v}_2$, where $\vec{v}_1=c\,\hat{v}_1(sina,0,cosa)$ and $\vec{v}_2=c\,\hat{v}_2(sina,0,-cosa)$.
+    The points $(x_1,z_1)$ and $(x_2,z_2)$ are the positions of the bunch centers at time $t=0$. 
+    For simplicity, the former is on the intersect of the two beam trajectories in the $x$--$z$ plane. 
+    The third dimension ($y$) is here suppressed.
+    }
+\end{figure*}
+%\begin{figure*}[!tbh]
+%  \centering
+%  \includegraphics[width=0.9\textwidth]{figures/luminosity/overlap_v2.png}
+%  \caption[Illustration of a bunch crossing at the interaction point]{\label{fig:overlap}
+%    Illustration of a bunch crossing; 
+%    in principle, the bunch luminosity can be inferred from the bunch populations and the transverse beam sizes at the IP.
+%    The beam-overlap or ``effective'' area is extracted during the well-established technique of beam-separation scans.
+%    }
+%\end{figure*}
+The kinematic factor $K$ 
+\begin{equation}
+\label{eq:k_factor}
+K = \sqrt{\lvert \vec{v}_1-\vec{v}_2 \rvert ^2-\frac{\vec{v}_1 \times \vec{v}_2}{c^2}}\, ,
+\end{equation}
+can be readily attained in case of equal and relativistic beam velocities, i.e., $\lvert \vec{v}_1 \rvert=\lvert \vec{v}_2 \rvert =c$, and Eq.\,(\ref{eq:lumidef}) can be thus simplified to
+\begin{equation}
+\label{eq:lumidef_simpl}
+\mathcal{L_{\textrm{b}}} = (2\mathrm{cos}^2\theta_\textrm{C}) N_1 N_2 f_{\textrm{r}}\int_{-\infty}^{\infty}\rho_1(x,y,z,t)\rho_2(x,y,z,t) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\,\mathrm{d}t\, ,
+\end{equation}
+in terms of a half-crossing angle $\theta_\textrm{C}$ defined by the two beam trajectories without loss of generality in the $x$--$z$ plane (Fig.~\ref{fig:coordinates}). 
+The time-dependent beam overlap $f=\rho_1\rho_2$ equals simply to the product of the normalized particle-density distributions, and it can be approximated as
+\begin{equation}
+\label{eq:densities}
+f(x,y,z,t) = \frac{1}{(2\pi)^3\sigma_{xi}\sigma_{yi}\sigma_{zi}}\mathrm{exp}\left[-\left(\frac{(x-x_i)^2}{2\sigma_{xi}^2} + \frac{(y-y_i)^2}{2\sigma_{yi}^2} + \frac{(z-ct)^2}{2\sigma_{zi}^2}\right)\right]\, ,
+\end{equation}
+assuming perfectly Gaussian bunch profiles. The values $\sigma_{xi}$, $\sigma_{yi}$, and $\sigma_{zi}$ are the transverse and longitudinal beam sizes ($i=1,2$) in the frame as defined in Fig.~\ref{fig:coordinates}, whereas $x_i$ and $y_i$ correspond to the transverse positions of the bunch centroids at the nominal collision point ($t=0$).
+The time-integrated beam overlap distribution reveals cross terms implying that the resulting distribution is not exactly factorizable in a $x$- and $z$-dependent Gaussian profile.
+For small crossing angles and $\sigma_{zi}\gg\sigma_{xi}$---two conditions typically valid at \texttt{LHC}---the longitudinal dependence of the transverse beam size is raised, and
+one can always find a rotated reference in the crossing plane in which the beam overlap is the product of two profiles each depending only on one position variable.
+For beams colliding with a half crossing-angle $a$ in the $x$--$z$ plane, and with a relative transverse offsets $\Delta x$ ($\Delta y$) in the $x$ ($y$) direction, 
+it can be therefore shown that integrating Eq.\,(\ref{eq:densities}) leads to
+\begin{equation}
+\label{eq:lumidefgen}
+\mathcal{L_{\textrm{b}}} = 2\mathrm{cos}^2\theta_\textrm{C} N_1 N_2 f_{\textrm{r}}\int_{-\infty}^{\infty}f(x,y,z)\mathrm{d}y\,\mathrm{d}z\ = \frac{\mathrm{cos}^2\theta_\textrm{C} N_1 N_2 f_{\textrm{r}}}{2\pi\Sigma_{x}\Sigma_{y}}\mathrm{exp}\left[-\left(\frac{\Delta x^2}{2\Sigma_{x}^2} + \frac{\Delta y^2}{2\Sigma_{y}^2} \right)\right]\, .
+\end{equation}
+More specifically, the variances $\sigma_{xi}^2$ and $\sigma_{yi}^2$ have been convolved to 
+\begin{equation}
+\label{eq:capsigmaX}
+\Sigma_x = \sqrt{(\sigma_{x1}^2+\sigma_{x2}^2)cos^2\theta_\textrm{C} + (\sigma_{z1}^2+\sigma_{z2}^2)\mathrm{sin}^2\theta_\textrm{C}}\, ,
+\end{equation}
+in the crossing plane, and
+\begin{equation}
+\label{eq:capsigmaY}
+\Sigma_y = \sqrt{(\sigma_{y1}^2+\sigma_{y2}^2)}\, ,
+\end{equation}
+otherwise. 
+
+
+The vdM scan method allows to measure the beam overlap in Eq.\,(\ref{eq:densities}) assuming that the two bunch densities factorize in $x$ and $y$, meaning
+%For the \texttt{vdM} scan method to be valid, it is assumed that the two bunch proton densities factorize in $x$ and $y$, i.e.
+\begin{equation}
+\label{eq:fact}
+\int_{-\infty}^{\infty}\rho_1(x,y)\rho_2(x+\Delta x,y+\Delta y) \,\mathrm{d}x\,\mathrm{d}y  = \int_{-\infty}^{\infty} \rho_1(x)\rho_2(x+\Delta x) \,\mathrm{d}x \,  \int_{-\infty}^{\infty} \rho_1(y)\rho_2(y+\Delta y) \,\mathrm{d}y\, .
+\end{equation}
+The estimate of the possible bias introduced by this assumption is calculated in Section~\ref{sec:xyCor}. Both sides of 
+Eq.\,(\ref{eq:lumidef}) can then be integrated independently in $\Delta x$ and $\Delta y$, while the separation in the
+other direction is kept fixed at arbitrary values $\Delta y_0$ and $\Delta x_0$, respectively. For $\theta_\textrm{C}=0$
+\begin{equation}
+\label{eq:evaldense}
+N_1 N_2 f_{\textrm{r}} \int_{-\infty}^{\infty} \rho_1(y)\rho_2(y+\Delta y_0) \,\mathrm{d}y = \int_{-\infty}^{\infty} \mathcal{L_{\textrm{b}}}(\Delta x, \Delta y_0) \,\mathrm{d}(\Delta x)\, ,
+\end{equation}
+and therefore
+\begin{equation}
+\label{eq:evaldense2}
+\int_{-\infty}^{\infty} \rho_1(x)\rho_2(x+\Delta x_0) \,\mathrm{d}x = \frac{\mathcal{L_{\textrm{b}}} (\Delta x_0, \Delta y_0)}{\int_{-\infty}^{\infty} \mathcal{L_{\textrm{b}}}(\Delta x, \Delta y_0) \,\mathrm{d}(\Delta x)}\, .
+\end{equation}
+Likewise for $y$. Experimentally the integration over $\Delta x$ and $\Delta y$ is implemented by scanning the two 
+beams against each other and the integral in the denominator of Eq.\,(\ref{eq:evaldense2}) is evaluated by measuring 
+the detector rate as a function of the beam-beam separation, the so-called ``scan curves.'' After replacing the factorized in $x$ and $y$ beam overlap integral
+according to Eq.\,(\ref{eq:evaldense2}), Eq.\,(\ref{eq:lumidefgen}) becomes for any head-on collision: 
+\begin{equation}
+\label{eq:lumidefVdM}
+\mathcal{L_{\textrm{b}}} (\Delta x=0, \Delta y=0) = N_1 N_2 f_{\textrm{r}}  \frac{R (\Delta x=0, \Delta y_0) R (\Delta x_0, \Delta y=0)}{\int_{-\infty}^{\infty} R (\Delta x, \Delta y_0) \,\mathrm{d}(\Delta x) \int_{-\infty}^{\infty} R(\Delta x_0, \Delta y) \,\mathrm{d}(\Delta y)}\, ,
+\end{equation}
+where the luminosity is expressed in terms of the rate $R(\Delta x, \Delta y)$ measured when the two beams are separated by values
+$\Delta x$ and $\Delta y$, respectively. The integrals of the scan curves can be obtained from the convolved beam widths $\Sigma_x$ and $\Sigma_y$ 
+\begin{equation}
+\label{eq:capsigmaX_vdm}
+\Sigma_x = \frac{1}{\sqrt{2\pi}}\frac{\int_{-\infty}^{\infty} R (\Delta x, \Delta y_0) \,\mathrm{d}(\Delta x)}{R (\Delta x=0, \Delta y_0)}\, .
+\end{equation}
+Likewise for $y$. 
+In the case of Gaussian luminosity curves, the convolved beam width coincides  with  the  standard  deviation  of  that  distribution. Equation\,(\ref{eq:capsigmaX_vdm}) is generic though
+meaning $\Sigma_x$ and $\Sigma_y$ depend only upon the area under the luminosity curve.
+% and make no assumption as to the shape of that curve.
+ The appealing feature of the vdM method is therefore no assumption about the shape of the scan curve is made.
+%; $\Sigma$ can be interpreted as the standard deviation of a Gaussian-like scan curve. 
+ The bunch luminosity at zero separation is extracted from machine parameters by performing a pair of beam-separations scans 
+\begin{equation}
+\label{eq:lumidefVdMcSig}
+\mathcal{L_{\textrm{b}}} (\Delta x=0, \Delta y=0) =\frac{N_1 N_2 f_{\textrm{r}}}{2\pi\Sigma_x \Sigma_y}\, ,
+\end{equation}
+such that the final formula used to measure the so-called ``visible cross sections'' is
+\begin{equation}
+\label{eq:sigVisX_vdm}
+ \sigmaVis=\frac{2\pi\Sigma_x \Sigma_y R(\Delta x=0, \Delta y=0)}{N_1 N_2 f_{\textrm{r}}\, .
+\end{equation}
+%retrieving Eq.~\ref{eq:sigVisX} for $\mu_{\textrm{vis}} \equiv R(\Delta x=0, \Delta y=0)$. 
+In contrast to beam-profile measurements, $\Sigma_x$ and $\Sigma_y$ are directly determined from fits of the scan curves based on detector rate measurements during the vdM scans. 
+While the convolved beam widths are the same for all detectors, the peaks of the corresponding scan curves depend on the detector, meaning the exercise is repeated per detector. 
+The comparison of the $\Sigma_x$ and $\Sigma_y$ as estimated from the scan curves of different detectors represents a crucial cross-check.

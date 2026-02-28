@@ -1,0 +1,78 @@
+\section{Data, simulated samples and theoretical cross section}
+\label{sec:samples}
+
+This analysis is based on an integrated luminosity of $27.4 \pm 0.6 \,\pbinv$~\citeTH{CMS-PAS-LUM-16-001}. 
+The presence of multiple proton collisions in the same or nearby bunch crossings results in an average number of overlapping interactions estimated online to be 1.4, 
+assuming a total inelastic cross section of 65\,$\mathrm{mb}$.
+
+Several MC event generators are used to simulate signal and background events. The NLO \POWHEG~(v2)~\cite{powheg,powheg2,powheghvq} 
+generator is used for \ttbar\ events, assuming a value of $172.5$\,\GeV\ for $m_{\textrm{top}}$. These events are passed to \PYTHIA~(v8.205)~\cite{Sjostrand:2006za,Sjostrand:2014zea}   
+to simulate parton showering, hadronization, and  the underlying event, using the CUETP8M1~\cite{Khachatryan:2015pea,Skands:2014pea} tune for the default \ttbar\ MC sample.
+The NNPDF3.0 NLO PDFs with strong coupling $\alpha_{\textrm{s}}(M_{\mathrm Z})=0.118$ at the Z boson mass scale $M_{\mathrm Z}$ are utilized in the MC calculations. 
+
+The \amcatnlo~(v2.2.2) generator~\cite{amcatnlo} is used to simulate \PW boson production with additional jets (\PW+jets), and high-mass ($> 50$\,\GeV) Drell--Yan quark-antiquark
+annihilation into lepton-antilepton pairs through Z boson or virtual-photon exchange (referred to as ``Z/$\gamma^{*}$''). 
+The simulation includes up to two extra partons at matrix element level, and the \textsc{FxFx} merging scheme~\cite{fxfx} is used to interface with \PYTHIA. 
+Low-mass Z/$\gamma^{*}$ events (20--50\,\GeV) are simulated with \PYTHIA. The normalization of the \PW+jets and Z/$\gamma^{*}$ processes is either derived from data (in the dilepton final state) 
+or estimated based on the NNLO cross sections (in the $\ell$+jets final state) from the \FEWZ\ program (v3.1.b2)~\cite{fewz}.
+Single top quark plus \PW boson events (\tW) are simulated using \POWHEG~(v1)~\cite{powheg1,powheg3} interfaced with \PYTHIA, 
+and are normalized to the approximate NNLO cross sections~\cite{Kidonakis:2013zqa}. 
+The diboson contributions from \WW and \WZ production (referred to as ``WV'') are simulated with \PYTHIA, and are normalized 
+to the NLO cross sections calculated with the \mcfm~(v8.0) program~\cite{mcfm}. 
+All generated events undergo a full \GEANTfour~\cite{geant4} simulation of the detector response. 
+A complete overview of all used simulated sample can be found in Table~\ref{tab:mc_5TeV}.
+
+The expected signal yields are normalized to the value of the SM prediction for the \ttbar\ production cross section:
+
+\begin{equation}
+\label{eq:theory}
+\sigma_{\tt}^{\mathrm{NNLO}} = 68.9\ ^{+1.9}_{-2.3}\,(\textrm{scale}) \pm 2.3\,\textrm{(PDF)}\ ^{+1.4}_{-1.0}\,(\alpha_{\textrm{s}})\,\mathrm{pb}\, ,
+\end{equation}
+as calculated with the \textsc{top++} program~\cite{top++} at NNLO in perturbative \QCD, including soft-gluon resummation 
+at next-to-next-to-leading-logarithmic order~\cite{mitov}, using the NNPDF3.0 NNLO PDF set, with
+$\alpha_{\textrm{s}}(M_{\mathrm Z})=0.118$ and $m_{\textrm{top}} = 172.5\,\GeV$.
+The systematic uncertainty in the theoretical \ttbar\ cross section are associated with the choice of the renormalization ($\mu_{\textrm{R}}$) and factorization ($\mu_{\textrm{F}}$) scales---nominally set at $\mu_{\textrm{R}}=\mu_{\textrm{F}}=\sqrt{m_{\textrm{top}}^{2}+p_{\textrm{T},\textrm{top}}^{2}}$ with $p_{\textrm{T},\textrm{top}}$ the top quark transverse momentum---as well as with the PDF set and the $\alpha_{\textrm{s}}$ value.
+The uncertainty of 0.1\% in the LHC beam energy~\cite{Wenninger:2254678} translates into an additional uncertainty of 0.22\,$\mathrm{pb}$ in the expected cross section, with negligible impact on the acceptance of any of the final states included in this analysis.
+
+\begin{sidewaystable}[htp]
+\caption[MC event samples used for the inclusive \stt measurement at $\sqrt{s}$=5.02\,\TeV]{
+MC event generation employed in the measurement of the inclusive \stt in pp collisions at $\sqrt{s}$=5.02\,\TeV~\citeAN{AN-16-098,AN-16-320,AN-16-369}; 
+the samples are generated either inclusively or with a final state restricted to the leptonic mode, including electrons, muons, and $\mathit{tau}$ leptons. 
+The absence of reference delineates cross section values calculated from the generator. 
+For the samples restricted to specific decay channels, the branching ratio is included in the quoted cross section.
+The  $M_{\ell\ell}>50\,\GeV$ ( $20<M_{\ell\ell}<50\,\GeV$) requirement has been applied on the MC event sample marked with \texttt{*} (\texttt{**}).
+The \NNPDFzero NLO PDFs with strong coupling $\alpha_{\textrm{s}}(M_{\mathrm{Z}})=0.118$ at the Z boson mass scale $M_{\mattrm{Z}}$ are utilized in all the MC calculations. 
+}
+\label{tab:mc_5TeV}
+\centering
+\begin{tabular}{c||c|l}
+  \toprule
+    			Process        & $\sigma[{\mathrm{pb}}]$  & MC event sample indicative description \\
+    			\midrule 
+                        \multirow{7}{*}{$\ttbar$}  & \multirow{7}{*}{
+                          69 {\small (NNLO+NNLL)}~\cite{top++}} & \small{\verb!TT_TuneCUETP8M1_5020GeV-powheg-pythia8!} \\
+                                                                & & \small{\verb!TT_TuneCUETP8M1_5020GeV-powheg-scaledown-pythia8!} \\
+                                                                 & & \small{\verb!TT_TuneCUETP8M1_5020GeV-powheg-scaleup-pythia8!} \\ 
+                                                               & & \small{\verb!TT_TuneEE5C_5020GeV-powheg-herwig++!}\\
+                        \midrule
+    		        \multirow{2}{*}{$\cPqt\PW$} & \multirow{2}{*}{
+                          3.04 {\small (NNLL)}~\cite{Kidonakis:2013zqa}} & \small{\verb!ST_tW_5020GeV_top-powheg-pythia8!}\\
+    	                                                           & & \small{\verb!ST_tW_5020GeV_antitop-powheg-pythia8!}\\
+			\midrule
+                        \multirow{2}{*}{$\PW+$\,jets}
+                        &  \multirow{2}{*}{ 21159 {\small (NNLO[\QCD]+NLO[EWK])}~\cite{fewz}} & \small{\verb!WToLNu_XJ{0,1,2}_5020GeV_5f-amcatnloFXFX-pythia8!}\\
+                                                                                & & \small{\verb!WJetsToLNu_TuneCUETP8M1_5020GeV-amcatnloFXFX-pythia8!}\\
+                         \midrule
+                         \multirow{2}{*}{$\cPZ/\gamma^{*}$}    &     2010\texttt{*} {\small (NNLO[\QCD]+NLO[EWK])}~\cite{fewz} & \small{\verb!DYJetsToLL_TuneCUETP8M1_5020GeV-amcatnloFXFX-pythia8!}\\
+                           & 1506\texttt{**} {\small (NNLO[\QCD]+NLO[EWK])}~\cite{fewz}
+                           & \small{\verb!DYJetsToLL_TuneCUETP8M1_5020GeV-MLM-pythia8!} \\
+                           \midrule
+                          ${\PW\PW}(\to \ell\nu)$      &
+                          1.77 {\small (NLO)}~\cite{mcfm} & \small{\verb!WWTo2L2Nu_TuneCUETP8M1_5020GeV-powheg-pythia8!}\\
+                        ${\cPZ\cPZ}$      &     0.441
+                        {\small (NLO)}~\cite{mcfm} & \small{\verb!ZZTo4L_TuneCUETP8M1_5020GeV-powheg-pythia8!}\\      
+                         ${\PW\cPZ}$      &
+                         1.21 {\small (NLO)}~\cite{mcfm} & \small{\verb!WZTo3LNU_TuneCUETP8M1_5020GeV-powhe-pythia8g!}\\
+  \bottomrule
+\end{tabular}
+\end{sidewaystable}

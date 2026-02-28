@@ -1,0 +1,504 @@
+\section{The Compact Muon Solenoid detector }
+\label{sec:cms_detector}
+
+The \texttt{CMS} detector~\cite{cms_paper} is one of the two general-purpose detectors operating at \texttt{LHC}. 
+It has an overall length of 22\,$\mathrm{m}$, a diameter of 15\,$\mathrm{m}$, and weighs 14\,000\,$\mathrm{t}$. 
+The \texttt{CMS} experiment makes use of a right-handed coordinate system, with the
+origin at the nominal interaction point, the $x$ axis pointing to the
+center of the \texttt{LHC} ring, the $y$ axis pointing up (perpendicular to the \texttt{LHC} plane), and 
+the $z$ axis along the counter-clockwise beam direction. The azimuthal angle $\phi$ is measured in the $x$--$y$ plane, 
+with $\phi=0$ along the positive $x$ axis, and $\phi=\pi/2$ along the positive $y$ axis, and it is expressed in radians. 
+The radial coordinate in this plane is denoted by $r$, while the polar angle $\theta$ is defined
+in the $r$--$z$ plane with respect to the $z$ axis, and the pseudorapidity is defined as $\eta = -\ln\left(\tan\left(\theta/2\right)\right)$. 
+The component of the momentum transverse to the $z$ axis is denoted by $\pt$. 
+%The missing transverse momentum \ptmiss is the vectorial sum of the undetectable particle transverse
+%momenta. The transverse energy is defined as $\ET=E\sin\theta$.
+
+The \texttt{CMS} detector is well-suited to a global event description that is achieved correlating the basic elements from all detector layers.
+Most of the produced particle types in an event can be reconstructed and identified with an optimized combination of subdetector information, using~\cite{cms_PF}
+
+\begin{itemize}
+\item a large magnetic field (Section~\ref{sec:CMS_magnet}), to measure the momentum of charged particles and to separate the calorimeter energy deposits of charged and neutral particles in jets;
+\item a fine-grained tracker (Section~\ref{sec:silicontracker}), providing a pure and efficient
+charged-particle trajectory reconstruction in jets with $\pt$ up to
+around 1\,\TeV, and therefore an excellent measurement of $\sim$65\% of the jet energy;
+\item a highly-segmented electromagnetic calorimeter (\texttt{ECAL}) (Section~\ref{sec:ecal}), allowing energy deposits from particles in jets
+(charged hadrons, neutral hadrons, and photons) to be clearly separated
+from each other up to a jet $\pt$ of the order of 1\,\TeV. The resulting
+efficient photon identification, combined with the high \texttt{ECAL} energy resolution,
+allows for an excellent measurement of another $\sim$25\% of the jet energy;
+\item a hermetic hadron calorimeter (\texttt{HCAL}) (Section~\ref{sec:hcal})  with a coarse segmentation, but still sufficient to separate
+charged and neutral hadron energy deposits in jets up to $\pt$ of
+200--300\,\GeV, allowing the remaining 10\% of the jet energy to be
+reconstructed, although with a modest resolution;
+\item an excellent muon tracking system (Section~\ref{sec:muon_dets}), delivering an efficient and pure  muon identification, irrespective of the surrounding particles.
+\end{itemize}
+This simplified view is graphically
+summarized in Fig.~\ref{fig:CMSSlice}, which displays a sketch of a
+transverse slice of the \texttt{CMS} detector.
+
+The first ``commissioning'' operation in the 3.8\,$\mathrm{T}$ magnetic field took place during October-November 2008,  when a month-long data-taking exercise, 
+henceforth known as the ``Cosmic Run at Four Tesla'' (CRAFT)~\cite{CRAFT}, was conducted, providing \texttt{CMS} Collaboration with invaluable experience 
+in operating the experiment and understanding the performance of its subdetectors. 
+At the start of each operating year, \texttt{CMS} also observes the muon halo from single circulating beams and receives several single shot ``beam splash'' 
+events. In such an event, single circulating beams are steered onto closed collimators upstream of \texttt{CMS}, releasing muons that produce signals in most channels of the detector.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.0\columnwidth]{figures/apparatus/Figure_001.pdf}
+\caption[A sketch of the \texttt{CMS} detector]{\label{fig:CMSSlice} A sketch of the specific particle
+interactions in a transverse slice of the \texttt{CMS} detector, from the beam
+interaction region, on the left, to the muon detector, on the right.  
+For this illustration, the muon and the charged pion are positively charged, and the electron is negatively charged~\cite{cms_PF}.}
+\end{figure}
+
+
+Two subdetectors, the Centauro And STrange Object Research (\texttt{CASTOR}) and Zero Degree Calorimeter (\texttt{ZDC}), 
+enhance the hermeticity of the \texttt{CMS} detector by extending the rapidity coverage in the forward region.
+The former is located 14.37\,$\mathrm{m}$ from IP5---installed on the collar table between the \texttt{HF} shielding and the rotating shielding~\cite{fwd_shielding}---and extends 
+the forward rapidity coverage to the region $-6.6< \lvert \eta \rvert <-5.2$ (no segmentation),
+while the later is installed 140\,$\mathrm{m}$ away from IP5 in both the forward and backward directions with a full acceptance to measure neutral energy flow 
+in the $\lvert \eta \rvert > 8.3$ region (multifold segmentation).
+Both calorimeters are made of quartz fibers and plates embedded in tungsten absorbers,  providing a fast collection of Cerenkov light; 
+each is further divided into an electromagnetic and hadronic section of 20.12 (19) radiation and 9.5 (5.6) interaction lengths, respectively.
+The significance of the forward physics program is essential, e.g., it offers constraints on the modeling of the underlying event in both pp and nuclear collisions, revealing the  proton and nucleus structure, and the  parton  evolution. A more detailed summary of the forward physics program can be found in Ref.~\cite{fsq}.
+
+The characteristics of the magnet and the rest of \texttt{CMS} subdetectors are described in the following.
+
+
+\subsection{The superconducting solenoid magnet}
+\label{sec:CMS_magnet}
+
+The central feature of the \texttt{CMS} design is a large superconducting solenoid
+magnet~\cite{CMS:1997fm}. It delivers an axial and uniform magnetic field of
+3.8\,$\mathrm{T}$ over a length of 12.5\,$\mathrm{m}$ and a free bore radius of 3.15\,$\mathrm{m}$.  This
+radius is large enough to accommodate the tracker and both the \texttt{ECAL} and \texttt{HCAL},
+thereby minimizing the amount of material in front of the calorimeters. This
+feature is an advantage for a global event reconstruction, as it eliminates the energy
+losses before the calorimeters caused by particles showering in the coil
+material and facilitates the link between tracks and calorimeter clusters.
+At normal incidence, the bending power of 4.9\,$\mathrm{T} \mathrm{m}$ to the inner surface of
+the calorimeter system provides strong separation (few\,$\mathrm{cm}$) between charged- and
+neutral-particle energy deposits, i.e., large enough distance to resolve energy deposits of the former from that of the latter emitted in the same direction.
+
+\subsection{The inner silicon pixel and the larger silicon strip tracker}
+\label{sec:silicontracker}
+
+The full-silicon \texttt{CMS} tracking system~\cite{CMS:1998aa,CMS:2000aa} is a
+cylinder-shaped detector consisting of two main detectors: the smaller inner pixel detector and the larger silicon strip tracker. 
+The original (``phase-0'') pixel detector---used in the current thesis---had three barrel pixel (\texttt{BPIX}) layers and two endcap disks (\texttt{FPIX}) per side, 
+covering the region from 4 to 15\,$\mathrm{cm}$ in radius, and spanning 98\,$\mathrm{cm}$ along the \texttt{LHC} beam axis. 
+The pixel modules, shown by the red lines in Fig.~\ref{fig:tklayout}, provide three-dimensional hits. 
+The silicon strip tracker had ten barrel layers and twelve endcap disks per side, covering the region from 25 to 110\,$\mathrm{cm}$ in
+radius, and spanning 560\,$\mathrm{cm}$ along the \texttt{LHC} beam axis. 
+Strip tracker modules that provide two-dimensional hits are illustrated
+with thin, black lines in Fig.~\ref{fig:tklayout}, while pairs of modules mounted back-to-back with a slight tilt are shown by thick, blue lines. 
+Within a given layer, each module is shifted slightly in $r$ or $z$ with respect to its adjacent  modules, which allows them to overlap, thereby avoiding gaps in the acceptance. 
+The latter extends up to a pseudorapidity of $\lvert \eta \rvert =2.5$. 
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/apparatus/Figure_001-a_TRK17001.png}
+\caption[Schematic view of the \texttt{CMS} tracker detector]{
+Schematic view of the \texttt{CMS} tracker (phase-0) detector with labels identifying the silicon pixel detector (three barrel layers and two endcap disks per side) and 
+the silicon strip tracker (ten barrel layers and twelve endcap disks per side), in total covering the region from 4 to 110\,$\mathrm{cm}$ in radius, and spanning 560\,$\mathrm{cm}$ 
+along the \texttt{LHC} beam axis. 
+In this view, the tracker is symmetric about the horizontal line at $r=0$, so only the top half is shown~\cite{cms_tracking_paper}. 
+The center of the tracker,  corresponding to the approximate position of the collision point, is indicated by the star.   
+}
+\label{fig:tklayout}
+\end{figure}
+
+The silicon strip tracker has four subsystems. 
+The innermost four barrel layers comprise the tracker inner barrel (\texttt{TIB}) detector, 
+and the outer six barrel layers form the tracker outer barrel (\texttt{TOB}) detector. The three endcap disks 
+to either side of the \texttt{TIB} detector form the tracker inner disks (\texttt{TID}$-$ and \texttt{TID}$+$), 
+and the nine endcap disks at each end constitute the tracker endcap (\texttt{TEC}$-$ and \texttt{TEC}$+$). 
+The 16\,588 silicon sensor modules were finely segmented into 66 million
+$100{\times}150\mumsq$ pixels (1\,440 modules) and 9.6 million $80$-to-$180\mum$-wide strips (15\,148 modules). 
+This fine granularity offers separation of closely-spaced particle trajectories in jets.
+With about 200\,$\mathrm{m}^2$ of active silicon area (Table~\ref{tab:TrackerGeom}) the \texttt{CMS} tracker is the largest silicon tracker ever built.
+
+\begin{table}[!ht]
+\centering
+\resizebox{\textwidth}{!}{\begin{tabular}{llllc}
+\toprule
+Tracker subsystem (modules)   &   Layers   &   Location ($\mathrm{cm}$)  & Pitch &Intrinsic $r\phi$ resolution (\mum)   \\
+\midrule
+    \texttt{BPIX}\,(768)                  &       3 cylindrical           &   $4.4 < r < 10.2$   &  $100\times 150$\,\mumsq& 10   \\
+    \texttt{TIB}\,(2\,724)    &       4 cylindrical  &   $20 < r < 55$      & 80--120\,\mum& \multirow{2}{*}{13--38}    \\
+    \texttt{TOB}\,(5\,200)      &       6 cylindrical  &   $55 < r < 116$     &  183--122\,\mum & \\
+\midrule
+    \texttt{FPIX}\,(672)                &       2 disks           & $34.5 < \lvert z \rvert < 46.5$  & $100\times 150$\,\mumsq&20--40        \\
+    \texttt{TID}\,(816)       &       3 disks  & $58 < \lvert z \rvert < 124$     &  100--141\,\mum& \multirow{2}{*}{18--47}\\
+    \texttt{TEC} \,(6\,400)      &       9 disks  & $124 < \lvert z \rvert < 282$    &97--184\,\mum & \\
+\bottomrule
+\end{tabular}}
+\caption[Summary of the principal characteristics of the \texttt{CMS} tracker subsystems]{\label{tab:TrackerGeom} 
+Summary of the principal characteristics of the various tracker subsystems~\cite{cms_tracking_paper}. The number of disks corresponds to that in a single endcap. 
+The location specifies the region in $r$ ($\lvert z \rvert$) occupied by each barrel (endcap) subsystem. 
+The modules of the pixel detector use silicon of 285\,\mum\ thickness, and achieve resolutions that are roughly the same in $r\phi$ as in $z$,
+ because of the chosen pixel cell size. %of $100\times 150$\,\mumsq in $r\phi\times z$. 
+The modules in the \texttt{TIB}, \texttt{TID} and inner four \texttt{TEC} rings use silicon that is 320\,\mum\ thick, while those in the \texttt{TOB} and the outer three 
+\texttt{TEC} rings use silicon of 500\,\mum.
+}
+\end{table}
+
+Tracker layers and the vital services (cables, support, cooling) represent though a substantial amount of material in front of the calorimeters,
+up to 0.5 interaction lengths or 1.8 radiation lengths, as estimated from simulation and displayed in Fig.~\ref{cms_detector_tracker_material:a} and~\ref{cms_detector_tracker_material:b}, respectively. At $\lvert \eta \rvert \approx 1.5$, the probability for a photon to convert or for an electron to emit a bremsstrahlung
+photon by interacting with this material is about 85\% due to the presence of the detector service cables. Similarly, a hadron (charged pion)
+has a 20\% probability to experience a nuclear interaction before reaching the \texttt{ECAL} surface~\cite{cms_tracking_paper}. 
+A large number of emerging secondary particles
+turned out to be a major source of complication for a global event reconstruction algorithm, and it required harnessing the full granularity and redundancy of the silicon tracker measurements.
+
+Despite being undesirable events that degrade the quality of the reconstruction of charged and neutral hadrons,  
+nuclear interactions can be alternatively used to produce a high-precision map of the material inside the tracker, as shown in Fig~\ref{cms_detector_tracker_material:c} 
+for the $x$--$y$ plane in the barrel region ($\lvert z \rvert < 25$\,$\mathrm{cm}$)  using a data set of pp collisions at $\sqrt{s}=13$\,\TeV~\cite{hadrography}.
+The positions of the secondary vertices can determine the locations of passive material with a precision of the order of 100\,\mum,
+verifying the simulation of the tracker material budget with an accuracy better than 10\%. 
+The signatures of the beam pipe, the \texttt{BPIX} detector with its support, and the first layer of the \texttt{TIB} detector can be clearly 
+observed above the background of misreconstructed vertices in Fig~\ref{cms_detector_tracker_material:c}.
+
+\begin{figure}[htbp]
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{cms_detector_tracker_material:a}\includegraphics[scale=0.20]{figures/apparatus/Figure_003-a.pdf}}
+\end{minipage}%
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{cms_detector_tracker_material:b}\includegraphics[scale=0.20]{figures/apparatus/Figure_003-b.pdf}}
+\end{minipage}%
+\begin{minipage}{.33\textwidth}
+\centering
+\subfloat[]{\label{cms_detector_tracker_material:c}\includegraphics[scale=0.23]{figures/apparatus/Figure_004_TRK17001.pdf}}
+\end{minipage}%
+\caption[Simulated and measured thickness of the \texttt{CMS} tracker active and passive material]{
+  Total thickness $t$ of the inner tracker material expressed in units
+  of interaction~(a) and radiation~(b) lengths, $\lambda_l$ and $X_0$, respectively,
+  as a function of the pseudorapidity $\eta$~\cite{cms_tracking_paper}.
+  (c) ``Hadrography'' is based on samples of secondary hadronic interactions and produces a high-precision map of the material within the tracking volume.
+  The density of vertices is indicated by the color scale~\cite{hadrography}.
+}
+\label{fig:cms_detector_tracker_material}
+\end{figure}
+
+The tracker measures the \pt of charged hadrons at normal incidence with a resolution
+of 1\% for $\pt<20$\,\GeV.
+The relative resolution then degrades with increasing \pt to reach the calorimeter energy resolution for track momenta of several hundred \,\GeV.
+Because the fragmentation of high-\pt partons typically produces many
+charged hadrons at a lower \pt, the tracker is expected to contribute significantly to
+the measurement of the momentum of jets with a \pt up to a few\,\TeV~\cite{cms_tracking_paper}.
+
+\subsection{The electromagnetic calorimeter}
+\label{sec:ecal}
+
+The \texttt{ECAL}~\cite{CMS:1997ema,CMS:2002xia} is a hermetic homogeneous calorimeter
+made of 75\,848 lead tungstate (PbWO$_4$) crystals. The barrel (\texttt{EB}) covers $\lvert \eta \rvert < 1.479$
+and the two endcap (\texttt{EE}) disks $1.479 < \lvert \eta \rvert < 3.0$ . The \texttt{EB} (\texttt{EE}) crystal
+length of 23 (22)\,$\mathrm{cm}$ corresponds to 25.8 (24.7) radiation lengths,
+sufficient to contain more than 98\% of the energy of electrons and photons
+up to 1\,\TeV, with the electron and photon separation being possible up to $\lvert \eta \rvert = 2.5$, the limit of the region covered by the tracker. 
+The crystal material also amounts to about one interaction length, causing about two-thirds of the hadrons to start showering in \texttt{ECAL} before entering \texttt{HCAL}. 
+To measure and correct for response changes during \texttt{LHC} operation \texttt{ECAL} is equipped with a light monitoring system.
+
+ \begin{figure}[t]
+  \begin{center}
+    \includegraphics[width=0.7\linewidth]{figures/apparatus/calorimeter.pdf}
+  \end{center}
+  \caption[Schematic layout of the \texttt{CMS} \texttt{ECAL}]
+  {
+    The \texttt{CMS} \texttt{ECAL} is a homogeneous and hermetic calorimeter~\cite{ecal_7TeV}.  
+    The preshower detector, based on lead absorbers that are equipped with silicon strip sensors, is placed in front of the endcap crystals, 
+    to enhance photon identification capabilities.  
+    \label{fig:ECAL} 
+ }
+ \end{figure}
+
+The crystal transverse size  matches the small Moli\`ere radius of PbWO$_4$,
+{2.2\,$\mathrm{cm}$}. This fine transverse granularity makes it possible
+to fully resolve hadron and photon energy deposits as close as 5\,$\mathrm{cm}$ from one
+another, for the benefit of exclusive particle identification in jets.
+More specifically, the front face of the \texttt{EB}
+crystals has an area of $2.2{\times}2.2\,\mathrm{cm}^2$, equivalent to
+$0.0174{\times}0.0174$ in the $\eta$--$\varphi$ plane. For \texttt{EE},
+the crystals are arranged instead in a rectangular $(x,y)$ grid, with a
+front-face area of $2.9{\times}2.9\,\mathrm{cm}^2$. The intrinsic energy resolution
+of \texttt{EB} was measured with an \texttt{ECAL} supermodule directly exposed to an
+electron beam, without any attempt to reproduce the inert material of the tracker in
+front of the \texttt{ECAL}~\cite{Adzic:2007mi}. The energy resolution, $\sigma$, 
+is parameterized as a function of the electron energy, $E$, as
+\begin{linenomath}
+\begin{equation}
+\frac{\sigma}{E}  = \frac{2.8\%}{\sqrt{E/\GeV}}  \oplus \frac{12\%}{E/\GeV}  \oplus 0.3\%\, ,
+\label{eq:ECALresolution}
+\end{equation}
+\end{linenomath}
+where the three contributions correspond to the stochastic, e.g., the shower containment, the  noise,  e.g., deposits from multiple interactions per bunch crossing, 
+and constant, e.g., non-uniformity of the longitudinal light collection, terms, respectively.   
+Because of the very small stochastic term inherent to homogeneous calorimeters,
+the photon energy resolution is excellent in the 1--50\,\GeV\ range typical of photons in jets.
+The constant term dominates the energy resolution for high-energy electron and photon showers.
+
+The \texttt{ECAL} electronics noise $\sigma_\textrm{noise}^\textrm{\texttt{ECAL}}$ is measured to
+be about $40\,(150)$\,\MeV  per crystal in \texttt{EB} (\texttt{EE}). Another important
+source of spurious signals arises from particles directly ionizing the
+avalanche photodiodes, aimed at collecting the crystal scintillation
+light~\cite{1748-0221-8-03-C03020}.
+This effect gives rise to single-crystal spikes with a relative amplitude significantly larger than the scintillation light.
+Such spikes would be
+misidentified by a global event description algorithm as photons with an energy up to 1\,\TeV.
+Since these spikes mostly affect a single crystal and more rarely two
+neighboring crystals, they are rejected by requiring the energy deposits to be compatible with arising from a particle shower. 
+This is based on a combination of looser and tighter thresholds on $E_4/E_1$ and $E_6/E_2$ ratios, where $E_1$ ($E_2$) and $E_4$ ($E_6$) are the energies 
+collected in the considered crystal (crystal pair) and in the four (six) adjacent crystals, respectively. 
+The timing of the energy deposits in excess of 1\,\GeV\
+is also required to be compatible with the beam crossing time to better
+than $\pm$2\,$\mathrm{ns}$.
+
+A much finer-grained detector, known as preshower (\texttt{ES}) and whose fiducial area is approximately  $1.65 < \lvert \eta \rvert < 2.6$, 
+is installed in front of each \texttt{EE} disk. It consists of two layers, each comprising a lead
+radiator followed by a plane of silicon strip sensors. The two lead radiators
+represent approximately two and one radiation lengths, respectively. The two
+planes of silicon sensors have orthogonal strips with a pitch of 1.9\,$\mathrm{mm}$. When
+either a photon or an electron passes through the lead, it initiates an
+electromagnetic shower. The granularity of the detector and the small radius
+of the initiating shower provide an accurate measurement of the shower
+position. 
+
+Originally, the aim of the superior granularity of \texttt{ES} was (i) to resolve the photons from $\pi^0$ decays; and (ii) 
+to indicate the presence of a photon or an electron in the \texttt{ECAL} by requiring an associated
+signal in \texttt{ES}.
+Parasitic signals, however, are generated by the large number of neutral pions
+produced by hadron interactions in the tracker material, followed
+by photon conversions and electron bremsstrahlung. These signals affect substantially the \texttt{ES} identification and separation capabilities. 
+In a global event description algorithm, these capabilities can therefore not be fully exploited, and
+the energy deposited in \texttt{ES} merely is added to that of the closest
+associated \texttt{ECAL} cluster, if any, and discarded otherwise.
+
+The electron momentum is estimated by combining the energy measurement in the ECAL with the momentum measurement in the tracker. 
+The momentum resolution for electrons with $\pt \approx 45$\,\GeV from $\mathrm{Z} \rightarrow \mathrm{e^{+}}\mathrm{e^{-}}$ decays ranges from 1.7 to 4.5\%. 
+It is generally better in the barrel region than in the endcaps, and also depends on the bremsstrahlung energy emitted by the electron 
+as it traverses the material in front of the \texttt{ECAL}~\cite{cms_eles}.
+
+\subsection{The hadron calorimeter}
+\label{sec:hcal}
+
+The \texttt{HCAL}~\cite{CMS:1997tfa} is a hermetic sampling calorimeter consisting of
+several layers of brass absorber and plastic scintillator tiles. It surrounds
+the \texttt{ECAL}, with a barrel ($\lvert \eta \rvert<1.3$) and two endcap disks ($1.3<\lvert \eta \vert <3.0$).
+In the barrel, the \texttt{HCAL} absorber thickness amounts to almost six interaction
+lengths at normal incidence, and increases to about ten interaction lengths at
+larger pseudorapidities. It is complemented by a tail catcher (\texttt{HO}) that is installed outside the solenoid coil. 
+The \texttt{HO} material (1.4 interaction lengths at normal incidence) is used as an additional absorber. At small pseudorapidities
+($\lvert \eta \rvert <0.25$), this thickness is enhanced to a total of three interaction lengths by a %20\,cm-thick 
+ layer of steel. The total depth of the
+calorimeter system (including \texttt{ECAL}) is thus extended to a minimum of twelve
+interaction lengths in the barrel,  while the thickness amounts to about ten interaction lengths in the endcaps.
+
+The \texttt{HCAL} is read out in individual towers with a cross section
+$\Delta \eta{\times}\Delta \varphi = 0.087{\times}0.087$ for $\lvert \eta \rvert<1.6$
+and $0.17{\times}0.17$ at larger pseudorapidities. The combined (\texttt{ECAL}+\texttt{HCAL}) calorimeter
+energy resolution was measured in a pion test beam~\cite{ehcal_test_beam} to be
+\begin{linenomath}
+\begin{equation}
+\frac{\sigma}{E} = \frac{110\%}{\sqrt{E}} \oplus 9\%\, ,
+\label{eq:HCALresolution}
+\end{equation}
+\end{linenomath}
+where $E$ is expressed in \,\GeV.
+
+The typical \texttt{HCAL} electronics noise $\sigma^\textrm{\texttt{HCAL}}_\textrm{noise}$  is measured
+to be $\approx 200$\,\MeV per tower. Additionally, rare occurrences of
+high-amplitude, coherent noise were observed in the \texttt{HCAL}
+barrel~\cite{hcal_noise}. 
+Since this coherent \texttt{HCAL} noise would be misinterpreted as high-energy neutral hadrons by a global event description algorithm, the
+affected events are identified by their characteristic topological features and rejected at the analysis level.
+
+The \texttt{HCAL} is complemented by hadron forward (\texttt{HF}) calorimeters situated at
+$\pm 11.2$\,$\mathrm{m}$ from the interaction point that extend the angular coverage
+on both sides up to $\lvert \eta \rvert = 5.2$. The \texttt{HF} consists of a steel absorber
+composed of grooved plates. Radiation-hard quartz fibers are inserted in the
+grooves along the beam direction and are read out by photomultipliers. 
+Each HF calorimeter consist of 432 readout towers with a cross section
+$\Delta \eta{\times}\Delta \varphi = 0.175{\times}0.175$ over most of the
+pseudorapidity range, containing long and short quartz fibers. 
+The long fibers run the entire depth of the HF calorimeter (about 165\,$\mathrm{cm}$, or approximately ten interaction length),
+ while the short fibers start at a depth of 22\,$\mathrm{cm}$ from the front of the detector.
+
+In each calorimeter tower, the signals from the short
+and long fibers are used to estimate the electromagnetic and hadronic
+components of the shower; photons deposit a significant fraction of their energy in the long-fiber calorimeter segment, whereas hadrons produce on average nearly equal signals in both calorimeter segments. 
+If $L$ ($S$) denotes the energy measured in the long (short) fibers,  the energy of the electromagnetic component, concentrated
+in the first part of the absorber, can be approximated by $L-S$, and the
+energy of the hadronic component is the complement, i.e., $2S$. 
+
+Spurious
+signals in the HF, caused for example by high-energy beam halo muons directly
+hitting the photomultiplier windows, are reduced by rejecting \textit{(i)}
+high-energy $S$ deposits not backed up by a $L$ deposit in the same tower;
+\textit{(ii)} out-of-time $S$ or $L$ deposits of more than 30\,\GeV,
+\textit{(iii)} $L$ deposits larger than 120\,\GeV with $S < 0.01 L$ in the same
+tower; \textit{(iv)} isolated $L$ deposits larger than 80\,\GeV,
+with small $L$ and $S$ deposits in the four neighbouring towers.
+
+\subsection{The muon detectors}
+\label{sec:muon_dets}
+
+Outside the solenoid coil, the magnetic flux is returned through a yoke
+consisting of three layers of steel interleaved with four muon gaseous detector
+planes (Fig.~\ref{fig:CMSquadrant}). Drift tube (\texttt{DT}) chambers and
+cathode strip chambers (\texttt{CSC}) detect muons in the regions $\lvert \eta \rvert <1.2$ and
+$0.9 <\lvert \eta \rvert < 2.4$, respectively, and are complemented by a system of
+resistive plate chambers (\texttt{RPC}) covering the range $\lvert \eta \rvert <1.6$. The
+reconstruction involves a global trajectory fit across the muon detectors and the inner tracker. The
+calorimeters and the solenoid coil represent a large amount of material
+before the muon detectors, and hence induce multiple scattering leaving the tracker to dominate the momentum measurement up to a \pt of about 200\,\GeV.
+
+\begin{figure}[!ht]
+  {
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/apparatus/Figure_001_MUO16001.png}
+    \caption[The \texttt{CMS} muon system of gaseous detectors sandwiched among the layers of the steel flux-return yoke]
+    { 
+      The locations of the various muon stations and the steel flux-return disks (dark areas) are shown~\cite{cms_muon_paper_13TeV}.
+      Here a quadrant of the \texttt{CMS} detector in the $r$--$z$ plane is shown, with the axis parallel to the beam ($z$) running horizontally 
+      and the radius ($r$)) increasing upward.  The interaction point is at the lower left corner. 
+    }
+    \label{fig:CMSquadrant}
+  }
+\end{figure}
+
+
+The \texttt{DTs} are segmented into drift cells; the position of the muon is determined
+by measuring the drift time to an anode wire of a cell with a shaped electric field.
+The \texttt{CSCs} operate as standard multi-wire proportional counters but add a finely
+segmented cathode strip readout, which yields an accurate measurement of the
+position of the bending plane ($r$--$\phi$) coordinate at which the muon crosses the gas volume.
+The \texttt{RPCs} are double-gap chambers operated in avalanche mode, and are primarily designed to provide timing information for the muon trigger.
+%The \texttt{DT} and \texttt{CSC} chambers are located in the regions  $\lvert \eta \rvert < 1.2$ and
+%$0.9 < \lvert \eta \rvert < 2.4$, respectively, and are complemented by \texttt{RPCs} in the range $\lvert \eta \rvert < 1.9$.
+ Three regions can be distinguished, naturally defined by the cylindrical geometry of \texttt{CMS}, i.e,
+the barrel ($\lvert \eta \rvert < 0.9$), overlap ($0.9 < \lvert \eta \rvert < 1.2$), and endcap ($1.2 < \lvert \eta \rvert < 2.4$) regions. 
+
+\begin{table}[!ht]
+  \caption[Properties and parameters of the \texttt{CMS} muon subsystems]{Properties and parameters of the \texttt{CMS} muon subsystems during the 2016 data taking period~\cite{cms_muon_paper_13TeV}.}
+  
+  \centering
+  \resizebox{\textwidth}{!}{\begin{tabular}{l c c c}
+    \toprule
+    Muon subsystem                & \texttt{DT}                         & \texttt{CSC}            & \texttt{RPC}     \\
+    \midrule
+    $\lvert \eta \rvert$ coverage         & 0.0--1.2                            & 0.9--2.4                & 0.0--1.9         \\
+    Number of stations            & 4                                   & 4                       & 4                \\
+    Number of chambers            & 250                                 & 540                     & Barrel: 480      \\
+                                  &                                     &                         & Endcap: 576      \\
+    Number of layers/chamber      & $r$-$\phi$: 8; $z$: 4               & 6                       & 2 in RB1 and RB2 \\
+                                  &                                     &                         & 1 elsewhere      \\
+    Number of readout channels    & 172\,000                             & Strips: 266\,112         & Barrel: 68\,136   \\
+                                  &                                     & Anode channels: 210\,816 & Endcap: 55\,296   \\
+    Percentage of active channels &   98.4\%                            &   99.0\%                &  98.3\%          \\
+    \bottomrule
+  \end{tabular}}
+  \label{tab:MuDetParameters}
+\end{table}
+
+The chambers are arranged to maximize the coverage and to provide overlap where possible. 
+In the barrel, a station is a ring of chambers assembled between two layers of the
+steel flux-return yoke at approximately the same value $R$. 
+There are four \texttt{DT} and four \texttt{RPC} stations in the barrel, labeled \texttt{MB1}--\texttt{MB4} and \texttt{RB1}--\texttt{RB4}, respectively. 
+Both \texttt{DT} and \texttt{RPC} barrel stations are arranged in five ``wheels'' along $z$. 
+In the endcaps, a station is a ring of chambers assembled between two disks of the 
+steel flux-return yoke at approximately the same value of $z$. 
+There are four \texttt{CSC} and four \texttt{RPC} stations in each endcap, labeled \texttt{ME1}--\texttt{ME4} and \texttt{RE1}--\texttt{RE4}, respectively. 
+Between Run~1 and~2, additional chambers were added in \texttt{ME4} and \texttt{RE4} to increase redundancy and improve efficiency. 
+A detailed description of these chambers, including gas composition and operating voltage, can be found in Refs.~\cite{CMS:1997dma,cms_muon_paper_13TeV}.
+
+
+Matching muons to tracks measured in the silicon tracker results in a relative transverse momentum resolution, for muons with \pt up to 100\,\GeV, 
+of 1\% in the barrel and 3\% in the endcaps. The \pt resolution in the barrel is better than 7\% for muons with \pt up to 1\,\TeV~\cite{cms_muon_paper_13TeV}.
+
+\subsection{Luminosity detectors at \texttt{CMS}}
+
+
+A system consisting of five subdetectors (``luminometers'') to monitor and measure the luminosity delivered by \texttt{LHC} is currently in use at the \texttt{CMS} experiment~\footnote{Although
+  originally  conceived  for  radiation  protection the  Radiation Monitoring System   for   the   Environment  and  Safety  (\texttt{RAMSES})~\cite{RAMSES} can be used for luminosity measurements.}.
+Based on rate measurements for a variety of observables (see Section~\ref{sec:ExpSetup}), this system includes five luminometers:
+a)  the silicon pixel and strip tracker, b) the \texttt{HF} calorimeter,
+c) the \texttt{DT} muon detector, d) the Fast Beam Conditions Monitor (\texttt{BCM1F}),
+and e) the most recently installed and commissioned Pixel Luminosity Telescope (\texttt{PLT}). 
+
+
+\subsubsection{The tracker-based methods}
+
+A pixel-cluster counting (PCC) method uses the rate of pixel clusters in the \texttt{CMS} pixel detector to provide a luminosity
+measurement. It supplied the primary offline luminosity measurement for \texttt{CMS} in 2015--2016, since the large
+area of the pixel detector and the relatively low occupancy provides a measurement with good statistical
+precision, and the stability of the measurement over time is typically good. Because the \texttt{CMS} trigger bandwidth (see Section~\ref{sec:trigger})
+available for collecting the data used for this measurement is limited, the statistical precision for a single
+23\,s period is not as high as for the rest of the luminometers, but integrated over longer time periods this is not anymore an issue for the PCC luminosity.
+
+Two corrections are typically applied to the PCC measurement to account for two discrete effects: the first type accounts
+for the signal from a hit spilling over into the next bunch crossing after a colliding bunch,
+while the second type accounts for an exponentially decaying ``afterglow'' for several
+bunches following a colliding bunch caused by activation of the surrounding detector material.
+These effects are measured using data from empty bunches, which should nominally have zero luminosity, and corrections are derived and applied to the raw luminosity.
+Since these corrections vary over the course of a run they are measured as a function of time and applied in a time-dependent manner.
+%The afterglow corrections for PCC are in the range 2--5\% for the Type 1
+%corrections and 2--3\% averaged over all active bunches for the Type 2 corrections.
+
+A second method relies on the primary vertex counting, imposing additional requirements to eliminate the background and retain good reconstruction efficiency.
+This method is simple and robust, but becomes less linear at high values of instantaneous luminosity.
+There are two competing effects. On the one hand, primary vertices from two collisions
+occurring close to one another in space are merged, leading to an undercounting of vertices at progressively high instantaneous luminosity.
+On the other hand, a large number of tracks can produce fake vertices, leading to overcounting.
+The precision with which these effects are currently understood falls short of the level needed for precision luminosity studies.
+Vertex counting nonetheless serves as a useful cross check, especially for the dedicated beam-separtion scans, where the instantaneous luminosity is typically low.
+
+\subsubsection{The \texttt{HF} measurement}
+
+The \texttt{HF} luminosity measurement uses a dedicated readout system installed in the \texttt{HF} calorimeter. The \texttt{HF} provided
+the primary online luminosity measurement for \texttt{CMS} during Run 1 of the \texttt{LHC} and has continued to provide
+excellent performance throughout Run 2. The latest algorithm applied in 2017, for the first time, uses the sum of the transverse energy
+$\sum E_\text{T}$ (HFET), which provides better performance at higher instantaneous luminosity than the occupancy-based algorithm (HFOC), i.e.,
+based on the average fraction of empty towers.
+
+Similarly to the PCC luminosity, afterglow corrections are applied: for HFET amount to
+approximately 4\% in the bunch immediately following a colliding bunch and 0.5\% in the next following bunch,
+with the corrections for subsequent bunches less than about 0.1\%.
+
+\subsubsection{The \texttt{PLT} detector}
+
+The \texttt{PLT}~\cite{Kornmayer2016304,Lujan:2017kvh} is a dedicated system for measuring luminosity using silicon pixel sensors,
+installed at the beginning of 2015. There are a total of 48 sensors arranged into 16 ``telescopes,'' eight at either end of \texttt{CMS}
+outside the pixel endcap, where each telescope contains three sensor planes arranged nearly parallel to the
+beam pipe. The sensors measure $8 \times 8$\,$\mathrm{mm}$, divided into 80 rows and 52 columns, although only the central
+region of the sensors is used to reduce the contribution from background. 
+
+%The \texttt{PLT} measures the rate of ``triple coincidences'', where a hit is observed in all
+%three planes, typically corresponding to a track from a particle originating at the interaction point. The
+%overall mean rate for \texttt{PLT} (and also in BCM1F) is estimated using the zero-counting method.
+
+Over the course of the time, accumulated radiation damage in the sensors may result in a higher-than-expected loss
+of efficiency in the \texttt{PLT}. The effects of this damage are compensated for by increasing the high voltage
+applied to the sensors; however, there might still be several periods where the \texttt{PLT} exhibits low efficiency.
+Corrections for these efficiency losses are applied offline.
+
+
+\subsubsection{The \texttt{BCM1F} detector}
+
+\texttt{BCM1F}~\cite{Zagozdzinska:2015,Hempel:2017nvn} measures both luminosity and machine-induced background (MIB). It consists of a total of 24 sensors
+mounted on the same carriage as the PLT. The sensors in the \texttt{BCM1F} consist of a
+total of 10 silicon sensors, 10 polycrystalline diamond (pCVD) sensors, and 4 single-crystal diamond (sCVD)
+sensors. The pCVD and sCVD sensors use split-pad metallization, with each sensor having two readout channels,
+to keep the overall occupancy low given the expected conditions in Run 2. The \texttt{BCM1F} readout features a fast
+readout with 6.25\,$\mathrm{ns}$ time resolution; the precise time measurement, in conjunction with the position of \texttt{BCM1F}
+1.8\,$\mathrm{m}$ from the center of \texttt{CMS}, allows hits from collision products to be separated from hits from MIB,
+because the incoming background is separated in time from the outgoing collision products.
+
+\subsubsection{The \texttt{DT} measuremet}
+
+The \texttt{DT} luminosity measurement uses the rate of muon track stubs in the muon barrel track finder. While the \texttt{DT}
+measurement is available online, the \texttt{DT} algorithm does not provide bunch-by-bunch measurements and is thus applicable only for the total luminosity measurement.
+In Run 2, the \texttt{DT} measurement has generally been stable and linear, as long as the track finder itself is not changed, so it
+can provide a complementary offline reference measurement.
+

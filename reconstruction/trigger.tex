@@ -1,0 +1,246 @@
+\section{The online event filter}
+\label{sec:trigger}
+
+
+\texttt{CMS} is a multipurpose detector designed for precise measurements of various physics objects, like leptons, photons, and jets, in pp and nuclear collisions. 
+At design luminosity, the pp interaction rate exceeds 1\,$\mathrm{GHz}$; only a small fraction of these collisions contain events of interest, 
+and only a small fraction of those can be stored for offline analysis. 
+The conditions for nuclear collisions, that can be currently delivered with a bunch spacing of at least 100\,$\mathrm{ns}$\,\footnote{For the first time, 
+ injectors provided a reduced bunch spacing of 75\,$\mathrm{ns}$ in 2018.}, are typically different from those in the pp case. 
+For example, the instantaneous luminosity delivered by \texttt{LHC} 
+in the 2016 proton-nucleus operational period at $\rootsNN=8.16$\,\TeV\ was about $10^{29}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$, 
+resulting in interaction rates of hundreds of\,$\mathrm{kHz}$, i.e., much lower than in typical pp conditions and with a negligible probability for simultaneous interactions.
+%Due to the typically larger data size in these events, the readout rate of the detector is limited to 3\,kHz in heavy ion collisions.
+It is up to the trigger system to select the interesting events for offline storage from the bulk of the (inelastic) collision events.
+
+To select events of potential physics interest, the \texttt{CMS} trigger system~\cite{cms_trigger} utilizes two levels: the first level (L1) is a custom hardware trigger, 
+and the second level, a high-level trigger (HLT), consists of custom software routines.
+At L1 interesting events are selected at  a  rate  of  under  100\,$\mathrm{kHz}$ based on data from calorimeters and muon detectors.  
+This  equates  to  a  rate  reduction  by  a  factor  of about 400  compared  to  the  bunch  crossing  frequency.
+
+The HLT processor farm of commercial computers consists  of  a streamlined version of the offline reconstruction and operates on the event data built 
+by the central data acquisition (\DAQ) system (Fig.~\ref{fig:daqarch}), performing a more sophisticated event selection 
+and further decreasing the event rate from around 100\,$\mathrm{kHz}$ to about 0.1-1\,$\mathrm{kHz}$. 
+During LS1 a significant upgrade of the \texttt{CMS} \DAQ\ system was performed in order to cope with the increased number of readout channels as well as with the larger 
+expected data fragments, while the general architecture remained the same~\cite{daq_upgrade}. 
+In addition to collecting collision data, the trigger and \DAQ\ systems record information for the data-quality monitoring (\DQM) that is meant 
+for identifying and diagnosing problems of the detector in real time (``online'').
+
+The thresholds of the trigger level can be adjusted during data taking in response to the value of the \texttt{LHC} instantaneous luminosity, 
+and the overall output rate can be further manipulated by reducing (``prescaling'') the number of events that pass the selection criteria.
+
+\begin{figure}[htb!]
+  \begin{center}
+     \includegraphics[width=1.0\textwidth]{figures/reconstruction/daq_schema.pdf}
+   \caption[Schematic view of the \texttt{CMS} readout chain]{
+     Simplified schematic view of the key building blocks for a single slice of the \texttt{CMS} \DAQ\ architecture~\cite{cms_paper}.
+     L1 trigger reduces the incoming event rate of 40\,$\mathrm{MHz}$ provided by LHC to about 100\,$\mathrm{kHz}$, the maximum rate the detector front-ends can withstand. 
+     Readout units (RUs) receive event fragments at this rate and provide them to the builder units (BUs). 
+     The final event selection is then operated in the filter unit (FU) with the HLT algorithms being executed within the FU using full granularity event data from all subdetectors, 
+     while the overall event flow--as illustrated with the solid arrows--is directed by the event manager (EVM). 
+     In addition to filtering the L1 output stream, FUs also provide online \DQM. 
+     Computing services include a host of monitoring services, storage and the interface of the \DAQ\ to the offline environment.
+     The output event rate of the filter units  is in the order of 0.1--1\,$\mathrm{kHz}$, and is stored on tape.
+   }  
+   \label{fig:daqarch}
+  \end{center}
+\end{figure} 
+
+\subsection{L1 trigger overview}
+\label{sec:L1_trigger}
+
+The L1 trigger (currently) takes input from the calorimeters and the muon system to select the events of physics interest. 
+Trigger primitives are generated on the front-ends of the subdetectors and are combined to physics objects such as muons, electrons or photons, and jets, 
+as well as event-level information such as missing transverse energy, before a final decision is rendered in the global trigger (GT) within about 4\,$\mu\mathrm{s}$ after the collision.
+The specification for \texttt{CMS} electronics is to operate with a trigger rate at L1 up to 100\,$\mathrm{kHz}$, i.e., 
+the limit for low ``deadtime'' readout operation (the percentage of time during data taking when collisions occur but no triggers can be recorded).
+With increasing energy, luminosity performance, and pileup, either a substantial increase in trigger thresholds would have been enforced to fit within the 100\,$\mathrm{kHz}$ limit, 
+exerting a detrimental impact on the physics reach of the experiment, or major upgrades to accommodate the required readout rate would have been required.
+
+To avoid raising the L1 trigger thresholds, a refined data reduction architecture has been introduced during the long shutdown 1
+by retaining offline-like features, e.g., subtracted energy sums (``isolation'') for electromagnetic and muon objects, 
+improved position and \pt resolution for muon tracks, the introduction of invariant-mass calculation, etc.
+In particular, the calorimeter trigger was redesigned to consist of two processing layers, named ``Layer 1'' and ``Layer 2,'' 
+and the muon trigger chain is split into three parallel track finding systems to reconstruct muon tracks using all muon detectors in a given geometrical region.
+While there were separate track finding systems for the  \texttt{RPC}, \texttt{CSC}, and \texttt{DT} detectors in the previous trigger, 
+the upgraded system introduces a barrel, overlap, and endcap muon track finder.
+The GT finally determines whether a readout process shall be initiated based on data received from the calorimeter trigger chain as well as the muon tracks, with a maximum of 
+512 separate selections, while the task of system control and synchronization is separately implemented in the Trigger Control and Distribution System (TCDS). 
+This is illustrated in Fig.~\ref{fig:L1-over}.
+
+\begin{figure}[htb!]
+  \centering
+    \includegraphics[width=0.8\textwidth]{figures/reconstruction/l1_upgrade.png}
+    \caption[Overview of the \texttt{CMS} L1 trigger system]{
+      Overview of the \texttt{CMS} L1 trigger system~\cite{l1_upgrade}. 
+      The calorimeter trigger is organized into a time-multiplexing trigger, allowing the full event information to be processed in the Layer-2 processors, 
+      after preprocessing and multiplexing in Layer 1. 
+      The input to the calorimeter trigger system originates from \texttt{HCAL}, \texttt{HF}, and \texttt{ECAL}.
+      In the muon trigger, whose input is obtained from \texttt{RPC}, \texttt{CSC}, and \texttt{DT}, the paradigm changed 
+      from a subdetector-based track finding system to a system reconstructing all tracks in a given geometric region.
+      The Global Muon Trigger (GMT) is the final stage of the upgraded muon trigger chain that receives multiple muon objects, 
+      but transmits to the Global Trigger (GT) only the eight best muons.
+
+}
+    \label{fig:L1-over}
+\end{figure}
+
+
+\subsection{HLT overview }
+\label{sec:HLT_trigger}
+
+The HLT is implemented in software, and further refines the purity of
+the physics objects. The HLT event selection is performed in a
+similar way to that used in the offline processing. For each event,
+objects such as leptons, photons, and jets are reconstructed, and
+identification criteria are applied.
+The presence of high-\pt leptons or photons strongly indicates interesting hard collisions, 
+and hence particular attention has been devoted to an efficient set of triggers for these processes.
+
+\subsection{Electron and photon triggers }
+\label{sec:egm_trigger}
+Electrons and photons (EG or ``electromagnetic objects'') are reconstructed primarily using \texttt{ECAL} energy deposits, with little energy deposited in the hadron calorimeter. 
+%The transverse shower size is of the order of one crystal. 
+Electrons can be distinguished from photons based on the presence of tracks that point to electrons and lack thereof for photons. 
+At L1, since only information from the calorimeter is available, no distinction can be made between $\mathrm{e}$ and $\gamma$; only at the HLT level, 
+tracks can be used to resolve this ambiguity.
+
+\begin{figure}[!ht]
+  \centering
+    \includegraphics[width=0.8\textwidth]{figures/reconstruction/HLT_example.pdf}
+    \caption[The internal filters of the lowest-\ET unprescaled single-electron trigger]{
+      Performance of the internal stages of the lowest-\ET unprescaled single-electron trigger during the pPb 2016 run.  
+      From left to right the rate is shown for steps associated to L1 seeding, cluster shape, calorimetric isolation, H/E ratio, pixel matching, 
+      energy-momentum and directional compatibility, and track isolation.
+    }
+    \label{fig:hlt20WPLoose}
+\end{figure}
+
+The electron and photon identification at HLT begins with a regional reconstruction of the deposited energy in the \texttt{ECAL} crystals around the EG 
+candidates retrieved from L1. This is followed by building a ``supercluster'' (SC) using offline reconstruction algorithms (see Section~\ref{sec:electrons}). 
+Electron and photon candidates are initially selected based on the $\ET=\sum_{i} E_i \sin\theta_i$ of the SC, with $E_i$ the energy seen by the calorimeters 
+for the $i$th cluster and the sum running over all particles emitted into a fixed solid angle in the event, and on criteria based on properties of the
+energy deposits in the calorimeters. The common selection requirements include~\cite{cms_trigger_Run2}
+
+\textbf{Common selection observables}
+
+\begin{itemize}
+\item \textbf{$\sigma_{\eta \eta}$}: a cluster shape variable equals to the root-mean-square of the width in $\eta$  of the shower.
+\item \textbf{isolation}: additional, i.e, after footprint removal, energy deposits in blocks of \texttt{ECAL} and \texttt{HCAL} are measured in a region around the EG candidate 
+  %with fixed outer and variable inner cone sizes.
+%of $\Delta R\equiv\sqrt{\smash[b]{{\Delta\phi}^2 + {\Delta\eta}^2}}=0.3$, and inner cone radius corresponding to the size of three \texttt{ECAL} crystals ($\Delta R=0.05$ in the barrel region).  
+%The energy deposits in channels that are found in a strip along $\phi$ centered at the ECAL position of the EM candidate with an $\eta$-width of 3 crystals are also considered.  
+\item \textbf{ratio to the HCAL energy}: in a fixed cone size centered on the SC relative to the SC energy.
+\end{itemize}
+After the common selection, the online electron candidates are further subjected to requirements involving the tracker. 
+The presence of a reconstructed track compatible with the SC is the basis of
+
+\textbf{Electron and photon candidates observables}
+
+\begin{itemize}
+\item \textbf{pixel matching}: the energy and position of the SC to propagate a hypothetical trajectory through the magnetic field under each charge hypothesis 
+to search for compatible hits in the pixel detector. Full silicon tracks are then reconstructed from the resulting pixel seeds. 
+\item \textbf{electron tracking}: based on a simple Kalman filter technique~\cite{Fruhwirth:1987fm} it is complemented by the Gaussian-Sum Filtering (GSF) algorithm, 
+  which better parametrizes the highly non-Gaussian electron energy loss, and the reconstructed luminous region (see Section~\ref{sec:beamspot}) position.
+\item \textbf{energy-momentum compatibility}: the inverse momentum of the electron tracks must be compatible with the SC inverse energy. 
+\item \textbf{directional compatibility}: their direction at the last tracker layer should match the SC position in $\eta$ and $\phi$.  
+\item \textbf{track isolation}: requirements with respect to the tracks reconstructed around the electron candidate are applied if required for rate reasons. 
+\end{itemize}
+
+
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{0.47\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/hltHISinglePhoton40Eta3p1_DataEff}
+\caption[The HLT single-electron efficiency at $\sqrt{s}=5.02$\,\TeV]{\label{fig:hlt_ele_pp} 
+  The single-electron trigger efficiency at HLT as a
+  function of the offline reconstructed \ET, separately in the \texttt{EB} and \texttt{EE} regions, 
+  with the lowest unprescaled threshold of $\ET=40$\,\GeV\ in pp collisions at $\sqrt{s}=5.02$\,\TeV~\citeAN{AN-16-320}.}
+\end{minipage}\hfill
+\begin{minipage}{0.37\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/elehlt/scalefactors/passingHLT20_XpT_Data.pdf}
+\caption[The HLT single-electron efficiency at $\sqrt{s_{\mathrm{NN}}}=8.16$\,\TeV]{\label{fig:hlt_ele_pPb}
+  The electron trigger efficiency at HLT as a
+  function of the offline reconstructed \ET, separately in the \texttt{EB} and \texttt{EE} regions, 
+  with the lowest unprescaled threshold of $\ET=20$\,\GeV\ in pPb collisions at $\sqrt{s_{\mathrm{NN}}}=8.16$\,\TeV~\citeAN{AN-17-043}.}
+\end{minipage}
+\end{figure}
+
+The lowest-threshold inclusive single isolated electron filter at the 2016 pPb run, corresponding to instantaneous luminosity of
+about $10^{29}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$, had a threshold of $\ET>20$\,\GeV. 
+Figure~\ref{fig:hlt20WPLoose} shows how the rate is gradually reduced by the filtering steps of this trigger, along with the relative contribution of each step. 
+Using a ``tag-and-probe'' technique (see Appendix~\ref{sec:tnp}), efficiencies are computed with respect to a standard offline selection (Figs.~\ref{fig:hlt_ele_pp} and~\ref{fig:hlt_ele_pPb}).
+
+\subsection{Muon triggers }
+%\label{sec:mu_trigger}
+
+The muon HLT combines information from both the muon and the tracker detectors to identify muon candidates and determine their $\pt$. 
+The muon HLT algorithm is composed of two main steps, level-2 (L2), which uses information from the muon system only, 
+and level-3 (L3), which combines measurements from both tracker and muon detectors.
+
+\paragraph{Level-2}
+The reconstruction of a track in the muon spectrometer starts from seeding \texttt{DT} and \texttt{CSC} segments. 
+Each seed is then used to reconstruct a track using measurements (hits and segments) from all the muon detectors using the Kalman filter technique. The track reconstruction is followed by the removal of possible duplicates of the same muon candidate checking that tracks do not share any
+hits. The luminous region position is used to constrain the track parameters to improve the transverse momentum resolution. 
+The multiplicity and relevant parameters of successfully reconstructed L2 muons are used to filter the event. 
+The main selection is based on the muon $\pt$, while the number of muon chambers and measurements used in the track fit, e.g., goodness-of-fit $\chi^2$, can also be used to suppress misreconstructed muons.
+
+\paragraph{Level-3}
+
+The L3 muon reconstruction exploits the excellent momentum and vertex 
+resolution of the inner silicon tracker to further improve the momentum resolution at high $\pt$. 
+Owing to timing and software constraints, the full tracker reconstruction is not performed. 
+Instead, the L3 muon trigger algorithm consists of three main steps: (i) seeding of tracker reconstruction starting from L2 information, 
+(ii) reconstruction in the tracker, and (iii) combined fit in the tracker and muon systems. 
+These tracks and the L2 muons are propagated to a common surface, e.g., the innermost layer of
+the muon system, and their compatibility is evaluated using criteria, such as angular separation or goodness-of-fit $\chi^2$. 
+%If a pair of compatible L2-tracker tracks is found, a final refit of all the tracker and muon system measurements is performed.
+If one or more L3 muons are successfully reconstructed, their number
+and parameters are used to filter the event; the main selection is based on the muon \pt, whereas additional track parameters, 
+such as pixel hits and impact parameter, can be used to suppress misreconstructed muons.
+
+\paragraph{Isolation}
+
+The isolation of L3 muons can be also considered and is evaluated combining information from the silicon tracker, \texttt{ECAL}, and \texttt{HCAL}. 
+Tracks reconstructed in the silicon tracker in a fixed cone size around the L3 muon, and are summed up with \texttt{ECAL} and \texttt{HCAL} deposits. 
+The calorimeter deposits are typically corrected for the average energy density, $\rho$, in the event using the \textsc{FastJet} technique~\cite{fastjet_pileup}. 
+
+The used inclusive single muon filter for the 2015 reference pp and 2016 pPb runs had thresholds of $\pt>15$ and $>12$\,\GeV, respectively, and no isolation requirement. 
+Efficiencies are measured in data and compared to simulation, and are shown to be highly-efficient and well-understood (Figs.~\ref{fig:hlt_mu_pp} and~\ref{fig:hlt_mu_pPb}). 
+
+\begin{figure}[h]
+\centering
+\begin{minipage}{0.43\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/MuID_ptpt_PLOT_TightHI_pass_and_tag_HIL2Mu15_pass.pdf}
+\caption[The L3 single-muon efficiency at HLT at $\sqrt{s}=5.02$\,\TeV]{\label{fig:hlt_mu_pp} 
+The single-muon trigger efficiency at L3 as a function of the offline reconstructed \pt with a threshold of $\pt=15$\,\GeV\ in pp collisions at $\sqrt{s}=5.02$\,\TeV~\citeAN{AN-16-320,AN-16-098,AN-16-369}.}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/tpTreeHLTEff_pPb_RD_MC_PT_1D.pdf}
+\caption[The L3 single-muon efficiency at HLT at $\sqrt{s_{\mathrm{NN}}}=8.16$\,\TeV]{\label{fig:hlt_mu_pPb}
+The single-muon trigger efficiency at L3 as a function of the offline reconstructed \pt with a threshold of $\pt=12$\,\GeV\ in pPb collisions at $\sqrt{s_{\mathrm{NN}}}=8.16$\,\TeV~\citeAN{AN-17-137}.
+}
+\end{minipage}
+\end{figure}
+
+
+\subsection{Beam position timing trigger}
+\label{sec:bptx_trigger}
+
+Several subdetectors may not provide trigger primitives, but still, generate simple binary logic signals for their inclusion in the trigger menu logic.
+For instance, the two \texttt{LHC} beam position monitors closest to the interaction point
+for each \texttt{LHC} experiment are reserved for timing measurements which are
+called the Beam Pick-up Timing eXperiment (\texttt{BPTX}) detectors~\cite{bptx}. For \texttt{CMS},
+they are located at a distance of approximately 175\,$\mathrm{m}$ on either side of the interaction point (\texttt{BPTX{\normalfont{+}}} and \texttt{BPTX{\normalfont{-}}}).
+The trigger typically selects ``zero-bias'' events, i.e., valid bunch crossings, using the digitized \texttt{BPTX} signal. 
+Requiring a logical conjunction of \texttt{BPTX{\normalfont{+}}} with \texttt{BPTX{\normalfont{-}}}  (\texttt{BPTX\_{\normalfont{AND}}}) 
+a coincidence of the signals from the detectors on either side is established. 
+To suppress noise in triggers with high background a coincidence with \texttt{BPTX\_{\normalfont{AND}}} is thus required. 
+
+Since the interaction probability per bunch crossing during nuclear collisions is small, 
+a complementary trigger to select hadronic interactions is typically deployed. 
+In that case, the collision events are selected online by requiring the coincidence of signals from both the \texttt{BPTX} devices, hence 
+indicating the presence of both proton and lead (or lead and lead) bunches crossing the IP, and at least one energy deposit above a readout threshold on either side of \texttt{HF}. 
+The selection offline can be further refined by repeating the energy deposition requirement on each of the two sides of \texttt{HF}, and possibly imposing a requirement on the 
+reconstructed PV multiplicity.
+This selection that is based on coincidences between the signals from the $+z$ and $-z$ sides of \texttt{BPTX} and \texttt{HF} is referred to as a ``minimum-bias'' trigger.

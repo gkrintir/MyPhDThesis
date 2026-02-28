@@ -1,0 +1,147 @@
+\subsection{The dilepton final state}
+\label{sec:bkg_dil}
+
+Final states with two genuine leptons can originate from background processes,
+primarily from Z/$\gamma^{*} \to \tau^+\tau^-$ (where the $\tau$ leptonic decays can yield $\empm$ or $\mmpm$ plus \ptmiss due to the neutrinos), \tW, and \WV events. Other background 
+sources, such as W+jets events or \ttbar\ production in the $\ell$+jets final state, can 
+contaminate the signal sample if a jet is misidentified as a lepton, or if an event contains a
+lepton from the decay of b or c hadrons. These are included in the ``\nonW''  category since genuine leptons are defined as originating from decays of W or Z bosons.  
+The yields
+from \tW and \WV events are estimated from simulation, while the contribution of the Z/$\gamma^{*}$ background is evaluated using control samples in data.
+The rate of \nonW backgrounds is extracted from control samples in data for the \empm final state and is estimated from the simulation in the \mmpm final state.
+
+A scale factor for the Z/$\gamma^{*}$ background normalization is estimated from the number of events within the Z boson mass window in data, which is extrapolated to
+the number of events outside the window. 
+This ratio, ${R_{\textrm{out/in}}}$, is estimated from MC simulation, and the contamination from processes other than the Z/$\gamma^{*}$ contribution 
+in the \cPZ{} boson mass window is considered to be negligible. 
+The number of extrapolated events can be inferred from data as
+\begin{eqnarray}
+N^{\ell^{\pm}\ell^{\mp},\,\textrm{obs}}_{\textrm{out}} = R^{\ell^{\pm}\ell^{\mp}}_{\textrm{out/in}}( N^{\ell^{\pm}\ell^{\mp}}_{\textrm{in}} -0.5 N^{\mathrm{e}^{\pm}\mu^{\mp}}_{\textrm{in}} k_{\ell^{\pm}\ell'^{\mp}})\, .
+\label{eq:dyest}
+\end{eqnarray}
+$R_{\textrm{out/in}}$ is the ratio of the number of events outside (``out'') and inside (``in'') the \cPZ{} mass region, estimated from the Z/$\gamma^{*}$ MC simulation event samples (Table~\ref{tab:mc_5TeV}) 
+\begin{equation}
+R_{\textrm{out/in}}= \frac{N^{\textrm{out}}_{\mathrm{Z}/\gamma^{*},\,\textrm{MC}}}{N^{in}_{\mathrm{Z}/\gamma^{*},\,\textrm{MC}} }\, ,
+\label{eq:routin}
+\end{equation}
+with $k$ a corrector factor that must be applied to take into account the differences between electron and muon reconstruction. 
+It is calculated using the events in the  \cPZ{} mass region that fulfill the standard dilepton selection, and can be written as
+\begin{equation}
+k_{\ell^{\pm}\ell^{\mp}} = \sqrt{\frac{N^{\ell^{\pm}\ell^{\mp}}_{\textrm{in}}}{ N^{\ell'^{\pm}\ell'^{\mp}}_{\textrm{in}} }}\, ,
+\label{eq:kll}
+\end{equation}
+with $\ell=e$ and $\ell'=\mu$ or $\ell=\mu$ and $\ell'=e$. 
+
+Tables~\ref{tab:dy} and~\ref{tab:dymumu} summarize the input obtained from data and simulation at different selection levels in the \empm\ and \mmpm\ final states, respectively.
+The data-based estimation is then compared to the MC simulation estimation to derive scale factors. In the \empm final state, the scale factor is defined as
+\begin{equation}
+\textrm{SF}_{\empm} = \sqrt{\textrm{SF}_{\empe}  \textrm{SF}_{\mmpm}}\, .
+\label{eq:sfemu}
+\end{equation} 
+A scale factor of $0.96 \pm 0.78$\,(stat) is obtained in the \mmpm final state, and $0.91 \pm 0.14$\,(stat)  in the \empm final state. 
+The estimation is performed using events with at least two jets, and the dependence on different jet multiplicities is discussed in Section~\ref{sec:syst}.
+
+\begin{table}[h] 
+\caption[Z/$\gamma^{*}$ background estimation in the \empm\ final state at $\sqrt{s}=5.02$\,\TeV]{
+Z/$\gamma^{*}$ background estimation in the \empm\ final state for events with at least two reconstructed jets.
+Uncertainties are of statistical nature. The breakdown of the results obtained for the different dilepton final states is given~\citeAN{AN-16-098,AN-16-369}.} \label{tab:dy}
+\centering 
+\begin{tabular}{l||c|c|c} 
+\toprule
+                   &   \empe                &         \mmpm    &  \empm \\
+\midrule 
+ $N_{\textrm{in}}$ (MC)     &   226.0 $\pm$   5.5 &   250.3 $\pm$   5.6 &                   \\
+ $N_{\textrm{out}}$ (MC)    &    18.2 $\pm$   2.4 &    32.9 $\pm$   3.0 &                   \\
+ $R_{\textrm{out}/\textrm{in}}$(MC)  &   0.081 $\pm$ 0.013 &   0.132 $\pm$ 0.015 &                   \\
+ $k_{\ell^{\pm}\ell^{\mp}}$    &   0.950 $\pm$ 0.022 &   1.052 $\pm$ 0.025 &                   \\
+ $N_{\textrm{in}}$ (Obs)      &     212 $\pm$  14.6 &     226 $\pm$  15.0 &   5.0 $\pm$  2.2  \\
+\midrule
+ $N_{\textrm{out}}$         &    16.9 $\pm$   0.8 &    29.4 $\pm$   1.0 &                   \\
+\midrule
+ SF (Obs/MC)         &    0.93 $\pm$  0.17 &    0.89 $\pm$  0.11 &  0.91 $\pm$ 0.14  \\
+\midrule
+Z/$\gamma^{*}$ (MC)    &    18.6 $\pm$   2.3 &    33.6 $\pm$   3.1 &   1.8 $\pm$ 0.4   \\
+Z/$\gamma^{*}$ (Obs)     &    17.3 $\pm$   2.1 &    30.0 $\pm$   2.8 &   1.6 $\pm$ 0.4   \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h] 
+\caption[Z/$\gamma^{*}$ background estimation in the \mmpm\ final state at $\sqrt{s}=5.02$\,\TeV]{
+Z/$\gamma^{*}$ background estimation in the \mmpm\ final state for different levels in the event selection. Uncertainties are of statistical nature~\citeAN{AN-16-098,AN-16-369}.} \label{tab:dymumu}
+\centering 
+\begin{tabular}{l||c|c|c} 
+\toprule
+                   &    \mmpm & $\ptmiss>35$\,\GeV & $\geq$ 2 jets   \\
+\midrule 
+ $N_{\textrm{in}}$ (\mmpm,\,MC)  & 6955.2   $\pm$ 21.4   &   7.3 $\pm$ 1.0   & 4.2   $\pm$ 0.8   \\
+ $N_{\textrm{out}}$ (\mmpm,\,MC) &  799.7   $\pm$ 12.0   &   3.0 $\pm$ 0.7   & 1.2   $\pm$ 0.5   \\
+ $R_{\textrm{out}/\textrm{in}}$(MC)       &    0.115 $\pm$  0.002 & 0.407 $\pm$ 0.151 & 0.300 $\pm$ 0.173 \\
+ $N_{\textrm{in}}$ (\empe,\,MC)      & 6408.3   $\pm$ 21.2   & 7.5   $\pm$ 1.0   & 4.1   $\pm$ 0.7   \\
+ $k_{\ell^{\pm}\ell^{\mp}}$         &    1.042 $\pm$  0.003 & 0.985 $\pm$ 0.129 & 1.010 $\pm$ 0.185 \\
+ $N_{\textrm{in}}$ (\mmpm,\,Obs)   & 6609     $\pm$ 81.3   &    10 $\pm$ 3.2   & 6.0   $\pm$ 2.4   \\
+ $N_{\textrm{in}}$ (\empm,\,Obs)     &   12.0   $\pm$  3.5   & 5.0   $\pm$ 2.2   & 4.0   $\pm$ 2.0   \\
+\midrule
+ $N_{\textrm{out}}$              &  763.9   $\pm$  2.2   & 3.1   $\pm$ 0.7   & 1.2   $\pm$ 0.5  \\
+\midrule
+ SF (Obs/MC)              &    0.949 $\pm$  0.017 & 1.036 $\pm$ 0.481 & 0.957 $\pm$ 0.788  \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+The \nonW background in the \empm final state is estimated using an extrapolation from a control region of same-sign ($\mathrm{SS}$) dilepton
+events to the signal region of opposite-sign ($\mathrm{OS}$) lepton pairs. 
+The $\mathrm{SS}$ control region is defined using the same criteria as for the
+nominal signal region, except requiring dilepton pairs of the same
+charge. The muon isolation requirement is relaxed in order to enhance the number of events.
+The $\mathrm{SS}$ dilepton events predominantly contain at least one
+misidentified lepton.
+Other SM processes produce genuine $\mathrm{SS}$ or charge-misidentified dilepton events
+with significantly smaller rates; these are estimated using simulation and subtracted from the
+observed number of events in data.
+
+The scaling from the $\mathrm{SS}$ control to the signal region in data is 
+performed using an extrapolation factor extracted from MC simulation,
+given by the ratio of the number of $\mathrm{OS}$ events with misidentified
+leptons to the number of $\mathrm{SS}$ events with misidentified (``misID'') leptons. 
+Taking these into account, the fake lepton contribution $N_{\textrm{data}}^{\mathrm{OS}\,\textrm{fakes}}$ to the measurement is estimated as
+\begin{equation}
+N_{\textrm{data}}^{\mathrm{OS}\,\textrm{fakes}} = \textrm{SF}_{\textrm{fakes}}  N_{\textrm{MC}}^{\mathrm{OS}\,\textrm{fakes}}\, ,
+\label{eq:fakeLeptons}
+\end{equation}
+where $\textrm{SF}_{\textrm{fakes}}$ is defined to be
+\begin{equation}
+\textrm{SF}_{\textrm{fakes}} = \frac{N_{\textrm{data}}^{\mathrm{SS}}-N_{\textrm{misID}}^{\mathrm{SS}}-N_{\textrm{rare}}^{\mathrm{SS}}}{N_{\textrm{MC}}^{\mathrm{SS}\,\textrm{fakes}}}
+= \frac{N_{\textrm{data}}^{\mathrm{'\,SS}}}{N_{\textrm{MC}}^{\mathrm{SS}\,\textrm{fakes}}}
+\label{eq:fakessf}
+\end{equation}
+The contribution from \ttbar, Z/$\gamma^{*}$ and tW processes are subtracted from $N_{\textrm{data}}^{\mathrm{SS}}$, giving rise to the numerator ($N_{\textrm{data}}^{\mathrm{'\,SS}}$) on the right-hand side 
+of Eq.\,(\ref{eq:fakeLeptons}). 
+The resulting estimate for the non-W/Z background is thus $1.0 \pm 0.9$\,(stat) events in the \empm final state, where the central value comes from the estimation using events 
+with at least two reconstructed jets. 
+No particular dependence of this scale factor is observed for different jet multiplicities within the sizeable statistical uncertainty.
+
+
+\begin{table}[!htp] 
+\caption[The \nonW background estimation in the \empm\ final state at $\sqrt{s}=5.02$\,\TeV]{
+The \nonW background estimation in the \empm\ final state using events with at least two reconstructed jets.
+The uncertainties are of statistical nature~\citeAN{AN-16-098,AN-16-369}.} 
+\label{tab:nonW}
+\centering 
+\begin{tabular}{l|c} 
+\toprule
+          Source    & $N_{\textrm{jets}}\geq 2$ \\
+\midrule
+Prompt $\mathrm{SS}$ (MC)      & 1.4  $\pm$ 0.2 \\
+Fake $\mathrm{SS}$ (MC)        & 5.2  $\pm$ 0.7 \\
+Fake $\mathrm{OS}$ (MC)        & 0.5  $\pm$ 0.3 \\
+R = fake $\mathrm{OS}$/fake $\mathrm{SS}$ & 0.10 $\pm$  0.08 \\
+\midrule
+$N_{\textrm{data}}^{\mathrm{SS}}$  &  11   \\
+\midrule
+$N_{\textrm{data}}^{\mathrm{OS}}$  & 1.0 $\pm$ 0.9\\
+\bottomrule
+\end{tabular}
+\end{table}

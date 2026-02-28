@@ -1,0 +1,337 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% File: main.tex
+%% Author of PhD thesis: GK Krintiras (gkrintir@cern.ch)
+%% Author of PhD template: John Liaperdos (ioannis.liaperdos@gmail.com)
+%% Last update: October 23, 2018
+%% Description: The open-source template was further edited 
+%% for the PhD thesis of GK Krintiras
+%% using the teipel-thesis-en pdfLaTeX class.
+%%
+%% Character encoding: UTF-8
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%
+% 1. use the "modern" or "classic" option to switch between 
+% a modern or classic font, respectively.
+%
+% 2. add/remove the "hyperref" option to enable/disable hyperlinks:
+% (remember to remove auxiliary files after adding/removing 
+% the "hyperref" option).
+%
+% 3. add/remove the "printer" option to typeset a printer-friendly 
+% (grayscale)/color version of the thesis.
+%
+% 4. use the "watermark" option to indicate a draft copy of the thesis
+%
+% 5. use the "histinit" option to enable "historiated initials".
+% (If used, all chapter initials declared by the \InitialCharacter{}
+% macro are enlarged. If ommitted, arguments of \InitialCharacter{}
+% are typeset as normal text.)
+%
+% 6. use the "plain" option to disable tikz graphics in title page
+% and part/chapter headers (might help to avoid compilation timeouts).
+% Note that "plain" disables CD label and CD cover creation.
+%
+% 7. use the "noindex" option to (hopefully) avoid compilation timeouts
+% when compiling online (disables index generation - note that "\indexGR",
+% "\index" invocations need not be removed when toggling this option).
+%
+% 8. use the "frontispiece" option to typeset a frontispiece at the back of the cover page
+%
+% 9. use the "letter" option for a US letter page layout, instead of A4
+%
+% 10. use the "minitoc" option to load and properly initialize the "minitoc" package, 
+% that allows typesetting individual tables of contents per chapter.
+% (remember to remove auxiliary files after adding/removing 
+% the "minitoc" option).
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+	\documentclass[classic,hyperref,histinit,watermark,modern,frontispiece,minitoc]{teipel-thesis-en}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% UNIVERSITY INFO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% University Name
+%
+	\UniversityName{Universit\'{e} catholique de Louvain}
+
+%
+% School Name
+%
+	\SchoolName{Secteur des Sciences et Technologies}
+%
+% Department Name
+%
+	\DepartmentName{Institut de Recherche en Math\'{e}matique et Physique}
+%
+% Location
+%
+	\UniversityLocation{Louvain-la-Neuve, Belgium}
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THESIS INFO 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%% -------------------------------------------------------------------
+% Thesis Type
+%
+	\ThesisType{Doctoral dissertation presented by}
+%
+%% -------------------------------------------------------------------
+% Thesis Title 
+%
+% To force line breaks in title, use "\\".
+% If different line break locations are to be used for the cover page and the inner title page (page 3) 
+% repeat the cover page title as an optional argument of the \title macro, including line breaks.
+%
+	\title{First measurements of the $\rm{t\overline{t}}$ cross section in LHC pp and pPb collisions at 5.02 and 8.16\,TeV and determination of the absolute luminosity 
+          in the CMS experiment}
+%%
+%
+%% -------------------------------------------------------------------
+%% Thesis subtitle (optional)%
+% If no subtitle is required, set argument to blank, or comment-out the \subtitle macro.
+%
+	\subtitle{Paving the way for detailed investigations of top quark production in nuclear interactions}
+%% -------------------------------------------------------------------
+%
+%% Author name
+%
+% For more than one authors, separate with ",".
+	\authorName{Georgios Konstantinos Krintiras} 
+%% -------------------------------------------------------------------
+%
+%% Supervisor's name
+% 
+	\supervisor{Andrea Giammanco}
+%% -------------------------------------------------------------------
+%% Supervisor's title
+%
+	\supervisorTitle{UCLouvain}
+%% -------------------------------------------------------------------
+%% Place and date of publication
+%
+	\thesisPlaceDate{Louvain-la-Neuve, January 2019}
+%% -------------------------------------------------------------------
+%% Place and date in acknowledgements (if applicable).
+%
+	\ackPlaceDate{Louvain-la-Neuve, January 2019}
+%% -------------------------------------------------------------------
+%% Approval information
+%
+	\examinationDate{Louvain-la-Neuve, January 2019}
+	\approvalStatement{Approved by the comittee composed of the members}
+%% -------------------------------------------------------------------
+%% Copyright Year
+%
+	\copyrightYear{2019}
+%% -------------------------------------------------------------------
+%% Name of first examiner
+%
+	\firstExaminer{Christophe Delaere}
+%% -------------------------------------------------------------------
+%% Title of first examiner
+%
+	\firstExaminerTitle{UCLouvain}
+%% -------------------------------------------------------------------
+%% Name of second examiner
+%
+	\secondExaminer{Vincent Lema\^{i}tre}
+%% -------------------------------------------------------------------
+%% Title of second examiner
+%
+	\secondExaminerTitle{UCLouvain}
+%% -------------------------------------------------------------------
+%% Name of thrid examiner
+%
+	\thirdExaminer{David Enterria}
+%% -------------------------------------------------------------------
+%% Title of third examiner
+%
+	\thirdExaminerTitle{CERN}
+%% -------------------------------------------------------------------
+%% Name of fourth examiner
+%
+        \fourthExaminer{Gabriella P\'{a}sztor}
+%% -------------------------------------------------------------------
+%% Title of fourth examiner
+%
+        \fourthExaminerTitle{E{\"o}tv{\"o}s Lor\'{a}nd University}
+
+%\wineAm{0.7}{0.75}{2}{0}{0}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% THESIS COLORS: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Color for cover and chapters
+	\chaptercolor{brown!85!magenta}
+%%
+%% Color for appendices
+	\appendixcolor{brown!60!orange}
+%%
+%% hyperlink color (ignored if the "hyperref" option is omitted)
+    	\hyperlinkcolor{blue}
+%%
+%% Thesis title foreground color in cover page (ignored if the "plain" option is used)
+    	\titlecolor{white}
+%%
+%% Thesis title background color in cover page (ignored if the "plain" option is used)
+    	\titlebackgroundcolor{brown!85!magenta}  
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% COVER PAGE IMAGE: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% Cover page image (optional)
+%% If no cover page image is required, set argument to blank, or comment-out the \coverpageimage macro.
+%%
+%% Syntax:
+%%          \coverpageimage{scale factor}{px`ath to cover page image}
+%%      or
+%%          \coverpageimage[tikz]{scale factor}{TikZ commands}
+%%          (commands may include \usetikzlibrary statements, etc.)
+%%      
+%% Examples:
+%%      - Use the image in "figures/rdf.png" scaled by 0.8 (=80%):
+%%          \coverpageimage{0.8}{figures/rdf.png}
+%%      - Use a TikZ drawing scaled by 0.5 (=50%):
+%%          \coverpageimage[tikz]{0.5}{
+%%              \draw[thick, magenta] \foreach \x in {18,90,...,306} {
+%%                  (\x:4) node{} -- (\x+72:4)
+%%                  (\x:4) -- (\x:3) nodee{}
+%%                  (\x:3) -- (\x+15:2) node{}
+%%                  (\x:3) -- (\x-15:2) node{}
+%%                  (\x+15:2) -- (\x+144-15:2)
+%%                  (\x-15:2) -- (\x+144+15:2)
+%%              };
+%%          }
+%%
+     \coverpageimage{0.3}{logo/CMSlogo_black_red_label_1024_May2014.png}
+%%
+%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MISCELLANEOUS SETTINGS: 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+% Path to University Logo (all supported formats are allowed)
+	\UniversityLogoPath{logo/Logo_UCLouvain.png}
+%
+% Path to University Logo (grayscale version to be used with the `printer' option)
+	\UniversityBWLogoPath{logo/Logo_UCLouvain.png}
+%
+% Scalefactor for University logos (1 for 100%)
+	\LogoScaleFactor{1.0}
+% Draft Indication (watermark text to be used with the `watermark' option)
+	%\draftIndication{--- DRAFT COPY (PUBLIC) v.1.0 ---}
+	\draftIndication{}
+%
+% Frontispiece settings (ignored if the `frontispiece' option is omitted)
+%	Syntax: \setFrontispiece[scale factor]{path to frontispiece image}{frontispiece image legend}
+	\setFrontispiece[0.8]{figures/CERN_Convention.jpg}{
+          The sixth session of the CERN Council took place in Paris, 29 June--1 July 1953. 
+          The monumental edition of the Convention establishing the European Organization for Nuclear Research was signed by 12 States, 
+          including Belgium and Greece.}
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% add custom hyphenation rules here
+%\hyphenation{} 
+%
+%%%%
+%
+%
+%%%%
+%\linenumbers
+
+\begin{document}
+
+
+\maketitle
+\beginfrontmatter
+
+% Preface (content in `preface.tex') 
+	\include{preface}
+% Dedication
+	\thesisDedication{\textit{The problem is that what we think is not interesting today might be fascinating tomorrow}\\Or Hen, MIT, \texttt{CLAS} Collaboration}
+% Acknowledgements (content in `acknowledgements.tex')
+	\include{acknowledgements}
+% Table of Contents
+	\tableofcontents
+% List of Figures
+	%\listoffigures
+% List of Tables
+	%\listoftables
+	
+\beginmainmatter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INCLUDE YOUR CHAPTERS/SECTIONS HERE
+%%
+% Introduction
+	\include{steer_chap1}
+% Parts/Chapters
+	\part{Part A}
+	\include{steer_chap2}
+	\include{steer_chap3}
+    \part{Part B} 
+	\include{steer_chap4}
+    \part{Part C}
+	\include{steer_chap5}
+	\include{steer_chap6}
+    \part{Part D}
+    \include{steer_chap7}
+% Summary
+    \include{outlook}
+% Appendices
+	\appendices
+        \include{steer_App1}
+	\include{steer_App3}
+        \include{steer_App4}
+        \include{steer_App2}
+
+        % Bibliography/References (BiBTeX items in `references.bib')
+        \bibliographyTH{references}
+        \phantomsection
+        \label{hellobiblio}
+        \bibliographyAN{references}
+        \label{hellobiblio1}
+	\bibliography{IEEEabrv,references}
+% Abbreviations (content in `abbreviations.tex') 
+	%\includeabbreviations{abbreviations}
+% Glossary (content in `glossary.tex') 
+	%\includeglossary{glossary}
+% My own publications (content in `mypublications.tex') 
+	%\includepub{mypublications}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Index
+	\printindices
+%
+%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%
+
+%% Create CD labels:
+
+%	\definecdlabeloffsets{0}{-0.65}{0}{0.55} % upper label x offset [cm] (default=0) /  upper label y offset [cm] (default=0) /  lower label x offset [cm] (default=0) /  lower  label y offset [cm] (default=0) -- For Q-Connect KF01579 labels use the following offset values: {0}{-0.65}{0}{0.55}
+
+%	\createcdlabel{This is my PhD \\ Thesis Title}{My Name}{February}{2019}{8} % thesis title / author name / month / year / title area width in cm (recommended value: 8) 
+
+%%
+%% Create CD case covers:
+
+%	\createcdcover{This is my PhD \\ Thesis Title}{My Name}{February}{2019}{10} % thesis title / author name / month / year / title area width in cm (recommended value: 10) 
+
+%%
+%
+
+\end{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

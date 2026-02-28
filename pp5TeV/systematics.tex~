@@ -1,0 +1,126 @@
+\section{Systematic uncertainty}
+\label{sec:syst}
+
+\subsection{Experimental uncertainty}
+\label{sec:expuncs}
+
+The following sources of experimental uncertainty are considered in the analysis:
+
+\begin{description}
+
+\item[Integrated luminosity] - The integrated luminosity has been estimated offline using a pixel-cluster counting method. 
+  The estimation takes into account the normalization uncertainty and the uncertainty related to the different conditions during typical physics periods 
+  relative to the specially tailored beam-separation scans, adding up to a total uncertainty of $\pm2.3\%$~\citeTH{CMS-PAS-LUM-16-001}.
+
+\item[Trigger and selection efficiency] - The uncertainty in the electron trigger efficiency (1.5\%) and the identification and isolation efficiency (2.5\%) are estimated by changing the values of the
+  data-to-simulation scale factors within the uncertainty,
+  as obtained from a tag-and-probe method (see Appendix~\ref{sec:tnp_eles}). 
+  The uncertainty in the muon identification and isolation efficiency, including the trigger efficiency (Fig.~\ref{fig:hlt_mu_pp}), is 3\% and covers one standard deviation 
+  of the scale factor from unity (see Appendix~\ref{sec:tnp_mus}).
+
+\item[Jet energy scale and resolution] - The impact of the uncertainty in the jet energy scale is estimated by changing the
+  \pt- and $\eta$-dependent JES corrections by a constant 2.8, and the uncertainty in jet energy resolution is estimated through $\eta$-dependent changes in the JER 
+  corrections to the simulation (Fig.~\ref{fig:TTJESJER}). 
+  The uncertainty arising from the use of \ptmiss in the \mmpm final state is dominated by the unclustered energy contribution to \ptmiss (Table~\ref{tab:unclust_unc}). 
+
+
+\item[Jet misidentification efficiencies] - A 30\% uncertainty is conservatively assigned to the jet misidentification probability in the $\ell$+jets analysis, as no dedicated 
+  measurement of this quantity has been performed for the considered data set.
+
+\item[QCD multijet estimation] - The uncertainty assigned to the QCD multijet background includes the statistical uncertainty in the data, and
+  the uncertainty from the non-QCD multijet contributions subtracted from the control region, as described in Section~\ref{sec:bkg_ljets}, and an additional 30\%-100\% normalization uncertainty. 
+  The latter depends on the event category and stems from the measured difference with respect to the alternative estimate of the QCD multijet normalization based on the transverse mass of the lepton 
+  and \ptmiss.
+
+\item[Limited event count in the W+jets MC simulation] - Owing to the finite event count in the W+jets simulated sample, an additional bin-by-bin uncertainty is assigned 
+  by generating an alternative shape to fit, where the bin prediction is varied by $\pm 1$ standard deviation while keeping all the other bins at their nominal expectation.
+
+\end{description}
+
+Figure~\ref{fig:expshapeuncs} shows the signal predictions and the effect of varying the main sources of experimental uncertainty, according to the prescriptions described above.  
+
+Two variables, which are sensitive to the resonant behavior of the light jets produced from the W boson hadronic decay in a \ttbar\ event, were independently considered for the fit. 
+Given that these light jets, here denoted by $j$ and $j^{\prime}$, are correlated during production, they are also expected to be closer in phase space when compared to pairs of other jets in the event. 
+The angular distance $\Delta R$ can thus be used as a metric to rank all pairs of non-b-tagged jets in the event, 
+maximizing the probability of selecting those from the W boson hadronic decay in cases where more than two non-b-tagged jets are found. 
+The invariant mass $M(j,j^{\prime})$ of jets $j$ and $j^{\prime}$ also has a distinctive peaking feature for the signal in contrast with a smooth background continuum.
+From simulation, we expect that the minimum angular distance $\Delta R$ between all pairs of jets $j$ and $j^{\prime}$, \minDeltaR,
+is robust against signal modeling uncertainty
+such as the choice of the $\mu_\textrm{R},\mu_\textrm{F}$ scales and jet energy scale and resolution,
+while the $M(j,j^{\prime})$ variable tends to be more affected by this kind of uncertainty.
+Owing to being less affected by the systematic uncertainty while maintaining good signal-to-background discrimination power, the \minDeltaR variable is used to extract the \ttbar cross section.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_0b_jer_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_1b_jer_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_2b_jer_unc}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_0b_jer_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_1b_jer_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_2b_jer_unc}}
+\caption[The effect of varying the main sources of experimental uncertainty in the \ttbar\ prediction at $\sqrt{s}=5.02$\,\TeV]{
+  Distributions for signal  $M(j,j^{\prime})$ (a--c)  and \minDeltaR (d--f) shapes with the main sources of experimental uncertainty superimposed 
+  for \ttbar\ events with 0 (a,\,d), 1 (b,\,e) or at least  2 (c,\,f) \cPqb-tagged jets~\citeAN{AN-16-320}. 
+  The \cPqb tagging efficiency is treated as a parameter of interest in the fit.
+}
+\label{fig:expshapeuncs}
+\end{figure}
+
+
+%%
+%%
+%%
+\subsection{Theory uncertainty}
+\label{sec:thuncs}
+
+The following sources of theory uncertainty are considered in the analysis:
+
+\begin{description}
+
+\item[QCD scale choices] -  The uncertainty in the simulation of \ttbar\ production cause a systematic bias related to the missing higher-order diagrams in \POWHEG, which is
+  estimated through studies of the signal modeling by modifying the $\mu_\textrm{R},\mu_\textrm{F}$ scales within a factor of two with respect to their nominal value.
+  In the $\ell$+jets analysis, the impact of the $\mu_\textrm{R},\mu_\textrm{F}$ variations are examined independently, while in the dilepton analysis they are varied simultaneously.
+  In both analyses, these variations are applied independently at the matrix element (ME) and parton shower (PS) levels.
+
+\item[Hadronizer choice] - The uncertainty arising from the hadronization model mainly affects the JES and the fragmentation of jets. 
+  The hadronization uncertainty is determined by comparing samples of
+  events generated with \POWHEG, where the hadronization is either
+  modeled with \PYTHIA or \HERWIGpp~(v2.7.1)~\cite{herwigpp}. This also
+  accounts for differences in the PS model and the underlying event.
+ 
+
+\item[PDFs] -  The uncertainty from the choice of PDF is determined by
+  reweighting the sample of simulated  \ttbar\ events according to the
+  RMS variation of the 100 NNPDF3.0 replica sets.
+  Two extra variations of $\alpha_{\textrm{s}}$ are added in quadrature
+  to determine the total PDF uncertainty.
+
+\item[Non-QCD background estimate] - In the $\ell$+jets analysis, the uncertainty in the choice of the $\mu_\textrm{R},\mu_\textrm{F}$ scales in the W+jets simulation is taken into account
+by considering alternative shapes and yields after varying independently the $\mu_\textrm{R},\mu_\textrm{F}$ scales,  following a similar procedure to that described above for the signal. 
+A 30\% normalization uncertainty in the theoretical tW, Z/$\gamma^{*}$, and WV background cross sections is assigned~\cite{Khachatryan:2016mqs}, given the previously unexplored $\sqrt{s}$  value and that the final states contain several jets. In the dilepton final state, an uncertainty of 30\% is assumed~\cite{Khachatryan:2016mqs} for the cross sections of the \tW and \WV backgrounds to cover the theoretical uncertainties and the effect of finite simulated samples. The uncertainty in the Z/$\gamma^{*}$ estimation is calculated by combining in quadrature the statistical uncertainty and
+an additional 30\% from the variation of the scale factor in the different levels of selection, resulting in uncertainties of about 30 and 80\% in the \empm and \mmpm final states,
+respectively. The systematic uncertainty in the non-W/Z background is estimated to be 90\% in the \empm final state and is dominated by the statistical uncertainty in the method. Owing to the limited sample size in the data, the method cannot be applied in the \mmpm final state. The estimation is therefore based on MC simulation, and an uncertainty of 100\% is conservatively assigned.
+
+\end{description}
+
+
+Figure~\ref{fig:shapeuncsqcdscale} summarizes the expected effect on the signal shapes from the choice of the QCD/PS-scales and hadronizer.
+For the QCD scale choices at matrix element level, the effect on the normalization is externalized
+externalized and assigned separately as an extrapolation uncertainty.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_0b_ttCombScale_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_1b_ttCombScale_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/mjjshapes_2b_ttCombScale_unc}}\\
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_0b_ttCombScale_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_1b_ttCombScale_unc}}
+\subfloat[][]{\includegraphics[width=0.33\textwidth]{figures/pp5TeV/shapes_2b_ttCombScale_unc}}
+\caption[The effect of varying the main theoretical uncertainties in the \ttbar\ prediction at $\sqrt{s}=5.02$\,\TeV]{
+  Distributions for signal $M(j,j^{\prime})$ (a--c)  and \minDeltaR (d--f) shapes with the sources of theoretical uncertainty
+  related to $\mu_\textrm{R},\mu_\textrm{F}$ scales at the matrix element and parton shower levels and hadronizer choice superimposed
+  for \ttbar\ events with 0 (a,\,d), 1 (b,e) or at least  2 (c,\,f) \cPqb-tagged jets~\citeAN{AN-16-320}. 
+}
+\label{fig:shapeuncsqcdscale}
+\end{figure}
+

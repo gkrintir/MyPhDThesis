@@ -1,0 +1,269 @@
+\chapter{\QCD\ multijet model from data and isolation of charged leptons}
+\label{sec:Multijet_model}
+
+\QCD\ multijet production is an important background to measurements of single top quark cross sections, e.g., in the $t$ channel. 
+These events become signal-like when an additional lepton is presented in the final state, where a lepton could simply be the decay product of a hadron formed within jets. 
+Typically, such ``nonprompt'' leptons, as opposed to leptons having been produced from the hard scattering, are
+surrounded by many activities within the jet. On the other hand, leptons arisen out of the W boson
+leptonic decay are expected to be isolated, meaning that they should be found in a restricted spatial
+region where they contribute with a significant fraction in the deposited energy. Therefore a \QCD\
+enriched data sample, yet orthogonal with the signal region, is achieved using leptons
+that fail the isolation requirement (Eq.\,(\ref{eq:dbIso})) since the region with reduced isolation starts to become 
+overwhelming in \QCD~\citeTH{qcd_mod}. 
+The question left to be answered concerned with the isolation region(s) that allow the optimal reduction of \QCD, 
+however, at the same time retaining as much \QCD\ as required to have a proper data-based modeling of this background process, plus of its verification.
+
+Given the associated theoretical uncertainty in the modeling of the \QCD\ multijet process, for instance stemming from
+a not precise enough knowledge of the cross section or the approximate description of the underlying hadronic activity, 
+it is necessary to predict the size and properties of this process by data.
+A reliable model for determining \QCD\ contamination is then derived by fitting templates of all physics processes to the
+$x\ (\equiv m_{\textrm{T}}^{\mathrm{W}})$ discriminant (Fig. \ref{fig:principle}), i.e.,
+\begin{equation}
+F(x)=N_{\QCD}\times \mathrm{Q}(x)+N_{\textrm{non-\QCD}}\times W(x)\ .
+\label{eq:fit}
+\end{equation}
+
+The $W(x)$ templates, representing the signal and other non-\QCD\ background processes, are taken
+from MC simulation (Table~\ref{tab:top16003_yield}). After having subtracted non-\QCD\ contamination, the $\mathrm{Q}(x)$ template 
+is constructed from a dedicated control sample that will be described in the following.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.2]{figures/reconstruction/2j1t/figures_muonoptimization/principle.png}
+    \caption[The basic principle behind data-based \QCD\ multijet estimation]
+{A fictitious example that establishes the basic principle behind data-based \QCD\ multijet estimation. The \QCD\ shape
+distribution is extracted by data over a phase space in the proximity of the signal region. The total amount of
+\QCD\ events is then determined by a template fit having utilized a variable that discriminates \QCD\ against
+non-\QCD\ processes.}
+    \label{fig:principle}
+\end{figure}
+
+
+\begin{table} [!h!tbp]
+\caption[Event yields for the main processes in the 2j1t event category at $\sqrt{s}=13$\,\TeV]
+{Event yields for the main processes in the 2j1t category, satisfying the selection as described in Ref.~\citeTH{top16003} and using 2.3\,\invfb of pp collisions 
+at $\sqrt{s}=13$\,\TeV.
+  The quoted uncertainties are of statistical nature. All yields are taken from simulation, except for \QCD\ multijet 
+  events where the yield and the associated uncertainty are determined from data.}
+\centering
+\begin{tabular}{ lcc }
+\toprule
+Process & $\mu^{+}$& $\mu^{-}$ \\
+\midrule
+Top quark (\ttbar~and tW) & $6837 \pm13$ & $6844 \pm 13$ \\
+V\,(V=W,\,Z)+jets & $2752 \pm 82 $ & $ 2487 \pm 76 $ \\
+\QCD\ multijet &$ \x\x308 \pm154$ & $ \x\x266 \pm 133$ \\
+\midrule
+Single top quark $t$-channel&$1493 \pm 13 $ & $ \x948 \pm 10 $ \\
+\midrule
+Total expected& $11390 \pm 175$ &$ 10545 \pm 154 $\\
+\midrule
+Observed&11877&  11017  \\
+\bottomrule
+\end{tabular}
+\label{tab:top16003_yield}
+\end{table}
+
+\begin{figure}[h!]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{Iso:MTWIso}\includegraphics[scale=0.36]{figures/reconstruction/2j1t/figures_muonoptimization/CMS-TOP-16-003_Figure_002-b}}
+\end{minipage}%                                                                                                                                                                                         
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{Iso:MTWMidIso}\includegraphics[scale=0.36]{figures/reconstruction/2j1t/figures_muonoptimization/CMS-TOP-16-003_Figure_002-c}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{Iso:MTWLessIso}\includegraphics[scale=0.36]{figures/reconstruction/2j1t/figures_muonoptimization/CMS-TOP-16-003_Figure_002-e}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{Iso:METLessIso}\includegraphics[scale=0.36]{figures/reconstruction/2j1t/figures_muonoptimization/CMS-TOP-16-003_Figure_002-f}}
+\end{minipage}\par\medskip
+\caption[Template fits of reconstructed \mTW distributions in 2j0t and 2j1t event categories at $\sqrt{s}=13$\,\TeV]
+{It is customary events to be divided in categories according to the number of jets and b-tagged jets using
+the naming convention of ``n-jet-m-tag,'' referring to events with n jets, m of which are b tagged. 
+The reconstructed \mTW distributions are shown for the 2j0t (a,\,b) and 2j1t (c,\,d) categories for events satisfying the selection as described in Ref.~\citeTH{top16003}, separately 
+for positively (a,\,c) and negatively (b,\,d) charged muons, using 2.3\,\invfb of pp collisions at $\sqrt{s}=13$\,\TeV.
+The fit template for the \QCD\ multijet component is derived from a sideband region in data. Only the statistical uncertainty is taken into account in the fit.
+}
+\label{fig:Iso}
+\end{figure}
+%------------------------------------------------------------------------------ 
+
+As important as rejecting \QCD\ away is, constraining the amount of its residual contribution to the analyses sensitive window is equally crucial. Indeed, Figs.~\ref{Iso:MTWIso} -~\ref{Iso:METLessIso} are representative examples of the reconstructed \mTW in the 2j0t and 2j1t regions within a \mt window around the top quark mass (SR) containing leptons with $I^{\mu}_{\rm{rel}}<0.06$. More specifically, reasonable agreement between data and simulation was found, after both \QCD\ and non-\QCD\ components have been scaled to the estimated contribution, the latter determined by the fit process in Eq.\,(\ref{eq:fit}). Thus a separation of $I^{\mu}_{\rm{rel}}>0.12\rm{-}0.15$ effectively results in a high statistics model for the \QCD\ background, while non-\QCD\ contamination becomes less dominant. The region in between $0.06<I^{\mu}_{\rm{rel}}<0.12\rm{-}0.15$ can be then used for the verification of such \textit{in-situ} model for the \QCD\ multijet, in a way similar to what was performed in Ref.~\citeTH{top15004}.
+
+
+By reperforming the template \QCD\ against non-\QCD\ fit over the \mTW variable in a range of $0.01 < I^{\mu}_{\rm{rel}} < 0.15$, it was found that the separation in the three distinct $I^{\mu}_{\rm{rel}}$ regions seems to be optimal. Just to note that the choice of $I^{\mu}_{\rm{rel}} < 0.15$ was simply made in view of the centrally provided working point for the muon isolation. 
+In Fig.~\ref{fig:SoverBgrvsIrel},  $S/B$ is plotted as a function of $I^{\mu}_{\rm{rel}}$, with $S$ and $B$ the number of best-fit non-\QCD\ and \QCD\ multijet events, i.e., 
+as determined from Eq.\,(\ref{eq:fit}). An additional cross-check has been done, by means of using the template \QCD\ against non-\QCD\ fit 
+over the \met variable (Fig.~\ref{SoverBgr:METOverlayed}) in a range of $0.03 <  I^{\mu}_{\rm{rel}} < 0.1$ and with a finer step size of $0.05$. 
+
+%-----------------------------------------------------------------------------
+\begin{figure}[h!]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SoverBgr:EntiremT}\includegraphics[scale=0.3]{figures/reconstruction/2j1t/SoverBgrEntiremT.png}}
+\end{minipage}%                                                                                                                                                                                         
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{SoverBgr:mTGreater50}\includegraphics[scale=0.3]{figures/reconstruction/2j1t/SoverBgrEmTGreater50.png}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[]{\label{SoverBgr:METOverlayed}\includegraphics[scale=0.22]{figures/reconstruction/2j1t/SoverBgrEMETOverlayed}}
+\caption[Optimization of isolation requirements for charged leptons in single top $t$-channel events at $\sqrt{s}=13$\,\TeV]
+{$S/B$ as a function of $I^{\mu}_{\rm{rel}}$ over the entire $\mTW > 0$\,\GeV\ variable region (a), in the extrapolated signal region of $\mTW > 50$\,\GeV\ (b), and over the entire
+  $\met > 0$\,\GeV region overplayed (c)~\citeAN{AN-16-112}.}
+\label{fig:SoverBgrvsIrel}
+\end{figure}
+%------------------------------------------------------------------------------ 
+
+\subsection{Pileup mitigation techniques for the isolation of charged leptons}
+\label{sec:Pileup_Mitigation}
+\subsubsection{Implementation of the PUPPI algorithm in \texttt{CMS}}
+\label{sec:puppi}
+
+In \texttt{CMS}, various techniques for pileup mitigation have been developed, with the most prominent example the CHS algorithm (see Section~\ref{sec:pileup}). 
+Several new techniques have recently been proposed including the pileup per particle identification (PUPPI) technique~\cite{puppi}.
+In contrast to CHS that only removes charged particles from pileup, PUPPI also calculates probabilities for each neutral particle of pileup or not origin and 
+weights them based on that probability. Therefore, physics objects clustered from hadrons, such as jets, or reconstructed from particles assessed with PUPPI, such as \vecptmiss 
+and the isolation of charged leptons, are expected to be less affected by harsher pileup conditions.
+Below, basic information on such techniques, applied to the lepton isolation, is given along with performance comparisons against the nominal isolation method (Eq.\,(\ref{eq:dbIso})). 
+The impact of pileup mitigation techniques on object reconstruction performance, including the commissioning of PUPPI in the complete data sample in 2016, will be detailed in Ref.~\cite{puppi_cms}.
+
+For each particle, a local shape variable, $\alpha$,  is defined that is sensitive to differences between the hadronization of quarks and gluons and the soft diffuse radiation coming from pileup 
+in the neighborhood of the particle, namely, particles from a parton shower are expected closer to each other, whereas pileup particles are distributed more homogeneously.
+The $\alpha$ variable can be then used as a weight to rescale the four-momenta of each particle at the particle level, i.e., before any clustering process is deployed.
+These weights thus serve as a metric of the probability that the particle originates from pileup interactions; a weight of unity (zero) is assigned to particles considered to originate from the leading (pileup) vertex. Furthermore, the algorithm flexibly allows combination with experimental information associated with vertex and timing performance, as described in the following.
+
+In particular, the PUPPI algorithm is implemented using PF candidates in \texttt{CMS}. 
+The variable $\alpha$ is separately defined in the central (within tracker acceptance) and forward (outside tracker acceptance) regions, and for any given PF candidate $i$ is defined as
+
+\begin{linenomath}
+\begin{equation}
+ \label{eq:metricalpha}
+  \alpha_i =    \log \sum_{j \neq i, \Delta R_{ij}<0.4 } \left(\frac{p_{\mathrm{T} j}}{\Delta R_{ij}}\right)^{2} 
+  \begin{cases}
+    \mathrm{for\ } |\eta _i | < 2.5, & j \mathrm{\ are\ charged\ particles\ from\ leading\ vertex} \\
+    \mathrm{for\ } |\eta _i | > 2.5, & j \mathrm{\ are\ all\ kindss\ of\ reconstructed\ particles} \\
+  \end{cases}
+\end{equation}
+\end{linenomath}
+\iffalse
+\begin{linenomath}\begin{equation}\label{eq:puppi}
+    \alpha_i = \log \sum_{\substack{j \in \text{ch},\text{PV} \\ j \neq i}}\left(\frac{p_{\mathrm{T},j}}{\Delta R_{ij}}\right)^{2} \theta(R_0 - \Delta R_{ij})\, ,
+\end{equation}\end{linenomath}
+where $\theta$ is the Heaviside function, $i$ refers to the PF candidate, $j$ to neighboring charged particles originating from the PV within a cone of radius $R_0$ in $\eta$--$\phi$ space around PF candidate $i$, and $\Delta R_{ij}$ is the distance in $\eta-\phi$ space between the $i$ and $j$ particles.
+\fi
+where $p_{\mathrm{T} j}$ is the transverse momentum of any neighboring particle $j$, $\Delta R_{ij}$ is the distance between particle $i$ and $j$ on the $(\eta$--$\phi)$ plane, 
+and the summation extends over all particles $j$ within a cone of radius 0.4 around the PF candidate $i$.
+In the central region of the detector, i.e.,  up to $|\eta|< 2.5$ where the tracking information is available, particles $j$ are charged particles from LV, while no such distinction can be made for particles in the forward region, i.e, in the $|\eta| > 2.5$ region. In addition, charged PF candidates not associated with any PV are used in the calculation, if 
+they satisfy a loose requirement---a multiple of the vertex reconstruction resolution---on $d_z$, where $d_z$ is the distance between the track and LV in the $z$ direction.
+
+A $\chi^{2}$ approximation
+\begin{linenomath}\begin{equation}
+\label{eq:puppi_chi2}
+\chi^{2}_{i} = \frac{(\alpha_i -  \overline{\alpha}_{\mathrm{PU}})^{2}}{\text{RMS}_{\mathrm{PU}}^{2}}\, ,
+\end{equation}\end{linenomath}
+where $\overline{\alpha}_{\mathrm{PU}}$ is the median value of the $\alpha_i$ distribution for all charged PF candidates associated with the pileup vertices in the event, 
+and $\text{RMS}_{\mathrm{PU}}$ is the corresponding root-mean-square (RMS) of the $\alpha_{i}$ distribution, is used to determine the likelihood that a PF candidate originates from pileup. 
+The numerator is defined to be sensitive to the direction of the deviation of $\alpha _i$ from $\overline{\alpha}_{\mathrm{PU}}$, given that $\alpha$ receives different values 
+for particles from the leading vertex relative to particles of pileup origin. 
+Within the tracker acceptance, $\overline{\alpha}_{\mathrm{PU}}$ and $\text{RMS}_{\mathrm{PU}}$ are calculated using all charged pileup PF candidates, 
+while in the forward region they are calculated either using all the particles in the event.
+
+The $\chi^{2}$ variable in Eq.\,(\ref{eq:puppi_chi2}) is finally transformed to a weight using the relation
+\begin{linenomath}\begin{equation}
+\label{eq:puppi_wgt}
+w_{i}=F_{\chi ^{2},\text{dof}=1}(\chi_{i}^{2})\, , 
+\end{equation}\end{linenomath}
+where $F_{\chi ^{2},\text{dof}=1}$ is the cumulative distribution function that approximates the $\chi^{2}$ distribution  with one degree of freedom of all PF candidates in the event. 
+The weights range from zero to one, with zero indicating PF candidates originating from a pileup vertex, whereas PF candidates originating from a PV have values close to unity. 
+Only charged PF candidates associated with the LV receive the value of unity. 
+The $w_{i}$ distribution is of interest above a minimum threshold, i.e., it is trimmed by rejecting particles with a probability of more than 99\% to originate from pileup, 
+and the minimum scaled $\pt$ of neutral PF candidates is further required to be $w_{i} \times p_{\mathrm{T},i} > (A+B\times N_{\textrm{PV}})$, 
+where $N_{\textrm{PV}}$ is the reconstructed PV multiplicity. In this equation, $A$ and $B$ are adjustable parameters that depend on $\eta$ and whose purpose is to ensure uniform jet energy response. An optimization of the tunable parameters is performed separately in the regions
+$\lvert \eta \rvert <$  2.5,  2.5 $< \lvert \eta \rvert <$ 3, and $\lvert \eta \rvert >$ 3,
+to achieve optimal performance related to jet kinematics and \ptmiss resolution.
+
+\begin{figure}[!ht]
+  \centering
+    \subfloat[][]{\label{puppi_metrics:a}\includegraphics[width=0.35\textwidth]{figures/appendix/puppi/alpha_all.pdf}} 
+    \subfloat[][]{\label{puppi_metrics:b}\includegraphics[width=0.35\textwidth]{figures/appendix/puppi/chi2.pdf}}
+    \subfloat[][]{\label{puppi_metrics:c}\includegraphics[width=0.35\textwidth]{figures/appendix/puppi/weight_not_charged_data_MC.pdf}}\\
+    \caption[The performance of the PUPPI algorithm using pp collisions at $\sqrt{s}=13$\,\TeV]{ 
+The performance of the PUPPI algorithm has been tested using a pp data sample recorded in late 2016 (period ``Run2016H'') at $\sqrt{s}=13$\,\TeV, 
+corresponding to about 0.27\,\invfb, and it is compared to \QCD\ multijet MC simulation~\cite{puppi_cms}. 
+}
+    \label{fig:puppi_metrics}
+  \end{figure}
+
+Figure~\ref{fig:puppi_metrics} displays the metric, the weighting function, and the particle weights of PUPPI algorithm form implemented in \texttt{CMS}. 
+Events are selected online based on jet triggers~\cite{cms_trigger} and are required offline to be associated with a scalar jet \pt sum of at least 1\,\TeV. 
+The separation power (Fig.~\ref{puppi_metrics:a}) of the variable $\alpha$ between particles from the leading and pileup vertices reveals
+ the majority of the charged particles from the latter having a value below about eight, with only a small fraction of (mostly high momentum) particles ending up to higher values. 
+In addition, comparing the neutral to charged particle distributions, it becomes clear that the $\alpha$ distribution is qualitatively similar for these two types of PF candidates, 
+confirming that $\overline{\alpha}_{\mathrm{PU}}$ and $\text{RMS}_{\mathrm{PU}}$ computed exclusively based on charged particles can be used to compute weights for neutral particles. 
+The $\chi^{2}$ (Eq.\,(\ref{eq:puppi_chi2})) is well modeled (Fig.~\ref{puppi_metrics:b}) and is less affected by the mismodeling in simulation.
+The shape of the resulting PUPPI weight distribution (Fig.~\ref{puppi_metrics:c}) is also reasonably well reproduced by simulation for particles with relatively high weights, i.e., 
+those likely to be originated from LV, yet relevant for the subsequent clustering. 
+The impact of the mismodeling at low $w_{i}$ values, dominated by low \pt particles from pileup interactions, on final observables is small, 
+since their weighted contribution on object reconstruction 
+is negligible.
+
+\subsubsection{Definition and performance of PUPPI muon isolation}
+\label{sec:puppi_muoniso}
+
+The lepton isolation, i.e., the scalar \pt sum of particles surrounding a charged lepton, is affected by pileup collisions. 
+One of the standard techniques used in \texttt{CMS} to mitigate pileup contamination is the $\delta \beta$ corrected isolation (Eq.\,(\ref{eq:dbIso})) 
+In this technique the $\delta \beta$ correction subtracts the contamination on average, whereas PUPPI is able to correct on a particle-by-particle basis. 
+A straightforward application of the PUPPI algorithm to the muon isolation can be defined as
+\begin{linenomath}
+\begin{equation}
+\label{eq:puppiisolation}
+I^{\mu ^ i }_{\textrm{PUPPI}}=
+ \sum_{ \Delta R(i,j) < 0.3,\,0.4 } w^j \pt^j\, ,
+\end{equation}
+\end{linenomath}
+ where $\pt^j$ and $w^i$ are the transverse momentum and PUPPI weight of the particle $j$, and the sum is considered for all particles in the cone with radius of 0.3 or 0.4 around muon in
+question. Although this treatment is favourable for muons from, e.g., semileptonic hadron decays, in the case of prompt muons the metric $\alpha$ 
+calculates higher weights to all neutral particles surrounding muons, and hence introducing some pileup dependence on the isolation efficiency. 
+An alternative type of isolation can be defined by excluding charged leptons from being of type $j$ in Eq.\,(\ref{eq:metricalpha}). 
+In following, the isolation defined with the former (default) PUPPI weight is referred to as ``with lepton'' (WL) and the latter as ``without lepton'' (WOL).
+
+
+The performance of muon isolation is tested using MC simulation of single top $t$-channel and \QCD\ multijet events using a pileup distribution with a mean of about 20. 
+The samples used for the study are described in Ref.~\citeTH{top15004}. 
+The efficiency is calculated with respect to reconstructed muons with $\pt$ greater than 20 GeV in $|\eta| < $ 2.4. 
+Muons are selected, if the relative isolation is smaller than a certain threshold, and the fraction of them passing the criteria is referred to as isolation efficiency for prompt muons
+ and as fake rate for nonprompt muons. 
+
+Figure~\ref{fig:IsoComparison} shows receiver operating characteristic (ROC) curves, i.e., 
+the efficiency as a function of the fake rate, scanning the threshold on the isolation.  
+Compared to $\delta\beta$ correction, the PUPPI-WL isolation provides a higher rejection power,  
+while the PUPPI-WOL isolation provides higher signal efficiency, as originally intended. 
+In addition, and according to these findings,  for the $\delta\beta$ corrected isolation a cone size of $\Delta R = 0.3$ seemed to be more promising, instead of the usual $0.4$. 
+However, a rough calculation based on the expected significance as a figure of merit, but modified~\cite{cousins_sig} to include a systematic uncertainty of 50\%
+in the \QCD\ multijet background, revealed little-to-no gain in the measurement of the $t$-channel production cross section.
+
+%-----------------------------------------------------------------------------
+\begin{figure}[h!]
+\centering
+\begin{minipage}{.5\linewidth}
+\subfloat[]{\label{IsoComparison:MuonsIncluded}\includegraphics[width=1\linewidth]{figures/reconstruction/figures_muonisolationpumitigation/comp_wL.png}}
+\end{minipage}%\par\medskip                                                                                                                                                                        
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{IsoComparison:MuonsExcluded}\includegraphics[width=1\linewidth]{figures/reconstruction/figures_muonisolationpumitigation/comp_woL.png}}
+\end{minipage}%\par\medskip
+\caption[Comparison of the pileup mitigation techniques for the isolation of charged leptons]{
+Comparison of the pileup mitigation techniques in the case of muon inclusion (a) or exclusion (b) from the calculation of the charged isolation deposits in Eq.\,(\ref{eq:puppiisolation}). 
+The $\delta \beta$ corrected isolation (Eq.\,(\ref{eq:dbIso})) is presented for two different cone sizes, i.e., $\Delta R = 0.3$ and 0.4. 
+The combined isolation, defined as the mean of with- and without-lepton (WL and WOL) definitions of the PUPPI isolation, has been found to provide a slightly better performance along the usual operation region. A second algorithm has been developed, the so-called ``PF reweighting,'' that also rescales the four-momentum of neutral hadrons and photons with weights 
+calculated based on their kinematics with respect to the PU- or non-PU-charged tracks in the event~\citeAN{AN-16-112}. 
+}
+\label{fig:IsoComparison}
+\end{figure}
+
+\clearpage

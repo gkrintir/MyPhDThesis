@@ -1,0 +1,226 @@
+\section{Measurement of the \ttbar\ cross section}
+\label{sec:res}
+
+\subsection{The $\ell$+jets final state}
+\label{sec:res_ljets}
+
+In the $\ell$+jets analysis, the \ttbar\ cross section is measured in a fiducial phase space through a fit. 
+In order to maximize the sensitivity of the analysis, the \minDeltaR distributions are categorized
+according to the number of jets---in addition to the ones assigned to the W boson hadronic decay---passing the b quark identification criteria. 
+In total, 6 categories are used, corresponding to electron or muon events with 0, 1, or $\geq\ $2 b{} jets. 
+The expected number of signal and background events in each category prior to the fit and the observed yields are given in Table~\ref{tab:yields_ljets}.
+Good agreement is observed between data and expectations.
+
+
+\begin{table}[!tb]
+\centering
+\caption[The predicted and observed number of events in the $\mathrm{e}$+jets and $\mu$+jets final states at $\sqrt{s}=5.02$\,\TeV]{
+  The number of expected background and signal events and the observed event yields in the different
+  b tag categories for the $\mathrm{e}$+jets and $\mu$+jets analyses, prior to the fit.
+  With the exception of the \QCD\ multijet estimate,
+  for which the total uncertainty is reported,
+  the uncertainties reflect the statistical uncertainty in the simulated samples~\citeTH{topobs_CMS_jhep}.
+  \label{tab:yields_ljets}}
+\resizebox{\textwidth}{!}{\begin{tabular}{lD{,}{\pm}{-1}D{,}{\pm}{-1}D{,}{\pm}{-1}D{,}{\pm}{-1}D{,}{\pm}{-1}D{,}{\pm}{-1}}
+\toprule
+\multirow{3}{*}{Source} & \multicolumn{6}{c}{b tag category} \\
+& \multicolumn{2}{c}{0b} & \multicolumn{2}{c}{1b} &\multicolumn{2}{c}{$\geq\ $2b} \\\cmidrule(l){2-3}\cmidrule(l){4-5}\cmidrule(l){6-7}
+& \multicolumn{1}{c}{\hspace{5.8mm} $\mathrm{e}$+jets} & \multicolumn{1}{c}{\hspace{5.8mm} $\mu$+jets} & \multicolumn{1}{c}{\hspace{5.8mm} $\mathrm{e}$+jets} & \multicolumn{1}{c}{\hspace{5.8mm} $\mu$+jets} & \multicolumn{1}{c}{\hspace{5.8mm} $\mathrm{e}$+jets} & \multicolumn{1}{c}{\hspace{5.8mm} $\mu$+jets} \\
+\midrule
+\tW & 3.03,0.02 & 5.6,0.03 & 2.49,0.02 & 4.5,0.03 & 0.39,0.01 & 0.67,0.01 \\
+W+jets & 776,17 & 1704,26 & 13,2 & 26,3 & 0.2,0.3 & 0.8,0.6 \\
+Z/$\gamma^{*}$ & 136,4 & 162,5 & 1.7,0.5 & 2.8,0.6 & 0.1,0.1 & 0.1,0.1 \\
+WV & 0.52,0.01 & 1.01,0.02 & \multicolumn{1}{c}{$<$0.01} & \multicolumn{1}{c}{$<0.02$} & \multicolumn{1}{c}{$<0.01$} & \multicolumn{1}{c}{$<0.01$} \\
+\QCD\ multijet & 440,130 & 490,150 & 3.6,1.1 & 28,8 & 2.5,0.8 & 2.0,0.8 \\
+\midrule
+\ttbar\ signal & 22.8,0.3 & 42.3,0.4 & 36.9,0.4 & 71.1,0.5 & 13.8,0.2 & 27.0,0.3 \\
+\midrule
+Total & 1380,130 & 2410,150 & 57.7,2.4 & 131,9 & 16.8,0.9 & 31,1 \\
+\midrule
+Observed data & \multicolumn{1}{c}{1375} & \multicolumn{1}{c}{2406} & \multicolumn{1}{c}{61} & \multicolumn{1}{c}{129} & \multicolumn{1}{c}{19} & \multicolumn{1}{c}{33} \\
+\bottomrule
+\end{tabular}}
+\end{table}
+
+
+The $M(j,j^{\prime})$ and \minDeltaR distributions are shown in Fig.~\ref{fig:ljetsdata}.
+The distributions have been combined for the $\mathrm{e}$+jets and $\mu$+jets final states to maximize the statistical precision
+and are shown for events  with different b-tagged jet multiplicities. 
+From simulation, we expect that the signal peaks at low $\Delta R$, while the background is uniformly distributed up to
+$\Delta R\approx 3$. Above that value, fewer events are expected, and background processes are predicted to dominate.
+A fair agreement is observed between data and pre-fit expectations.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/allrankedmjj_0b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/allrankedmjj_1b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/allrankedmjj_2b}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/alldrjj_0b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/alldrjj_1b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pp5TeV/alldrjj_2b}}
+\caption[The predicted and observed distributions of the $M(j,j^{\prime})$ and \minDeltaR variables in $\ell$+jets events at $\sqrt{s}=5.02$\,\TeV]{
+The predicted and observed distributions of the (a--c) $M(j,j^{\prime})$ and (d--f) \minDeltaR variables for $\ell$+jets events
+in the 0b{} (a,d), 1b{} (b,e), and $\geq\ $2b{} (c,f) tagged jet categories.
+The distributions from data are compared to the sum of the expectations for the signal and backgrounds prior to any fit.
+The \QCD\ multijet background is estimated from data (see Section~\ref{sec:bkg_ljets}).
+The cross-hatched band represents the statistical and the integrated luminosity uncertainties in the expected signal and background yields added in quadrature.
+The vertical bars on the data points represent the statistical uncertainties~\citeTH{topobs_CMS_jhep}.
+}
+\label{fig:ljetsdata}
+\end{figure}
+
+
+A profile likelihood ratio (PLR) method, similar to the one employed in Ref.~\cite{CMS-PAS-TOP-16-006}, is used to perform the fit the number of events counted in the different categories. 
+The likelihood function takes into account the expectations from background processes as well as signal. 
+These expectations depend on: (i) the simulation- or data-based expectations ($\hat{\mathrm{S}}$ or $\hat{\mathrm{B}}$ for
+signal and background, respectively), and (ii) nuisance parameters  ($\theta_i$) that parameterize the uninteresting variables used to control the effect of the systematic variations, 
+as described in Section~\ref{sec:syst}. 
+The effect of each source of uncertainty is separated in a rate- and shape-changing nuisance parameter. 
+In the fit, the nuisance parameters are assumed to be distributed according to log-normal probability distribution functions, if affecting the rate, or Gaussian PDFs if affecting the shapes. 
+The signal expectation is also modulated by a multiplicative factor, i.e., the ratio of the observed \ttbar\ cross section to the expectation from theory, the so-called 
+signal strength $\mu=\sigma/\sigma_\text{th}$ for $m_\mathrm{top}=172.5$\,\GeV.
+For each category (k), the total number of expected events can be written as
+\begin{equation}
+\hat{N}_k(\mu,\vec{\Theta})
+= \mu \, \hat{\mathrm{S}}_k  \, \prod_i (1+\delta_i^\mathrm{S}\theta_i)+
+\hat{\mathrm{B}}_k  \, \prod_i
+(1+\delta_i^\mathrm{B}\theta_i)\, ,
+\label{eq:nexp}
+\end{equation}
+where $\vec{\Theta}$ is the set of all nuisance parameters,
+the index k runs over the bins of the distributions (or the yields for the cross-check event counting analysis), 
+and $\delta_i^\mathrm{S}$ and $\delta_i^\mathrm{B}$ are changes in yields induced through one-standard-deviation changes in the $i$th source of uncertainty in the signal
+and background, respectively. The likelihood function is then defined as
+\begin{equation}
+\mathcal{L}(\mu,\vec{\Theta}) =
+\prod_k \mathcal{P} \left[ N_k | \hat{N}_k(\mu,\theta_i) \right]\,
+\prod_i \rho(\theta_i)\, ,
+\label{eq:ll}
+\end{equation}
+where $\mathcal{P}$ is a Poisson distribution, $N_k$ is the number of events observed in the $k$th category, and $\rho(\theta_i)$ corresponds to the PDF associated with a nuisance parameter. 
+The \ttbar\ cross section is measured maximizing the PLR test statistic, which is asymptotically distributed as a $\chi^2$ distribution,
+\begin{equation}
+\lambda(\mu,\textrm{SF}_{\mathrm{b}}) = \frac{\mathcal{L}(\mu,\textrm{SF}_{\mathrm{b}},\hat{{\hat{{\vec{\Theta}}}}})}{\mathcal{L}(\hat{\mu},\hat{\textrm{SF}}_{\mathrm{b}},\hat{\vec{\,\Theta}})}\, ,
+\label{eq:profll}
+\end{equation}
+where $\mu$ and $\vec{\Theta}$ are the signal strength and the set of nuisance parameters, respectively, and $\textrm{SF}_{\mathrm{b}}$ is an additional parameter of interest meant for the b tagging efficiency. 
+The quantities $\hat{{\hat{{\vec{\Theta}}}}}$ correspond to the values of the nuisance parameters that maximize the likelihood for the specified signal strength and b tagging efficiency (conditional likelihood), 
+and $\hat\mu$, $\hat{\textrm{SF}}_{{\mathrm{b}}}$, $\hat{{\vec{\Theta}}}$ are, respectively, the values of the signal strength, b tagging efficiency, and nuisance parameters that maximize the likelihood. 
+In the presence of nuisance parameters, the resulting PLR as a function of $\mu$ and $\textrm{SF}_{\mathrm{b}}$ tends to be broader
+relative to the one obtained when the values are well known and fixed. This reflects the loss of information because of the
+systematic uncertainty~\cite{Cowan:2010js}. The uncertainty interval ($\pm 1$ standard deviation) corresponds to an increase in the 
+parabolic shape of the PLR from the minimum obtained with the best-fit signal strength $\hat\mu$ by a factor of 1.  
+In the case of a two-dimensional likelihood contour, the factor to derive the uncertainty is 2.3 instead.
+
+
+Figure~\ref{fig:test} (left) shows the two-dimensional contours at the 68\% confidence level (CL)
+obtained from the scan of $-2\ln(\lambda)$, as functions of $\mu$ and $\textrm{SF}_{\mathrm{b}}$.
+The expected results, obtained using the Asimov data set~\cite{Cowan:2010js},
+are compared to the observed results and found to agree well within one standard deviation.
+The signal strength is obtained after profiling $\textrm{SF}_{\mathrm{b}}$, and the result is
+\(\mu= 1.00\ ^{+0.10}_{-0.09}\,(\stat)\ ^{+0.09}_{-0.08}\,(\syst)\). 
+
+As a cross-check, the signal strength is also extracted by fitting only the total number of events observed in each of the six categories.
+The observed value $\mu=1.03\ ^{+0.10}_{-0.10}\,(\stat)\ ^{+0.21}_{-0.11}\,(\syst)$ is in agreement with the analysis using the
+\minDeltaR distributions.
+Figure~\ref{fig:test} (right) summarizes the results obtained for the signal strength fit in each final state separately
+from the analysis of the distributions and event counting.
+In both cases, a substantial contribution to the uncertainty is systematic in nature, although the statistical component is still significant.
+In the  $\ell$+jets combination, the $\mu$+jets final state is expected and observed to carry the largest weight.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pp5TeV/shape_nll2d_rvsbtagRate}}
+\subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pp5TeV/ljmusummary}}
+\caption[The  68\% CL observed and expected contours, and signal strengths in the $\ell$+jets final state at $\sqrt{s}=5.02$\,\TeV]{
+  a: The 68\% CL contour obtained from the scan of the likelihood in $\ell$+jets analysis, 
+  as a function of $\mu$ and $\textrm{SF}_{\mathrm{b}}$ in the $\ell$+jets analysis.
+  The solid (dashed) contour refers to the result from data (expectation from simulation).
+  The solid (hollow) diamond represents the observed fit result (SM expectation)~\citeTH{topobs_CMS_jhep}.
+  b: Summary of the signal strengths separately obtained in the $\mathrm{e}$+jets and $\mu$+jets final states, and after their combination in the $\ell$+jets final state.
+  The results of the analysis from the distributions are compared to those from the cross-check analysis with event counting (Count).
+  The inner (outer) bars correspond to the statistical (total) uncertainty in the signal strengths~\citeTH{topobs_CMS_jhep}.
+}
+\label{fig:test}
+\end{figure}
+
+%\begin{figure}[!ht]
+%\centering
+%\subfloat[][]{\label{postfit_impact:a}\includegraphics[width=0.84\textwidth]{figures/pp5TeV/CMS-TOP-16-023_Figure-aux_002-a}}\\
+%\subfloat[][]{\label{postfit_impact:b}\includegraphics[width=0.84\textwidth]{figures/pp5TeV/CMS-TOP-16-023_Figure-aux_002-b}}
+%\caption[Summary of the impacts and pulls of the most significant nuisance parameters in the $\ell$+jets final state at $\sqrt{s}=5.02$\,\TeV]{
+%Summary of the impacts and pulls of the most significant nuisance parameters used in the count analysis (a) and in the analysis of distributions (b), when the fit is performed to the Asimov data set. I%n each plot the left panel shows the post-fit pull (value and uncertainty) of each nuisance, while the right panel displays the estimated impact on the fit for the signal strength. Only the first 30 nu%isances are displayed, being their name shown at each row of the plots~\citeTH{topobs_CMS_jhep}.
+%}
+%\label{fig:postfit_impact}
+%\end{figure}
+
+To estimate the impact of the experimental systematic uncertainty in the measured signal
+strength, the fit is repeated after fixing one nuisance parameter at a time at its
+post-fit uncertainty ($\pm 1$ standard deviation) values. The impact on the signal strength fit is
+then evaluated from the difference induced in the final result from
+this procedure.
+By repeating the fits, the effect of some nuisance parameters being fixed may be reabsorbed
+by a variation of the ones being profiled, owing to correlations.
+As such, the individual sources of experimental uncertainty obtained and summarized
+in Table~\ref{tab:impacts} and Appendix~\ref{sec:postfit_impact}, respectively, can only be interpreted as the observed
+post-fit values, and not as an absolute, orthogonalized breakdown of the uncertainty.
+Compared to the event counting (Fig.~\ref{fig:postfit_impact:a}), the analysis of the distributions
+is less prone to the uncertainty in the \QCD\ multijet background and jet energy resolution. %and equally prone to the uncertainties in signal modeling and b\ tagging efficiency 
+In both cases, the signal modeling uncertainty and the b\ tagging efficiency are among the most significant sources of uncertainty. 
+The post-fit constraints are mostly observed in the shape analysis (Fig.~\ref{fig:postfit_impact:b}), and mainly in nuisance parameters that could lead to significantly different expectations (Figs.~\ref{fig:expshapeuncs} and~\ref{fig:shapeuncsqcdscale}) for the \minDeltaR variable. 
+
+\begin{table}[!ht]
+\centering
+\caption[The estimated impact of each source of uncertainty in the signal strength value for the $\ell$+jets final state at $\sqrt{s}=5.02$\,\TeV]{
+The estimated impact of each source of uncertainty in the
+value of $\mu$ extracted from the analysis of distributions, and in the cross-check from event counting.
+The ``Other background'' component includes the contributions from Z/$\gamma^{*}$, \tW, and \WV events.
+The total uncertainty is obtained by adding in quadrature the statistical, experimental systematic, and theoretical uncertainties.
+The individual experimental uncertainties are obtained by repeating the fit after fixing one nuisance parameter at a time at its post-fit uncertainty ($\pm 1$ standard deviation) value.
+The values quoted have been symmetrized~\citeTH{topobs_CMS_jhep}.\label{tab:impacts}}
+\begin{tabular}{lll}
+\toprule
+\multirow{2}{*}{Source} & \multicolumn{2}{c}{$\Delta\mu/\mu$} \\
+                                            & Distr. & Count \\
+\midrule
+Statistical uncertainty  & 0.095 & 0.100 \\
+Experimental systematic uncertainty  & 0.085 & 0.160 \\
+\midrule
+\multicolumn{3}{c}{\it Sources of experimental uncertainty}\\
+\hspace{+2mm} W+jets background  & 0.035 &  0.025 \\
+\hspace{+2mm} \QCD\ multijet background & 0.024 & 0.044 \\
+\hspace{+2mm} Other background & 0.013 & 0.013 \\
+\hspace{+2mm} Jet energy scale & 0.030 & 0.031 \\
+\hspace{+2mm} Jet energy resolution & 0.006 & 0.023 \\
+\hspace{+2mm} b\ tagging & 0.034 & 0.045  \\
+\hspace{+2mm} Electron efficiency & 0.011 & 0.028  \\
+\hspace{+2mm} Muon efficiency & 0.017 & 0.022  \\
+\midrule
+\multicolumn{3}{c}{\it Sources of theoretical uncertainty}\\
+Hadronization model of \ttbar\ signal & 0.028 & 0.069  \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (PS) & 0.044 & 0.115 \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (ME) & \hspace{-3.3mm}$<$0.010 & \hspace{-3.3mm}$<$0.010  \\
+\midrule
+Total uncertainty & 0.127 & 0.189 \\
+\bottomrule
+\end{tabular}
+\end{table}
+The fiducial cross section is measured in events with one electron (muon) in the range $\pt>35$ ($25$)\,$\mathrm{GeV}$ and $\lvert\eta\rvert<2.1$ (including the transition region for electrons),  
+and at least two jets with $\pt>25\,\mathrm{GeV}$ and $\lvert\eta\rvert<2.4$.
+After multiplying the signal strength by the theoretical expectations (Eq.\,(\ref{eq:theory})), we find
+\begin{equation*}
+\sigma_{\textrm{fid}}= 20.8 \pm 2.0\,(\stat) \pm 1.8\,(\syst) \pm 0.5\,(\lumi)\,{\mathrm{pb}}\, .
+\label{eq:totalxsecpp}
+\end{equation*}
+
+The combined acceptance in the $\mathrm{e}$+jets and $\mu$+jets final states is estimated using the NLO \POWHEG simulation
+to be  $\mathcal{A}=0.301\pm 0.007$, with the uncertainty being dominated by the variation of the $\mu_\textrm{R},\mu_\textrm{F}$ scales at ME and PS levels
+and the hadronization model used for the \ttbar\ signal. The uncertainty due to the PDFs is included but verified to be less critical.
+Taking into account the acceptance of the analysis and its uncertainty, the inclusive \ttbar\ cross section is determined to be
+\begin{equation*}
+\stt= 68.9 \pm 6.5\,(\stat) \pm 6.1\,(\syst) \pm 1.6\,(\lumi)\,{\mathrm{pb}}\, ,
+\label{eq:totalxsecpp}
+\end{equation*}
+in agreement with the SM prediction and attaining a 13\% total relative uncertainty.
+
+

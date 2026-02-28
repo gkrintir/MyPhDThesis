@@ -1,0 +1,82 @@
+\section{The concept of luminosity}
+\label{sec:intro}
+
+Luminosity has been used in astronomy (cosmology) indicating the amount of electromagnetic energy an astronomical (cosmological) object radiates per unit time.
+The term has been introduced in particle physics in the early 1960's in the context of the first matter-antimatter collider, Anello di Accumulazione,  at the Frascati laboratory
+accelerating electron ($\mathrm{e^-}$) against positron ($\mathrm{e^+}$) beams at $\sqrt{s}=250$~\MeV~\cite{ada}.
+The analogy between the definitions in accelerator physics and astronomy, that is driven by a characteristic ``source factor'' in both cases,  rendered luminosity as the proportionality coefficient 
+between the event accumulation rate in a particle collider and the cross section.
+Luminosity thus quantifies the potential of the collider for delivering a statistically significant sample of any class of events.
+
+Storage-ring beam dynamics suggest operating particle colliders in ``bunched mode,'' i.e., each of the two beams consists of a
+string of bunches typically unevenly distributed around the collider ring and numbering a few ten to a few thousand (see Section~\ref{sec:cycle}).
+To determine the cross section of any given subatomic process at high energy colliding-beam experiments 
+a measurement of the colliding-bunch luminosity must hence be performed. 
+The single-bunch instantaneous luminosity $\mathcal{L_{\textrm{b}}}$, i.e., produced by a single pair of colliding bunches, can be written as
+\begin{equation}
+\label{eq:lumibunch}
+\mathcal{L_{\textrm{b}}} = \frac{R}{\sigma_{\textrm{ref}}}\ ,%(t,\mu,n_b,...)}.
+\end{equation}
+where the interaction rate $R=\mu f_{\textrm{r}}$ for any reference process is linearly dependent on the average number of interactions per bunch crossing ($\mu$)
+and the bunch revolution frequency ($f_{\textrm{r}}$). In principle, the reference process can be arbitrarily selected, and referring to inelastic collisions as a typical example, 
+the total instantaneous luminosity for inelastic interactions known with an absolute scale $\sigma_{\textrm{inel}}$ is given by
+\begin{equation}
+\label{eq:totlumibunch}
+\mathcal{L} = \sum_{\textrm{b}=1}^{n_{\textrm{b}}}\mathcal{L_{\textrm{b}}}=n_{\textrm{b}}\frac{\langle \mu \rangle f_{\textrm{r}}}{\sigma_{\textrm{inel}}}\ .%(t,\mu,n_b,...)}.
+\end{equation}
+In Eq.\,(\ref{eq:totlumibunch}) the sum runs over the bunch pairs $n_{\textrm{b}}$ colliding at the interaction point (IP), and the mean bunch luminosity is regulated by 
+the bunch-averaged pile-up parameter $\langle \mu \rangle$. Therefore the instantaneous luminosity can be determined using any per-bunch-granularity method that measures the 
+ratio $\mu / \sigma_{\textrm{ref}}$, or respectively  $\langle \mu \rangle/\sigma_{\textrm{ref}}$ for the total instantaneous luminosity.
+%motivate a precision of order 1–2\% for the luminosity calibration
+Although luminosity is a macroscopic indicator of the global performance of a collider, 
+the observed bunch-to-bunch intensity and emittance variations in hadron colliders result in a large spread in $\mathcal{L_{\textrm{b}}}$, hence make
+impractical any bunch-averaged luminosity measurements.
+
+\subsection{Interaction rate determination}
+\label{sec:rate}
+
+Methods for absolute luminosity determination can be classified as being either direct or indirect.  
+For instance, indirect methods make use of the optical theorem in a simultaneous
+measurement  of  the  elastic  and  total  cross sections~\cite{totem} or perform a comparison  with 
+\QED\ processes for which the absolute cross section is well known from theory~\cite{opal,ADAMCZYK201480}.  
+Direct methods derive the luminosity from the measurement of the colliding-beam parameters. 
+The analysis described in this thesis relies on two direct methods to determine the absolute luminosity calibration, i.e., 
+the ``van der Meer'' (vdM) and the ``beam-imaging'' (BI) scan methods. 
+With the notable exception of the ``first'' and ``second'' generation experiments at \texttt{CERN} Intersecting Storage Rings (\texttt{ISR}) facility---including the Louvain-Northwester group~\cite{ISR_UCLouvain}---the achieved precision in the luminosity determination at hadron colliders typically ranges from 1 to 15\%~\cite{Witold_overview}. 
+The 1\% ``precision frontier'' is not uniquely linked to a fundamental limitation, rather it stems from a complex mix of sources of systematic uncertainty. 
+
+The vdM technique exploits the ability to control the beam separation in both transverse coordinates with high precision (see Section~\ref{sec:lhc_layout}), and hence to scan the
+overlap integral of the colliding beams at different relative beam positions, while measuring the interaction rate.  
+This method---first applied at the \texttt{CERN} \texttt{ISR}~\cite{vanderMeer:296752}---has been widely used by all major \texttt{LHC} experiments 
+during Run 1~\cite{Abelev:2014epa,ALICE-PUBLIC-2017-002,Aad:2013ucp,Aaij:2014ida,CMS-PAS-LUM-13-001} and more recently at 13\,\TeV~\cite{ALICE-PUBLIC-2016-002,ALICE-PUBLIC-2016-005,CMS-PAS-LUM-15-001}\,~\citeTH{CMS-PAS-LUM-16-001,CMS-PAS-LUM-17-001}. The BI method~\cite{BALAGURA2011634} is based on reconstructing primary vertices 
+from interactions between one beam fixed in the rest-frame of the detector and the other one consecutively moving in $x$ and $y$. 
+The shapes obtained by the distribution of vertices can be analytically convolved with vertex position resolution models, 
+and can be used to determine the overlap integral accounting for genuine nonfactorizabilities. 
+
+In both methods, data recorded by \texttt{CMS} are used in conjunction with input from the \texttt{LHC} beam instrumentation. 
+While beam-current monitoring currently achieves sub-percent level precision, single-beam profile measurements, e.g, Ref.~\cite{fanouria_overview}, 
+are challenging because of instrumental resolution and limitations on optical models of the collider lattice. 
+
+Lately, \texttt{LHC} measurements, that resorted to synchrotron-light telescopes as transverse and longitudinal beam-profile monitors, 
+achieved a remarkably good ($\mathcal{O}$(5\%)) agreement with the absolute luminosity scales of both \texttt{ATLAS} and \texttt{CMS}; discrepancies though appeared indicating the impact driven by instrumental calibration. 
+Figure~\ref{fig:fanouria} shows an example comparison between the peak luminosity values calculated (crosses) using the measured bunch parameters, i.e., 
+transverse emittance, bunch intensity and length, and the average measured peak luminosity provided by \texttt{ATLAS} (blue circles) and \texttt{CMS} (red circles) during 2016~\cite{fanouria}. 
+The bottom plot shows the luminosity imbalance between the two experiments using the same marker convention. 
+During the first part of the year, before the transition to the compression merging and splitting (BCMS) production scheme, 
+very good agreement between the calculated and measured peak luminosity is observed. 
+After the transition to BCMS, even though the calculated and measured imbalance agrees well, the absolute values start to diverge. 
+In the third part, after the crossing angle reduction, a disagreement is observed both in absolute values and in imbalance. 
+An update in the calibration of the beam synchrotron radiation telescope (\texttt{BSRT}) system was performed both before the transition to BCMS and the crossing angle change. 
+
+\begin{figure*}[!tbh]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/luminosity/fanouria.png}
+  \caption[Calculated and measured peak instantaneous luminosity follow-up throughout the 2016 year]{\label{fig:fanouria}
+     Using the measured bunch parameters, i.e., transverse emittances, bunch intensity and length, the calculated peak luminosity values (crosses)
+     at the beginning of stable beams are compared to the average measured peak luminosity provided by the \texttt{ATLAS} (blue circles) and \texttt{CMS} (red circles) during 2016~\cite{fanouria}.
+     The drop in peak luminosity for Fills 5219, 5222, 5223, and 5433 corresponds to machine development conditions~\cite{CERN-ACC-NOTE-2017-0029,ecloud} 
+     for studying electron cloud effects on the \texttt{LHC} performance.
+     %https://cds.cern.ch/record/2260999/files/CERN-ACC-NOTE-2017-0029.pdf
+     %https://cds.cern.ch/record/2293524?ln=en
+    }
+\end{figure*}

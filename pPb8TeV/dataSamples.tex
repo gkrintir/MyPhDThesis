@@ -1,0 +1,76 @@
+
+The event sample of proton-nucleus collisions collected by the \texttt{CMS} detector in 2016 corresponds to an integrated luminosity of $\mylumipA$~\citeTH{CMS-PAS-LUM-17-002}.
+The lead nuclei and protons had beam energies of 2.56 and 6.5\,\TeV\ per nucleon, respectively, corresponding to a nucleon-nucleon centre-of-mass energy of $\rootsNN = 8.16$\,\TeV.
+The direction of the proton beam was initially clockwise (``Pbp'' configuration) and was then reversed (``pPb'' configuration). 
+Owing to the energy difference between the proton-lead colliding beams, the nucleon-nucleon center-of-mass (CM) frame is not at rest with respect to the laboratory (lab) frame. 
+Massless particles emitted at a pseudorapidity $\eta_{\textrm{CM}}$ in the CM frame experience a longitudinal boost according to.
+\begin{equation}
+\lvert \Delta{\eta}_{\textrm{CM}} \rvert = \frac{1}{2}\times\left|\ln\left(\frac{Z_{\ce{^{208}_{82}Pb+}}\times A_{\mathrm{p}}}{Z_{\mathrm{p}}\times A_{\ce{^{208}_{82}Pb+}}}\right)\right| = \frac{1}{2}\times\ln\left(\frac{208}{82}\right) = 0.465
+\label{eq:CMShift}
+\end{equation}
+The pseudorapidity $\eta_{\textrm{lab}}$ is defined such as to have positive value in the direction of motion of the proton in both Pbp and pPb data samples.
+The average number of collisions per bunch crossing is unity in the combined data set, and assuming a pp inelastic cross section of 69.2\,$\mathrm{mb}$ multiplied by $A = 208$.
+
+
+The $\mathrm{pN} \rightarrow \ttbar + \mathrm{X}$ process ($\mathrm{N = p,n}$) is simulated using the LO \PYTHIA~(v6.424~\cite{Sjostrand:2006za}, tune $\mathrm{Z}2^{*}$~\cite{Chatrchyan:2013gfi,Khachatryan:2015pea})
+ and the NLO \POWHEG~(v2~\cite{powheg,powheg2}, tune CUETP8M1~\cite{Khachatryan:2015pea,Skands:2014pea}) generators with a mixture of \pp and \pn interactions corresponding 
+ to their ratio in pPb collisions. 
+The nuclear modification of the up- and down-type valence quark and gluon distribution functions are rendered using the EPPS16 \cite{EPPS16} nuclear PDFs for the {\ce{^{208}_{82}Pb+} ions. 
+The quark densities are scaled according to the isospin symmetry
+\begin{equation}
+\begin{aligned}
+f^{\cPqu}_{\ce{^{208}_{82}Pb+}}(A,\,Z) &= \frac{Z}{A}\left(R^{\cPqu}_{s}f^{\cPaqu}_{\Pp} + R^{\cPqu}_{v}\left(f^{\cPqu}_{\Pp}-f^{\cPaqu}_{\Pp}\right)\right) + \frac{A-Z}{A}\left(R^{\cPqd}_{s}f^{\cPaqd}_{\Pp} + R^{\cPqd}_{v}\left(f^{\cPqd}_{\Pp}-f^{\cPaqd}_{\Pp}\right)\right) \\
+f^{\cPqd}_{\ce{^{208}_{82}Pb+}}(A,\,Z) &= \frac{Z}{A}\left(R^{\cPqd}_{s}f^{\cPaqd}_{\Pp} + R^{\cPqd}_{v}\left(f^{\cPqd}_{\Pp}-f^{\cPaqd}_{\Pp}\right)\right) + \frac{A-Z}{A}\left(R^{\cPqu}_{s}f^{\cPaqu}_{\Pp} + R^{\cPqu}_{v}\left(f^{\cPqu}_{\Pp}-f^{\cPaqu}_{\Pp}\right)\right)
+\end{aligned}
+\label{eq:PbScaling}
+\end{equation}
+where $f^{\cPqu}_{\ce{^{208}_{82}Pb+}}$ and $f^{\cPqd}_{\ce{^{208}_{82}Pb+}}$ represent the up- and down-type valence quark PDF inside the \ce{^{208}_{82}Pb+} ion, and $R_{v}$ ($R_{s}$) parameterize 
+the nuclear modification factor for valence (sea) quarks. 
+The value of $m_{\cPqt}$ used in all simulated samples is 172.5\,\GeV. 
+
+Simulated samples of \PW+jets and Drell--Yan 
+production of charged-lepton pairs with an invariant mass larger than 30\,\GeV\ are generated using \PYTHIA~6. 
+The MC is used solely for efficiency measurements and validation of the functional forms used for the background distributions
+since the latter is determined {\it in situ} from the data.
+All signal and background samples are embedded (see Section~\ref{sec:pileup}) into pPb events generated with \EPOS-{\sc lhc}~\cite{epos_lhc} (v.3400), 
+tuned to reproduce the global pPb event properties experimentally measured, and reconstructed with the same analysis code as used for the data. 
+The kinematics of all MC-generated events are boosted to account for the different energies of the proton and lead beam.
+Simulated samples include an emulation of the full detector response, based on \GEANTfour~\cite{geant4}, 
+with simulated alignment and calibration conditions tuned on data, and a realistic description of the luminous region (see Section~\ref{sec:beamspot}) produced by the collisions.
+
+
+\begin{sidewaystable}[htp]
+\caption[MC event samples used for the inclusive \stt measurement at $\rootsNN=8.16$\,\TeV]{
+MC data samples for the inclusive \stt measurement using pPb collisions at$\rootsNN = 8.16$\,\TeV~\citeAN{AN-17-043}. 
+The samples are generated either inclusively or with a final state restricted to the leptonic mode,
+including either electrons or muons. 
+The absence of reference delineates cross section values calculated from the generator. 
+For the samples restricted to specific decay channels, the branching ratio is included in the quoted cross section value.
+The samples with "Emb" in the name are embedded using the \textsc{epos-lhc} (v.3400) generator (see Section~\ref{sec:pileup}).
+}
+\label{tab:mc_pPb8TeV}
+\centering
+\begin{tabular}{c||c|l}
+                        \toprule
+                        Process        & $\sigma[{\mathrm{nb}}]$  & MC event sample indicative description  \\
+                        \midrule
+                        \multirow{4}{*}{\ttbar}  & \multirow{4}{*}{
+                          59.0 {\small (NNLO+NNLL)}~\cite{mcfm}} & \small{\verb!TTbar_pPb-EmbEPOS_8160GeV_pythia6!}\\
+                                                                & & \small{\verb!TTbar_PbP-EmbEPOS_8160GeV_pythia6!}\\
+                                                                & & \small{\verb!TT_TuneCUETP8M1_pPb-EmbEPOS_8160GeV-powheg-pythia8!} \\
+                                                                & & \small{\verb!TT_TuneCUETP8M1_Pbp-EmbEPOS_8160GeV-powheg-pythia8!} \\
+                        \midrule
+                                \multirow{3}{*}{$\PW+$\,jets}
+                        &  \multirow{3}{*}{ 1970 } 
+                                                   &\small{\verb!WJetstoLNu_TuneZ2_pPb-EmbEPOS_8160GeV_pythia6!}\\
+                                                   & &\small{\verb!WJetstoLNu_TuneZ2_Pbp-EmbEPOS_8160GeV_pythia6!}\\ 
+                                                   
+                         \midrule
+                         \multirow{3}{*}{$\cPZ/\gamma^{*}(\to\ell^{\pm}\ell^{\mp})+$\,jets}
+                        &  \multirow{3}{*}{ 229 } & \small{\verb!DYJetstoLL_TuneZ2_M-30_pPb-EmbEPOS_8160GeV_pythia6!}\\
+                                                  & & \small{\verb!DYJetstoLL_TuneZ2_M-30_Pbp-EmbEPOS_8160GeV_pythia6!}\\
+                                                  
+
+                         \bottorule
+                         \end{tabular}
+\end{sidewaystable}

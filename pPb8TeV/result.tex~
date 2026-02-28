@@ -1,0 +1,402 @@
+\subsection{Fit model}
+\label{sec:fit_model}
+
+The parameterizations of the signal and main background processes, as described in Sections~\ref{sec:sig_ttbar_pPb} and~\ref{sec:bkg_pPb} , respectively, 
+are used to build a fit model that is applied to the data to extract the inclusive \ttbar\ cross section.  
+The fit model predicts the total number of events in 1$\ell$4j0\cPqb, 1$\ell$4j1\cPqb, and 1$\ell$4j2\cPqb event categories by summing up the contributions
+for \ttbar, and \PW+jets and \QCD\ multijet background, i.e., in each category (``k'') we write
+\begin{equation}
+N_\textrm{k}(\mjj)=N_\textrm{k}({\ttbar})\times \textrm{pdf}_\textrm{k}^{\ttbar}(\mjj)+N_\textrm{k}({\textrm{bkg}})\times \left( \textrm{pdf}_\textrm{k}^{\textrm{\PW+jets}}(\mjj)+f_\textrm{k}\times \textrm{pdf}_\textrm{k}^{\QCD}(\mjj)\right)\, ,
+\label{eq:yields}
+\end{equation}
+where $N_\textrm{k}(i)$ ($\textrm{pdf}_\textrm{k}(i)$) is the total number of events (distribution) for the process $i$ in category c, 
+and $f_\textrm{k}\in[0,1]$ is a parameter that regulates the relative contribution in background events from the \QCD\ multijet background;
+$N_\textrm{k}({\QCD})= f_\textrm{k} N_\textrm{k}({\textrm{bkg}})$ is constrained by a Gaussian penalty term with mean and width as shown in Table~\ref{tab:qcdnorm}.
+Given that the resolution and discrimination between the signal and background distributions of \mjj are superior with respect to the other mass variables, 
+the fit used to extract the final cross section is performed with the \mjj variable. 
+A variant of the nominal configuration included a two-dimensional fit to \mjj and $m_{\cPqt_{\textrm{had}}}$ variables; 
+the \stt was found to be consistent with the one obtained from the \mjj fit, with the latter being described in the following. 
+
+The number of \ttbar\ events in each category can be inferred based on multinomial probabilities to describe the expected number of signal events. 
+Denoting by $\varepsilon_\cPqb$ the \cPqb-finding efficiency, i.e., the probability to select and tag a \cPqb quark from a top quark decay, one can write the following set of equations
+for the number of signal events expected in each event category
+\begin{equation}
+N_{\mathrm{1\ell4j0b}}(\ttbar)= \varepsilon_\cPqb^2 N(\ttbar)~~~~
+N_{\mathrm{1\ell4j1b}}(\ttbar)=2 \varepsilon_\cPqb (1-\varepsilon_\cPqb ) N(\ttbar)~~~~
+N_{\mathrm{1\ell4j0b}}(\ttbar)=(1-\varepsilon_\cPqb )^2 N(\ttbar)\, .
+\label{eq:sigyields}
+\end{equation}
+The parameter $\varepsilon_\cPqb$ is assigned 10\% pre-fit uncertainty by means of a Gaussian constraint. 
+From simulation it is expected that $\varepsilon_\cPqb\approx 0.6$, a value which is consistent between the two final states, and \PYTHIA and \POWHEG MC samples. 
+Imposing the relation in Eq.\,(\ref{eq:sigyields}) establishes the signal more accurately with respect to a fit where the signal yields would be left to float without 
+any constraint in each category. Owing to the similarity of the distributions for wrongly assigned \ttbar\ events and the \PW+jets background, in particular,
+in events with no \cPqb-tagged jets, the fit could be biased without the more refined signal model of Eq.\,(\ref{eq:sigyields}).
+
+\subsection{Extraction of the inclusive \ttbar\ cross section}
+\label{sec:xsection_pPb}
+
+The final ingredient is the cross section which is used to parameterize $N(\ttbar)$ 
+\begin{equation}
+N(\ttbar)=\sigma_{\ttbar} A \varepsilon \mathcal{L}\, ,
+\label{eq:xsec}
+\end{equation}
+where $A$ is the signal acceptance, $\varepsilon$ is the total lepton trigger and selection efficiency, and $\mathcal{L}$ is the total integrated luminosity. 
+In the fit, these parameters float constrained by Gaussian penalty terms with mean and width corresponding to their estimated values and uncertainties, respectively.
+
+In total 25 nuisance parameters are used: 12 background normalization-related parameters, six related to the distribution of the \PW+jets background (MPV and $\sigma$ of the Landau pdf), 
+the \cPqb-finding efficiency, the JSF scaling factor, the integrated luminosity, and acceptance and efficiency values per final state. 
+Out of the total nuisance parameters, 19 are associated with Gaussian constraints in the fit, i.e., only the total background yields are unconstrained.
+As these parameters are not directly relevant to our measurement and reflect unknown degrees in the modeling of signal and background,
+a profiling of the likelihood is performed in order to evaluate the uncertainty in the signal yield.
+
+The likelihood is written as
+\begin{equation}
+\mathcal{L}(\sigma_{\ttbar},\vec{\Theta})=
+\prod_k \mathcal{P} \left( N_k | \hat{N}_k(\stt,\theta_i) \right)\,
+\prod_i \rho(\theta_i^0,\theta_i,\sigma_{\theta_i})\, ,
+\label{eq:likelihood_pPb}
+\end{equation}
+where $\vec{\Theta}$ is the vector of nuisance parameters, $\theta_i^0$ and $\sigma_{\theta_i}$ are the mean and width of the Gaussian penalty term associated to the $i$th nuisance parameter
+(when applicable), and the rest of the notations follow Eq.\,(\ref{eq:ll}). 
+The constraint terms help to stabilize the fit, penalizing extreme values of the nuisance parameters that may be induced by the low event count in the data and 
+the similarity for part of the signal with the background. 
+The central value is thus obtained by maximizing Eq.\,(\ref{eq:likelihood_pPb}), and the associated uncertainty is determined after profiling the likelihood, i.e., by maximizing the test statistic
+\begin{equation}
+\lambda = \frac{\mathcal{L}(\stt,\hat{{\hat{{\vec{\Theta}}}}})}{\mathcal{L}({\hat{\sigma}_\mathrm{t\overline{t}}},\hat{\vec{\,\Theta}})}\, ,
+\label{eq:profll_pPb}
+\end{equation}
+where the notations follow Eq.\,(\ref{eq:profll}).
+
+Figure~\ref{fig:fitres} shows the \mjj distribution for events with zero, one, or at least two \cPqb-tagged jets, compared with the combined fit results. 
+An excellent agreement is observed in all event categories between the data and the fitted signal and background parameterizations. 
+The total number of signal events obtained through the combined fit to the $\mu$+jets and $\mathrm{e}$+jets final states is $710\pm130$. 
+The  total  uncertainty  in the fitted signal events is obtained from the covariance matrix of the fit, and using Eq.\,(\ref{eq:xsec}) 
+\begin{linenomath}
+\begin{equation}
+\stt=45\pm 8~(\textrm{total})~{\mathrm{nb}} \, .
+\label{eq:xsection_pPb}
+\end{equation}
+\end{linenomath} 
+The signal acceptance is determined from the \POWHEG NLO simulation (Table~\ref{tab:mc_pPb8TeV}) and is found to be $\mathcal{A} = 0.060 \pm 0.002$ and $0.056 \pm 0.002$  in 
+the $\mu$+jets and $\mathrm{e}$+jets final states relative to all generated \ttbar\ events, 
+including the branching fraction to leptons; the 4\% uncertainty in the acceptance correction includes its dependence on the proton and Pb PDFs, 
+and on the values of theoretical scales and the \QCD\ coupling ($\alpha_{\textrm{s}} = 0.118 \pm 0.001$ at the \PZ\ boson pole mass).
+The lepton trigger and selection efficiencies are $\varepsilon = 0.91 \pm 0.04$ and $0.63 \pm 0.03$ in the  $\mu$+jets and \Pe+jets as estimated from data.
+
+
+Fitting exclusively the $\mu$+jets or $\mathrm{e}$+jets final state, the number of signal events is measured to be $420\pm80$ or $348\pm50$, and using Eq.\,(\ref{eq:xsec}) 
+\begin{eqnarray}
+\stt^{\mu+\textrm{jets}}=44\pm 3~(\stat)\pm 8~(\syst)~{\mathrm{nb}}\, ,\\ % \pm 6(\rm lumi)~{\rm nb}\,,\\
+\stt^{\Pe+\textrm{jets}}=56\pm 4~(\stat)\pm 13~(\syst)~{\mathrm{nb}}\, ,% \pm 8(\rm lumi)~{\rm nb}\,,
+\label{eq:xsection_pPb_perchannel}
+\end{eqnarray}
+where the uncertainty is further split into a statistical part, by leaving $\stt$ to float in the fit and fixing all other parameters to their post-fit values, 
+and a systematic part, by subtracting the square of the statistical uncertainty from the square of the total uncertainty. 
+Figure~\ref{fig:fitres} shows the \mjj distribution for events with zero, one, or at least two \cPqb-tagged jets, compared with the exclusive fit results.
+The cross section is thus measured with a relative uncertainty of about 18 (23)\% in the $\mu$+jets ($\mathrm{e}$+jets) final state, and 17\% in their combination.
+
+\begin{figure*}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_comb_1l4j2q_nopull.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_comb_1l4j1b1q_nopull.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_comb_1l4j2b_nopull.pdf}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-d.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-e.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-f.pdf}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-a.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-b.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_006-c.pdf}}
+\caption[Post-fit dijet invariant mass distributions in the $\mu$+jets, $\mathrm{e}$+jets, and combined $\ell$+jets final states at $\rootsNN=8.16$\,\TeV]{
+  Invariant mass distributions of the \PW\ candidate, \mjj,
+  in the 0 (a,\,d,\,g), 1 (b,\,e,\,h), and 2 (c,\,f,\,i) \cPqb{}-tagged jet categories after all selections in the $\ell$+jets (a--c), $\mu$+jets (d--f) and $\mathrm{e}$+jets (g--i) final states.
+  The red and orange areas correspond to the signal simulation (correct and wrong assignments, respectively)
+  while the blue one corresponds to the estimated non-top background contributions.
+  The error bars indicate the statistical uncertainty~\citeTH{topobs_CMS_prl}.}
+\label{fig:fitres}
+\end{figure*}
+
+The measured cross section is found to be consistent with the theoretical prediction~\cite{dEnterria:2017dum},
+$\sigma(\pPb\to\ttbar + \mathrm{X}) = 59.0 \pm 5.3~(\textrm{PDF})\,^{+1.6}_{-2.1}~(\textrm{scale})~\mathrm{nb}$,
+computed with \mcfm (v.8)~\cite{mcfm} using the CT14 proton PDF~\cite{Dulat:2015mca} and the EPPS16 nPDF for the lead
+ions~\cite{EPPS16}, scaled to NNLO+NNLL accuracy with a $K$ factor computed with \textsc{Top++} (v.2.0)~\cite{top++}, 
+and multiplied by $A = 208$.
+The PDF uncertainties are obtained from the corresponding 56+40 eigenvalues of the CT14+EPPS16 sets
+(corresponding to a 90\% confidence level) added in quadrature, while the theoretical scale uncertainty 
+is estimated by modifying the factorization and renormalization scales within
+a factor of two with respect to their default value set at $\mu_{\textrm{F}} = \mu_{\textrm{R}} = m_{\cPqt}$. 
+The same calculation with the CT10 proton PDF~\cite{ct10} and EPS09~\cite{EPS09} nPDF yields 
+$\sigma(\pPb\to\ttbar + \mathrm{X}) = 57.5 \pm \,^{+4.3}_{-3.3}(\textrm{PDF})\,^{+1.5}_{-2.0}~(\textrm{scale})~\mathrm{nb}$.
+The difference in the theoretical \ttbar\ cross section computed with the PDF for free protons and for bound nucleons is small. A net overall 
+antishadowing effect increases the total top-quark pair cross section by only 4\% for both the EPPS16 and EPS09 sets in \pPb relative to \pp collisions~\cite{dEnterria:2017dum}. 
+Such a difference is too small to be observed in the data with the current experimental uncertainties.
+Figure~\ref{fig:summary} shows the measured and
+theoretical cross sections for \ttbar\ production in \pPb collisions at $\rootsNN=8.16$\,TeV, compared with the results from \pp
+collisions at $\roots=8$\,\TeV~\cite{Khachatryan:2016mqs,Khachatryan:2016yzq} scaled by $A$ and by the ratio of 8.16 over 8\,\TeV\ NNLO+NNLL cross sections.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=\textwidth]{figures/pPb8TeV/xsecsummary.pdf}
+\caption[Inclusive \stt measurement in the $\mu$+jets, $\mathrm{e}$+jets, and combined $\ell$+jets final states at $\rootsNN=8.16$\,\TeV]{
+Inclusive \ttbar\ cross section measurements in the $\mu$+jets, $\mathrm{e}$+jets, and combined $\ell$+jets final states using \pPb\ collisions at $\rootsNN=8.16$\,\TeV, 
+compared to theoretical NNLO+NNLL predictions, and to scaled $\roots=8$\,\TeV pp results~\cite{Khachatryan:2016mqs,Khachatryan:2016yzq}. 
+The total experimental error bars (theoretical error bands) include statistical and systematic (PDF and scale) uncertainties added in quadrature~\citeTH{topobs_CMS_prl}.}
+\label{fig:summary}
+\end{figure}
+
+\subsection{Impact of the statistical and systematic uncertainties}
+\label{sec:sig_ttbar}
+The values obtained for the free parameters of the fit, i.e., the normalization of the signal,
+\QCD\ multijet, and \PW+jets yields (as well as the parameters of their functional forms described
+above), the b-finding efficiency, and the jet energy scale factor, are reported in Table~\ref{tab:nuisances}. 
+It can be seen that the post-fit values for the \cPqb-finding and jet energy scale factor are close to their initial estimates, and are not significantly altered in the fit. 
+Because of the low event count, the sensitivity of the fit to the \QCD\ multijet and \PW+jets background distributions is reduced, 
+hence the fraction $f$ of \QCD\ multijet background is prone to statistical fluctuations. 
+In the signal enriched categories, there is even lower sensitivity to the background parameters that is further reflected on the normalization, functional form, and relative contribution parameters. 
+There is a fair agreement between the values obtained in the exclusive fits to the  in the $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) final states, 
+and obtained in the combined fit to all six event categories.
+
+\begin{table}[!ht]
+\begin{center}
+\caption[Post-fit results for the free parameters used to extract the inclusive \stt in the $\mu$+jets and $\mathrm{e}$+jets, and combined $\ell$+jets final states at $\rootsNN=8.16$\,\TeV]
+{Post-fit results for the free parameters of the exclusive and combined fits used to extract the inclusive \stt in the $\mu$+jets and $\mathrm{e}$+jets, and combined $\ell$+jets final states, 
+  respectively, using pPb collisions at $\rootsNN=8.16$\,\TeV~\citeAN{AN-17-043}.}
+\label{tab:nuisances} \begin{tabular}{llccc}
+\toprule
+\multirow{2}{*}{Parameter} & & \multicolumn{3}{c}{Fit} \\
+                           & & $\mu$+jets & $\mathrm{e}$+jets & Combined \\
+\midrule
+\multicolumn{2}{l}{$\varepsilon_b$}  & $ 0.62 \pm0.05 $   & $ 0.59 \pm0.05 $ & $ 0.62 \pm0.04 $ \\
+\multicolumn{2}{l}{JSF}            & $ 0.98 \pm 0.02$  & $ 1.03 \pm0.02 $ & $ 0.99 \pm0.02 $ \\
+
+\midrule
+& Category & \multicolumn{3}{c}{Background yields}\\
+\midrule
+\multirow{6}{*}{$N_{\textrm{k}}(\textrm{bkg})$}
+&        1$\mathrm{e}$4j0\cPqb   &                                           & $ [ 1.04 \pm0.04 ] \times10^{3} $  & $[ 1.03 \pm0.04 ] \times10^{3}$ \\
+&        1$\mathrm{e}$4j1\cPqb   &                                           & $ [ 0.17 \pm0.04 ] \times10^{3} $  & $ 200 \pm30 $ \\
+&        1$\mathrm{e}$4j2\cPqb   &                                           & $ 43 \pm15 $                       & $ 35 \pm12 $ \\
+&        1$\mu$4j0\cPqb  &         $ 596 \pm34 $                     &                                    & $ 594 \pm34$  \\
+&        1$\mu$4j1\cPqb  &         $ [ 0.13 \pm0.04 ] \times10^{3} $ &                                    & $ [ 0.12 \pm0.04 ] \times10^{3} $   \\
+&        1$\mu$4j2\cPqb  &          $ 2.7 \pm2.9$                    &                                    & $ 2.9 \pm3.1 $ \\\cline{2-5}
+\multirow{6}{*}{$f_k$}
+&        1$\mathrm{e}$4j0\cPqb     &                             & $ 1.00 \pm0.03 $  &         $ 1.00 \pm0.030 $ \\
+&        1$\mathrm{e}$4j1\cPqb     &                             & $ 0.72 \pm0.20 $    &         $ 0.66 \pm0.17 $  \\
+&        1$\mathrm{e}$4j2\cPqb     &                             & $ 0.12 \pm0.11 $    &         $ 0.10 \pm0.08  $ \\
+&        1$\mu$4j0\cPqb &           $ 1.00 \pm0.10 $  &                     &         $ 1.00 \pm0.10 $  \\
+&        1$\mu$4j1\cPqb &           $ 0.60 \pm0.27 $  &                     &         $ 0.53 \pm0.29 $\\
+&        1$\mu$4j2\cPqb &           $ 1.00 \pm0.60  $   &                     &         $ 1.00 \pm0.60 $ \\
+\midrule
+& & \multicolumn{3}{c}{\PW{}+jets Landau pdf}\\
+\midrule
+\multirow{3}{*}{MPV}
+&      1$\ell$4j0\cPqb &    $ 48 \pm 10 $ & $ 48 \pm9 $ & $ 48 \pm10 $   \\
+&      1$\ell$4j1\cPqb &    $ 57 \pm 7 $  & $ 53 \pm6 $ & $ 54 \pm5 $          \\
+&      1$\ell$4j2\cPqb &    $ 62 \pm 12 $ & $ 62 \pm12 $  & $ 60 \pm6 $  \\\cline{2-5}
+\multirow{3}{*}{$\sigma$}
+&    1$\ell$4j0\cPqb & $ 17.0 \pm0.8 $ & $ 17.0 \pm0.8 $ & $ 17.0 \pm0.9 $ \\
+&    1$\ell$4j1\cPqb & $ 19.5 \pm1.0 $ & $ 19.3 \pm1.0 $ & $ 19.1 \pm1.0 $ \\
+&    1$\ell$4j2\cPqb & $ 22.3 \pm1.1 $ & $ 22.2 \pm1.1 $ & $ 22.0 \pm1.1 $ \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+Table~\ref{tab:breakdown_systs} summarizes the statistical and
+systematic uncertainties in the measured \ttbar\ production cross section from different sources (see Section~\ref{sec:sys_pPb}). 
+The methodology follows closely the one used in~\citeTH{topobs_CMS_jhep}. 
+For each source of uncertainty, the corresponding nuisance parameter in the fit
+is fixed to its post-fit value and varied within $\pm1$ standard deviation. 
+The fit is repeated, and the difference found in the measured \stt with respect to initial estimate is the reported impact. 
+The individual sources of experimental uncertainty can only be interpreted as the observed post-fit values, and not as an absolute, orthogonalized breakdown of the uncertainty. 
+The dominant source of systematic uncertainty originates from the \cPqb-finding efficiency, followed by the background normalization and modeling, and then the jet energy scale. 
+The statistical uncertainty is at the level of 5\%. It is expected that most of the systematic uncertainty in the analysis to improve with higher event count data samples. 
+The uncertainties in the integrated luminosity, though refined as described in Section~\ref{sec:conclusions}, and signal acceptance are currently the limiting factors. 
+
+\begin{table}[!ht]
+\caption[Summary of the individual contributions to the statistic and systematic uncertainties in the inclusive \stt measurement at $\rootsNN=8.16$\,\TeV]
+{Summary of the individual contributions to the statistic and systematic uncertainties in the inclusive \stt  measurement using pPb collisions at $\rootsNN=8.16$\,\TeV. 
+The contributions are estimated by the change induced in the cross section after varying once at a time the corresponding nuisance at $\pm 1$ standard deviation away from its post-fit values.
+The impact of the individual sources of uncertainty is given as a relative uncertainty and quoted with one significant figure. The total uncertainty has been symmetrized~\citeTH{topobs_CMS_prl}. 
+\label{tab:breakdown_systs}}
+\centering
+\begin{tabular}{lccc}
+\toprule
+\multirow{2}{*}{Source} & \multicolumn{3}{c}{$\Delta\sigma_{\ttbar} /\sigma_{\ttbar}$ (\%)} \\
+& $\mathrm{e}$+jets & $\mu$+jets & Combined \\
+\midrule
+Statistical                   & $\pm$7    & $\pm$6    & $\pm$5 \\
+\midrule
+\multicolumn{4}{l}{Systematic} \\
+~~Electron efficiency        & 4           & -           & 4 \\
+~~Muon efficiency            & -           & 4           & 4 \\
+~~\cPqb-finding efficiency   & 8           & 15          & 13 \\
+~~Jet energy scale           & 4           & 3           & 4 \\
+~~Jet energy resolution      & $<$1        & $<$1        & $<$1\\
+~~Background                 & 21          & 8           & 7 \\
+~~Signal acceptance          & 4           & 4           & 4 \\
+~~Integrated luminosity      & 5           & 5           & 5  \\
+\midrule
+Total uncertainty            & 23 & 18 & 17 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+
+\subsection{Statistical significance of the signal}
+\label{sec:signif}
+
+Several studies have been performed to quantify the statistical significance of the observed signal compared to a background-only hypothesis. 
+An asymptotic approach is used with a test statistic based on the profile likelihood ratio, and systematic uncertainties are included in the form of nuisance parameters given Gaussian priors~\cite{higgs_combine}. 
+Several tests have been performed, varying the estimation method and the background modeling assumptions.
+Even with the most conservative assumptions, the background-only hypothesis is excluded with a significance above five standard deviations.
+
+ \subsubsection{Significance with the nominal shape analysis and variations}
+ 
+ The fitted \stt and the statistical significance are reported in Table~\ref{tab:signif}. 
+ Results are given using the nominal \mjj analysis and for different assumptions related to the \PW+jets background parameters and event categories. 
+ For all considered cases, a significance larger than five standard deviations is obtained.
+ 
+ \begin{table}[!ht]
+\caption[Statistical significance obtained from the \mjj nominal analysis at $\rootsNN=8.16$\,\TeV]
+{Statistical significance obtained from the \mjj nominal analysis using events from all three categories, and exclusively in the 1$\ell$4j2\cPqb category.
+  Different hypotheses about the \PW+jets background distribution are considered: nonrestricted background model parameters, 
+  or parameters fixed to the central values as summarized in Table~\ref{tab:wlanparams}. 
+  The quoted uncertainty in the cross section is the total uncertainty~\citeAN{AN-17-043}.\label{tab:signif}} 
+\begin{center}
+ \begin{tabular}{c|cc|cc}
+ \toprule
+  Hypothesis & \multicolumn{2}{c|}{All event categories} & \multicolumn{2}{c}{1$\ell$4j2\cPqb} \\
+  & \stt [nb] & Significance & \stt [nb] & Significance \\
+  \midrule
+  Nominal & $45\pm8$ & 6.64 & $49\pm13$ & 5.95 \\
+  \midrule
+  Nonrestricted \PW+jets distribution & $48\pm6$ & 5.88 & $44\pm12$ & 4.74 \\
+  Fixed \PW+jets distribution & $49\pm7$ & 8.06 & $50\pm13$ & 9.94 \\
+  \bottomrule
+ \end{tabular}
+ \end{center}
+\end{table}
+
+
+The PLR variation as a function of the parameter of interest, and corresponding to the different hypotheses about the \PW+jets model parameters, 
+are given in Figs.~\ref{fig:lhscan_nominal}-~\ref{fig:lhscan_model2} for all three event categories. 
+The breakdown into statistical and systematic uncertainties is slightly different from the procedure followed to quote the result in Eq.\,(\ref{eq:xsection_pPb_perchannel}); 
+the background normalization is included in the statistical uncertainty, while they are treated as a source of systematic uncertainty in Eq.\,(\ref{eq:xsection_pPb_perchannel})x.
+
+\begin{figure}[!ht]
+\begin{center}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel0_0_20170712/Figure-aux_008-a.pdf}}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel0_0_20170712/statsyst.pdf}}
+\end{center}
+ \caption[Profile likelihood ratio variation as a function of the parameter of interest for the nominal \mjj analysis]{
+   Profile likelihood ratio variation as a function of the parameter of interest for the nominal \mjj analysis 
+   corresponding to the (a) total~\citeTH{topobs_CMS_prl} and (b) split into statistical and systematic uncertainties~\citeAN{AN-17-043}.
+   The two horizontal lines on (a) represent the values in the profile likelihood that are used to determine the 68 and 95\% confidence level intervals for the \stt. 
+ \label{fig:lhscan_nominal}}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel0_0_20170706/total.pdf}}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel0_0_20170706/statsyst.pdf}}
+\end{center}
+
+ \caption[Profile likelihood ratio variation as a function of the parameter of interest considering nonrestricted \PW+jets distribution]{
+   Profile likelihood ratio variation as a function of the parameter of interest considering nonrestricted \PW+jets distribution, 
+   and corresponding to the (a) total~\citeAN{AN-17-043} and (b) split into statistical and systematic uncertainties~\citeAN{AN-17-043}.
+   The two horizontal lines on (a) represent the values in the profile likelihood that are used to determine the 68 and 95\% confidence level intervals for the \stt.
+ \label{fig:lhscan_model0}}
+\end{figure}
+
+\begin{figure}[!ht]
+\begin{center}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel2_0_20170706/total.pdf}}
+ \subfloat[][]{\includegraphics[width=0.49\textwidth]{figures/pPb8TeV/stat/plots_wmodel2_0_20170706/statsyst.pdf}}
+\end{center}
+
+ \caption[Profile likelihood ratio variation as a function of the parameter of interest considering fixed \PW+jets distribution]{
+   Profile likelihood ratio variation as a function of the parameter of interest considering nonrestricted \PW+jets distribution, 
+   and corresponding to the (a) total~\citeAN{AN-17-043} and (b) split into statistical and systematic uncertainties~\citeAN{AN-17-043}. 
+   The two horizontal lines on (a) represent the values in the profile likelihood that are used to determine the 68 and 95\% confidence level intervals for the \stt.
+ \label{fig:lhscan_model2}}
+\end{figure}
+
+
+ 
+\subsubsection{Significance using pseudo-experiments}
+
+The significance is also estimated by generating pseudo-experiments from the background-only hypothesis, and monitoring the distribution of the test statistic. 
+For this test, the nominal hypothesis is used, i.e., the \PW+jets background pdf parameters to be constrained. 
+The resulted distribution is shown in Fig.~\ref{fig:signif_toys}. It can be seen that the statistical significance in data is above five standard deviations.
+
+\begin{figure}[!ht]
+\begin{center}
+ \includegraphics[width=0.6\textwidth]{figures/pPb8TeV/stat/Figure-aux_008-b.pdf}
+\end{center}
+
+ \caption[Profile likelihood ratio distribution from pseudo-data generated from the nominal background-only hypothesis]{
+  Profile likelihood ratio distribution from pseudo-data generated from the nominal background-only hypothesis. 
+  The value of the test statistic in data is also indicated by the black arrow. 
+  Dashed lines show the approximate location of the expected test statistic value, based on asymptotic formulae, for z-values equal to three, five, and six standard deviations~\citeTH{topobs_CMS_prl}.
+ \label{fig:signif_toys}}
+\end{figure}
+
+
+\subsubsection{Significance using the 1$\ell$4j2\cPqb event category with a counting experiment}
+
+The significance has also been estimated using a simple counting experiment in the 1$\ell$4j2\cPqb event category, i.e., combining the $\mu$+jets and $\mathrm{e}$+jets final states. 
+This means that no information related to the distributions is considered. 
+Different hypotheses on the systematic uncertainty are considered, as summarized in Table~\ref{tab:signif_2bcount}: the nominal hypothesis,
+including only the systematic uncertainty considered for the \stt measurement, and extra assumptions with an additional arbitrary systematic uncertainty in the background normalization. 
+This is to account for the fact that the background normalization is left free in the actual fit to the \mjj distribution, but it is constrained by the shape of the distribution in this fit.
+Even with the most conservative assumption, the background-only hypothesis is excluded with a significance above five standard deviations. 
+The nominal hypothesis gives a best-fit cross section of $51.2\pm9.0$\,$\mathrm{nb}$.
+
+\begin{table}[!ht]
+\caption[Statistical significance obtained from a simple counting experiment at $\rootsNN=8.16$\,\TeV]
+{Significance obtained with a simple counting experiment using only events from the 1$\ell$4j2\cPqb category. 
+  Different assumptions about the systematic uncertainty are considered: the nominal hypothesis, including only the systematic uncertainty considered for the cross section measurement, 
+  and hypotheses with an additional arbitrary systematic uncertainty in the background normalization~\citeAN{AN-17-043}. \label{tab:signif_2bcount}} 
+
+\begin{center}
+\begin{tabular}{cc}
+ \hline\hline
+  Hypothesis & Statistical significance \\
+  \hline
+  Nominal & 16.8 \\
+  Additional background 10\% & 14.8 \\
+  Additional background 20\% & 12.2 \\
+  Additional background 50\% & 8.5 \\
+  Additional background 100\% & 5.7  \\
+  \hline
+ \end{tabular}
+ \end{center}
+\end{table}
+
+\subsubsection{Additional post-fit control distributions}
+\label{subsec:postfitcontrol}
+
+To further support the hypothesis that the selected data are consistent with the production of top quarks the hadronic top quark mass is formed, following the description of Section~\ref{sec:toprec}. 
+In the  1$\ell$4j0\cPqb and 1$\ell$4j1\cPqb event categories, the jet(s) with the highest value(s) of the \cPqb\ quark identification discriminator are considered for this purpose. 
+Figure~\ref{fig:valid-mthad} shows the distribution of the hadronic top mass reconstructed using events in the three \cPqb-tagged jet categories, 
+with all signal and background parameters kept fixed to those from the outcome of the \mjj fit.
+
+\begin{figure*}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_comb_1l4j2q_nopull.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_comb_1l4j1b1q_nopull.pdf}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_comb_1l4j2b_nopull.pdf}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-e}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-e}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-f}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-a}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_007-c}}\\
+\caption[Post-fit hadronic top mass distributions in the $\mu$+jets, $\mathrm{e}$+jets, and combined $\ell$+jets final states at $\rootsNN=8.16$\,\TeV]{Invariant mass distributions of the $\cPqt \to \jj\cPqb$ candidates, \mtop,
+in the 0 (a,\,d,\,g), 1 (b,\,e,\,h), and 2 (c,\,f,\,i) \cPqb{}-tagged jet categories after all selections  in the $\ell$+jets (a--c), $\mu$+jets (d--f) and $\mathrm{e}$+jets (g--i) final states.
+ All signal and background parameters are kept fixed to the outcome of the \mjj fit. 
+ The red and orange areas correspond to the signal simulation (correct and wrong assignments, respectively) 
+ while the blue one corresponds to the estimated non-top background contributions. The error bars indicate the statistical uncertainty~\citeTH{topobs_CMS_prl}.}
+\label{fig:valid-mthad}
+\end{figure*}

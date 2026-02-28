@@ -1,0 +1,915 @@
+\section{Physics object reconstruction}
+\label{sec:obj}
+
+%Modern general-purpose detectors at high-energy colliders are based on the
+%concept of cylindrical detection layers, nested around the beam axis. 
+%This apparent simplicity has led to a tradition at hadron colliders--at least to a large extent--of 
+The concept of cylindrical detection layers, nested around the beam axis, formulates the reconstruction of ``physics objects'' from signals collected by a given subdetector as:
+\begin{itemize}
+\item The reconstruction of ``isolated'' photons and electrons primarily concerns the \texttt{ECAL}.
+\item The identification of muons is principally based on the information from the muon detectors.
+\item The energy of the jets, consisting of hadrons and photons, can be inclusively measured by the calorimeters, i.e, without any attempt to separate individual jet particles. 
+  The same argument applies to \vecptmiss reconstruction.
+\item The ``tagging'' of jets originating, e.g., from the b quark hadronization or hadronic $\tau$ decays is based on the properties of the
+pertaining charged particle tracks, and thus mostly involves
+the tracker.
+\end{itemize}
+
+A significantly improved event description is achieved by correlating the basic elements from all detectors (tracks and clusters) to identify
+each final-state particle, and finally combining the relevant measurements to reconstruct the particle properties on the basis of this identification.
+This universal approach is called the ``particle-flow'' (PF) reconstruction.
+The PF concept was developed and used for the first time by the \texttt{ALEPH} experiment at \texttt{LEP}~\cite{aleph_PF}.
+%though the same exercise at hadron colliders had to meet certain requirements. 
+
+A key ingredient in this approach is the fine spatial granularity of the detector layers since coarse-grained detectors 
+may cause the signals from different particles to overlap, thereby reducing the particle identification and reconstruction efficiencies. 
+The level of ability to individually identify the particles from the hard scatter is assessed by the extent of the proton or ion debris, the particles from pileup interactions, 
+the particle proximity inside high-energy jets, the secondary interactions in the tracker material, etc.
+In \texttt{CMS}, the PF reconstruction was ready for use in physics analyses in June 2010, and was further implemented at HLT and in heavy ion collision analyses in 2011~\cite{cms_PF}. Since then, practically all \texttt{CMS} physics results have been based on PF reconstruction.
+
+\subsection{Pileup mitigation and treatment of the underlying event}
+\label{sec:pileup}
+
+The PF algorithm was initially designed without taking into account pileup.
+During standard \texttt{LHC} running conditions, simultaneous interactions occur per bunch crossing whose average number depends on 
+the specifications of the data-taking period. 
+These interactions  are  randomly spread  along  the  beam  axis  around  the  center  of  the  \texttt{CMS}  coordinate  system, presumably following a normal distribution 
+with a standard deviation of few~\,$\mathrm{cm}$ (see Section~\ref{sec:beamspot} for the RMS of the luminous region). 
+The number of pileup interactions can be estimated, e.g., from the PV multiplicity---the vertex reconstruction efficiency is about 70\% for pileup interactions~\cite{cms_jets}---and the 
+instantaneous luminosity of the given bunch crossing, with the inelastic pp cross section~\cite{pp_inel} as additional input. 
+Typically the simulated events are assigned a weight such that the distribution of the simulated multiplicity matches the observed distribution, as displayed in Fig.~\ref{fig:vertex}. 
+ The total uncertainty is dominated by the uncertainty in the total inelastic pp scattering cross section measurement~\cite{pp_inel}, 
+which affects the pileup profile in the simulated sample. Less dominant is the uncertainty associated with the luminosity measurement.
+
+Particles produced in pileup interactions give rise to additional PF constituents, e.g., charged hadrons, photons, and neutral hadrons.  
+This results in an average additional \pt of few\,\GeV\ per pileup interaction and unit area in the transverse plane.  
+As a consequence, reconstructed particles from pileup affect, among others, jets, \vecptmiss, and the isolation of charged leptons. 
+The measured energy deposits in the calorimeters used as input for particle reconstruction may also be directly affected by pileup interactions.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.99\linewidth]{figures/reconstruction/nVert_ZtoMM.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.99\linewidth]{figures/reconstruction/nVert_ZtoEE.pdf}}
+\end{minipage}
+\caption[Primary vertex multiplicity in \Zmumu\ and \Zee\ candidate events at $\sqrt{s} = 13$\,\TeV]
+{
+Multiplicity of reconstructed primary vertices in \Zmumu\ (a) and \Zee\ (b) candidate events at $\sqrts = 13$\,\TeV~\cite{CMS-PAS-JME-16-004} using a data sample recorded in early 2016 
+(up to period ``Run2016C''). For the remainder of the year, \texttt{LHC} achieved instantaneous luminosity values of up to $1.53 \times 10^{34}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$, 
+with an average number of collisions occurring at one proton beam bunch crossing about 27 and a maximum of more than 50, assuming a total inelastic cross section of 80\,$\mathrm{mb}$.
+}
+\label{fig:vertex}
+\end{figure}
+
+As noted in Section~\ref{sec:vertex}, the PV with the largest weighted \pt (LV) is considered as the one corresponding to the hard scattering, whereas 
+the other reconstructed vertices are referred to as the pileup vertices. Charged hadrons reconstructed within the tracker acceptance can be identified as coming from
+pileup by associating their track with a pileup vertex. If identified as coming from pileup, these
+charged particles are removed from the record of reconstructed particles that are used to form physics objects. 
+This widely used algorithm is called ``pileup charged-hadron subtraction,'' and is referred to as CHS. 
+All neutral and charged particles associated with LV or not associated with any PV are kept in the CHS procedure.
+
+Photons and neutral hadrons, as well as all reconstructed particles outside the tracker acceptance, cannot be associated with one of the reconstructed PV using 
+the CHS technique though.  
+To mitigate the impact of these particles the uniformity of the \pt density of pileup interactions in the transverse plane facilitates the average \pt contributions expected from pileup 
+to be subtracted. The \pt density from pileup interaction can be calculated with jet clustering techniques, such as \textsc{fastjet}, with the list of all reconstructed particles as input. 
+As an alternative, this contribution can be estimated locally, e.g., around a given lepton, from the expected ratio of the neutral to the charged energy from pileup, typically 0.5 (see Section~\ref{sec:muons}). After the end of Run 1, advanced pileup mitigation techniques have been explored, e.g., Ref.~\cite{puppi,CMS-PAS-JME-16-003}, 
+and become increasingly important (see Appendix~\ref{sec:Pileup_Mitigation} for a dedicated study) with the larger number of pileup interactions observed during the \texttt{LHC} Run 2.
+
+Fluctuations in the transverse energy flow of secondary particles produced in nuclear collisions result in increased soft background relative to hadron-hadron collisions.
+To account for the influence of these underlying events the initial hard scattering is embedded into simulated events using, e.g., the \textsc{epos-lhc} (v.3400) generator~\cite{epos_lhc} 
+that is tuned to reproduce global event properties as measured in data such as the total particle multiplicities, charged-hadron spectra, and anisotropic transverse flow. 
+The  procedure  involves  preprocessing  the  digitized (``raw''~\cite{dataformats_CMS}) format of the  events, rendering the vertex distribution along the luminous region as observed in data. 
+ More specifically, for  each  event  that  satisfies a minimum-bias trigger (see Section~\ref{sec:bptx_trigger}) selection, the embedding is done by mixing the simulated 
+digital signal information from hard scattering and \textsc{epos}.
+ These events are then propagated through the standard reconstruction and analysis chain using the \textsc{geant}4 package~\cite{geant4} to simulate the detector response.
+
+The effect of the underlying event on  the  reconstruction  of  jets and the isolation of charged leptons is shown in Figs.~\ref{UE:a} and~\ref{UE:b}, respectively, 
+using simulated \ttbar\ events passing the analysis selection of Ref.~\citeTH{topobs_CMS_prl} (Section~\ref{sec:evcat}). 
+The jet energy scale is shown for a various selection of the summed transverse energy in the forward calorimeters in the Pb-going direction, 
+which is a measure of the uncorrelated underlying event produced in pPb collisions. 
+The performance of charged lepton isolation is studied in data using high-\pt muons that are required to form a pair of opposite sign with an invariant mass between 80 and 100\,\GeV. 
+The efficiency loss due to the isolation is studied as a function of the energy in \texttt{HF} in the Pb-going direction. 
+The muon detection efficiency decreases when the underlying event increases, considering a constant isolation requirement (Eq.\,(\ref{eq:dbIso})) of 0.15. 
+For the average \texttt{HF} energy ($\sim21$\,\GeV), the muon isolation efficiency is about 0.93, 
+and uncertainty of 4\% is estimated taking a variation of two standard deviations around the mean. 
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{UE:a}\includegraphics[width=0.99\linewidth]{figures/reconstruction/CMS-HIN-17-002_Figure-aux_002.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{UE:b}\includegraphics[width=0.99\linewidth]{figures/reconstruction/ConstantIrelSigEff_EffVsHFE.pdf}}
+\end{minipage}
+\caption[Impact of the underlying event on the jet energy scale and charged lepton isolation in pPb collisions]
+{
+(a) Jet energy scale for jets in simulated \ttbar\ events using pPb collisions at $\rootsNN=8.16$\,\TeV. Reconstructed jets overlapping with the isolated muon are excluded~\citeTH{topobs_CMS_prl}. 
+(b) The efficiency loss due to the muon isolation  as a function of the energy in the \texttt{HF} subdetector. Similar conclusions are drawn for electrons~\citeAN{AN-17-043}.
+}
+\label{fig:UE}
+\end{figure}
+
+\subsection{Muon reconstruction and identification}
+\label{sec:muons}
+
+In the standard \texttt{CMS} reconstruction procedure, tracks are first reconstructed independently in the tracker (``tracker track'') and the muon system (``standalone-muon track''), 
+and then used as input for muon track reconstruction. ``Global  muon  tracks'' are  built  by  matching  standalone-muon  with  tracker tracks. 
+Reconstructed muons are then processed by the PF algorithm, that applies a set of selection criteria to candidates reconstructed with the standalone, 
+global, or tracker muon algorithms~\cite{cms_muon_paper_13TeV}. 
+The requirements are based on various quality parameters from the muon reconstruction, and information from other subdetectors is also used, as described in the following. 
+Emphasis is exclusively given on muons that are reconstructed as both belonging to the tracker and global classes, and also selected by the PF algorithm. 
+
+\begin{figure}[!ht]
+ \begin{center}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/mass}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/pt}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/abseta}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/glbChi2}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/glbValidMuHits}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/numberOfMatchedStations}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/tkDxy}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/tkDz}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/tkTrackerLay}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/tkValidPixelHits}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/SingleMuHighPt/combRelIsoPF04}
+    \caption[Muon kinematic and identification variables at $\sqrts = 5.02$\,\TeV]
+    {
+      Muon kinematic (invariant mass, \pt, and $\lvert \eta \rvert$) and identification variables for \Zmumu\ events at $\sqrts = 5.02$\,\TeV. 
+      Data (Table~\ref{tab:muIsosamples}) are found to be in good agreement with the MC (Table~\ref{tab:mc_5TeV}) simulation---scaled to the amount of data---in all the considered variables.
+      Identification variables are shown prior to any requirement~\citeAN{AN-16-098,AN-16-320,AN-16-369}, and hence the non-simulated background is expected to populate the discrepant regions.
+    }
+    \label{fig:TightMuonIDppVars}
+ \end{center}
+\end{figure}
+
+The set of variables and selection criteria are defined to allow an optimum balance between efficiency and misidentification rate of about 95\% and 1\%, 
+and using simulated \Zmumu\ and \QCD\ multijet events~\cite{cms_muon_paper_13TeV}, respectively. 
+This ``tight'' selection thus aims to identify prompt muons, i.e., originating from LV, and suppress contributions from light and heavy flavor decays as well as the misidentification from charged hadrons.
+
+\textbf{Muon reconstruction observables}
+
+\begin{itemize}
+\item Number of hits per track: The tracker track should have hits from at least six layers of the tracker including at least one pixel hit. 
+\item $\chi^2/\mathrm{dof}$ of track fit:  The global muon fit must have $\chi^2/\mathrm{dof} < 10$ and include at least one hit from the muon system.
+\item Degree of matching between tracker and standalone track: The tracker muon must have segment matching in at least two of the muon  stations. 
+The muon segment compatibility is computed by propagating the tracker track to the muon system, and evaluating both the number of matched segments in all stations
+ and the closeness of the matching in position and direction.
+\end{itemize}
+
+\textbf{Global event observables}
+
+\begin{itemize}
+\item \dxy and \dz:  A tight muon must be compatible with LV, having a transverse and longitudinal impact parameter of $\dxy < 0.2$ and $\dz< 0.5$\,$\mathrm{cm}$, respectively.
+\end{itemize}
+
+\vspace*{0.5cm}
+
+
+To further distinguish prompt charged leptons from those originating, e.g., from semileptonic hadron decays, 
+ the scalar \pt sum of surrounding particles, often referred to as the ``isolation,'' is a widely used discriminating variable. 
+Although charged particles associated with pileup vertices can be removed from the isolation, following the CHS paradigm, 
+the contamination of neutral particles from pileup interactions still holds. 
+Various techniques to mitigate this effect have been developed. A widely used example is the so-called $\delta \beta$ correction, which estimates 
+the contribution of neutral particles from pileup based on the contribution of charged particles associated with pileup vertices.
+That is, the muon isolation, $I^{\mu}$, is defined as
+\begin{linenomath}
+\begin{equation}
+\label{eq:dbIso}
+I^{\mu ^ i } =
+ \sum_{ \Delta R(i,j) < 0.3,\,0.4 }^\mathrm{\textrm{CH}\,(\textrm{LV})} \pt^j
+ +
+\max \left(0 , 
+ \sum_{ \Delta R(i,j) < 0.3,\,0.4 }^\mathrm{\textrm{NH}} \pt^j
++ \sum_{ \Delta R(i,j) < 0.3,\,0.4 }^\mathrm{\textrm{PH}} \pt^j
+-
+\frac{1}{2}
+ \sum_{ \Delta R(i,j) < 0.3,\,4 }^\mathrm{\textrm{CH}\,(\textrm{PU})} \pt^j
+\right)\, ,
+\end{equation}
+\end{linenomath}
+ where each \pt sum is performed over the particles within a cone $\Delta R = \sqrt{\Delta \eta ^2 + \Delta \phi ^2 }$ of size 0.3 (in pPb collisions) or 0.4 (in pp collisions), 
+``CH\,(LV)'' and ``CH\,(PU)'' are charged particles associated with LV and pileup vertices, respectively, 
+and ``NH'' and ``PH'' are neutral hadrons and photons. 
+In this technique, the pileup contamination from neutral particles is estimated as a half, motivated by the isospin limit in which jets are approximately 
+composed of $1/3$ neutral and $2/3$ charged pions. As such, the $\delta \beta$ correction subtracts the contamination on average.
+ The isolation is typically further divided by the transverse momentum of the lepton, and it is referred to as the ``relative isolation'' ($I^{\mu}_{\textrm{rel}}$). 
+The default value entering the tight identification using the PF isolation $I^{\mu}_{\textrm{rel}}$ of $\Delta R < 0.4$ is 0.15, 
+whereas it has been further optimized for final states involving single $t$ and $\overline{t}$ quarks in view of Refs.~\citeTH{top15004} and~\citeTH{top16003} (see Appendix~\ref{sec:Multijet_model}).
+
+Figures~\ref{fig:TightMuonIDppVars} and~\ref{fig:TightMuonIDpPbVars} show muon kinematic and identification variables of the probe leg in the tag-and-probe pair, as well as the invariant mass of
+the tag-and-probe system, comparing data and simulation using pp and pPb collisions at $\sqrt{s}=5.02$ and $\rootsNN=8.16$\,\TeV, respectively.
+
+\begin{figure}[!ht]
+ \begin{center}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/mass}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/pt}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/eta}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/chi2_global}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/muonhits_global}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/muonstations_global}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/dxy}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/dz}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/tkLayers}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/pxHits}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/muid/variables/rel0p4dBeta}
+    \caption[Muon kinematic and identification variables at $\rootsNN = 8.16$\,\TeV]
+{
+  Muon kinematic (invariant mass, \pt, and $\eta$) and identification variables for \Zmumu\ events at $\rootsNN = 8.16$\,\TeV. 
+  Data (Table~\ref{tab:muIsosamples}) are found to be in good agreement with the MC (Table~\ref{tab:mc_pPb8TeV}) simulation---scaled to the integral of data---in
+  most of considered variables, except for the isolation due to the presence of the underlying event~\citeAN{AN-17-043}.
+  The slight mismodeling in \dxy\ can be attributed to the non-simulated background and imperfect simulation of the tracker alignment. 
+}
+    \label{fig:TightMuonIDpPbVars}
+ \end{center}
+\end{figure}
+
+\subsection{Electron reconstruction and identification}
+\label{sec:electrons}
+
+Excellent electron reconstruction and selection efficiencies, together with small misidentification probability over a large phase space, and good momentum resolution are 
+of great importance in many analyses. 
+One of the main challenges for precise reconstruction of electrons in \texttt{CMS} is the tracker material (Fig.~\ref{fig:cms_detector_tracker_material}), 
+which causes significant bremsstrahlung along the electron trajectory. In addition, this bremsstrahlung spreads over a large volume because of the \texttt{CMS} magnetic field.  
+Dedicated techniques have been developed (Ref.~\cite{cms_eles} and references therein) to group the energy deposited in contiguous 5$\times$5 arrays of clusters in \texttt{ECAL}, i.e, 
+the final global cluster (supercluster), to build the electron track using a dedicated version of the standard Kalman filter (Gaussian sum filter), 
+and to associate the two inputs for estimating the electron properties. 
+The energy calibration and resolution in \texttt{ECAL} and general issues in track reconstruction are discussed in Refs.~\cite{ecal_7TeV} and~\cite{cms_eles}, respectively.
+
+\begin{table}[!ht]
+\centering
+\resizebox{\textwidth}{!}{
+\begin{tabular}{l||c|c|c|c|c|c|cc}
+\toprule
+\multirow{3}{*}{Variable} & \multicolumn{ 2}{c|}{\texttt{Veto}} &\multicolumn{ 2}{c|}{\texttt{Loose}} & \multicolumn{2}{c|}{\texttt{Veto}} & \multicolumn{ 2}{c}{\texttt{Medium}} \\
+
+\cmidrule(l){2-3} \cmidrule(l){4-5}\cmidrule(l){6-7} \cmidrule(l){8-9} 
+& Barrel & Endcap & Barrel & Endcap & Barrel & Endcap & Barrel & Endcap\\
+\midrule
+%  & \multicolumn{6}{c}{}\\
+\sigmaIetaIeta & 0.0114  &  0.0352& 0.0103 & 0.0301 & 0.0115  & 0.037   & 0.00998& 0.0298 \\
+\dEtaIn        &  0.0152 &  0.0113& 0.0105 & 0.0081 & 0.00749 & 0.00895 & 0.00311& 0.00609\\
+\dPhiIn        &  0.216  &  0.237 & 0.1150 & 0.1820 & 0.228   & 0.213   & 0.103  & 0.045  \\
+\hOverE        &  0.181  &  0.116 & 0.1040 & 0.0897 & 0.356   & 0.211   & 0.253  & 0.0878\\
+\PFrelIsoRho   &  0.126  &  0.144 & 0.04   & 0.05   & 0.175   & 0.1590  & 0.07   & 0.08  \\
+\ooEmooP       &  0.207  &  0.174 & 0.1020 & 0.1260 & 0.299   & 0.15    & 0.134  & 0.13   \\
+\dxy           &  0.0564 &  0.2220& 0.0261 & 0.1180 & 0.0564  & 0.2220  & 0.0118 & 0.0739 \\
+\dz            &  0.4720 &  0.9210& 0.4100 & 0.8220 & 0.4720  & 0.9210  & 0.3730 & 0.6020 \\
+\mhits         & 2       & 3      & 2      &1       & 2       & 3       & 1      & 1      \\
+\veto          & Yes     &Yes     & Yes    & Yes     & Yes    & Yes     & Yes    & Yes    \\
+\bottomrule
+\end{tabular}
+}
+\caption{Requirements for the rectangular-based identification of electrons in pp (``veto'' and ``loose'') and pPb (``veto'' and ``medium'') 
+  collisions at $\sqrt{s}=5.02$~\citeAN{AN-16-110} and $\rootsNN=8.16$\,\TeV~\citeAN{AN-17-043}, respectively.}
+\label{seltagandprobeeff}
+\end{table}
+
+The related procedures to identify prompt isolated electrons, as concisely described in the following, are optimized using simulation and commissioned with data. 
+By convention, ``energy'' and ``momentum'' refer to the energy of the electromagnetic shower initiated by the electron in \texttt{ECAL}
+and to the track momentum measurement in the tracker, respectively, while the term ``electron momentum'' describes the combined information, taking into account 
+the bremsstrahlung photons spatially compatible with originating from the electron track.
+
+
+Variables that provide discriminating power against electron background sources, mainly originating from photon conversions, jets misidentified as electrons, or from semileptonic 
+decays of b and c quarks, can be grouped into three main categories, and are listed in Table~\ref{seltagandprobeeff}.
+
+\textbf{Purely calorimetric observables}
+
+\begin{itemize}
+\item $\sigmaIetaIeta$: The lateral extension of the shower along the $\eta$ direction is expressed in terms of the variable $\sigma_{\eta \eta}$, which is defined as
+$(\sigma_{\eta \eta})^2 = [\sum (\eta_i - \overline{\eta})^2 w_i]/\sum w_i$.
+The sum runs over the 5$\times$5 matrix of crystals around the highest-\et crystal of the SC,
+and $w_i$ is a weight that depends logarithmic on the contained energy.
+The positions $\eta_i$ are expressed in units of crystals,
+which has the advantage that the variable-size gaps between \texttt{ECAL} crystals (in particular at modules boundary) can be ignored.
+The discrimination power of the lateral shower extension is due to the fact that bremsstrahlung strongly affects the energy deposition along the $\phi$ direction.
+\item \hOverE: The fraction of energy deposited in \texttt{HCAL} is expected to be small, as electromagnetic showers are essentially fully contained in \texttt{ECAL} and \texttt{ES}.
+\end{itemize}
+
+\textbf{Tracking observables}
+
+\begin{itemize}
+%\item \textbf{f_\text{brem}}: The fraction of energy lost through  bremsstrahlung is estimated using the momentum at the point of closest approach to the beam spot ($p_{\text{in}}$), 
+%and the momentum extrapolated to the surface of \texttt{ECAL} from the track at the exit of the tracker ($p_{\text{out}}$), and is defined as $f_\text{brem} = [p_\text{in} - p_\text{out}]/ p_\text{in}$.
+\item \mhits: The PF algorithm can exploit the pattern of track hits. When photon conversions take place inside the volume of the tracker, 
+the first hit on electron tracks from the converted photons is often not located in the innermost layer of the tracker, and missing hits are therefore expected in that region. 
+For prompt electrons, whose trajectories start from the LV, no missing hits are expected in the inner layers. 
+\item \veto: In addition to the missing hits, photon conversion candidates can also be rejected using a fit to the reconstructed GSF tracks. 
+Since the photon is massless, and momentum transfer is in general small, the conversions have a well-defined topology, with tracks that have essentially the same 
+tangent at the conversion vertex. The strategy for rejecting these candidates consists of fitting the track pairs to a common vertex, incorporating this topological constraint, 
+and then rejecting the converted photon candidates according to a $\chi^2$ probability of the fit.
+\item \dxy\ and \dz: The impact parameters of the electron, such as the transverse (\dxy) and longitudinal (\dz) distance to the LV at the point of closest approach
+in the transverse plane are used to reject secondary electrons.
+\end{itemize}
+
+\textbf{Track-cluster association observables}
+
+\begin{itemize}
+\item \dEtaIn and \dPhiIn: The track-cluster association criterion is designed to preserve high efficiency and reduce misidentification probability, and it is therefore not very restrictive along the direction of the track curvature affected by bremsstrahlung. For ECAL-seeded electrons, this requires a  geometrical matching between the GSF track and the SC, such as:
+\begin{itemize}
+\item $\lvert \Delta \eta \rvert = \lvert \eta_{\mathrm{SC}} - \eta_{\text{in}}^{\text{extrap}} \rvert < 0.02$, with $\eta_{\mathrm{SC}}$ being the SC energy-weighted position in $\eta$, and $\eta_{\text{in}}^{\text{extrap}}$ the track $\eta$ extrapolated from the innermost track position and direction to the position of closest approach to the SC,
+\item $\lvert \Delta \phi \rvert = \lvert \phi_{\mathrm{SC}} - \phi_{\text{in}}^{\text{extrap}} \rvert < 0.15$, with analogous definitions for $\phi$.
+\end {itemize}
+\item \ooEmooP: The track-cluster association includes not only geometrical but also SC energy-track momentum matching. 
+  The $\ooEmooP=\lvert 1/E_{\textrm{SC}}- 1/p_\text{in} \rvert$ variable is typically considered, where $E_{\mathrm{\texttt{SC}}}$ is the SC energy and $p_{\text{in}}$ is the track momentum at the point of the closest approach to LV.
+\end{itemize}
+\vspace*{0.5cm}
+
+\begin{figure}[!ht]
+ \begin{center}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fElePtLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fEleEtaLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fConversionVetoLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fHoverELead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fEleIsoLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fdEtaAtVtxLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fdPhiAtVtxLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fDxyLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fDzLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fEoverPInvLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fSigmaIEtaIEtaLead_ScaledToLumi.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/highptphoton30andz/hlt_hidoublephoton15_eta2p5_mass50_1000_r9sigmahecut_v1/eleele/dilep/eleid/variables/fMissHitsLead_ScaledToLumi.png}
+    \caption[Electron kinematic and identification variables at $\sqrts = 5.02$\,\TeV]
+    {Electron kinematic (\pt, $\lvert \eta \rvert$, and $\phi$) and identification variables (Table~\ref{seltagandprobeeff}) for \Zee\ events at $\sqrts = 5.02$\,\TeV~\citeAN{AN-16-110}.
+      Data (Table~\ref{tab:muIsosamples}) are found to be in good agreement with the MC (Table~\ref{tab:mc_5TeV}) simulation---scaled to the amount of data---in all the considered variables.
+      The slight mismodeling in \dxy\ can be attributed to the non-simulated background and imperfect simulation of the tracker alignment.
+    }
+    \label{fig:EleKinematicsAndIDppVars}
+ \end{center}
+\end{figure}
+
+Electron candidates from misidentified jets or semileptonic decays of b or c quarks have significant energy flow near their trajectories, 
+and hence requiring electrons to be isolated from such nearby activity greatly reduces these sources of background. 
+Two isolation techniques are used in \texttt{CMS}. The simplest one is referred to as ``detector-based isolation,'' 
+and relies on the sum of energy depositions either in \texttt{ECAL} or \texttt{HCAL} around each electron trajectory, or on the scalar sum \pt of all tracks reconstructed from LV. 
+These sums are usually computed within cone radii of $\Delta R=0.3$ or 0.4 around the electron direction, and are used at HLT to reject jets misidentified as electrons 
+given their decent performance.
+
+Offline, the PF technique is used to extend the definition of isolation quantities, i.e., rather than using energy measurements in independent subdetectors, 
+the isolation is defined using the PF candidates 
+\begin{linenomath}
+\begin{equation}
+\label{eq:AeffIso}
+I^{\mathrm{e} ^ i } =
+ \sum_{ \Delta R(i,j) < 0.3 }^\mathrm{\textrm{CH}\,(\textrm{LV})} \pt^j
+ +
+\max \left(0 , 
+ \sum_{ \Delta R(i,j) < 0.3 }^\mathrm{\textrm{NH}} \pt^j
++ \sum_{ \Delta R(i,j) < 0.3 }^\mathrm{\textrm{PH}} \pt^j
+-\pt^{\mathrm{\textrm{PU}}}\right)\, ,
+\end{equation}
+\end{linenomath}
+where the sums run over the charged PF candidates, neutral hadrons and photons, 
+within a chosen $\Delta R$ cone around the electron direction. The charged candidates 
+are required to originate from LV, and $\pt^{\mathrm{\textrm{PU}}}$ is the correction related to event pileup. 
+
+
+The contribution from pileup in the isolation cone is computed using the \textsc{FastJet} technique, 
+assuming $\pt^{\mathrm{\textrm{PU}}} = \rho A_{\text{eff}}$; $\rho$ is the average energy density, defined as the median of the 
+energy density distribution for all particles within $\lvert y \rvert <5$ and a fixed grid size of 0.6. 
+Using the median instead of the mean makes $\rho$ effectively less sensitive to low energy pseudojets composed of nonphysical particles with infinitesimal momenta and random direction, 
+and hence reducing the bias from low pileup energy densities. 
+The effective area $A_{\text{eff}}$ in ($\eta$, $\phi$) plane is defined, for each component of the isolation, as $(\Delta R)^2$ scaled by the ratio 
+of the slopes for $\rho$ and for the considered component against the PV multiplicity. 
+The dependence of both the charged and neutral components on the PV multiplicity is expected to be almost linear. 
+
+\begin{figure}[!ht]
+ \begin{center}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fElePtLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fEleEtaLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fPhiLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fHoverELead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fEleIsoLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fdEtaAtVtxLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fdPhiAtVtxLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fDxyLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fDzLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fEoverPInvLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fSigmaIEtaIEtaLead.png}
+    \includegraphics[width=0.32\textwidth]{figures/reconstruction/eleid/variables/fMissHitsLead.png}
+    \caption[Electron kinematic and identification variables at $\rootsNN = 8.16$\,\TeV]
+    {Electron kinematic (\pt, $\lvert \eta \rvert$, and $\phi$) and identification variables for \Zee\ events at $\rootsNN = 8.16$\,\TeV~\citeAN{AN-17-043}.
+      Data (Table~\ref{tab:muIsosamples}) are found to be in good agreement with the MC (Table~\ref{tab:mc_pPb8TeV}) simulation---scaled to the integral of data---in
+      all the considered variables.
+      The variable depicted in the middle of the second row is $I^{\textrm{CH}}-I^{\textrm{NH}}-I^{\gamma}$.}
+    \label{fig:EleKinematicsAndIDpPbVars}
+ \end{center}
+\end{figure}
+
+
+\subsection{Jet reconstruction and noise-jet rejection}
+\label{sec:jets}
+
+\QCD\ predicts that large-distance nonperturbative effects can be decoupled from the hard reaction so that energetic partons fragment into collimated streams or ``jets'' of hadrons, 
+which inherits energy and momentum from their parent parton. 
+A prescription is then required to define what ``collimated'' means, i.e., to unambiguously decide upon what objects can be ascribed to a jet given some measure of distance. 
+The outcome of the jet-clustering procedure must deal with the cancellation of collinear and soft singularities appearing in \QCD, namely, the algorithm has to treat the dependence 
+on (i) the splitting or merging of collinear parton four-vectors and (ii) the addition of arbitrarily soft partons to the list of objects to be clustered. 
+
+Sequential-recombination algorithms belong to a class of infrared and collinear safe inclusive jet algorithms for hadron colliders, 
+and iteratively combine the closest pairs of physics objects to obtain massive jets using as a measure of distance 
+\begin{equation}
+d_{ij}=\mathrm{min}(p_{\mathrm{T},i}^{2p},p_{\mathrm{T},j}^{2p})\frac{\Delta R_{ij}^2}{R^2}
+\label{eq:cluster_metric}
+\end{equation}
+with $\Delta R_{ij}=\sqrt{\lvert y_i - y_j \rvert^2 + \lvert \phi_i - \phi_j \rvert^2}$ and fixed distance parameter $R$; 
+a continuous parameter $p$ sets the power of the \pt scale relative to the geometrical distance; $i$ and $j$ entities with rapidities $y_i$ and $y_j$, and azimuthal angles $\phi_i$ and $\phi_j$, respectively, are only combined as long as $d_{ij}<p_{\mathrm{T},i}^{2p}$; otherwise, the jet is promoted to a final jet and ignored in subsequent steps. 
+Considering $p=-1$ yields the so-called ``anti-\kt clustering algorithm'' that is infrared and collinear safe, yet resilient with respect to soft radiation concerning the jet boundaries~\cite{antikt}. 
+
+In \texttt{CMS}, jets are reconstructed using the anti-\kt clustering algorithm, as implemented in the \textsc{FastJet} package~\cite{fastjet_manual}, with a nominal distance parameter of 0.4, 
+and $i$ and $j$ entities corresponding to different types of physics objects. We focus on three types of jets that are distinguished based on the nature of simulated and detector information (Fig.~\ref{fig:partons_to_hits}): simulated particle-level, calorimeter, and PF jets. 
+
+The simulated particle-level jets are built by applying the clustering procedure to all stable (lifetime $c\tau>1$\,$\mathrm{cm}$) particles excluding neutrinos. 
+The exclusion of neutrinos is a convention adopted by \texttt{CMS}, facilitating the definition of the jet response in a way that is experimentally accessible and significantly reduces 
+response differences between heavy-flavor (\cPqc, \cPqb) and light-quark (\cPqu, \cPqd, \cPqs) or gluon jets (see Section~\ref{sec:bjets}), 
+caused by neutrinos produced in semileptonic decays of heavy-flavor hadrons\footnote{The neutrino fraction leads to an additional systematic uncertainty in the fragmentation of heavy hadrons relative to the original \cPqb quarks that is typically considered in, e.g., measurements of 
+the inclusive \cPqb jet cross section or the top quark mass.}. 
+%Indeed, neutrinos are often included at the particle level, but the response is measured from samples with negligible neutrino content, leading to practically no difference for inclusive JEC.
+Although the lifetime of heavy hadrons on average is shorter than $c\tau=1$\,$\mathrm{cm}$, they are considered, together with their decay products, as the particles for jet clustering. To 
+prevent these generated hadrons from affecting the susceptibility of jets to additional underlying-event and pileup radiation~\cite{ghosts} 
+the modulus of the hadron four-momentum is set to a small number, retaining only the directional information, a procedure known as ``ghost association.'' 
+Jets coming from pileup interactions are tentatively identified as those missing a geometrically match to a simulated particle-level jet.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[scale=0.35]{figures/reconstruction/jetperformance/Figure7b_PFFraction.pdf}
+\caption[Composition of particle-flow jets based on \QCD\ dijet events]
+{
+Jet PF composition studied with \QCD\ dijet events in the end of 2016 pp data taking (period ``Run2016\,GH'') for fully corrected jets using pp collisions~\cite{CMS-DP-2018-028}.
+Data are compared to \QCD\ multijet simulation. All types of PF particles are considered: leptons, photons, neutral and charged hadrons. 
+The latter are split into hadrons clustered into PF CHS jets (see Section~\ref{sec:pileup}) and energy removed by CHS before jet clustering, 
+overlaid on top of the ``PF+CHS'' jet energy fraction for visualization.
+} \label{fig:jetpffraction}
+\end{figure}
+
+The calorimeter (CALO) jets are reconstructed from energy deposits in the calorimeter towers alone. A calorimeter tower consists of one or more \texttt{HCAL}
+cells and the geometrically corresponding \texttt{ECAL} crystals.
+Calorimeter jets result from a relatively simplistic yet robust approach and were widely used in the early \texttt{CMS} analyses.
+With the improvement of the understanding of the detector and the commissioning of the reconstruction with data,
+the performance of the PF reconstruction has proven to be reliable, and hence the PF jets are used in the majority of recent analyses.
+
+The PF jets are reconstructed by clustering the four-momentum vectors of PF candidates, i.e., muon, electron (``charged EM''), photon (``neutral EM''), 
+charged and neutral hadron candidates. The PF jet momentum and spatial resolutions
+are greatly improved with respect to CALO jets, as the use of the tracking detectors and high granularity of \texttt{ECAL} improves the energy resolution 
+through the independent measurements of charged hadrons and photons inside a jet, which together constitute more than ${\approx}85$\% of the average jet energy (Fig.~\ref{fig:jetpffraction}).
+In reconstructing the PF candidate four-momentum, photons are assumed massless and charged hadrons are assigned the charged pion mass~\cite{pdg_2018}.
+
+\subsubsection{Jet energy correction strategy}
+\label{sec:jec}
+
+Similar to all experimentally-reconstructed objects, jets need to be calibrated in order to have the correct energy scale (JES): this is the purpose of the jet energy
+corrections (JEC). The detailed understanding of both JES and the \pt resolution of the jets (JER) is of crucial importance for many physics analyses, 
+and a leading component of the systematic uncertainty. 
+%Using a detailed \texttt{MC} simulation of the detector, \texttt{JECs} can be calculated and are then adjusted for data using a combination of several channels and data-based methods. 
+Jets are successively corrected for the offset energy coming from pileup, the detector response to hadrons, and residual differences between data and simulation as a function of their 
+\pt and $\eta$. These corrections also depend on the jet flavor and the distance parameter, albeit the latter is fixed throughout all the analyses of the thesis. 
+The consecutive JEC steps are illustrated in Fig.~\ref{fig:jecfactorized}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=1.15\textwidth]{figures/reconstruction/jetperformance/JME_13_004_Figure_002.pdf}
+\caption[Consecutive stages of jet energy corrections in data and MC simulation]{
+Consecutive stages of JEC, as applied in data and MC simulation~\cite{cms_jets}. 
+} \label{fig:jecfactorized}
+\end{figure}
+
+Briefly, the jet response corrections are determined based on simulated \QCD\ dijet flavor mixture as a function of jet \pt and $\eta$. 
+Corrections for residual differences between data and detector simulation as a function of $\eta$ are determined from a \pt-balance technique using \QCD\ dijet events. 
+The $\eta$-dependent corrections are estimated from \QCD\ dijet events relative to a jet of similar \pt in the reference (barrel) region  of $ \vert \eta \vert <1.3$. 
+These corrections include a \pt dependence of the JES, and up to the limit of available dijet data. 
+The absolute scale, together with its \pt dependence, is measured in $\gamma$+jet events, and it is typically cross-checked with Z+jet events. 
+The uncertainty in the jet-flavor composition are also derived from MC simulations. 
+The first step in the chain of the factorized JEC approach, i.e., the pileup offset correction, subtracts the energy not associated with the hard collision in the bunch crossing. 
+The excess energy, which includes contributions from electronic noise in the calorimeters, ``in-time''---extra interactions within the same bunch crossing---as well as ``out-of-time'' pileup---energy integrated from the preceding and subsequent bunch crossings---is not expected to be significant in the studied \texttt{LHC} conditions.
+
+ 
+Simulated particle-level jets are geometrically matched to jets reconstructed in the detector such that their angular distance in ($\eta$,$\phi$) plane is less than the distance parameter $R$ used in the clustering. The performance of the MC-based corrections that are used to remove the bulk of the nonuniformity in $\eta$ and the nonlinearity 
+in \pt are verified by calculating JES. The latter is defined as the mean value of a Gaussian fit to the distribution of $\pt^{\textrm{reco}}/\pt^{\textrm{gen}}$; a mean value close to unity 
+signifies a good agreement between the corrected reconstructed and particle-level jet  $\pt^{\textrm{reco}}$ and $\pt^{\textrm{gen}}$, respectively. 
+This has been verified in the realm of Ref.~\cite{cms_dijets}, and additionally checked using b jets 
+for the purpose of the current thesis, as shown in Fig.~\ref{fig:TTJESJER} as a function of $\eta^{\textrm{gen}}$ in bins of $\pt^{\textrm{gen}}$. 
+The JER variation is extracted by the $\sigma$ parameter of the same Gaussian fit; the factorized dependence of JER on jet $\pt$ and $\eta$ is displayed in Fig.~\ref{fig:TTJESJER}. 
+The jet \pt resolutions have been independently determined with \QCD\ dijet events, as discussed in Ref.~\cite{cms_dijets}. 
+
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.99\linewidth]{figures/reconstruction/jetperformance/MeanPtScaleVsEtaanaJESForestBsCentBin0.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.99\linewidth]{figures/reconstruction/jetperformance/RMSPtScaleVsEtaanaJESForestBsCentBin0.pdf}}
+\end{minipage}
+\caption[Jet energy scale and resolution for b jets generated in \ttbar\ events at $\sqrts = 5.02$\,\TeV]
+{Jet energy scale (a) and resolution (b) in different \pt bins for jets identified as associated to the hadronization of a b quark in a simulated \ttbar\ event sample (Table~\ref{tab:mc_pPb8TeV}) 
+at $\sqrts = 5.02$\,\TeV~\citeAN{AN-16-098}.}
+\label{fig:TTJESJER}
+\end{figure}
+
+To measure the response of a jet at any $\eta$ relative to the response in the region $|\eta|<1.3$ the dijet \pt-balance technique is used. 
+For the measurement of relative jet energy response, two leading in \pt jets are selected in the pseudorapidity interval of $|\eta|<3.0$. 
+The reference jet is required to be within $|\eta^{\textrm{ref}}|<1.3$, with the probe jet at arbitrary $\eta^{\textrm{probe}}$. 
+If both jets are within $|\eta|<1.3$, one jet is randomly chosen as the reference jet, whereas, if both jets are not within $|\eta|<1.3$, the event is discarded. 
+A dijet balance quantity, $B$, is then defined as
+\begin{eqnarray}
+B=\frac{\pt^{\textrm{probe}} - \pt^{\textrm{ref}}}{\pt^{\textrm{avg}}}\, ,
+\end{eqnarray}
+where $\pt^{\textrm{avg}}$ is the average \pt of the two leading jets
+\begin{eqnarray}
+\pt^{\textrm{avg}}=\frac{\pt^{\textrm{probe}} + \pt^{\textrm{ref}}}{2}\, .
+\end{eqnarray}
+
+The correction, calculated from the response $R = (2 - \langle B \rangle) / (2 + \langle B \rangle)$, is derived as a function of $\pt^{\textrm{ave}}$ in separate $\eta$ bins, 
+chosen according to calorimeter tower granularity and merging two neighboring cells to increase the event count. 
+Figure~\ref{fig:Balance13_example} shows an example of dijet balance distributions from data and MC simulation within $1.740 < \eta^{\textrm{probe}} < 2.172$ for a selection of $\pt^{\textrm{avg}}$. 
+Using balance distributions the response in data and MC are compared, and after data are corrected to match simulation by a multiplicative jet by jet factor of $R_{\textrm{MC}}/R_{\textrm{Data}}$, 
+the closure is examined as shown in Fig. \ref{fig:closureDijetBal}.
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.9\textwidth]{figures/reconstruction/jetperformance/balance13_v2}
+\caption[The \pt-balance method for $\eta$-dependent residual differences between data and MC simulation]{
+Balance distributions in \PYTHIA simulation and data are shown for the $ 1.749 < \eta < 2.172 $ range in bins of $\pt^{\textrm{ave}}$ for PF jets. 
+The variables $\alpha = \pt^{\textrm{third}} / \pt^{\textrm{avg}}$ and $|\Delta \phi_{jj}| = \phi^{\textrm{probe}} - \phi^{\textrm{ref}}$ are used to suppress three-jet events in the illustration~\citeAN{AN-16-087}.
+}
+\label{fig:Balance13_example}                   
+\end{center}
+\end{figure}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.32\textwidth]{figures/reconstruction/jetperformance/ratios_pp_hcalbins_ak3PF_jet40_corrv5_eta3}
+\includegraphics[width=0.32\textwidth]{figures/reconstruction/jetperformance/ratios_pp_hcalbins_ak3PF_jet60_corrv5_eta3}
+\includegraphics[width=0.32\textwidth]{figures/reconstruction/jetperformance/ratios_pp_hcalbins_ak3PF_jet80_corrv5_eta3}
+\caption[The simulated jet response  as a function of jet \pt and $\eta$]{
+  Response ratios in \PYTHIA simulation and data as a function of $\eta^{\textrm{probe}}$ for PF jets found in $|\eta| < 3.0$,
+  before and after the residual correction to the data is applied to account for the discrepancy between data and simulation in the jet response~\citeAN{AN-16-087}. 
+  In pp collisions the results from dijet balance technique is cross-checked with the \ptmiss projection fraction (MPF) method as described in Ref. \cite{cms_jets}. 
+}
+\label{fig:closureDijetBal}                   
+\end{center}
+\end{figure}
+
+The absolute JES is verified using $\gamma$+jet events; 
+a photon in the barrel region $|\eta|<1.479$ and $\pt^\gamma>40$\,\GeV\ is selected. 
+The jets used in the $\gamma$+jets sample are required to lie in the pseudorapidity interval $|\eta^{\textrm{probe}}|<1.3$. 
+The leading away side jet with $\pt^{\textrm{probe}}> 10 $\,\GeV\ is selected as the probe jet. 
+The $\gamma$+jets sample is dominated by \QCD\ multijet background, in which jets can disguise a photon. 
+To suppress this type of background the photon candidate is required to be isolated based on stringent selection criteria~\cite{cms_photons}. 
+The average value of the transverse momentum ratio $\pt^{\textrm{probe}}/\pt^{\gamma}$ distribution in a given $\pt^{\gamma}$ bin, is used to determine the absolute response $R_{\textrm{abs}}$, that is shown in Fig. \ref{fig:AbsResDist}.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.7\textwidth]{figures/reconstruction/jetperformance/AbsResDistsMPF30_v3}
+\caption[The absolute jet energy scale, together with its \pt dependence, as measured in $\gamma+\mathrm{jet}$ events]
+{Response distributions for different $\pt^{\gamma}$ ranges in \PYTHIA simulation for PF jets~\citeAN{AN-16-087}.
+To reject $\gamma$+$\geq 2$ jets events the variables $\alpha^{\gamma} = \pt^{\textrm{subleading}}/\pt^{\gamma}$ and $\Delta\phi_{j\gamma} $ are used in the illustration. 
+A cross-check of the absolute response obtained in MC is performed using Z\,($\mathrm{ee}$,\,$\mu\mu$)+jet events with the same requirements on $\Delta\phi$ and $\alpha$ 
+as in the $\gamma$+jet final state.  
+The average ratio of the response in simulation and data is found to be close to unity in both balance studies.
+}
+\label{fig:AbsResDist}                   
+\end{center}
+\end{figure}
+
+
+The fractions of the jet energy carried by certain types of PF candidates, along with the number of PF candidates, clustered into a jet are used to discriminate 
+between noise jets and physical jets. The jet energy fraction and multiplicity variables are sensitive 
+to different sources of noise from \texttt{ECAL} and \texttt{HCAL}. 
+Table~\ref{tab:jetID_criteria} presents these PF jet identification (ID) criteria.
+Three PF jet ID working points (WPs) are defined: ``loose,'' ``tight,'' and ``tight lepton veto.''
+The loose and tight WPs are designed to remove jets originating from calorimetric noise, while the ``tight lepton veto'' WP additionally rejects potential background 
+from misreconstructed electron or muon candidates, effectively resolving also the ambiguity between isolated lepton candidates and jets reconstructed from single lepton candidates.
+
+
+\begin{table}[!ht]
+ \begin{center}
+ \caption[The particle-flow jet identification criteria]{
+   The three PF jet ID criteria; the ``charged'' variables extend up to about $\lvert \eta \rvert<2.4$ since there is no tracker coverage outside of this region, 
+   whereas the ``neutral'' variables extend to the $\eta$ region up to $|\eta|<$ 5.2~\cite{CMS-PAS-JME-16-003}.
+}
+ \begin{tabular}{c||c|c|c|c}
+ \toprule
+  Jet variables  & Pseudorapidity range  &  Loose   & Tight &  Tight lepton veto \\
+ \midrule
+ %\hline
+ Charged hadron fraction & $|\eta|<2.4$ & \multicolumn{3}{c}{$>$0.0} \\
+ Charged multiplicity & $|\eta|<2.4$ & \multicolumn{3}{c}{$>$0} \\
+ Charged EM fraction & $|\eta|<2.4$ & $<$0.99 & $<$0.99 & $<$0.9 \\
+ \midrule
+ Muon fraction & $|\eta|<2.4$ & & & $<$0.8 \\
+ \midrule
+ Neutral hadron fraction & $|\eta|<2.7$ & $<$0.99 & $<$0.9 & $<$0.9 \\
+ Neutral EM fraction & $|\eta|<2.7$ & $<$0.99 & $<$0.9 & $<$0.9 \\
+                     & $2.7<|\eta|<5.2$ & \multicolumn{3}{c}{$<$0.9} \\
+ Neutral multiplicity & $2.7<|\eta|<3.0$ & \multicolumn{3}{c}{$>$2} \\
+                      & $3.0<|\eta|<5.2$ & \multicolumn{3}{c}{$>$10} \\
+ \bottomrule
+ \end{tabular}
+ \label{tab:jetID_criteria}
+ \end{center}
+\end{table}
+
+\subsection{Identification of heavy-flavor jets}
+\label{sec:bjets}
+
+Heavy-flavor jet identification techniques exploit the properties of hadrons clustered into the jet to discriminate between those originating from b quarks against c or light-flavor quarks and gluons. 
+Owing to the lifetime of b hadrons, typical displacements of a few\,$\mathrm{mm}$ to\,$\mathrm{cm}$---depending on their momentum---are expected, thus giving rise to displaced tracks 
+out of which a secondary vertex (SV) can be reconstructed (Fig.~\ref{btagging:a}). 
+In addition the decay products from b quarks have larger average \pt relative ($p_{\text{T,rel}}$) to the jet axis---spanned by the primary vertex and the direction of the jet momentum---than the other jet constituents because of their larger mass and harder fragmentation compared to the light-flavor quarks and massless gluons. 
+Apart from the properties of the reconstructed SV and displaced tracks, the presence of charged leptons is also exploited for heavy-flavor jet identification.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{btagging:a}\includegraphics[scale=0.35]{figures/introduction/CMS-BTV-16-002_Figure_001.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{btagging:b}\includegraphics[scale=0.35]{figures/introduction/CMS-BTV-16-002_Figure_016.pdf}}
+\end{minipage}\par\medskip
+
+
+\caption[Illustration of a heavy-flavor jet with a secondary vertex from the decay of a b hadron]{
+(a)
+Illustration of a heavy-flavor jet with a secondary vertex (SV) from the decay of a b hadron~\cite{cms_bjets_Run2}.
+The displacement of tracks, including possibly an identified lepton, with respect to the primary interaction vertex is characterized by their impact parameter (IP). 
+The IP can receive both positive and negative values, with a positive sign indicating that the track is produced ``upstream,'' namely, 
+the angle between the impact parameter vector and the jet axis is less than $\pi/2$.
+(b)
+Misidentification probability for c and light-flavor jets against b jet identification efficiency~\cite{cms_bjets_Run2}.
+}
+\label{fig:btagging}
+\end{figure}
+
+One of the algorithms, implemented by \texttt{CMS} to select jets originating from b quarks and used in the current thesis, combines the information of displaced tracks 
+with the information on SV associated with the jet using a multivariate (MVA) technique. 
+The combined secondary vertex  algorithm~\cite{cms_bjets_Run2} is a variant of the technique already developed during Run 1~\cite{cms_bjets_Run1}, 
+mainly after adopting a different reconstruction algorithm for SV~\cite{cms_bjets_IVF} and extending the list of input variables (Table~\ref{tab:CSVvsCSVv2Vars}). 
+The baseline selection consists of tracks having an angular distance with respect to the jet axis of $\Delta R < 0.3$; any combination of two tracks compatible with the mass of 
+the $\mathrm{K_S^0}$ meson in a window of 30\,\MeV\ is rejected; jets that have neither a selected track nor a SV are assigned the lowest MVA score.
+
+\begin{table*}[!ht]
+\centering
+\caption[Input variables used in the main algorithm for the identification of heavy-flavor jets]{
+Input variables used for the Run 1 version of the CSV~\cite{cms_bjets_Run1} compared to the CSVv2~\cite{cms_bjets_Run2} algorithm. 
+To avoid discrimination between jet flavors caused by different jet \pt and $\eta$ distributions all variables  are 
+reweighted to obtain the same spectrum for all jet flavors in the training sample, which consists of inclusive \QCD\ multijet events in three independent vertex categories, 
+depending on the presence and association of SV to selected jets or tracks. 
+The symbol ``\checkmark'' (``\xmark'') means that the variable is (not) used in the respective version of the algorithm. 
+The order of variables is arbitrary.
+\label{tab:CSVvsCSVv2Vars}}
+\resizebox{\textwidth}{!}{\begin{tabular}{l||cc}
+\toprule
+Input variable & CSV (Run 1) & CSVv2 \\
+\midrule
+SV two-dimensional flight of distance significance & \checkmark  & \checkmark  \\
+SV multiplicity & \xmark  & \checkmark  \\
+Track $\eta_{\textrm{rel}}$ & \checkmark  & \checkmark  \\
+Corrected SV mass & \checkmark  & \checkmark  \\
+Number of tracks originating from SV & \checkmark  & \checkmark  \\
+SV energy ratio & \checkmark  & \checkmark  \\
+$\Delta R(\textrm{SV},\,\textrm{jet})$ & \xmark  & \checkmark  \\
+Three-dimensional IP significance of the first four tracks & \checkmark  & \checkmark  \\
+Track $p_{\textrm{T},\,\texttm{rel}}$ & \xmark  & \checkmark  \\
+$\Delta R(\textrm{track},\,\textrm{jet})$ & \xmark  & \checkmark  \\
+Track $p_{\textrm{T},\,\textrm{rel}}$ ratio  & \xmark  & \checkmark  \\
+Track distance & \xmark  & \checkmark  \\
+Track decay length & \xmark  & \checkmark  \\
+Vector sum track \et ratio & \xmark  & \checkmark  \\
+$\Delta R(\textrm{summed tracks},\,\textrm{jet})$ & \xmark  & \checkmark  \\
+First track two-dimensional IP significance above {\cPqc} quark mass threshold & \xmark  & \checkmark  \\
+Number of selected tracks & \xmark  & \checkmark  \\
+Jet \pt & \xmark  & \checkmark  \\
+Jet $\eta$ & \xmark  & \checkmark  \\
+\bottomrule
+\end{tabular}}
+\end{table*}
+
+The efficiency (misidentification probability) to correctly (wrongly) label a jet with flavor $\mathrm{f}$ is defined as the number of $\mathrm{f}$ jets 
+fulfilling the ``tagging'' requirement divided by the total number of $\mathrm{f}$ jets. 
+Figures~\ref{fig:btagging_eff_pp} and~\ref{fig:btagging_eff_pPb} show the {\cPqb} tagging efficiency as a function of the misidentification probability against either {\cPqc} or light-flavor jets 
+in simulated \ttbar\ and QCD\ multijet events requiring jets with $\pt > 20$\,\GeV and $\lvert \eta \vert<2.4$ in pp and pPb collisions, respectively. 
+For the latter the {\cPqb} tagging efficiency is integrated over the jet \pt and $\eta$ distributions in the \ttbar\ and \QCD\ multijet samples. 
+Three standard working points are defined, namely, ```loose,'' ``medium,'' and ``tight.''
+These correspond to thresholds on the discriminator after which the misidentification probability is around 10\%, 1\%, and 0.1\%, respectively, for light-flavor jets, 
+and using pp collisions at 13\,\TeV\ (Fig.~\ref{btagging:b}).
+The efficiency for correctly identifying {\cPqb} jets in simulated \ttbar\ events for each of the three working points of the various taggers is also summarized in Table~\ref{tab:OP}.
+
+The tagging efficiency depends on the jet \pt and $\eta$, whereas the dependence with respect to the number of pileup interactions is expected to be small for the considered conditions. 
+The efficiency for correctly identifying {\cPqb} jets is maximal for jets with $\pt \approx 100$\,\GeV and decreases at low- and high-\pt values, respectively, 
+as indeed illustrated in Fig.~\ref{fig:btagging_eff_pp}. 
+The lower efficiency at low jet \pt is due to the larger uncertainty on the track impact parameter resolution. 
+At high jet \pt, there are two main effects. First, the misidentification probability for light-flavor jets increases, as can be also seen in Fig.~\ref{fig:btagging_eff_pp} within the uncertainty, 
+because of the larger number of tracks present in the jet. Second, at higher jet transverse momenta, jets are more collimated, resulting in merged hits in the innermost layers 
+of the tracker. This effect impacts the track reconstruction efficiency and hence also the {\cPqb} jet identification efficiency. 
+Owing to the higher track reconstruction efficiency and the better resolution of the  track parameters at small $\lvert \eta \rvert$ values (Fig.~\ref{trkeff:a}), 
+the algorithm is more efficient in identifying {\cPqb} jets in the barrel region of the silicon tracker.
+
+\begin{figure}[!ht]
+\centering
+\begin{minipage}{0.43\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/exptagEff.pdf}
+\caption[Identification efficiency and misidentification probability for b, c, and light-flavor jets as a function of the jet \pt in pp collisions]{\label{fig:btagging_eff_pp} 
+  Identification efficiency and misidentification probability for b and c and light-flavor jets, respectively, as a function of the jet \pt in pp collisions at $\sqrt{s}=5.02$\,\TeV\ 
+  determined from \ttbar\ simulation~\citeAN{AN-16-098,AN-16-320,AN-16-369}.
+}
+\end{minipage}\hfill
+\begin{minipage}{0.47\textwidth}
+\includegraphics[width=\textwidth]{figures/reconstruction/CSVv2_rocCurves_ttbar_qcd_pPb_lightCharm_withWorkPoints.pdf}
+\caption[Misidentification probability for c and light-flavor jets against b jet identification efficiency in pPb collisions]{\label{fig:btagging_eff_pPb}
+  Misidentification probability for c and light-flavor jets against b jet identification efficiency in pPb collisions at $\rootsNN=8.16$\,\TeV\ separately determined from \ttbar\ 
+  and \QCD\ multijet simulations~\citeAN{AN-17-043}.}
+\end{minipage}
+\end{figure}
+
+\begin{table*}[!ht]
+\centering
+\caption[Main algorithms, operating (``working'') points, and corresponding efficiencies in the identification of heavy-flavor jets]{
+Main algorithms, operating (``working'') points, and corresponding efficiency for b jets with $\pt>20$\,\GeV\ in simulated $t\overline{t}$ events using pp collisions at $\sqrt{s}=13$\,\TeV. 
+The numbers  are for illustrative purpose since the b jet identification efficiency is integrated over the \pt and $\eta$ distributions of jets~\cite{cms_bjets_Run2}. 
+For comparison, the most efficient algorithms in Run 1 and 2, the CSV and DeepCSV taggers, respectively, achieve b jet tagging efficiencies of about 85\,(70)\,\% and 84\,(68)\,\%
+for a light-parton misidentification probability of approximately 10\,(1.5)\,\% and 11\,(1.1)\,\%, using the same loose\,(medium) event selection~\cite{cms_bjets_Run1}.
+\label{tab:OP}}
+\begin{tabular}{lcccc}
+\toprule
+Tagger & Working point & $\varepsilon_{{\cPqb}}$ (\%)& $\varepsilon_{{\cPqc}}$ (\%)& $\varepsilon_{\mathrm{udsg}}$ (\%) \\
+\midrule
+ & \texttt{Loose} & 81 & 37  &  8.9 \\
+Combined secondary vertex (CSVv2) & \texttt{Medim} & 63 & 12  & 0.9  \\
+ & \texttt{Tight} &41 &  2.2 &  0.1 \\
+\midrule
+  & \texttt{Loose} &  84 & 41  &  11  \\
+Deep combined secondary vertex  & \texttt{Medium} &  68 &  12 & 1.1  \\
+(DeepCSV)  & \texttt{Tight} & 50 & 2.4  & 0.1  \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
+\subsection{Reconstruction and calibration of \vecptmiss}
+\label{sec:ptmiss}
+
+The missing transverse momentum vector is defined as the negative vector sum of the momenta of all observed final-state particles in any event, 
+projected onto the plane perpendicular to the direction of the proton beams, i.e., $\vecptmiss\equiv-\sum\vecpt$. Its magnitude is referred to as \ptmiss.
+By momentum conservation, \vecptmiss is also equal to the total transverse momentum of all unobserved particles, such as neutrinos. 
+In \texttt{CMS} several distinct and complementary algorithms to reconstruct
+\vecptmiss have been developed~\cite{CMS-PAS-JME-16-004} (and references therein).  
+The \vecptmiss reconstructed with the PF technique is used primarily. It is defined as the negative vector sum over the transverse momenta of all PF particles. 
+A less commonly used method is the calorimetric \vecptmiss that is calculated using the energies contained in calorimeter towers and their directions relative to the center of the detector. 
+
+Different effects could lead to biased \ptmiss values like minimum energy thresholds in the calorimeters, inefficiencies in the tracker, nonlinearity of the response of the calorimeters for hadronic particles, etc. This bias is significantly reduced by correcting the \pt of jets to the particle-level \pt using jet energy corrections (see Section~\ref{sec:jec}),
+\begin{equation}
+\vec{p}_\mathrm{T}^{\kern1pt\textrm{miss,corr}}
+=\vecptmiss - \vec{\Delta}_\textrm{jets}
+=\vecptmiss - \sum_\textrm{jets} (\vec{p}_{\mathrm{T},\textrm{jet}}^{\kern1pt\textrm{corr}}-\vec{p}_{\mathrm{T},\textrm{jet}})\, ,
+\label{eq:Type1MET}
+\end{equation}
+where the superscript ``corr'' refers to the corrected values.
+The sum extends over all jets with an electromagnetic energy fraction below 0.9 (Table~\ref{tab:jetID_criteria})
+and a corrected $\pt>15$\,\GeV, and it is colloquially referred to as ``type-I'' correction.
+In addition, if a muon reconstructed using the outer tracking system overlaps with a jet, its four-momentum is subtracted from
+the four-momentum of the jet. In this thesis exclusively the corrected \vecptmiss is used, and therefore the prefix ``corr'' is typically omitted to improve clarity, unless specified otherwise.
+
+\begin{table}[!ht]
+\centering
+\caption[Functional forms of the \pt resolutions for each physics object contributing to the unclustered \ptmiss]{\label{tab:unclust_unc} 
+Functional forms of the resolutions in the \pt measurement for each PF-candidate class contributing to the unclustered energy, 
+whose uncertainty is the dominant source in the estimation of \ptmiss. 
+}
+\begin{tabular}{c||c}  \toprule
+        PF-candidate type & Resolution function\\ 
+        \midrule
+        Charged hadron & \begin{math}  (0.00009 \times \pt)^{2} + (0.0085/ \sqrt{\mathrm{sin} \times (2 \times \mathrm{arctan}(\mathrm{e}^{-\eta}) )} )^{2} \end{math}\\ \midrule
+        Charged and neutral EM (\texttt{ECAL})          & $(0.03/\pt) \oplus 0.001$ \\ \midrule 
+        Neutral hadron (\texttt{HCAL} barrel)      & $\mathrm{min}(0.25, (0.8/\pt) \oplus 0.05)$ \\ %\midrule
+        Neutral hadron (\texttt{HCAL} endcap) & $\mathrm{min}(0.30, (1/\pt) \oplus 0.04)$ \\ 
+        Neutral hadron (\texttt{HF}) & $(1/\pt)  \oplus 0.05$ \\ 
+        \bottomrule
+\end{tabular}
+\end{table}
+
+The uncertainty in \ptmiss has strong dependence on the  exact topology of the final state under study. 
+Since \ptmiss relies on the accurate measurement of the reconstructed physics objects, namely, muons, electrons, photons, $\tau$ leptons, jets, and unclustered energy---defined as the contribution from  PF candidates not clustered into any of the previous physics objects---the associated uncertainty is estimated based on a factorized approach. 
+The contribution from each physics object is independently recalculated within its scale and resolution boundaries, meaning the uncertainty in \ptmiss is evaluated by comparing 
+the recalculated \ptmiss to its nominal value.
+
+The uncertainty due to unclustered energy is evaluated based on the momentum resolution of each PF candidate. 
+More specifically, the \pt measurement of PF charged hadrons is dominated by the tracker resolution, while for PF neutral hadrons, 
+the \pt resolution is dominated by the resolution of \texttt{HCAL}. The \texttt{ECAL} resolution dominates the PF photon \pt measurement, whereas \texttt{HF} intrinsic resolution 
+dominates the measurement for PF particles in that region. 
+The largest contributions to the unclustered energy uncertainty are due to the PF neutral hadrons and candidates in \texttt{HF}. 
+Table~\ref{tab:unclust_unc} summarizes the functional forms of the resolutions of the individual PF-candidate classes contributing to the unclustered energy.
+
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{met_mm_tt:a}\includegraphics[scale=0.35]{figures/reconstruction/results/compareMET_TTbar_Powheg_Muon_dilepton.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{met_mm_tt:b}\includegraphics[scale=0.35]{figures/reconstruction/results/compareMET_DYJetsToLL_M50_aMCatNLO_Muon_dilepton.pdf}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{met_mm_tt:c}\includegraphics[scale=0.35]{figures/reconstruction/results/METeff_tk}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{met_mm_tt:d}\includegraphics[scale=0.3]{figures/reconstruction/results/METeff}}
+\end{minipage}\par\medskip
+\caption[Generated and reconstructed \ptmiss in simulated \ttbar\ and Z/$\gamma^{*}$ events at $\sqrts = 5.02$\,\TeV]
+{
+  Generated (``true'') \ptmiss distributions are compared to \ptmiss reconstructed considering all PF candidates (``rawMET,'' ``typeIMET''), 
+  only PF candidates from the tracker (``trkMET''), or  excluding those from \texttt{HF} (``noHF'') using \mmpm events in simulated \ttbar\ (a) 
+  and Z/$\gamma^{*}$ (b) event samples (Table~\ref{tab:mc_5TeV}) at $\sqrts = 5.02$\,\TeV. 
+  The fraction of events satisfying a \ttbar-enriched selection (see Section~\ref{sec:evtSel}) and sequentially applying an increasing requirement on \ptmiss 
+  (from left to right and bottom to top for the horizontal and vertical axis, respectively) is shown in (c) and (d)~\citeAN{AN-16-098,AN-16-369}. 
+ 
+}
+\label{fig:met_mm_tt}
+\end{figure}
+
+A typical requirement is imposed using the \ptmiss magnitude to further reject Z/$\gamma^{*}$ background events in the \ttbar\ dilepton final state.
+To that end, different definitions of \ptmiss have been studied, which are displayed in Figs.~\ref{met_mm_tt:a} and~\ref{met_mm_tt:b}, including the generated, raw and tracking \ptmiss distributions, 
+with and without the \texttt{HF} contribution separately in \ttbar\ signal and  Z/$\gamma^{*}$ background for the event selection of Ref.~\citeTH{topobs_CMS_jhep} (see Section~\ref{sec:evtSel}). 
+Figures~\ref{met_mm_tt:c} and~\ref{met_mm_tt:d} show the background rejection against the \ttbar\ signal efficiency for the different \ptmiss definitions. 
+The chosen working point is  \ptmiss$>$35\,\GeV that corresponds to a signal efficiency of $\sim$80\% with more than 99\% of the  Z/$\gamma^{*}$ contribution being rejected.
+
+The scale and resolution of \ptmiss can be studied in event samples with an identified Z boson or an isolated photon. 
+Such events have no genuine \vecptmiss, and hence the performance can be measured comparing the momenta of the vector boson to that of the so-called ``hadronic recoil'' system. 
+The hadronic recoil system is defined as the vector \pt sum of all PF candidates excluding either the vector boson itself or its decay products in the case of the Z boson decay. 
+In Fig.~\ref{fig:recoilDef} the kinematic representation of the \pt of the vector boson and the hadronic recoil, \vqt and \vut, respectively, is given. 
+Momentum conservation in the transverse plane trivially imposes $\vqt+\vut+\vecptmiss = \vec{0}$. Thus this type of events provide a unique event axis and a precise momentum scale.
+The components of the hadronic recoil parallel and perpendicular to the boson axis are denoted by \upar\ and \uperp, respectively.
+The \upar\ and \uperp\ are used to study the \ptmiss response and resolution. 
+Specifically, the mean of the \upar\ (or \redupara) distribution is used to estimate the \ptmiss\ response, whereas the $\rm{RMS}$ of the \upar\ (or \redupara) and \uperp\ distributions are used to estimate the resolution of \upar\ and \uperp, respectively. 
+Corrections can be then extracted from Z/$\gamma^{*}$- or photon-enriched samples in bins of \vqt and applied to the recoil in MC simulation to match the scale and resolution measured in data. 
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.8\textwidth]{figures/reconstruction/pTmissPerformance/Zll_recoilDef.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.8\textwidth]{figures/reconstruction/pTmissPerformance/Photon_recoilDef.pdf}}
+\end{minipage}
+\caption[Illustration of Z/$\gamma^{*}$ and photon event kinematics for measuring the scale and resolution of \ptmiss]{
+Illustration of the Z/$\gamma^{*}$ (a) and photon (b) event kinematics in the transverse plane. 
+The vector \vut denotes the vector \pt sum of all particles reconstructed in the event excluding the two leptons from the Z/$\gamma^{*}$ decay or the photon~\cite{CMS-PAS-JME-16-004}.}
+\label{fig:recoilDef}
+\end{figure}
+
+Figure~\ref{fig:MET_HIN17007} shows the \ptmiss distributions for W boson muon~\cite{W_8TeV} and \ttbar\ $\ell$+jets~\citeTH{topobs_CMS_prl} decay events at $\rootsNN = 8.16$\,\TeV. 
+The distributions of the hadronic recoil components that are parallel and perpendicular to the Z boson transverse momentum are fitted in simulation and data using a weighted 
+sum of two Gaussian functions. The mean and resolution values extracted from the recoil fits are used to scale the simulated hadronic recoil distributions to match the performance measured in data. 
+The corrected \ptmiss distribution is then derived in the MC event samples as the vector sum of $\vec{u}^{\textrm{corr}}_{\textrm{T}}$ and the $\vec{q}_{\textrm{T}}$ 
+of the reconstructed leptons from the decay of Z bosons. 
+Owing to the similarity of the Z and W boson production processes, and their similar masses, it is assumed that the recoil distributions do not depend on the particle type.
+
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.9\textwidth]{figures/reconstruction/pTmissPerformance/CMS-PAS-HIN-17-007_Figure_001-b.pdf}}
+\end{minipage}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\includegraphics[width=0.9\textwidth]{figures/reconstruction/pTmissPerformance/l1l4j1b1q_met_control.pdf}}
+\end{minipage}
+\caption[The \ptmiss reconstructed in W boson and top quark leptonic decays at $\rootsNN = 8.16$\,\TeV]{
+The \ptmiss reconstructed in (a) W boson~\cite{W_8TeV} or (b) top quark~\citeTH{topobs_CMS_prl} leptonic decays at $\rootsNN = 8.16$\,\TeV. 
+They are split into contributions from \ttbar, Z/$\gamma^{*}$, W+jets, and \QCD\ multijet processes.  
+Error bars represent the statistical uncertainty. 
+The lower panels display the data divided either by the result of the unbinned fit to the data (a) or the expectation from the simulation (b).
+For (a) the the $-0.2 < \etaMuCM < 0.0$ range is defined such that the proton is moving towards positive pseudorapidity. 
+}
+\label{fig:MET_HIN17007}
+\end{figure}
+
+Last but not least anomalous high-\ptmiss events and/or $\phi$ modulations of physics objects can arise from reconstruction failures or malfunctioning detector. 
+The anomalous events with artificially large \ptmiss are typically found to be mostly due to electronic noise in the calorimeters, e.g., showers in \texttt{ECAL} of non collision origin or 
+noise in the \texttt{HCAL} electronics, while an excess of events with $\phi\approx 0$ or $\pi$ can be attributed to machine-induced backgrounds, 
+especially the production of muons when beam protons undergo collisions upstream of the detector (``beam halo''). 
+The angular distribution of beam halo events is dictated by the shape of the \texttt{LHC} tunnel and the beamline elements~\cite{Tosi:2017nzv}. 
+Event filters are designed to identify more than 85--90\% of the spurious events with a mistag rate of less than 0.1\%. 
+The event filtering algorithms can be further combined with the jet identification requirements (Table~\ref{tab:jetID_criteria}), e.g., 
+by imposing the neutral hadron energy fraction of a jet to be less than 0.9, more than 99\% of the noise jets are rejected (independent of jet \pt) with a negligible mistag rate.
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.4]{figures/reconstruction/pTmissPerformance/btbdijets_and_noise_no_vs_withJetID_HLT800_mjj1200_no_cert_metovsumet.pdf}
+\caption[The \ptmiss as reconstructed in signal- and noise-enriched events]
+{The distributions of the \ptmiss over the scalar \pt sum ($\Sigma \pt$) ratio in signal- and noise-enriched events using back-to-back dijet (black) 
+  and a minimum-bias selection without applying any PF jet identification requirements (red), respectively~\cite{CMS-PAS-JME-16-003}.}
+ \label{fig:met}
+\end{figure}

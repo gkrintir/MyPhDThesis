@@ -1,0 +1,237 @@
+\section{Offline luminosity measurement in \texttt{CMS}}
+\label{sec:luminometers}
+
+\subsection{Experimental setup}
+\label{sec:ExpSetup}
+
+On the one hand, the \texttt{BCM1F}, \texttt{HF}, and \texttt{PLT} detectors are characterized by an independent high-rate \DAQ\ system and thus serve
+as excellent luminosity monitoring systems online.
+On the other hand, the silicon pixel and \texttt{DT} detectors feature very low occupancy and good stability over time.
+These two detectors utilize the standard \texttt{CMS} trigger 
+and \DAQ\ systems, in contrast to the others, which are read out asynchronously with respect to the rest of \texttt{CMS}.
+The employed techniques for luminosity determination can be classified as follows.
+
+\begin{enumerate}
+  \item ``Event'' counting: the fraction of bunch crossings is determined during which a specified detector registers an event satisfying a selection requirement. 
+    For instance, a bunch crossing can be deemed to contain an event, if at least one interaction in that crossing induces a coincidence of observed hits in the detector.
+    The \texttt{BCM1F}, HFOC, and \texttt{PLT} luminosity measurements fall into this category.
+  \item ``Hit'' counting: the hit multiplicity per bunch crossing is registered, e.g., the number of electronic channels or energy clusters above a background threshold.
+    Representative examples are methods exploiting pixel-cluster, vertex and track counting. 
+  \item ``Particle'' counting: the particle multiplicity per bunch crossing is inferred from reconstructed quantities such as calorimeter-energy distributions or observables sensitive to
+    particle flux traversing the detector. The \texttt{DT}-based and HFET methods have been used successfully and proved reliable similarly to the event- and hit-counting methods.
+\end{enumerate}
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{PLT_lum_lin:a}\includegraphics[width=0.95\textwidth]{figures/luminosity/mu_PLT_fill.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{PLT_lum_lin:b}\includegraphics[width=0.95\textwidth]{figures/luminosity/PLTLinearity6300-6371.pdf}}
+\end{minipage}\par\medskip
+
+\caption{
+(a) Instantaneous luminosity measured by \texttt{PLT} as a function of time~\cite{cms_emit}. The two deep dips---at the beginning and end of the Fill---correspond to emittance scans. 
+The shallower dips during the Fill correspond to optimization scans, which are performed by the \texttt{LHC} operators to tune the beam positions for complete overlap.
+(b) Visible \texttt{PLT} cross section as a function of the single-bunch instantaneous luminosity that serves as metric of $\mu_{\textrm{vis}}$~\cite{cms_emit}.
+The best-fit function (first-order polynomial) is superimposed, with its parameters displayed on the legend.  
+}
+\label{fig:PLT_lum_lin}
+\end{figure}
+
+Considering the event counting as the simplest approach, each separate term in the series of Eq.\,(\ref{eq:lumibunch}) can be expressed 
+as a function of a detector-dependent constant, i.e., the visible cross section,
+which relates the measurable quantity, $\mu_{\textrm{vis}}$, to the absolute bunch luminosity (Fig.~\ref{PLT_lum_lin:a}) as
+\begin{equation}
+\label{eq:lumirel}
+\mathcal{L_{\textrm{b}}} = \frac{\mu_{\textrm{vis}}f_{\textrm{r}}}{\varepsilon\sigma_{\textrm{inel}}}\, .
+\end{equation}
+The efficiency $\varepsilon$ determines the average number of inelastic collisions per bunch crossing to satisfy the selection requirements, 
+while $\sigma_{\textrm{vis}}=\varepsilon\sigma_{\textrm{inel}}$ is a unique luminometer property that depends on detector acceptance.
+Since the Poisson probability $P_0(\mu_{\textrm{vis}})$ for observing zero events in a given bunch crossing out of a total number of $n_{\textrm{BC}}$ equals to $P_0(\mu_{\textrm{vis}})=\mathrm{e}^{-\mu_{\textrm{vis}}}$, 
+the probability of observing at least one occurrence of events ($n_{\textrm{F\textbf{Or}B}}$) in either forward or backward IP region reads $P = 1-P_0(\mu_{\textrm{vis}})=1-\mathrm{e}^{-\mu_{\textrm{vis}}}$, 
+which can be solved for $\mu_{\textrm{vis}}\ll 1$ 
+\begin{equation}
+\label{eq:muvis}
+\mu_{\textrm{vis}}=-\mathrm{ln}(1-\frac{n_{\textrm{F\textbf{Or}B}}}{n_{\textrm{BC}}})\, .
+\end{equation}
+The efficiency to detect a single inelastic interaction is constant in the absence of subtle detector effects, 
+and it can be generalized to arbitrary $\textrm{n}$ simultaneous occurrences
+\begin{equation}
+\label{eq:effn}
+\varepsilon_{n} = 1-(1-\varepsilon)^{\textrm n}\, ,
+\end{equation}
+given that the number of interactions in any bunch crossing also obeys a Poisson distribution.
+
+When $\mu_{\textrm{vis}}\gg 1$, event-counting methods start losing sensitivity (Fig.~\ref{PLT_lum_lin:b}) as progressively fewer bunch crossings result in zero observed interactions.
+This can be alleviated by counting the number of hits ($n_{\textrm{hits}}$) in a given detector rather the total number of events.
+Under the assumption that the number of hits in one interaction follows a binomial distribution, the average probability to register a hit per bunch crossing in one of the detector channel (``CH'') out of 
+$n_{\textrm{CH}}$ is similarly given by $P=1-\mathrm{e}^{-\mu_{\textrm{vis}}}$, which can be solved for the measurable quantity
+\begin{equation}
+\label{eq:muvis_hit}
+\mu_{\textrm{vis}}=-\mathrm{ln}(1-\frac{n_{\textrm{hits}}}{n_{\textrm{BC}}n_{\textrm{CH}}})\, .
+\end{equation}
+In particular, the binomial assumption used to derive Eq.\,(\ref{eq:muvis_hit}) holds true for pixel-cluster counting (PCC), i.e., 
+the probability to observe a hit in any single channel is independent of the number of hits observed in the other channels.
+
+\subsection{The vdM scan protocols}
+\label{sec:vdM}
+
+The beam conditions for vdM calibration are different from those in normal physics Fills, with fewer bunches colliding, 
+lower bunch intensities and typically special optical configuration at the IP.
+In other words, they are specifically optimized to handle various sources of systematic uncertainty in the calibration procedure.
+The extrapolation of the absolute luminosity calibration from the low-rate regime to the nominally high-pileup conditions is given by the intrinsic nonlinearity and cross-detector stability. As a complementary method for measuring the beam size during high-intensity conditions, 
+luminosity scans with a small beam separation---regularly performed at \texttt{LHC} already since the 2015 proton physics operation---can be exploited to further constrain~\citeTH{CMS-PAS-LUM-17-004} 
+the extrapolation uncertainty.
+%https://cds.cern.ch/record/2207311/files/mopmr025.pdf%
+%as well as highly accurate measurements of bunch populations
+
+The vdM scans for the luminosity calibration of the pp reference run at \myEnergy were performed during the \texttt{LHC} Fill 
+\myFillNumber in \myDate. The \texttt{LHC} beam conditions for Fill \myFillNumber are summarized in Table~\ref{tab:Fill4634}.
+The \texttt{LHC} filling scheme was \myFillScheme with \myNBunchColl colliding bunch pairs at IP5 widely spread over the orbit 
+to reduce long-range beam--beam effects and detector afterglow. LHC beam optics were adjusted to \myBetaStar and 
+transverse emittance of $\epsilon_{\textrm N} \approx 3.5$\,\mum\ resulting in relatively wide beams of about $\sigma_{\texrm{b}} = 72$\,\mum.
+The two beams were crossing with an angle of \myXAngle.
+
+\begin{table}[h!]
+  \centering
+  \caption[Summary of the \texttt{LHC} beam parameters for Fill \myFillNumber at \myEnergy]{
+    Summary of the \texttt{LHC} beam parameters for Fill \myFillNumber at \myEnergy~\citeTH{CMS-PAS-LUM-16-001}. The vdM scans for the luminosity 
+    calibration of the proton-ion runs at \mypPbEnergy were performed under physics conditions, i.e, low-$\beta^{\ast}$ operation, during the \texttt{LHC} 
+    Fills \myPbpFillNumber and \mypPbFillNumber in November and December 2016, respectively~\citeTH{CMS-PAS-LUM-17-002}. 
+    \label{tab:Fill4634}}
+  \begin{tabular}{lc}
+    \toprule
+    Beam energy          &	2510\,\GeV \\
+    Peak luminosity      &	$2.4 \times 10^{30}$\,$\mathrm{cm}^{2}\mathrm{s}^{-1}$ \\
+    Peak pileup          &	$\langle \mu \rangle = 0.6$ \\
+
+    Injection scheme     &	\myFillScheme\\
+    Beam 1/2 intensity   &	$3.2\times 10^{12}$ \\
+    Number of bunches in beam 1/2     &      $44$ \\
+    Number of colliding bunches in beam 1/2     &      $22$ \\
+    Beams crossing angle  &	\myXAngle \\
+    $\beta^{\ast}$	  &     4\,$\mathrm{m}$ \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The beam intensities, about $3\times 10^{12}$ protons per beam, are measured with the DC Current Transformers 
+(\texttt{DCCT})~\cite{Barschel:1425904}, whereas the individual bunch currents are measured either with the Fast Beam Current Transformers 
+(\texttt{FBCT})~\cite{Belohrad:1267400} or the Beam Quality Monitor (\texttt{BQM})~\cite{bqm}.  The amount of elementary charge in the nominally empty bunch slots (``ghost charge'') and the 
+charge circulating in the RF buckets adjacent to the nominal bunch slots (``satellite charge'') are estimated by means of
+the \texttt{LHC} Longitudinal Density Monitors (\texttt{LDM})~\cite{PhysRevSTAB.15.032803}. 
+An independent measurement of ghost charges is provided by the \texttt{LHCb} Collaboration~\cite{Barschel:1693671}.
+The beam orbit is monitored using the Diode ORbit and OScillation System (\texttt{DOROS}) beam position monitor~\cite{Gasior:1476070}.
+%and additionally checked by tracking the beam spot movements with the reconstructed vertices. 
+ To maximize the number of events specifically for PCC at large beam separations \texttt{CMS} gates zero-bias triggers on a restricted number of bunch pairs and 
+records events with a bandwidth of about 18\,$\mathrm{kHz}$.
+
+\begin{figure*}[!tbh]
+  \centering
+  \includegraphics[width=0.9\textwidth]{figures/luminosity/vdm_campaign.png}
+  \caption[Horizontal and vertical beam displacements as measured with the \texttt{DOROS} \texttt{BPM} for Fill 4634]{\label{fig:BeamPos}
+    Horizontal and vertical beam displacements, measured with the \texttt{DOROS} beam position monitor, during the vdM scan campaign at $\sqrt{s}=5.02$\,\TeV\
+    in \myDate~\citeTH{CMS-PAS-LUM-16-001}.
+  }
+\end{figure*}
+
+Since the determination of \sigmaVis requires the measurement of the convolved transverse beam sizes, a minimum of two separate beam scans is required, i.e., 
+one where the beams are separated horizontally and a second where the beams are separated vertically. 
+The beams are sequentially moved in a series of scan steps, and data recorded at each step to obtain a statistically significant measurement per luminometer. 
+To help assess the experimental systematic uncertainty two such scan pairs (at least) are performed typically in short succession to provide independent calibrations under similar
+beam conditions.
+
+The CMS vdM scan program of \myDate, as summarized in Fig.~\ref{fig:BeamPos}, consisted of six sequential $x$--$y$ scan pairs: two $x$--$y$ regular scans, one length scale calibration 
+(LSC) scan, one additional  $x$--$y$ scan and two BI scans.\,\footnote{During the first $x$ scan ($\mathrm{X}_1$) and the second $y$ scan ($\mathrm{Y}_2$) issues in the pixel readout prevented from acquiring all the data. In the \myDate vdM analysis the $x$ and $y$ scans are paired as: $(1,2)\rightarrow (\mathrm{Y}_1,\mathrm{X}_2)$, $(3,4)\rightarrow (\mathrm{Y}_3,\mathrm{X}_3)$, $(5,6)\rightarrow (\mathrm{IY}_1,\mathrm{IX}_1)$, and $(7,8)\rightarrow (\mathrm{IY}_2,\mathrm{IX}_2)$.} For the three vdM scan pairs the two beams were put to $\pm 6\,\sigma_{\textrm{b}} = \pm 434$\,\mum\ with respect to the nominal beam position for head-on collisions and scanned in 25 steps across one another in opposite directions. For the BI scans, beam 1 (2) is kept fixed at nominal position while beam 2 (1) is being separated and moved in 19 steps from $+4.5$ to $-4.5\,\sigma_{\textrm{b}}=\pm 325$\,\mum, first in $x$ and then in $y$. The time spent at each scan point is about 30\,$\mathrm{s}$. For the LSC scans, the two beams are kept with fixed separation of 94\,\mum\ and simultaneously moved back and forth in the vertical and horizontal directions to derive a linear length scale correction. %Both the LSC and BI scans are discussed in detail in Ref.~\cite{Zanetti:1357856}.
+
+The vdM scan program in \mypPbDate consisted~\citeTH{CMS-PAS-LUM-17-002} of four sequential $x$-$y$ scan pairs: two $x$-$y$ regular scans, one LSC scan, and one additional 
+$x$-$y$ scan to ensure reproducibility. For the three vdM scan pairs the two beams were put to $\pm 6\,\sigma_{\textrm{b}} = \pm 108$\,\mum\ and scanned in 
+25 steps across one another in opposite directions. The time spent at each scan point was about 30 seconds. For the LSC scans the two beams are kept with 
+fixed separation of 18\,\mum\ and simultaneously moved back and forth in the vertical and horizontal directions to derive a linear length scale correction.
+The direction of the higher energy proton beam was initially clockwise and was then reversed, producing two statistically independent data sets (``Pbp'' and ``pPb'')
+that respect the usual convention of the proton fragmentation region being probed in \texttt{CMS}, i.e., the proton-going side defining the positive fragmentation region.
+
+\subsection{The pixel-cluster counting method}
+\label{sec:PCC}
+
+The PCC method, featuring a very low occupancy of less than a permille even under high-pileup conditions,
+has already been shown to provide high precision luminosity measurements~\cite{CMS-PAS-LUM-13-001,CMS-PAS-LUM-15-001}. 
+As in Run 1 and 2, the rate algorithm uses the mean number of pixel clusters per bunch crossing.
+All reconstructed pixel clusters are considered in the counting process. However, 
+clusters reconstructed in the innermost barrel layer (Fig.~\ref{fig:hitEffPixel}) are affected by dynamic inefficiency, e.g. memory size (buffer) overflow in pixel readout when the L1 trigger 
+rate is very high, and are thus excluded from further consideration. 
+Generally, this effect is found to be less than 0.4\% for the rest of barrel layers and endcap disks during the 2015 running conditions~\cite{CMS-PAS-LUM-15-001}, 
+and a 0.4\% is taken as a systematic uncertainty. 
+In addition, pixel modules that are not fully operational throughout the entire data-taking period have been 
+omitted from the cluster counting sum. Finally, the pixel front-end driver numbered 33 (FED\,33) was excluded from the \DAQ\ system 
+during the $\mathrm{X}_1$ and $\mathrm{Y}_2$ vdM scans in Fill \myFillNumber. 
+To minimize scan-to-scan variations and to ensure scan-to-scan reproducibility pixel clusters associated with FED\,33 are therefore not taken into account 
+in the vdM analysis or in the luminosity measurement at $\sqrt{s}=5.02$\,\TeV.
+
+During usual data taking conditions, out-of-time response affects the true mean number of pixel clusters.  
+The particle flux through the detectors at LHC is dominated by collision products, whereas the single-beam halo created by aperture losses or beam--gas interactions are typically negligible. 
+The tight bunch spacing induces a peculiar type of ``afterglow'' background that affects luminosity measurements at the level of up to a few percents during normal physics conditions, 
+depending on the detector and algorithm considered. Bunch pairs collided at the considered IP are called ``colliding'' BCIDs, while bunches that do not collide at the
+considered IP are labeled ``nonactive.'' 
+Figure~\ref{fig:PCCrandom} shows the single-bunch instantaneous luminosity (SBIL) as a function of BCID measured by the PCC rate 
+within a typical Fill during the \myEnergy conditions from data collected with ``random triggers,'' i.e., signaling nonactive bunch crossings. 
+While the bunch train structure of the filling scheme is clearly visible, a nonvanishing rate in nonactive bunch slots can be observed.  
+The relative magnitude of such structures, as observed in Fig.~\ref{fig:PCCrandom}, depends on the instrumental characteristics and the local material distribution.
+They may also contain a fraction of collisions between a nonactive bunch in one beam and an unbunched component in the opposing beam.
+
+Two out-of-time response effects are distinguished and taken into account. The first effect (``type 1'') is due to a tail of the pixel hit signal leaking into the time integration window 
+of the next 25\,$\mathrm{ns}$ bunch slot. Such an effect is visible in Fig.~\ref{fig:PCCrandom} in the trailing bunch slots after the trains. 
+The second effect (``type 2'') is due to the exponentially decaying activation of the material surrounding the detector; the long tails in Fig.~\ref{fig:PCCrandom} is the activation result 
+from the previous bunch crossings. Since it is assumed that the type 1 effect mainly depends on the final response, while the type 2 effect stems from real activity
+in the pixel detector, the correction of type 1 effect should precede the one related to type 2.
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{PCCrandom:a}\includegraphics[scale=0.2]{figures/luminosity/PCCcorrections_example_0_262235_LS1_LS500.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{PCCrandom:b}\includegraphics[scale=0.212]{figures/luminosity/PCCcorrections_example_0_262235_LS1_LS500_zoom.png}}
+\end{minipage}\par\medskip
+
+\caption{Instantaneous luminosity as a function of bunch crossing, showing the impact of type 1 and 2 corrections~\citeTH{CMS-PAS-LUM-16-001}.
+  Plot (b) zooms in on the vertical axis of plot (a).
+}
+\label{fig:PCCrandom}
+\end{figure}
+
+%Both types of corrections are taken to be related to the true (corrected) single bunch PCC response 
+%and derived according to
+
+The correction of type 1 effect is modeled by:
+\begin{equation}
+C_{1}(n+1) = c R(n)\ ,
+\label{eqn:typeI}
+\end{equation}
+where $C_{1}(n+1)$ is the type 1 correction in the $(n+1)$th bunch, 
+$R(n)$ is the SBIL response in the $n$th bunch, and $c$ is a constant determined on a Fill-by-Fill basis.  
+%The correction is monitored nonactive bunch slot after a train
+The average of the residual correction for the first nonactive bunch slot after a train is considered as a systematic uncertainty. 
+%for type 1, whereas for type 2 the correction model reads
+For type 2, the correction model is iteratively built and reads
+\begin{equation}
+%C_{II}(n+j)=\beta\exp(-\lambda j)\alpha_{II}R(n), \quad j>0,
+C_{2}(n+j)=\beta\,\mathrm{e}^{(-\lambda j)}A(n), \quad j>0\ ,
+\label{eqn:typeII}
+\end{equation}
+where $C_{2}(n+j)$ is the type 2 correction in the $(n+j)$th bunch due to the 
+activity in the $n$th bunch; $A(n)$ is the true (corrected) activity in the $n$th bunch and  
+$\beta$, $\lambda$ are the constants determined as follows. 
+%where $R(n)$ denotes the true SBIL of bunch number $n$ and $C_{1}$ ($C_{2}$) is the type 
+%1(2) correction to be applied to the SBIL of the $(n+1)^{th}$ ($(n+j)^{th}$) bunch due to the activity in the $n^{th}$ bunch.  
+Based on SBIL measurements for random trigger samples recorded during 25\,$\mathrm{ns}$ bunch-spacing periods, 
+the model parameters $(\beta,\lambda)$ are estimated by minimizing the root-mean-square of SBILs around zero for nonactive bunch slots. 
+The parameters of type 2 correction are determined to be
+$\beta=0.00086$ and $\lambda=0.014$ for all 2015 data~\cite{CMS-PAS-LUM-15-001}, and their performance is found to be optimal both within and out of trains.
+%The type 1 model parameter ($(\alpha$) is optimized on a 
+%fill-by-fill basis.
+
+

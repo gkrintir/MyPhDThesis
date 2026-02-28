@@ -1,0 +1,59 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+%% use the starred version of the "acknowledgements" environment
+%% to omit signatures from this section, e.g.:
+%% \begin{acknowledgements*} ... \end{acknowledgements*}
+%% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{acknowledgements}
+
+  This work is a result of fruitful collaboration as well as guidance that I received during the past four years. In the following, I would like to express my sincere gratitude to people who made a substantial (direct or indirect) contribution towards the completion of this research. However, it is not possible to name all people involved because of either space restriction or an unfortunate oversight. I must apologize for failing to acknowledge anyone whose their contribution has been crucial.
+
+   I am deeply grateful to my doctoral advisor, A. Giammanco, for his scientific guidance and ceaseless availability to help. This search has  profited immensely from his constructive suggestions and broad expertise. His friendly and open-minded attitude formed the solid basis for our close collaboration. In particular, there was no moment that I felt my academic freedom to be retained. On the contrary, there was a constant motivation to pursue my interests and ideas about top quark physics and calibration of the physics objects. Thank you very much also for encouraging me to participate actively in international conferences and workshops, ending up to a total of about twice the credits required for graduation.
+   
+   I thank for accepting to serve as additional members of the ``Comit\'{e} d’accompagnement'' and dissertation committee, for their input and suggestions that have contributed to shaping the final version of the thesis, C. Delaere, D. d'Enterria, V. Lema\^{i}tre, and G. P\'{a}sztor.
+
+   Moreover, I would like to thank my colleagues H. Bakhshiansohi, P. David (mon voisin de bureau), A. Jafari,  M. Komm, and A. Popov (mon ex-voisin de bureau), i.e., the ``The Offbeat Physicists @ CP3'' team---a term coined by Andrea and Matthias---with whom I had much fun discussing about physics during the past four years.
+
+   While conducting the doctoral studies I collaborated with many people, but I would like to give  special thanks to \'{E}. Chapon‎, K. Lipka, P. Silva, and M. Verweij‎.
+   Apart from his support throughout the last four years, Pedro's fascinating way for attacking and treating physics problems has been a unique lesson to me.
+   I owe the personal inclination towards parton distribution functions to Katerina.
+   \'{E}milien and Marta make an admiring endeavor to lead the heavy ion (HIN) community within the \texttt{CMS} experiment and I had the distinct honor and privilege of participating
+ in the HIN activities. As Marta remarked in a recent article in the \textit{symmetry} magazine: ``We have four weeks to collect all the data we will use for the next couple of years.''
+   
+   The paper on the top quark observation in nuclear collisions would not be possible without the direct contribution from \'{E}. Chapon‎, D. d'Enterria, A. Giammanco, M. Mulders, P. Silva, and M. Verweij, and the hard work of the HIN calibration groups, including K.E. Jung, O. Kukral, C. McGinn, C. Mironov, M. Nguyen, J. Park, A. St\r{a}hl \textit{et al.}.
+   Producing results that the world has not seen before entails an exhaustive journey from early analysis to publication.
+   I would like therefore to thank i) the Analysis Review Committee (ARC) consisted of M. d'Alfonso,  O. Kodolova, A.B. Meyer, and  D. Noonan; ii) signatories to the paper for commenting on text and the physics described in the document during the collaboration-wide review (CWR); iii) the members of the Publication Committee (PubComm) W. Busza, O. Evdokimov, V. Greene, D. Krofcheck, G.M. Roland, S.S. Padula, S.J. Sanders, G.S.F. Stephans, and J. Velkovska, who are responsible for the final stage of the paper before it leaves the Collaboration. I would also like to thanks G. Alverson and C. Lourenco for preparing the paper format for submission and comments on the draft prepared for the CERN Courrier Journal, respectively.
+   
+   For the successful collaboration on the top quark measurement at $\sqrt{s}=5.02$\,\TeV\ it was a pleasure to work with E. Eren, A. Giammanco, J.R. Gonz\'{a}lez, K. Lipka,
+   E. Palencia, P. Silva, and M. Verweij. Thanks to the corresponding Physics Objects Groups for their support and comments.
+   Special thanks to the ARC (J.R. Komaragiri, D. Horvath, E. Robutti, and H. Stadie) and PubComm members (T. Ferguson, F. Matorras, S. Qian, and K. Stenson), and everyone vividly contributed during the CWR process.
+
+   The topic of the very first research within \texttt{CMS}, i.e., the measurement of $t$-channel single top quark production at $\sqrt{s}=13$\,\TeV\, was initially proposed to me by Andrea.
+   I feel honor bound to acknowledge the work of T. Chwalek, N. Faltermann, O. Iorio, S. Mitra, T. M\"{u}ller, S. Paktinat, M. Zeinali, and  ``The Offbeat Physicists @ CP3'' team;
+   it was an invaluable experience of sharing my enthusiasm for the very first raw data from Run 2 with you.
+
+   I want to give my thanks for the great collaboration and fun we had while developing further the tools for the luminosity measurement at \texttt{CMS} to:
+   A. Babaev, J. Benitez‎, F. Brivio, M. Casarsa, A. Dabrowski, S. Fiorendi, M. Guthoff, S.L. Higginbotham, O. Karacheban‎, J. Knolle, J.L. Leonard, P. Lujan, R. Manzoni‎, D. Marlow, A.B. Meyer
+   J. Salfeld-Nebgen‎, C. Palmer, G. P\'{a}sztor‎, ‎R. Sosa‎, ‎D. Stickland‎, D. Takaki, and O. Turkot.
+
+   I would also like to express by gratitude to the conveners and sub conveners of the \texttt{CMS} ``TOP'' and ``HIN'' Physics Analysis Groups
+   M. Aldaya, J. Andrea, A. Giammanco, O. Iorio, A. Jafari, J.M. Keaveney, A.B. Meyer, P. Silva, L. Skinnari, and R. Suarez,
+   and  \'{E}. Chapon, W. Li, C. Mironov, and M. Verweij‎.
+   It was a pleasure to contribute to the top quark and heavy ion efforts in the friendly and welcoming atmosphere you all created.
+   I would like to thanks the \texttt{CMS} Management Board, and especially the involved Physics Coordination (J. Alcaraz, T. Bose, J. Olsen, S. Rahatlou)
+   for keeping track of the tremendous physics results.
+   
+   Even without being directly involved in my projects, some people ended up being closer collaborators to me:
+   T. Arndt, T. Cheng, P. Gunnellini, S. Harper, J. Kieseler, Q. Li, T. McCauley, K. Mondal, L. Pernie, L. Perozzi, T. Sakuma, S. Sekmen, L. Vanelderen, X. Wang, E. Yazgan, S. Zenz \textit{et al.}
+
+   M. Drewes, A. Giammanco, J. Hajer, M. Lucente, and O. Mattelaer pursued ``A Heavy Metal Path to New Physics''; their passion amazed me, while their effort provided me with mental stimulus for rethinking the future of heavy ion program at \texttt{LHC} and post-\texttt{LHC}. Thanks for organizing the ``Heavy Ions and Hidden Sectors'' workshop,
+   a unique chance to bring together members of the involved communities.
+   
+   I would also like to sincerely thank C. Mertens and G. Tabordon for their prompt assistance in administrative procedures, and I appreciate the help of P. Demin, J. de Favereau,  O. Mattelaer, and A. Tanasijczuk in computing infrastructure.
+
+   Last but not least, I would like to acknowledge the work of a few hundreds of engineers, accelerator physicists, and experimentalists who designed and constructed \texttt{LHC} and the \texttt{CMS}  detector.  Likewise,  the excellent physics performance of the \texttt{CMS} experiment has been only achieved thanks to the hard work of people developing and maintaining  ever-better reconstruction algorithms. The constant effort put into monitoring of detector and accelerator operation, both regarding crew control rooms and  remotely, should also be emphasized.
+   
+   I am deeply grateful to Universit\'{e} catholique de Louvain (UCLouvain), Institut de Recherche en Math\'{e}matique et Physique (IRMP), and the
+   Centre for Cosmology, Particle Physics and Phenomenology (CP3) in Belgium for unceasingly supporting my work.
+\end{acknowledgements}

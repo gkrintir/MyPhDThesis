@@ -1,0 +1,80 @@
+10
+
+dir
+436990
+svn+ssh://svn.cern.ch/reps/tdr2/notes/AN-16-110/trunk/figures/EfficiencyFigures/Data/Fit
+svn+ssh://svn.cern.ch/reps/tdr2
+
+
+
+2016-04-05T12:03:57.300745Z
+337073
+gkrintir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+4525493e-7705-40b1-a816-d608a930855b
+
+Comb
+dir
+
+2D
+dir
+
+FitExampleRECOEtaMinus2Minus1point56PtLow30High40.pdf
+file
+
+
+
+
+2017-11-30T14:05:07.000000Z
+68d254c2a0244c9a4acd8f087e4a1861
+2016-04-05T12:03:57.300745Z
+337073
+gkrintir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+31960
+
+HLT
+dir
+
+RECO
+dir
+
+ID
+dir
+
+L1
+dir
+

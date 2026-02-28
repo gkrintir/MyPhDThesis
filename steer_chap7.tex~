@@ -1,0 +1,262 @@
+
+\chapter{Projected improvements in the precision of the inclusive \stt measurement}
+\minitoc
+
+\InitialCharacter{T}he reference proton-proton run in 2017 consisted of collisions at $\sqrt{s}=5.02$\,\TeV,
+the same nucleon-nucleon center-of-mass energy to the heavy ion collisions in 2018, i.e., the last run before the second long shutdown.
+The precision of the inclusive \ttbar\ cross section will profit from the larger amount of data (about 0.3\invfb) and the phase-I silicon pixel tracker. 
+Owing to refined transverse beam shape models, the systematic uncertainty associated with the knowledge of the absolute luminosity scale is expected to be further decreased.
+This has been already demonstrated by a specially conducted run at the end of 2017, in which the beams were adjusted for low pileup configuration. 
+In this Chapter, a projection of the \stt measurement is presented based on the result previously attained in 2015, and the expected improvements are used to estimate 
+the tighter constraints on parton distribution functions.
+
+The material in the following Chapter, as documented in \hyperref[hellobiblio]{Scientific output} and \hyperref[hellobiblio1]{Internal notes}, relies almost exclusively on a original contribution.
+The latter further includes the preliminary effort of luminosity calibration for the pp run at $\sqrt{s}=5.02$\,\TeV\ in 2017.
+
+\clearpage
+
+\section{The largest reference proton-proton data set at 5.02\,\TeV}
+
+The second proton-proton reference data set in Run 2 offers the unprecedented opportunity to establish a precise baseline evaluation relative to heavy ion data, and to parasitically
+improve and extend top quark cross section measurements at $\sqrt{s}=5.02$\,\TeV. 
+The higher amount of data relative to 2015 (Figs.~\ref{cumulative_2017:a} and~\ref{cumulative_2017:b}) and the inclusion of the phase-I pixel silicon tracker allow even for fine-binned measurements 
+in phase space regions---especially at the edge of the tracker acceptance---that are affected in the current \stt\ measurement, e.g., 
+the $\lvert \eta \rvert>2.1$ region (Figs.~\ref{cumulative_2017:c} and~\ref{cumulative_2017:d}) because of the \QCD\ multijet background. 
+The most significant reduction of uncertainty is thus expected because of the higher event count in data and MC simulation, and reduced uncertainty in the absolute luminosity scale determination. 
+Improved jet energy calibration and b jet identification can also be foreseen. 
+Since the measurable portion of the phase space will be increased, in turn,
+the theory-based uncertainty in the extrapolation to the full phase space will be reduced. 
+It can be then demonstrated that the projected inclusive \ttbar\ cross sections a consistently have a sizeable impact on the proton PDFs, with the strongest effect on the gluon distribution.
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[]{\label{cumulative_2017:a}\includegraphics[width=.47\textwidth]{figures/outlook/int_lumi_per_day_cumulative_pp_2017_5TeV_NormtagLumi.pdf}}
+\subfloat[]{\label{cumulative_2017:b}\includegraphics[width=.47\textwidth]{figures/outlook/int_lumi_per_day_pp_2017_5TeV_NormtagLumi.pdf}}\\
+\subfloat[]{\label{cumulative_2017:c}\includegraphics[width=.45\textwidth]{figures/outlook/ElecEta_ElMu_2jets.pdf}}
+\subfloat[]{\label{cumulative_2017:d}\includegraphics[width=.45\textwidth]{figures/outlook/ElecPt_ElMu_2jets.pdf}}\\
+\end{center}
+     \caption[Cumulative day-by-day integrated luminosity, and predicted and observed kinematic distributions of the electron in the dilepton final state at $\sqrt{s}=5.02$\,\TeV in 2017]
+      {
+        (a,\,b) Cumulative luminosity as a function of time delivered by \texttt{LHC} and recorded by \texttt{CMS} during the 5.02\,\TeV pp reference run in 2017~\cite{pp5TeV2017_lumi}. 
+        The plot makes use of the offline preliminary calibration that amounts to $316.31 \pm 11.07$\,\invpb~\citeAN{AN-18-186} under the condition of ``stable beams'' 
+        and with no requirement on the data quality in \texttt{CMS}.
+        (c,\,d) Predicted and observed distributions of the electron $\eta$ and \pt for events passing the dilepton criteria (Table~\ref{tab:cutFlow}), 
+        and after requiring at least two jets, in the \empm final state (image courtesy of J. Gonz\'{a}lez, Oviedo).
+      }
+      \label{fig:cumulative_2017}
+\end{figure}
+
+
+\section{Incremental improvements in luminosity determination}
+\label{sec:lum_impr}
+
+\subsection{Refined impact of nonfactorizable beam shape}
+
+The vdM scan method assumes that the bunch proton density function is factorizable into independent $x$- and $y$-dependent terms.
+ However, this assumption is not strictly valid, and leads to a biased estimate of the beam overlap area. 
+The two-dimensional vertex distributions accumulated during the beam imaging scans in \myDate are used to measure the bunch proton densities, 
+extending the methodology described in Section~\ref{sec:xyCor}.
+
+The simplest model for the bunch proton density that has a correlated spatial dependence is a Gaussian distribution (Eq.~\ref{eq:sgmodel1}) 
+with $x$--$y$ correlations parametrized by a correlation parameter $r$. For the refined analysis, various parametrizations are considered to determine 
+the optimal fit function to the vertex distributions. In the end, the fit is performed using a model that describes the proton density function
+$\rho(x,y)$ with a main Gaussian component $g_{\textrm{M}}$ (following the form of Eq.~\ref{eq:sgmodel1}) with a large
+weight $w_{\textrm{M}}$, a wide component $g_{\textrm{W}}$ with a small weight to model wide tails, and a narrow component $g_{\textrm{N}}$
+with a small but negative coefficient $-w_{\textrm{N}}$ to model a flattened central part, i.e,
+\begin{equation}\begin{aligned}
+    \rho(x,y) &= - w_{\textrm{N}} g_{\textrm{N}}(x,y) + w_{\textrm{M}} g_{\textrm{M}}(x,y) + (1+w_{\textrm{N}}-w_{\textrm{M}}) g_{\textrm{W}}(x,y).
+    \label{eq:supdg}
+\end{aligned}\end{equation}
+The reconstruction of bunch proton densities using a fit model with the weighted sum of three Gaussian distributions is also considered.
+
+To derive a correction for the measured cross section from the vdM scan the fitted bunch proton
+densities are used to simulate vdM scans. The product $\Sigma_x\Sigma_y$ from the MC simulation of
+the vdM scan method is then compared to the value from direct integration of the nonfactorized bunch
+proton densities, yielding an estimate of the inaccuracy introduced by using the beam overlap area $\propto \Sigma_x\Sigma_y$, 
+which does not account for the $x$--$y$ correlations of the bunch proton densities.
+Multiple pseudo-experiments are performed to derive the central value of the correction and its statistical uncertainty. 
+%Additionally, a Monte Carlo simulation of beam imaging scans is performed to estimate any
+%possible bias from the fit method, and the resulting uncertainty is added to the statistical one.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[]{\includegraphics[width=.45\textwidth]{figures/outlook/Fill4634_corr_central.pdf}}
+\subfloat[]{\includegraphics[width=.45\textwidth]{figures/outlook/Fill4634_chisq_central.pdf}}\\
+\subfloat[]{\includegraphics[width=.45\textwidth]{figures/outlook/Fill4634_comb_central_SupDG_bcid644_X2.pdf}}
+\subfloat[]{\includegraphics[width=.45\textwidth]{figures/outlook/Fill4634_comb_central_TG_bcid644_X2.pdf}}
+\end{center}
+\caption[Primary vertex transverse and longitudinal resolution as a function of the track multiplicity]{
+  (a) Difference between the beam overlap area from the simulated vdM scans and the integrals incorporating genuine nonfactorizabilities as a function 
+  of the bunch crossing identification number in \myDate scan program.
+  (b) The goodness-of-fit $\chi^2$ divided by the number of degrees of freedom in the modeling of the vertex distributions accumulated during beam imaging scans in \myDate.
+  (c,\,d)  Projections to radial and angular coordinates from the two-dimensional pull distributions of proton density models built 
+   based on (c) Eq.~\ref{eq:supdg} and (d) a combination of three Gaussian pdf~\citeAN{AN-17-240}.
+}
+\label{fig:xycorr_updated}
+\end{figure}
+
+Figure~\ref{fig:xycorr_updated} shows the calculated corrections and the goodness-of-fit $\chi^2$ divided by the number of degrees of freedom as a function of the bunch crossing identification number
+from different fits to the reconstructed vertex distributions. In general, the fit results are good, although there is some remaining mismodeling for BCID 644. 
+A correction factor on the visible cross section of 1.5\% is obtained taking the bunch-averaged correction and using the weighted sum of three Gaussian distributions. 
+The uncertainty due to residual beam-shape effects in the bunch proton densities is estimated to be 0.2\%, covering the range of correction factors obtained by the alternative 
+model of Eq.~\ref{eq:supdg} per BCID.
+
+\subsection{Concept and formalism of variable separation scan}
+
+To displace the beams at the IP the orbit is modified with a four-magnet closed orbit bump (Fig.~\ref{fig:trims}) that allows establishing an orbit deformation with well-defined position and slope at any given point $m$, with $m$ being located between the second and the third magnet. 
+Considering the kick $k_{i},\,(i=1-4)$ instantaneous values in the field generated by a corrector $i$, the requirement for the bump to be ``closed,'' i.e., 
+an unchanged orbit at the first and last corrector can be expressed as a system of linear equations
+\begin{equation}
+\begin{pmatrix}
+x_{m}  \\
+\beta_{m}x'_{m}+\alpha_{m}x_{m}\\ 
+x_{1}\\
+x'_{1}
+\end{pmatrix} = 
+\begin{pmatrix}
+A\\
+\beta_{m}A'+\alpha_{m}A\\ 
+0\\
+0
+\end{pmatrix} = 
+T\times C
+\begin{pmatrix}
+\sqrt{\beta_{1}}k_{1}\\
+\sqrt{\beta_{2}}k_{2}\\
+\sqrt{\beta_{3}}k_{3}\\
+\sqrt{\beta_{4}}k_{4}
+\end{pmatrix}
+\, ,
+  \label{eq:myeqn}
+\end{equation}
+where the transformation matrix $T$ is given in and the constant $C$ depends on the $\beta_{m}$ function and the overall machine tune (ref); 
+$A$ and $A'$ are the bump amplitude and slope, respectively. For the specific case of the variable separation scans each beam is displaced at the IP 
+with both $\alpha$---the slope of the $\beta_{m}$ function---and $x'_{m}$ equal to zero allowing only for a parallel separation.
+
+A bump nonclosure would result in a scale factor error in the beam displacement which would directly
+modify the measured beam size. The origin of the nonclosure could be the combined effect of the ``hysteresis,'' i.e., distance (from the IP) dependent distortions 
+in $x_{m}$ and $x'_{m}$, and lattice imperfections. To minimize the hysteresis effect during the scan the translation is always performed in the same
+direction. In addition, for each scan an acquisition at zero separation is performed at the beginning, middle and the end of the scan;
+given the middle point lies on a different hysteresis branch as compared to the two other points, 
+an indication of the hysteresis effect translates to a reduction of rate assuming the beam parameters do not significantly vary, e.g., beam emittance, intensity, etc.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[]{\includegraphics[width=0.5\textwidth]{{figures/outlook/Figure_004-a.pdf}}}
+\subfloat[]{\includegraphics[width=0.5\textwidth]{{figures/outlook/Figure_004-b.pdf}}}
+\end{center}
+  \caption[Length scale calibration scan using the variable separation procedure]{
+    Length scale calibration scan, using the variable separation procedure, for the $x$ (a) and $y$ (b) direction of beam 1 (red) and 2 (blue), respectively. 
+    Shown is the measured displacement of the luminous centroid as a function of the expected displacement based on the corrector bump amplitude. 
+    The line is a linear fit to the data. Errors are of statistical nature~\citeTH{CMS-PAS-LUM-17-004}.}
+  \label{fig:LSCATLAS}
+\end{figure}
+
+
+The variable separation scan for the length scale calibration was introduced in the July 2017 scan program using pp collisions at $\sqrt{s}=13$\,\TeV. 
+Similar to the constant separation scan we make use of the \texttt{CMS} tracker to reconstruct the displacement of the luminous region. 
+However, the variable separation scan is designed to measure the calibration constant for each of the two beams in each of the two directions
+independently.  The calibration data for both horizontal and vertical bumps of beam 1 and  2 are shown
+in Fig.~\ref{fig:LSCATLAS}. The scale factor which relates the nominal beam displacement to the measured
+displacement of the luminous centroid is given by the slope of the fitted straight line; the intercept is
+irrelevant. Because regular vdM scans are performed by displacing the two beams symmetrically in opposite
+directions, the relevant scale factor in the determination of the beam overlap is the average of the scale
+factors for beam 1 and 2 in each plane, i.e., $(0.9937+0.9947)/2 \approx 0.994$ and $(0.9978+0.9965)/2 \approx 0.997$ in $x$ and $y$, respectively. 
+This represented an excellent agreement with the scale factors obtained based on the constant separation scan, though with much better precision~\citeTH{CMS-PAS-LUM-17-004}.
+
+
+\section{Cross section measurements}
+
+\subsection{Statistical and systematic uncertainty treatment}
+
+Based on the measurements of the inclusive \ttbar\ cross sections at $\sqrt{s}=5.02$\,\TeV~\citeTH{topobs_CMS_jhep}, their performance can be conjectured 
+using the data set collected in 2017 at the same center-of-mass energy. 
+Although the higher instantaneous luminosity resulted in about three pp interactions per bunch crossing on average, pileup mitigation techniques are not crucial
+for a good performance of the \ttbar\ reconstruction. 
+Because of the inclusion of the phase-I silicon tracker, the requirement of $\lvert \eta \rvert < 2.1$ for electrons can be relaxed. 
+At least two of the jets have to be identified as b jets, i.e., fulfilling a requirement of the CSVv2 algorithm, whereas alternative b tagging techniques can be used 
+with a higher b-jet selection efficiency and rejection power for other jets in \ttbar\ events (Table~\ref{tab:OP}).
+
+Theoretical and modeling uncertainties make a significant contribution to the overall uncertainty. 
+Since it is speculative to estimate a possible reduction of these uncertainties we consider the current ones as a conservative estimate. 
+Improvements of the theoretical predictions can be expected, while further measurements at $\sqrt{s}=13$\,\TeV\ could reduce the modeling uncertainty. 
+
+The individual sources of uncertainty, as well as the assumed correlations, that are used as input to illustrate the impact of the conjectured \stt\ measurements 
+at $\sqrt{s}=5.02$\,\TeV\ on the knowledge of the proton PDFs are summarized in Table~\ref{tab:inputs_proj}. 
+The setup of the \QCD\ analysis at NNLO is identical to the one used in Ref.~\citeTH{topobs_CMS_jhep}, i.e., 
+the total uncertainty in the measurements are propagated to the extracted \QCD\ fit parameters using the MC method.
+
+\begin{table*}[htb]
+\scriptsize
+\begin{center}
+\caption{Conjectured inputs to the updated \QCD\ analysis at NNLO using the data set collected in 2017 at $\qrt{s}=5.02$\,\TeV. 
+Entries marked with one (two) ``*'' delineate foreseen but difficult to quantify improvements over experimental (theoretical) point of view.
+\label{tab:inputs_proj}}
+\resizebox{\textwidth}{!}{\begin{tabular}{|lccccc|}
+\toprule
+Final state & \empm & \mmpm & $\ell+$jets & & \\
+\midrule
+\midrule
+Central value (pb) & 68.9 & 68.9 & 68.9 & &\\
+\midrule
+\midrule
+Uncertainty (\%) &  &  &  & Correlation & Note\\
+\midrule
+Data sample event count          & $25/\sqrt{10}\sim 8$  & $48/\sqrt{10} \sim 16 $ & $9.5/\sqrt{10} \sim 3.0$   & 0 & $\times 10$ expected yield \\
+MC sample event count         & $1.4/\sqrt{2} \sim 1.0 $   & $2.4/\sqrt{2} \sim 1.7$  & $0.1/\sqrt{2} < 0.1 $   & 0 & $\times 2$ MC simulated yield\\
+b tagging  efficiency           & -     & -    & 3.4 (*)   & - & New algorithms; performance to be validated\\
+Electron efficiency   & 1.4 (*) & -    & 1.1 (*)   & 1 & Some improvement upon endcap electrons\\
+Muon efficiency         & $3.0 \rightarrow 2.5 $   & $6.1 \rightarrow 5.0 $  & 1.7   & 1 & Less conservative approach\\
+\ptmiss             & -     & 0.7  & -     & - &\\
+Jet energy scale      & 1.3   & 1.3  & 3.0   & 1 &\\
+Jet energy resolution & $<$0.1  & $<$0.1 & 0.6   & 1 &\\
+\QCD\ multijet background        & -     & -    & 2.4 (*)   & - & Some improvement upon endcap electrons\\
+W+jets background     & $2.5/\sqrt{10} \sim 0.8 $   & $0.7/\sqrt{5} \sim 0.3$  & $3.5/\sqrt{5} \sim 1.6 $   & 1 & $\times 10\,(5)$ due to data-\,(MC-) based estimation\\
+tW background         & 1.4   & 1.6  & 1.3   & 1 &\\
+WV background         & 0.7   & 0.9  & -     & 1 &\\
+Z/$\gamma^{*}$ background  & $2.7\rightarrow \sim 2.0$   & $15.4/\sqrt{10} \sim 5.0$ & -     & 1 & $\times 10$ due to data-based estimation; in \empm partly  \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (PS)  & 1.2   & 1.7  & 4.4   & 1 &\\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (ME) & $<$0.1  & 1.1  & $<$0.1  & 1 &\\
+Hadronization model of \ttbar\ signal  & $1.2$ (**)   & $5.2$ (**)   & $2.8$ (**)   & 1 & \\
+PDF                   & 0.5   & 0.4  & $<$0.1  & 1 &\\
+Integrated luminosity            & $2.3\rightarrow 1.7$   & $2.3\rightarrow 1.7$  & $2.3\rightarrow 1.7$   & 1 & see Section~\ref{sec:lum_impr}\\
+\bottomrule
+\end{tabular}}
+\end{center}
+\end{table*}
+
+
+\subsection{PDF constraints including the inclusive \stt}
+
+
+\begin{figure}[!ht]
+\begin{center}
+\subfloat[]{ \label{projections:a}\includegraphics[width=0.415\textwidth]{{figures/outlook/gluon}}}
+\subfloat[]{ \label{projections:b}\includegraphics[width=0.39\textwidth]{{figures/outlook/gluon_proj}}}\\
+\subfloat[]{ \label{projections:c}\includegraphics[width=0.4\textwidth]{{figures/outlook/u_valence}}}
+\subfloat[]{ \label{projections:d}\includegraphics[width=0.4\textwidth]{{figures/outlook/d_valence}}}\\
+\end{center}
+  \caption[Relative uncertainties in the gluon and valence quark PDFs of the proton as a function of $x$ at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$ including \stt data at $\sqrt{s}=5.02$\,\TeV]{
+    (a) The relative uncertainties in the gluon distribution functions of the proton as a function of $x$ at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$ from a 
+    \QCD\ analysis using the \texttt{HERA} DIS and \texttt{CMS} muon charge asymmetry measurements, and also including the \texttt{CMS} \stt results at $\sqrts = 5.02$\,\TeV.
+    (b) Same as (a) but corresponding to the conjectured \stt results.
+    (c,\,d) Same as (b) but corresponding to the relative uncertainties in the valence quark distribution functions. 
+    The latter needs to be compared with Figs.~\ref{PDFs_light_and_gluon:d} and~\ref{PDFs_light_and_gluon:d}, respectively.
+}
+  \label{fig:projections}
+\end{figure}
+
+For each replica, the PDF fit is performed, and the uncertainty is estimated as the RMS around the central value. 
+The relative uncertainties in the gluon distributions, as obtained in the 
+\QCD\ analyses with and without the measured and conjectured values for \stt at $\mu^2_{\textrm{F}}=10^5\,\mathrm{GeV}^2$, are shown in Figs.~\ref{projections:a} and~\ref{projections:a}, respectively. 
+A further reduction of the uncertainty in the gluon distribution at $x \gtrsim 0.1$ is observed, once the conjectured values for \stt are included in the fit. 
+Although they remained unaffected in Ref.~\citeTH{topobs_CMS_jhep}, a small improvement to the uncertainties in the valence quark distributions 
+(Figs.~\ref{projections:c} and~\ref{projections:d}) is also observed, consistent with the outcome of Refs.~\cite{TOP-18-004} and~\cite{FTR-18-015}.
+
+
+It is thus demonstrated that the projected inclusive \ttbar\ cross sections have a stronger impact on the gluon distribution in the proton. 
+Overall, this measurement is expected to profit from the higher amount of data collected in 2017, the improved phase-I silicon tracker detector, 
+and the better knowledge of the absolute luminosity scale.
+

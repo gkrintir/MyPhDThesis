@@ -1,0 +1,333 @@
+
+In this section, the fit model applied to extract the inclusive \stt is discussed. 
+The \ttbar\ MC simulation is used to guide the parameterization of the signal, while the shape of the background is estimated \textit{in-situ} from the data.
+The normalization of both signal and background is left to float freely.
+The efficiency of the \cPqb-identification algorithm is measured simultaneously with the signal cross section, and hence it is also data-based estimated. 
+The background from \QCD\ multijet and \PW+jets events are controlled by counting the number of jets identified as originating from \cPqb\ quarks.
+
+\subsection{Signal parameterization}
+\label{sec:sig_ttbar_pPb}
+
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_e1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_e1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_e1l4j2b_ttbar}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_mu1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_mu1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_mu1l4j2b_ttbar}}
+\caption[Parametrized signal spectra for the dijet invariant mass in e+jets and $\mu$+jets final states at $\rootsNN=8.16$\,\TeV]{
+  Parametrized signal spectra in e+jets (a--c) and $\mu$+jets (d--f) final states as a function of \mjj in the 1$\ell$4j0b (a,\,d), 1$\ell$4j1b (b,\,e), and 1$\ell$4j2b (c,\,f) event categories,
+  using the \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}). 
+  On the bottom panels, the estimated contributions from correct (wrong) assignments are shown in light (dark) blue. 
+  The parameterizations of correct and wrong assignments are fitted to the MC simulated events (points) 
+  and their difference, divided by the statistical uncertainty in the simulation, is represented on the top panels~\citeAN{AN-17-043}.
+}
+\label{fig:sigparam_mjj}
+\end{figure}
+
+For each mass variable, i.e., \mjj, $m_{\cPqt_{\textrm{had}}}$ and $m_{\cPqt_{\textrm{lep}}}$, the \ttbar\ MC simulation is used to estimate the expected contributions from correctly or wrongly assigned pairs. 
+Independently of the variable and event category it is seen that a Crystal-Ball function~\cite{SLAC-R-236} 
+summed with a Gamma function is able to model the spectrum of correct assigned pairs precisely, whereas wrongly assigned pairs are described with a bifurcated Gaussian, i.e., 
+a Gaussian with different widths to the left and right of its mean summed with a Landau function.
+The definition of the pdfs and the routines used to adjust the parameters are based on \textsc{RooFit}~\cite{roofit}.
+
+Figures~\ref{fig:sigparam_mjj},~\ref{fig:sigparam_mthad} and~\ref{fig:sigparam_mtlep} show the results of the parameterizations obtained for the different event categories used in
+the analysis.
+The separation between correct and wrong assigned pairs serves only illustrative purposes.
+Their ratio is determined by a fit to the signal MC, while its magnitude has no effect on the final result.
+The figures span a wide mass range mostly to highlight the expectations from the simulation for the signal.
+The fits to the data are performed within a smaller range to ensure their stability.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_e1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_e1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_e1l4j2b_ttbar}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_mu1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_mu1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_mu1l4j2b_ttbar}}
+\caption[Parametrized signal spectra for the hadronic top mass in e+jets and $\mu$+jets final states at $\rootsNN=8.16$\,\TeV]{
+  Parametrized signal spectra in e+jets (a--c) and $\mu$+jets (d--f) final states as a function of  $m_{\cPqt_{\textrm{had}}}$ in the 1$\ell$4j0b (a,\,d), 1$\ell$4j1b (b,\,e),
+  and 1$\ell$4j2b (c,\,f) event categories, using the \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}). 
+  On the bottom panels, the estimated contributions from correct (wrong) assignments are shown in light (dark) blue. 
+  The parameterizations of correct and wrong assignments are fitted to the MC simulated events (points) 
+  and their difference, divided by the statistical uncertainty in the simulation, is represented on the top panels~\citeAN{AN-17-043}.
+}
+\label{fig:sigparam_mthad}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_e1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_e1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_e1l4j2b_ttbar}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_mu1l4j2q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_mu1l4j1b1q_ttbar}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_mu1l4j2b_ttbar}}
+\caption[Parametrized signal spectra for the leptonic top mass in e+jets and $\mu$+jets final states at $\rootsNN=8.16$\,\TeV]{
+  Parametrized signal spectra in e+jets (a--c) and $\mu$+jets (d--f) final states as a function of $m_{\cPqt_{\textrm{lep}}}$ in the 1$\ell$4j0b (a,\,d), 1$\ell$4j1b (b,\,e),
+  and 1$\ell$4j2b (c,\,f) event categories, using the \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}). 
+  In the bottom panels, the estimated contributions from correct (wrong) assignments are shown in light (dark) blue. 
+  The parameterizations of correct and wrong assignments are fitted to the MC simulated events (points) 
+  and their difference, divided by the statistical uncertainty in the simulation, is represented on the top panels~\citeAN{AN-17-043}.
+}
+\label{fig:sigparam_mtlep}
+\end{figure}
+
+In Table~\ref{tab:sigparam} the main parameters for the spectrum of correct assignments are summarized. 
+The effective width is computed from the cumulative distribution function (CDF); half of the 68\% CL derived from the CDF is quoted as the effective width of the distribution. 
+It can be seen that for the \mjj and $m_{\cPqt_{\textrm{had}}}$ variables the main parameters are quite similar across all event categories. 
+The largest variations are related to the 0\cPqb{} where the event count of the MC simulation may induce statistical fluctuations in the parameterizations. 
+Given this category is signal depleted and is used only for controlling the background no significant impact in the analysis is expected.
+
+\begin{table}[!ht]
+\begin{center}
+\caption[Parameters of the correct assignments for the signal spectra as extracted from simulation at $\rootsNN=8.16$\,\TeV]
+{Main parameters of the correct assignments for the signal spectra as extracted from the \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}). 
+  Values are given in\,\GeV~\citeAN{AN-17-043}.\label{tab:sigparam}}
+\begin{tabular}{lccccc}
+\toprule
+Category & Final state ($\ell$+jets)  & Mean & Median & Mode & Eff width \\
+\midrule
+\multicolumn{6}{c}{\mjj} \\
+\midrule
+\multirow{2}{*}{1$\ell$4j0\cPqb}
+& $\ell=\mathrm{e}$     & 75.2 & 73.7 & 75.0 & 28.9  \\
+& $\ell=\mu$ & 76.1 & 75.0 & 75.0 & 35.5 \\
+\multirow{2}{*}{1$\ell$4j1\cPqb}
+& $\ell=\mathrm{e}$      & 76.0 & 76.5 & 75.0 & 30.0 \\
+& $\ell=\mu$ & 75.9 & 76.6 & 75.0 & 30.4 \\
+\multirow{2}{*}{1$\ell$4j2\cPqb}
+& $\ell=\mathrm{e}$  & 76.2 & 77.3 & 75.0 & 26.0 \\
+& $\ell=\mu$ & 75.8 & 76.5 & 75.0 & 24.3 \\
+\midrule
+\multicolumn{6}{c}{$m_{\cPqt_{\textrm{had}}}$} \\
+\midrule
+\multirow{2}{*}{1$\ell$4j0\cPqb}
+& $\ell=\mathrm{e}$      & 156.8 & 164.9 & 159.7 & 44.0  \\
+& $\ell=\mu$ & 156.8 & 164.9 & 159.7 & 44.0  \\
+\multirow{2}{*}{1$\ell$4j1\cPqb}
+& $\ell=\mathrm{e}$      & 160.2 & 171.0 & 158.8 & 56.0 \\
+& $\ell=\mu$ & 162.3 & 172.0 & 161.0 & 53.9 \\
+\multirow{2}{*}{1$\ell$4j2\cPqb}
+& $\ell=\mathrm{e}$      & 161.0 & 169.3 & 159.9 & 40.8 \\
+& $\ell=\mu$ & 161.5 & 169.1 & 159.9 & 38.9 \\
+\midrule
+\multicolumn{6}{c}{$m_{\cPqt_{\textrm{lep}}}$}\\
+\midrule
+\multirow{2}{*}{1$\ell$4j0\cPqb}
+& $\ell=\mathrm{e}$      & 167.6 & 168.1 & 160.0 & 32.7 \\
+& $\ell=\mu$ & 172.8 & 172.5 & 160.0 & 35.0 \\
+\multirow{2}{*}{1$\ell$4j1\cPqb}
+& $\ell=\mathrm{e}$      & 168.9 & 170.8 & 162.6 & 30.0 \\
+& $\ell=\mu$ & 169.0 & 170.8 & 161.1 & 30.1 \\
+\multirow{2}{*}{1$\ell$4j2\cPqb}
+& $\ell=\mathrm{e}$      & 172.3 & 172.2 & 160.1 & 29.0 \\
+& $\ell=\mu$ & 187.7 & 170.2 & 179.4 & 27.3 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsection{Background parameterization}
+\label{sec:bkg_pPb}
+
+\subsubsection{\PW+jets background}
+\label{sec:bkg_Wjets}
+
+The MC simulation is used to seed the parameters of the \PW+jets background modeling. 
+Once a functional form is derived, its parameters and normalization are determined from the fit to the data. 
+This approach is justified on the grounds of the nonaccurate simulation in the phase space of the analysis, i.e, 
+simulations rely on the \PYTHIA parton shower to predict most of the jets in the \ttbar\ signal region. 
+Therefore the simulation could bias both the rate and the shape of \PW+heavy flavor production.
+
+From the MC simulation, a Landau pdf~\cite{roofit} is found to describe reasonably well the contribution from \PW+jets in all mass variables. 
+Figure~\ref{fig:wparammc} compares the \PW{}+jets simulated events with the Landau pdf fit superimposed. 
+Because of the low event count, the fit is performed using events with no \cPqb-tagged jets; a fair agreement is observed between the pdf and the simulation. 
+It can also be noticed that the Landau parameters differ only slightly with respect to those obtained for the wrong assignment component of the signal, 
+as described in the previous Section and shown in the same Figure. This is not surprising given the combinatorial nature of the \PW+jets background.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_mu1l4j2q_w}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_mu1l4j2q_w}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_mu1l4j2q_w}}
+\caption[Parametrized \PW+jets spectra for the dijet invariant mass, and hadronic and leptonic top mass in the $\mu$+jets final state at $\rootsNN=8.16$\,\TeV]
+{Simulated and parametrized \PW+jets spectra in the $\mu$+jets final state as a function of \mjj (a), $m_{\cPqt_{\textrm{had}}}$ (b) and $m_{\cPqt_{\textrm{lep}}}$ (c)
+in the 1$\ell$4j0\cPqb event category; their difference, divided by the statistical uncertainty in the simulation, is represented on the top panels. 
+The superimposed gray curve corresponds to the parametrized contribution from wrong assignments in the \ttbar\ signal process~\citeAN{AN-17-043}.
+}
+\label{fig:wparammc}
+\end{figure}
+
+The higher event count \PW+jets LO sample using pp collisions at 8\,\TeV\ validates the Landau parameterization. 
+Figure~\ref{fig:wshapevar} shows the relative difference in the shape of the three mass distributions in the $1\ell$4j1\cPqb and $1\ell$4j2\cPqb 
+with respect to the $1\ell$4j0\cPqb event category. 
+The largest deviations are seen for \mjj and $m_{\cPqt_{\textrm{lep}}}$ variables. 
+The former indicates that the kinematics of the jets in a heavy-flavor enriched region are harder with respect to the light-flavor region, 
+while the latter is expected as \cPqb-jets tend to contribute to real \ptmiss through semileptonic \cPqb quark decays.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mjj_refratios}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mthad_refratios}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mtlep_refratios}}
+\caption[Simulated \PW+jets spectra for the dijet invariant mass, and hadronic and leptonic top mass in the $\ell$+jets final state using pp collisions at $\sqrt{s}=8$\,\TeV]{
+  Relative difference of the \PW+jets spectra in the $1\ell$4j1\cPqb and $1\ell$4j2\cPqb with respect to the 1$\ell$4j0\cPqb event category from the \PW+jets LO sample,
+  using pp collisions at 8\,\TeV. 
+  The ratios are shown for the \mjj (a), $m_{\cPqt_{\textrm{had}}}$ (b) and $m_{\cPqt_{\textrm{lep}}}$ (c) variables. 
+  The gray band illustrates the statistical uncertainty in the MC sample using events in the 1$\ell$4j0\cPqb event category, 
+  while the red lines represent first order polynomial fits to the ratios~\citeAN{AN-17-043}.
+}
+\label{fig:wshapevar}
+\end{figure}
+
+The relative differences in Fig.~\ref{fig:wshapevar}, as extracted using pp collisions, are used to extrapolate the \PW+jets distributions from the $1\ell$4j0\cPqb 
+to the $1\ell$4j1\cPqb and $1\ell$4j2\cPqb event categories; each simulated \PYTHIA event falling in the $1\ell$4j0\cPqb category is reweighted according to the value of the relative difference. 
+The extrapolated distributions are fitted to Landau functions and are further compared to events from the \PYTHIA MC simulation. 
+The obtained results are shown in Fig.~\ref{fig:wshapepred}. 
+Within the limited statistical accuracy of this procedure, the Landau parameterization is indeed expected to be a good approximation of the \PW+jets contribution in the different event categories. 
+However, as summarized in Table~\ref{tab:wlanparams}, the parameters seem to differ in each category, 
+and hence motivating separate width ($\sigma$) and most probable value (MPV) Landau parameters per category. 
+It is though interesting to note that the $\sigma/\textrm{MPV}$ ratio is approximately the same possibly indicating that the intrinsic resolution is approximately the same. 
+In the fit to the data Gaussian penalty terms are assigned to allow for a 5 (20)\% variation in the  $\sigma$ (MPV) with respect to the predictions in Table~\ref{tab:wlanparams}.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mjj_extrapolation}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mthad_extrapolation}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/w_mtlep_extrapolation}}
+\caption[Reweighted and fitted \PW+jets spectra for the dijet invariant mass, and hadronic and leptonic top mass in the $\ell$+jets final state using pPb collisions at $\rootsNN=8.16$\,\TeV]{
+Reweighted \PW+jets spectra in the different event categories based on the ratio (Fig.~\ref{fig:wshapevar}) calculated from the \PW+jets LO sample, using pp collisions at 8\,\TeV 
+separately for the \mjj (a), $m_{\cPqt_{\textrm{had}}}$ (b) and $m_{\cPqt_{\textrm{lep}}}$ (c) variables. 
+Landau functions are fitted to the reweighted spectra, while the latter are further compared to events from the \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}), using pPb collisions~\citeAN{AN-17-043}. 
+}
+\label{fig:wshapepred}
+\end{figure}
+
+\begin{table}[!ht]
+\begin{center}
+\caption[Parameters of the Landau function for the \PW+jets spectra as extracted from simulation at $\rootsNN=8.16$\,\TeV]{
+Parameters of the Landau functions as extracted from the reweighted \PW+jets \PYTHIA MC simulation (Table~\ref{tab:mc_pPb8TeV}). 
+Values are given in\,\GeV~\citeAN{AN-17-043}.\label{tab:wlanparams}}
+\begin{tabular}{lccc}
+\toprule
+Category & MPV & $\sigma$ & $\sigma/\textrm{MPV}$\\
+\midrule
+\multicolumn{4}{c}{\mjj} \\
+\midrule
+\multirow{1}{*}{1$\ell$4j0\cPqb} & 48.2 & 17.0 & 0.35 \\
+\multirow{1}{*}{1$\ell$4j1\cPqb} & 54.0 & 19.6 & 0.36 \\
+\multirow{1}{*}{1$\ell$4j2\cPqb} & 62.0 & 22.3 & 0.36\\
+\midrule
+\multicolumn{4}{c}{$m_{\cPqt_{\textrm{had}}}$} \\
+\midrule
+\multirow{1}{*}{1$\ell$4j0\cPqb} & 143.7 & 34.2 & 0.24 \\
+\multirow{1}{*}{1$\ell$4j1\cPqb} & 143.9 & 34.3 & 0.24\\
+\multirow{1}{*}{1$\ell$4j2\cPqb} & 144.7 & 34.6 & 0.24\\
+\midrule
+\multicolumn{4}{c}{$m_{\cPqt_{\textrm{lep}}}$}\\
+\midrule
+\multirow{1}{*}{1$\ell$4j0\cPqb} & 159.8 & 29.0 & 0.18\\
+\multirow{1}{*}{1$\ell$4j1\cPqb} & 154.7 & 26.5 & 0.17\\
+\multirow{1}{*}{1$\ell$4j2\cPqb} & 150.6 & 24.5 & 0.16\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+
+\subsubsection{\QCD\ multijet background}
+\label{sec:bkg_QCD}
+
+Typically, MC event simulation cannot properly reproduce the shape and normalization of the
+\QCD\ multijet background, in particular, in the phase space of the analysis with an isolated and high-\pt lepton on top of four jets. 
+Significantly high event count samples would also be required, and without any guarantee that the result
+could be safely used as a description of this type of background, a data-based technique is applied.
+
+A control region is selected in the $\mu$+jets final state by inverting the
+isolation requirement for muons, i.e., $I_{\textrm{rel}}^{\mu}>0.2$, leaving all other identification requirements unchanged. 
+The inverted cut value of 0.2 reflects a tradeoff between the event count and the contamination expected in the control region from non-\QCD\ processes, i.e., signal and \PW+jets events. 
+In the $\mathrm{e}$+jets final state the electron candidate is required to fail a looser set of identification criteria, the so-called ``veto'' identification (Table~\ref{seltagandprobeeff}). 
+A better estimate of the \QCD\ multijet background is found in the \texttt{ECAL} endcaps~\citeTH{topobs_CMS_jhep} where the fraction of nongenuine electrons is higher than the barrel. 
+In both $\mu$+jets and $\mathrm{e}$+jets final states, the control regions contain no \cPqb-tagged jets to reduce the contamination from other non-\QCD\ processes, and hence are expected 
+to be enriched mostly in \QCD\ multijet events.
+
+Figure~\ref{fig:qcdparam} shows the distributions of the three mass variables, reconstructed in the \QCD\ multijet control regions. 
+It is seen that the event count in the $\mathrm{e}$+jets is significantly higher than in $\mu$+jets final state, owing to the dominant contribution from nongenuine electrons.
+Following the approach of~\citeTH{topobs_CMS_jhep} the shape of the \QCD\ multijet background is assumed to be the same in the control and signal regions. 
+The shape is modeled with a nonparametric kernel approach~\cite{Cranmer:2000du}. 
+A fair agreement is observed for all mass variables and categories.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_mu_QCD}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_mu_QCD}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_mu_QCD}}
+\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_e_QCD}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_e_QCD}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_e_QCD}}
+\caption[Parametrized \QCD\ multijet distributions for the dijet invariant mass, and hadronic and leptonic top mass in the $\ell$+jets final state using pPb collisions at $\rootsNN=8.16$\,\TeV]{
+Parametrized \QCD\ multijet distributions as a function of \mjj (a), $m_{\cPqt_{\textrm{had}}}$ (b) and $m_{\cPqt_{\textrm{lep}}}$ (c) using events with no \cPqb-tagged jets in 
+(a--c) $\mu$+jets---failing $I_{\textrm{rel}}^{\mu}>0.2$ requirement---and (d--f) $\mathrm{e}$+jets---failing the veto identification---final states, respectively~\citeAN{AN-17-043}.
+}
+\label{fig:qcdparam}
+\end{figure}
+
+The initial normalization of the \QCD\ multijet background is estimated from events with low $\ptmiss<20$\,\GeV. 
+A fit is performed using the distributions of \QCD\ multijet, and \ttbar\ and \PW+jets processes derived from the control regions and MC simulation, respectively.  
+The contributions from \ttbar\ and \PW+jets are left to float within 30\% of their initial estimates based on their theory cross sections. 
+A 50-100\% systematic uncertainty is assigned to the result of the fit that is displayed in Fig.~\ref{fig:qcdmetmetfits} separately for the $\mu$+jets and $\mathrm{e}$+jets final states. 
+Although slight mismodeling is observed, the outcome of the fit serves the purpose of the data-based technique, i.e., to find an initial estimate for the number of \QCD\ multijet 
+events fulfilling the analysis selection.  
+Table~\ref{tab:qcdnorm} summarizes the number of \QCD\ multijet events estimated in each event category and the associated uncertainty which is used as a constraint 
+when extracting the \ttbar\ cross section, as described in the following.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_mu1l4j2q}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_mu1l4j1b1q}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_mu1l4j2b}}
+\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_e1l4j2q}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_e1l4j1b1q}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/metfit_e1l4j2b}}
+
+\caption[Initial estimation of the \QCD\ multijet background based on \ptmiss distributions in the $\ell$+jets final state using pPb collisions at $\rootsNN=8.16$\,\TeV]{
+Fits to the \ptmiss distribution in the $\mu$+jets (a--c) and $\mathrm{e}$+jets (d--f) final states in the 1$\ell$4j0b (a,\,d), 1$\ell$4j1b (b,\,e), and 1$\ell$4j2b (c,\,f) event categories.
+The \QCD\ normalization estimated from the fit is shown in the captions, along with its statistical uncertainty~\citeAN{AN-17-043}.
+}
+\label{fig:qcdmetmetfits}
+\end{figure}
+
+
+\begin{table}[!ht]
+\begin{center}
+\caption[Initial estimate and associated uncertainty in the \QCD\ multijet normalization at $\rootsNN=8.16$\,\TeV]
+{Initial estimate and associated uncertainty in the \QCD\ multijet normalization in the 1$\ell$4j0b, 1$\ell$4j1b and 1$\ell$4j2b  event categories~\citeAN{AN-17-043}.
+\label{tab:qcdnorm}}
+\begin{tabular}{lcc}
+\toprule
+Category & Final state ($\ell$+jets) & \QCD\ normalization$\pm$uncertainty \\
+\midrule
+\multirow{2}{*}{1$\ell$4j0\cPqb}
+& $\ell=\mathrm{e}$  & 854$\pm$427\\
+& $\ell=\mu$  & 343$\pm$171\\
+\midrule
+\multirow{2}{*}{1$\ell$4j1\cPqb}
+& $\ell=\mathrm{e}$ & 74$\pm$54\\
+& $\ell=\mu$ & 77$\pm$57\\
+\midrule
+\multirow{2}{*}{1$\ell$4j2\cPqb}
+& $\ell=\mathrm{e}$ & 5$\pm$5\\
+& $\ell=\mu$ & 3$\pm$3\\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table}
+
+

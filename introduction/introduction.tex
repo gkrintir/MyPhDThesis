@@ -1,0 +1,520 @@
+\section{Setting the scene}
+\label{sec:intro}
+
+With a mass close to the one of a gold atom, yet a size less than $10^{-3}$ fm, the top quark is the heaviest elementary particle known.
+When the top quark was independently discovered by the \texttt{CDF}~\cite{topobs_CDF} and \texttt{D{\O}}~\cite{topobs_D0} Collaborations in 1995 at the 
+Tevatron proton-antiproton ($\mathrm{p\overline{p}}$) collider,
+a  decades-long search for one of the last missing pieces of the standard model (SM) had come to an end.
+Despite an early blunder, that had resulted in claiming a ``clear signal'' compatible with a \PW\ boson decaying into a 40\,\GeV\ top quark in 1984~\cite{ua1_blunder},
+indirect hints of a large top quark mass ($ \gg 50$\,\GeV) later came from significant flavor oscillation frequencies in $B_{\cPqd}^0$ meson mass eigenstates
+and electroweak (EW) precision data from \texttt{LEP} Collaborations and \texttt{SLD} experiment~\cite{aleph}.
+In Fig.~\ref{fig:topmass_time}, the limits on the top quark mass, $m_{\textrm{top}}$, 
+%\footnote{Alternative notations, like $M_{\rm{top}}$, $M_{\rm{t}}$, or $m_{\rm{t}}$, exist and are typically used interchangeably.},
+as a function of time are compared to direct measurements at the Tevatron, the \texttt{CERN} \texttt{LHC}, and their combination.
+The indirect determination within the framework of the SM adheres to a remarkably good agreement with the direct measurements.
+It is thus interesting to note that the top quark influences predictions regarding the stability of the Higgs field 
+and its effects on the evolution of the Universe as well as the sensitivity of SM consistency checks. 
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.30]{figures/introduction/10052_2018_6131_Fig1_HTML.png}
+  \caption[Direct and indirect determinations of the top quark mass as a function of time]{
+    Prediction of the top quark mass as a function of time as obtained by various analysis groups using electroweak precision data.
+    The bands indicate the 68\% confidence level. The direct measurements after the top quark discovery are displayed by the data points~\cite{global_EW_fit}.
+    The good agreement between the top quark mass measured directly and the predicted mass determined indirectly from measurements at the Z pole
+    is a convincing illustration of the validity of radiative corrections.
+}
+    \label{fig:topmass_time}
+\end{figure}
+
+\subsection{A special role in the EWSB mechanism? }
+\label{sec:ewsb}
+
+The SM describes the fundamental elementary fields, that propagate in flat spacetime, and their interactions.  The internal symmetry of the SM is
+\begin{equation*}
+\mathrm{SU}(3)_{C} \times \mathrm{SU}(2)_{L} \times \mathrm{U}(1)_{Y} \xrightarrow{\textrm{EWSB}} \mathrm{SU}(3)_{C} \times \mathrm{U}(1)_{\mathrm{Q}}\, ,
+\end{equation*}
+ where $\mathrm{U}(1)_{Y}$ is a $\mathrm{U}(1)$ symmetry related to the hypercharge, $Y$, the $\mathrm{SU}(2)_{L}$ symmetry acts only on doublets of left handed Dirac spinors (fermions), 
+ and $\mathrm{SU}(3)_{C}$ is a non-Abelian local symmetry with additional self-interacting (``coloured'') terms from the gluon field strength.
+ The $\mathrm{SU}(2)_{L} \times \mathrm{U}(1)_{Y}$ Lagrangian also includes a complex scalar doublet field, the Higgs doublet, whose symmetry is broken when the 
+ latter acquires a vacuum expectation value (VEV).  The VEV should be electrically neutral, and perturbations around the ground state, $\upsilon$, can be described by the unitary gauge 
+ that gives a convenient physical interpretation: the Higgs field is the real scalar field~\cite{Englert:1964et,Higgs:1964ia,Higgs:1964pj,Guralnik:1964eu,Higgs:1966ev,Kibble:1967sv}. 
+ Interaction terms between the Higgs field and the gauge bosons break the symmetry via their mass terms ($\mathrm{W^{\pm}}$,\,$\mathrm{Z}$) that are proportional to $\upsilon^2$, 
+ while the new unbroken $\mathrm{U}(1)_{\mathrm{Q}}$ symmetry describes the  massless gauge boson ($\gamma$). 
+ The SM ``lives'' at the energy scale of $\upsilon = 246$\,\GeV~\cite{pdg_2018} that triggers the EW symmetry breaking (EWSB) of the Higgs doublet.
+ On the one hand, the discovery of a Higgs boson at the \texttt{CERN} \texttt{LHC}~\cite{Aad:2012tfa,Chatrchyan:2012ufa,Chatrchyan:2013lba} and measurements 
+ of its properties, e.g., Ref.~\cite{higgs_couplings}, consolidate the SM. On the other hand, 
+ producing particle collisions with energies above this scale is bound to probe the mechanism of EWSB, i.e., whether it is given by an elementary Higgs boson or by some alternative dynamics.
+
+ The corresponding SM Lagrangian, $\mathcal{L}_\textrm{SM}$, is invariant under the Poincar\'{e} group, and can be divided into four parts:
+ \begin{equation*}
+   \mathcal{L}_\textrm{SM} = \mathcal{L}_{\textrm{Gauge}} + \mathcal{L}_{\textrm{Matter}} + \mathcal{L}_{\textrm{Higgs}}  + \mathcal{L}_{\textrm{Yukawa}}\, .
+\end{equation*}
+The  $\mathcal{L}_\textrm{Gauge}$  term  refers to the kinetic terms and interactions among the gauge bosons. 
+The $\mathcal{L}_\textrm{Matter}$ term includes the interactions of the fermionic particles with the gauge bosons through covariant derivatives.
+The $\mathcal{L}_\textrm{Higgs}$ term includes the Higgs self-interaction terms, the interactions between the Higgs and the gauge bosons and the EW gauge boson mass terms. 
+Finally, the $\mathcal{L}_\textrm{Yukawa}$ term describes the interactions between the Higgs field and the fermions as well as the fermion mass terms. 
+The Lagrangian $\mathcal{L}_\textrm{SM}$ contains 19 independent parameters in total:  nine fermion (excluding the neutrino) masses, 
+the mass of the Higgs and the VEV, three gauge couplings, three mixing angles and one CP-violating phase in the Cabibbo--Kobayashi--Maskawa (CKM) matrix, the latter accounting for the fact that the flavor and mass eigenstates are different for quarks. It is thus evident that the Yukawa sector accounts for nearly two-third of all free SM parameters.
+
+In the SM, the quark and lepton masses have to be thus ``inserted'' through adjustable parameters  that  describe  how  feebly or strongly  each type  interacts with the Higgs boson. 
+For a top quark the Yukawa coupling, $y=\sqrt{2}\frac{m}{\upsilon}$, is almost exactly unity, unlike for any other fermion. 
+This relatively strong coupling with the Higgs boson suggests  that  the  top  quark  may  play  a special role in the mechanism of EWSB.
+Quadratically divergent radiative corrections appear in the computation of the Higgs boson mass and
+are dominated by top quark loop contributions. 
+Repeating the exercise of indirect determination of $m_{\textrm{top}}$ from global SM fits to EW precision data 
+is thus essential for testing the overall SM consistency.
+A scan~\cite{global_EW_fit} of the confidence level profile of W boson mass versus $m_{\textrm{top}}$ is shown in Fig.~\ref{fits:a} for
+the scenarios where the direct Higgs boson measurements~\cite{atlas_h_mass,cms_h_mass} 
+are included (blue) or not (grey) in the fit.  Both contours agree with the direct measurements (green bands and ellipse).
+
+In addition, owing to its large value, the top quark mass has a direct impact on extrapolations of the EWSB- to high-energy scales.
+Radiative corrections can drive the Higgs boson self-coupling ($\lambda$) towards zero or even negative values, potentially leading to an unstable vacuum. 
+The determination of the energy scale ($\mu$) where the vacuum becomes unstable, either requiring or not beyond the SM (BSM) physics at lower energies like the EWSB scale,
+is strongly influenced by the precision of the measurements in the top quark sector and their unambiguous interpretation
+in a clear theoretical framework: In Fig.~\ref{fits:b} $\mu$ varies by several orders of magnitude under a seemingly insignificant variation of $\pm 2$\,\GeV\ in $m_{\textrm{top}}$.
+Last but not least, the indication of a flat Higgs potential ($\lambda=0$) at very high $\mu$ values could imply 
+the possibility that the Higgs boson plays the role of the scalar field in the early universe, an appealing phenomenological consequence, e.g., Ref.~\cite{higgs_inflation}.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{fits:a}\includegraphics[scale=0.28]{figures/introduction/10052_2018_6131_Fig5_HTML.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{fits:b}\includegraphics[scale=0.22]{figures/introduction/lamda_running.png}}
+\end{minipage}\par\medskip
+
+\caption[Simultaneous indirect determination of the \PW\ boson and the top quark mass and renormalization-group evolution of the Higgs boson self-coupling]{
+(a) Contours at 68\% and 95\% confidence level 
+obtained from scans of fits~\cite{global_EW_fit} with the \PW\ boson and top quark mass fixed. 
+The corresponding direct measurements are excluded from the fit.
+The narrower blue and larger grey allowed regions are the results of the fit including and excluding the Higgs boson mass measurement~\cite{atlas_cms_h_mass}, respectively.
+The horizontal bands indicate the $\pm$\,1$\sigma$ regions of the world averages used 
+for the \PW\ boson~\cite{pdg_2018} and top quark mass~\cite{topmass_world}.
+A theoretical uncertainty of 0.5\,\GeV is added to the direct top mass measurement to take into account nonperturbative effects that are deemed to be of $\mathcal{O}(\Lambda_{\QCD})$. 
+(b)
+Renormalization-group evolution of the Higgs boson self-coupling varying the top mass, strong $\mathrm{SU}(3)_{C}$ coupling, and Higgs boson mass 
+within a range of $\pm$\,3$\sigma$~\cite{vacuum_stability_1}.
+Residual theoretical uncertainty~\cite{vacuum_stability_2} is safely smaller than the experimental uncertainty, dominated by the uncertainty in the determination of the top quark mass.
+}
+\label{fig:fits}
+\end{figure}
+
+
+\subsection{Theory predates experiment; experiment keeps a tight rein on theory }
+\label{sec:theo}
+
+The basic tool to study top quark is a high energy particle collider. For instance, the dominant production
+of top quark pairs ($\mathrm{t\overline{t}}$),
+which is a quantum chromodynamics (\QCD) process,
+is accessible both at lepton and hadron (Fig~\ref{fig:tt_prod}) colliders, provided the $\sqrt{s}$ value of  the  collisions  is  above  the production threshold of twice $m_{\textrm{top}}$.
+The SM predicts the EW production of single top quarks in addition to the dominant $\mathrm{t\overline{t}}$ process~\citeTH{qcd_mod},
+while the associated production of top quarks with the EW gauge bosons or the Higgs boson is also possible~\citeTH{CR-17-176}. 
+A natural question can be then addressed: how theory and experiment have coped with the broad range of studies in top quark
+physics, from inclusive production cross sections and precise measurements of the top quark mass and of its couplings 
+to a variety of searches for BSM physics with top quarks~\citeTH{CR-18-013}.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_prod:a}\includegraphics[scale=0.25]{figures/introduction/tt_qq.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_prod:b}\includegraphics[scale=0.25]{figures/introduction/tt_gg_t.png}}
+\end{minipage}\par\medskip
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_prod:c}\includegraphics[scale=0.25]{figures/introduction/tt_gg_s.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_prod:b}\includegraphics[scale=0.25]{figures/introduction/tt_gg_u.png}}
+\end{minipage}\par\medskip
+\caption[Leading order diagrams for \ttbar\ production in perturbative quantum chromodynamics]{
+  The Feynman diagram approach is based on perturbation theory assuming that the coupling constants that appear in the vertices are parameters smaller than one. 
+  In this case, representative diagrams~\cite{husemann} are given for \ttbar\ production at the lowest (``leading'') order in the strong coupling constant: 
+  $\mathrm{q\overline{q}}$ annihilation (a) and gg fusion in the \textit{t}- (b), \textit{s}- (c), and \textit{u}-channel (d) configuration.
+  The inclusion of diagrams with real and virtual corrections defines the order of a calculable observable in $\alpha_{\textrm{s}}$.
+  %Adding more vertices and keeping the same external legs leads to diagrams of a higher order.
+}
+\label{fig:tt_prod}
+\end{figure}
+
+The probability (cross section), $\sigma$, for any process can be expressed as a weighted product of a high-energy (``hard'') parton-parton scattering
+multiplied with parton distribution functions (PDFs), integrated over all parton momenta and  summed  over  all  parton  
+types (``phase space''):
+\begin{align*}
+\sigma=\sum_{j,\,k}^{\textrm{partons}}\int\limits_0^1 \mathrm{d}x_j \mathrm{d}x_k f_k(x_k,\mu_{\textrm{F}}^2) \hat{\sigma} (sx_jx_k,\mu_{\textrm{F}},\alpha_{\textrm{s}}) \ .
+\end{align*}
+While the  hard  scattering  cross  section, $\hat{\sigma}$, is process specific and can be computed in perturbative \QCD\ at different levels of accuracy,
+PDFs, $f_i(x_i,\mu_{\textrm{F}}^2)$, are deemed universal functions that describe the probability to find a parton $i$ with a given longitudinal 
+momentum  fraction $x_i$ (Fig.~\ref{fig:pdfs}), when  the hadron  is  probed  at  a  momentum  transfer scale of $\mathrm{Q}^{2}=\mu_{\textrm{F}}$. 
+The PDF parameterization absorbs all long-distance effects in the  initial  state, and ultraviolet divergences in $\hat{\sigma}$ are treated with
+a renormalization procedure of the strong coupling constant, $\alpha_{\textrm s}$, introducing an additional energy scale ($\mu_{\textrm{R}}$). 
+The  ``default'' (but not unique) choice of energy scales are process specific, e.g., for $\mathrm{t\overline{t}}$ production a typical choice is $m_{\textrm{top}}$. 
+
+Inclusive cross sections and distributions are already  known  to  the  impressive  level  of  a  few  percent in uncertainty.
+Top pair and single top production can be computed fully-differential at next-to-next-to leading  order  (NNLO)  in  perturbative \QCD\ for  stable  tops~\cite{gao} (and References therein), 
+and recently NNLO corrections can also describe the decay products differentially in both production and decay subprocesses~\cite{poncelet}. 
+The  fixed-order predictions are often supplemented with various resummations---typically at next-to-next-to-leading logarithm (NNLL) accuracy---which stabilize 
+the predictions against the effects of large logarithms.  Since the expected hierarchy between the strong and electroweak interactions may not be respected at such large scales, 
+electroweak corrections are thus also studied at this level of accuracy, including even photon-induced contributions from the hadron content~\cite{tsinikos}.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{pdfs:a}\includegraphics[scale=0.2]{figures/introduction/abmp16_vs1.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{pdfs:b}\includegraphics[scale=0.215]{figures/introduction/abmp16_vs2.png}}
+\end{minipage}\par\medskip
+\caption[The proton gluon PDF against the longitudinal momentum $x$ as determined in various sets]{
+The proton gluon PDF as a function of the longitudinal momentum $x$ as determined from the (a) ABMP16~\cite{Alekhin:2017kpj}, CT14~\cite{Dulat:2015mca}, MMHT14~\cite{Harland-Lang:2014zoa}, NNPDF3.0~\cite{Ball:2014uwa}, (b) HERAPDF2.0~\cite{Abramowicz:2015mha}, 
+and JR14~\cite{jr14} sets
+with their $\pm$\,1$\sigma$ uncertainties at a factorization scale equal to the \PZ\ boson mass.
+The distributions are normalized to the central values from ABMP16 for comparison~\cite{Alekhin:2017kpj}.}
+\label{fig:pdfs}
+\end{figure}
+
+\QCD\ color confinement requires the final state particles to be color-neutral, but the process of turning partons into hadrons 
+cannot be treated perturbatively, and it thus relies on phenomenological models. 
+To compare calculations to data software tools are used based on the Monte Carlo (MC) method that simulates hadron-hadron collisions. 
+``General-purpose'' MC event generators, e.g., as described in Refs.~\cite{amcatnlo,powheg,powheg2,sherpa}, can automatically compute  the  full  set  of
+contributions to the hard process at NLO given the Feynman rules of the underlying theory (both SM and BSM). 
+For most of the processes, the normalization of the MC event generation is corrected to match the most precise
+calculation, ignoring the effect that higher-order corrections may cause on the shape of kinematic observables.
+
+The final process of turning partons into hadrons is separated into two steps; a probabilistic method to model 
+the fragmentation of partons that effectively resums soft and collinear radiation (parton shower), and hadron formation (hadronization). 
+To avoid double-counting parton emissions due to higher order processes, specialized matching and merging techniques (e.g., Refs.~\cite{mlm,fxfx,herwig7})
+are available to consistently interface NLO MC event generators  to  the  parton  shower, typically to leading-logarithmic (LL) precision.  
+Frameworks  have  been  recently developed to consistently match additional sets of NLO  calculations to  parton  showers, including the treatment of the top quark 
+propagator  in  the  narrow-width  approximation as well as  keeping the top quarks off their mass shell (e.g., Ref.~\cite{jezo}). 
+Hadronization is described with phenomenological approaches that are subjected to scrutiny, e.g., Refs.~\cite{cms_tuning_1,cms_tuning_2,cms_tuning_3}, and with the most popular being 
+the Lund string~\cite{Sjostrand:2006za,Sjostrand:2007gs,Sjostrand:2014zea} and the cluster~\cite{herwigpp} models, albeit their unique implementation has been lately questioned in view of multiparticle production effects, with two typical examples being the enhanced strangeness production~\cite{alice} and the formation of a ``ridge.''~\cite{cms_ridge_pp7,cms_ridge_pPb5,cms_ridge_pp13}
+
+Throughout this thesis, data are compared to the predictions of different generator settings for the \ttbar\ (``signal'') and other SM (``background'') processes. 
+Table~\ref{tab:mcsetups} summarizes the main characteristics of the setups and abbreviations used.
+
+\begin{table*}[ht]
+\centering
+\caption[MC simulation settings used for the comparisons with the inclusive and differential \stt measurements]{
+MC simulation settings used for the comparisons with the inclusive and differential \stt measurements. 
+The table lists the main characteristics and values used for the most relevant parameters of the generators. 
+}
+\resizebox{\textwidth}{!}{\begin{tabular}{lcc}
+\toprule
+Event generator                    & \POWHEG~(v2)~\cite{powheg,powheg2}  &  \amcatnlo~(v2.2.2)~\cite{amcatnlo} \\
+\midrule
+\multicolumn{3}{l}{\textit{ Matrix element (ME) characteristics}} \\
+Mode                             &  hvq~\cite{powheghvq}            & \textsc{FxFx} merging~\cite{fxfx}             \\
+Scales ($\mu_\textrm{R},\mu_\textrm{F}$)     & $\sqrt{m_{\textrm{top}}^{2}+p_{\textrm{T},\textrm{top}}^{2}}$  & $\sum_{\mathrm{t},\,{\mathrm{\overline{t}}}}\sqrt{m_{\textrm{top}}^{2}+p_{\textrm{T},\textrm{top}}^{2}}/2$ \\
+$\alpha_{\textrm s}(M_{\mathrm{Z}})$                       & 0.118~\cite{pdg_2018}           & 0.118             \\
+PDF                              & NNPDF3.0 NLO~\cite{Ball:2014uwa}    & NNPDF3.0 NLO          \\
+
+
+Accuracy                    & \ttbar\ (NLO)    & \ttbar~+~0,1,2 jets (NLO)   \\
+\midrule
+\multicolumn{3}{l}{\textit{ Parton shower}} \\
+Setup designation                    &           &                \\
+~~~~Parton shower                                 & \multicolumn{2}{c}{\PYTHIA~(v8.205)~\cite{Sjostrand:2006za,Sjostrand:2014zea}}     \\
+~~~~Tune                               & \multicolumn{2}{c}{CUETP8M1~\cite{Khachatryan:2015pea,Skands:2014pea}}           \\
+~~~~PDF                                & \multicolumn{2}{c}{NNPDF2.3 LO~\cite{nnpdf20_1,nnpdf20_2}}      \\
+~~~~($\alpha_{\textrm s}^\textrm{ISR}(M_{\mathrm{Z}}),\alpha_{\textrm s}^\textrm{FSR}(M_{\mathrm{Z}})$)  & \multicolumn{2}{c}{(0.1108, 0.1365)}  \\
+~~~~ME corrections                     & \multicolumn{2}{c}{on}              \\
+\midrule
+\multicolumn{3}{l}{\textit{ Parton shower alternative}} \\
+Setup designation                      &           &     \xmark           \\
+~~~~PS                                 &  \HERWIGpp~(v2.7.1)~\cite{herwigpp}       &                 \\
+~~~~Tune                               &  EE5C~\cite{Seymour:2013qka}            &                 \\
+~~~~PDF                                &  CTEQ6~(vL1)~\cite{Pumplin:2002vw}     &               \\
+~~~~($\alpha_{\textrm s}^\textrm{ISR}(M_{\amthrm{Z}}),\alpha_{\textrm s}^\textrm{FSR}(M_{\mathrm{Z}})$)  & (0.1262, 0.1262)   \\
+~~~~ME corrections                     &  off             &                 \\
+\bottomrule
+\end{tabular}}
+\label{tab:mcsetups}
+\end{table*}
+
+\subsection{That could well be a top quark!}
+\label{sec:exp}
+
+Until the end of its data taking in 2011, the Tevatron collider had delivered more than  $10$\,\invfb of  integrated  luminosity~\cite{tevatron_review}. 
+The successful attempt from LHC at $\sqrt{s}=7$\,\TeV\ in 2010 (``Run 1'') has marked the beginning  of a new era  in  top quark  physics.
+Enhanced cross sections for top quark production, on the one hand, and ever increasing data sets culminating at $25$\,\invfb~\cite{CMS-PAS-LUM-13-001}
+by the end of 2012 at $\sqrt{s}=8$\,\TeV\ (Fig.~\ref{lumi:a}),
+on the other hand, rendered LHC the first ``top quark factory.''
+After  a  two-year  shutdown  for  maintenance  of  the  LHC  machine  and experiments,  the  LHC  has restarted  in  early  2015 (``Run 2''). 
+The  $\sqrt{s}$ value has further increased to 13\,\TeV, boosting typical top quark cross sections by about a factor of three compared to Run 1 (Fig.~\ref{lumi:a}). 
+With an availability for luminosity production of about 50\%~\cite{evian_boyd} an integrated luminosity of almost 50~\citeTH{CMS-PAS-LUM-17-004} and 70\,\invfb has been further 
+delivered in 2017 and 2018, respectively, producing more than 185\,\invfb of proton-proton (pp) data for Run 2 and comfortably surpassing the target of 150\,\invfb. 
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{lumi:a}\includegraphics[scale=0.28]{figures/introduction/intLumiRunAllV2}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{lumi:b}\includegraphics[scale=0.28]{figures/introduction/lumiRunAll}}
+\end{minipage}\par\medskip
+\caption[Integrated delivered and instantaneous luminosity versus time for proton-proton collisions during \texttt{LHC} Run 1 and 2 periods]{
+  (a) Cumulative (``integrated'') delivered and (b) instantaneous (Eq.\,(\ref{eq:l_inst_exp})) luminosity versus time for pp collisions
+  during \texttt{LHC} Run 1 and 2 periods at $\sqrt{s}=$\,7 or 8 and 13\,\TeV, respectively~\cite{lpc_lumi_val}.
+}
+\label{fig:lumi}
+\end{figure}
+
+The top quark has been thus the subject of numerous detailed studies based on data samples with the integrated luminosity ranging from few \invpb to several \invfb 
+both in \ppbar\ and pp collisions~\citeTH{CR-17-345}. 
+Until recently, top quark remained elusive in nuclear collisions because of the small amount of events recorded during the first heavy ion runs at \texttt{LHC}, 
+and the low nucleon-nucleon center-of-mass energies available at \texttt{RHIC}. 
+This situation changed~\citeTH{CR-17-434,QM18}  when the 2016 \texttt{LHC} proton-lead run at $\rootsNN = 8.16$\,\TeV\ 
+produced a data set corresponding to an integrated luminosity of 174\,\invnb~\citeTH{CMS-PAS-LUM-17-002} (equivalent to 36\,\invpb of nucleon-nucleon collision data), 
+releasing the very first \ttbar-like event signatures (Fig.~\ref{fig:pPbCollision_emu}).
+
+\begin{figure}[!ht]
+  {
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/introduction/display_HCALendcap.png}
+     \caption[A pPb collision featuring a $\ttbar\rightarrow \empm+X$ candidate event at $\rootsNN=8.16$\,\TeV]{
+      A pPb collision featuring a $\ttbar\rightarrow \empm+X$ candidate event in the $\rootsNN=$\,8.16\,\TeV\ data sample recorded by \texttt{CMS}. 
+      Calorimetric energy deposits in \texttt{ECAL} (\texttt{HCAL}) are depicted as green (blue) bars with a height proportional to the magnitude of the deposit. 
+      Tracks from hits using the combined tracker and muon systems are represented by red lines.
+      Apart from the beam pipe, the highlighted \texttt{CMS} detectors are the pixel and \texttt{ECAL} barrel, \texttt{ECAL} and \texttt{HCAL} endcaps, \texttt{HF} calorimeter, and part of 
+      the muon system along with the matching chambers, \texttt{CSC} and \texttt{DT} segments.
+      The measured kinematics of the reconstructed electron, muons (from \ttbar\ and B-hadron candidates, respectively), jets (yellow cones) and \ptmiss (not highlighted)
+      can be found in Ref.~\cite{CMS-PHO-EVENTS-2016-009-19}.
+      The superimposed model of the \texttt{CMS} detector~\cite{skethup} is imported in the browser-based event display of Ref.~\cite{ispy}.
+    }
+    \label{fig:pPbCollision_emu}
+  }
+\end{figure}
+
+Unlike  the  up and down quarks, which are stable, the top quark has a mean lifetime of only about $10^{-24}$\,$\mathrm{s}$. 
+In the SM, the top quark decays almost instantly and nearly all the times into a  \PW\ boson and a bottom (b) quark~\cite{pdg_2018}. 
+Neither the \PW\ boson nor the b quarks 
+can be directly observed. When a quark emerges from a collision, it gets ``dressed up'' by a cloud of quarks and antiquarks. 
+What is then experimentally observed is a jet (Fig.~\ref{fig:partons_to_hits}), 
+a directed spray of particles that in the vacuum have roughly the same energy and direction as the original quark.
+The \PW\ boson decays with a probability of almost 70\%~\cite{pdg_2018} into a quark and an antiquark of the same generation (``hadronically''). In this case, the  quark and antiquark show up as two
+jets correlated in phase space. But the \PW\ boson also decays, though with a decreased probability of around 10\%~\cite{pdg_2018}, ``leptonically,'' i.e., into  a  charged  and  a  neutral lepton of the same 
+generation, such as a muon and a neutrino.
+The  neutrino traverses a detector completely unobserved. Its presence can be indirectly deduced because of a significant amount of missing momentum, 
+assumed to have been carried away by the neutrino.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.5\columnwidth]{figures/introduction/levels.png}
+\caption[The transition from strongly interacting to measurable particles]{\label{fig:partons_to_hits} 
+Illustration of a jet to which bundles of partons, hadrons, or detector measurements are grouped together~\cite{lhc_chapter5}.
+The parton and particle levels, the latter containing color-neutral particles with mean decay lengths of at least $c\tau > 10$\,$\mathrm{mm}$, are also denoted as the ``truth level.''
+While  traversing the detector, these particles interact with the detector material at the ``detector level,'' producing characteristic signatures, i.e., tracks and/or energy deposits.
+}
+\end{figure}
+
+Among the most striking features of a top quark signature are therefore the jets containing b quarks. 
+General-purpose detectors, like \texttt{CMS}~\cite{cms_paper}, put great emphasis on the ability to accurately track the paths of individual particles 
+in a magnetic field, and in parallel, rely on extremely precise segmented calorimeters.
+The b quark lies within a jet as part of a hadron, then the latter decays roughly  half  a  millimeter from where it was created.
+The charged particles in jets can be very precisely tracked using a silicon vertex detector with an accuracy of few~\mum.
+By identifying most of the tracks in a jet, and extrapolating them backwards towards the primary interaction vertex,  
+the point where the bottom quark decayed could thereby be determined and the jet identified (``tagged'') as a b jet, based on its displacement relative to the primary interaction vertex.
+
+
+\section{The synchrotron legacy: a luminosity story}
+\label{sec:luminosity_intro}
+
+
+Assuming an arbitrary process $X$, the luminosity $\mathcal{L}(t)$ is the process-independent proportionality factor between the event rate $R(t)$ and its production cross section $\sigma$:
+\begin{equation}
+R (t) = \mathcal{L}(t) \sigma
+\label{eq:l_inst}
+\end{equation}
+The luminosity of a particle collider is thus determined by the rate of particle collisions it can produce, making it an important measure for the performance of a collider. 
+At circular colliders, it can be expressed in terms of the collision geometry and of the density distribution of the counter-rotating beams. 
+For colliders operating in ``bunched mode'' it is hence proportional to the number of bunches ($n_{\mathrm b}$), the product of the number of particles per bunch ($N_1N_2$), 
+the revolution frequency in the apparatus ($f_{\textrm{r}}$), yet inversely proportional to values related to the collision geometry, meaning~\cite{Witold_overview}
+\begin{equation}
+\mathcal{L}(t) = \frac{n_{\mathrm b}N_1N_2f_{\textrm{r}}}{A_{\textrm{eff}}}\, ,
+\label{eq:l_inst_exp}
+\end{equation}
+where $A_{\textrm{eff}}=4\pi\sigma_x\sigma_y$ is the effective beam overlap cross section at the collision point; $\sigma_x$ and $\sigma_y$ are the horizontal and vertical beam sizes, respectively, 
+that depend on the beam emittance ($\epsilon$) and the demagnification value ($\beta^{*}$ ) of the relevant optical function.  
+Identical $\epsilon$ and $\beta^{*}$ in horizontal and vertical planes for both beams are assumed as well as geometric (zero crossing angle) and separation (beams with complete overlap) factors 
+that equal unity.
+
+
+The definition in Eq.\,(\ref{eq:l_inst_exp}) is referred to as the ``instantaneous luminosity,'' and is usually expressed in units of $\mathrm{cm}^{-2}\mathrm{s}^{-1}$. 
+As running conditions vary with time, the luminosity of a collider also has a time dependency. 
+The integral over time is called the ``integrated luminosity'' that is commonly denoted by $\mathcal{L} = \int \mathcal{L}(t)\mathrm{d}t$, 
+and is conveniently measured in units of inverse barns ($1\mathrm{b}^{-1} \equiv 10^{-24}\mathrm{cm}^{-2}$). 
+One further distinguishes into ``delivered'' integrated luminosity, which refers to the integrated luminosity the machine delivered to an experiment or series of experiments, and into ``recorded'' 
+integrated luminosity, which refers to the amount of collisions actually written to tape by the experiments. 
+Maximizing the potential of colliders for delivering statistically significant data samples as well as the precise knowledge of the determination of the luminosity are of utmost importance 
+for rare events, new phenomena, and many cross section measurements, e.g., Ref.~\cite{CMS-PAS-TOP-17-001} or as illustrated in Fig.~\ref{fig:top16006_impact}.
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.6\columnwidth]{figures/introduction/CMS-TOP-16-006_Figure_004.pdf}
+\caption[The dominant source of uncertainty in the \stt analyses are related to the integrated luminosity]{\label{fig:top16006_impact} 
+  Estimated impact---change in the expected and observed signal strength---resulting from the listed sources of experimental and theoretical uncertainty in the \stt analysis of 
+  Ref.~\cite{CMS-PAS-TOP-16-006}.
+  The various contributions are shown from the largest to the smallest observed impact.
+  The dominant source of uncertainty is related to the integrated luminosity, which is expected and observed to impact the signal strength at the level of 2.2\%.
+}
+\end{figure}
+
+Limitations on the energy available in the center of mass system and luminosity~\cite{Zimmermann}---two critical parameters coupled to the potential for discovery---are typically surpassed   
+following the path of a somewhat lower energy that can be compensated for by a higher luminosity.
+The \texttt{FNAL} Tevatron was the first collider based on superconducting magnets with the colliding-beam operation having started in 1987. 
+Tevatron  luminosity was  limited by $\mathrm{\overline{p}}$ intensity,  beam--beam  interaction,  including long-range effects, luminosity lifetime, number of (simultaneous) 
+events per crossing, and intrabeam scattering. \texttt{RHIC} at \texttt{BNL}---the first heavy ion collider at relativistic energies---delivers luminosity since 2000. 
+The main limiting factor is intrabeam scattering. Other factors again are beam--beam interaction, luminosity lifetime, and the number of events per crossing.
+
+\texttt{LHC} has been designed~\cite{lhc_yellow} to provide experiments with pp and PbPb luminosity of up to $10^{34}$ and $10^{27}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$ (both already surpassed), 
+respectively. It is the first machine where radiation damping is stronger than intrabeam scattering, 
+while the scarcity of antiprotons is no longer a problem.
+Similarly to Tevatron, limits are the beam--beam interaction, luminosity lifetime, and events per crossing. In addition, the electron cloud produced by 
+photoemission or beam-induced multipacting, and local magnet quenches induced by the collision products could be important limiting factors.
+The main ``path'' to very high luminosity at \texttt{LHC} is therefore to use a high number of bunches and to reduce the transverse beam size 
+at the experimental areas by manipulations of the magnetic focusing system at top energies. 
+This can be combined with beams beyond the design brightness that the injector chain can  produce, i.e., higher bunch intensities and normalized transverse emittance.
+
+
+\begin{figure}[!ht]
+\centering
+\includegraphics[width=0.9\columnwidth]{figures/introduction/luminosity_colliders.png}
+\caption[Evolution of the peak luminosity at hadron colliders]{\label{fig:hadroncolliders} 
+  Evolution of the peak luminosity at hadron-hadron, lepton-hadron, and nucleus-nucleus colliders since 1970 (image courtesy of W. Fischer, \texttt{BNL}).
+  The \texttt{CERN} \texttt{ISR} has been put into operation in 1970, reaching a peak luminosity of $2.2 \times 10^{32}$\,$\mathrm{cm}^{-2}\mathrm{s}^{-1}$,
+  followed by the second hadron collider, i.e., the \texttt{CERN} \texttt{SPS} which operates since 1981 at ten times higher energy than achieved at \texttt{ISR}. 
+  Future projects like the High-Luminosity \texttt{LHC}~\cite{hl_lhc}, \texttt{eRHIC}~\cite{eRHIC} and a possible 100\,$\mathrm{km}$ circumference collider (\texttt{FCC})~\cite{fcc} 
+  are also indicated.
+}
+\end{figure}
+
+\subsection[``A great accomplishment is not the end of the road, just the starting point for the next leap forward'']{``A great accomplishment is not the end of the road,  just the starting point for the next leap forward''\ \footnote{Harvey Mackay}}
+\label{sec:pPb_intro}
+
+At  hadron  collider  experiments,   protons,  as  well  as  heavy  nuclei,  are brought into 
+collision,  and the results are interpreted to obtain better knowledge about the dynamics of the fundamental interactions at high energies. 
+The strong force plays a central role for the study of pp and heavy ion collisions. 
+In the case of pp collisions, the general purpose MC event generators interfaced to PDF parameterizations succeeded in describing the dynamics of strong and EW processes 
+from very high momentum transfer scales, where perturbation theory is applicable, down to scales around $\Lambda_{\QCD}$. 
+This has resulted in a remarkably precise description of the majority of observations in pp collisions, e.g., as shown in Fig.~\ref{fig:cms_summary_SM}, 
+so that further experimental and theoretical developments can rely upon. 
+Since PDFs provide the essential link between the measurable hadronic and the perturbatively calculable cross sections, 
+their precise determination is an extremely active area of research, where several groups perform global analyses including wide variety of experimental  data. 
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[scale=0.65]{figures/introduction/SigmaNew_v0.pdf}
+    \caption[Compilation of \texttt{CMS} measurements and SM predictions in proton-proton collisions at $\sqrt{s}=7$, 8, and 13\,\TeV]{
+	Compilation of CMS measurements and SM predictions in pp collisions at $\sqrt{s}=$\,7, 8, and 13\,\TeV\ for a variety of 
+	processes as indicated on the horizontal axis~\cite{cms_summary_SM}.
+}
+    \label{fig:cms_summary_SM}
+\end{figure}
+
+For high energy heavy ion collisions, efforts are often directed towards signals for the formation of the quark-gluon plasma (\QGP), and  studies  of  its  properties, e.g., Ref.~\cite{krintiras_msc}.  
+The  existence  of  such  a  phase  can be  demonstrated  in  lattice \QCD\ calculations~\cite{lattice},  and  it  is  conjectured to be present in the interior of compact, dense stellar objects, 
+and also presumed to  have  existed  in the early phase of the evolution of the Universe~\cite{bjorken}. 
+In  this  area event generators also exist, but are usually more ``special'' than event simulations of general purpose, each investigating  different particle  production  mechanisms.
+The  situation  is  thus more  challenging, but  not  less interesting, for PDFs of nucleons inside nuclei (nPDFs) with nuclear data being significantly 
+more complicated to collect, and with two additional degrees of freedom, i.e., the number of protons ($Z$) and nucleons ($A$) in the studied nuclei.
+
+Since the early 1980s, it is known that the nuclei do not behave as a simple collection of free nucleons, and nPDFs are not equal to the sum of nucleon PDFs. 
+The binding energies of nucleons in the nucleus are several orders of magnitude smaller than the momentum transfers of deep-inelastic 
+scattering (DIS). Therefore, such a ratio naively should be close to unity, except for small corrections for the Fermi motion of nucleons in the nucleus at large $x\gtrsim0.8$. 
+Contrary to expectations, three regions of nuclear modification are well established for quarks: 
+\begin{itemize} 
+\item  a depletion in the $0.3 \lesssim x \lesssim 0.8$  (EMC), 
+\item  an enhancement in the  $0.1 \lesssim x  \lesssim 0.3$  (``antishadowing''), and
+\item  a dip in the $x\lesssim 0.1$ (``shadowing'') regions. 
+\end{itemize} 
+Different physics mechanisms were proposed to explain this behavior at medium and large $x$, but a fully conclusive picture has not yet emerged 
+after the discovery from the European Muon Collaboration experiment of a declining slope to the modification ratio~\cite{Aubert:1983xm}, a result later confirmed with high-precision electron- and muon-scattering DIS data. 
+At small $x$, coherent scatterings inside the nucleus explain the observed suppression, while antishadowing is even less understood.
+The conclusions from the combined experimental evidence demonstrates the consistency in modifying the free nucleon PDFs, $f_{i}^{\mathrm{p}}(x,\mathrm{Q}^2)$, at low $\mathrm{Q}^2$ and 
+letting the Dokshitzer--Gribov--Lipatov--Altarelli--Parisi evolution to take care of the momentum transfer dependence, i.e., 
+$f_{i}^{\mathrm{p/A}}(x,\mathrm{Q}^2)=R_{i}^{A}(x,\mathrm{Q}^2)f_{i}^{\mathrm{p}}(x,\mathrm{Q}^2)$, where $R_{i}^{A}(x,\mathrm{Q}^2)$ is  the  scale-dependent  nuclear 
+modifications encoded in nPDFs (Fig.~\ref{nPDF:a}).
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{nPDF:a}\includegraphics[width=0.96\textwidth]{figures/introduction/ttbar_constraint.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{nPDF:b}\includegraphics[width=0.95\textwidth]{figures/introduction/LHC_coverage.png}}
+\end{minipage}\par\medskip
+
+
+\caption[Nuclear PDF parametrizations for the \ce{^{208}_{82}Pb+} ion and variety of data constraints in the \EPPS fit]{
+(a) Nuclear modification factor (bound-over-free parton densities ratio) for gluons as computed with EPS09~\cite{EPS09} at $\mathrm{Q}^{2}=m_{\textrm{top}}^{2}$ (region enclosed by the red dotted lines) 
+as a function of $x$. 
+The ratio is also shown after a reweighting procedure using pseudo-experiments that correspond to an hypothesis about 1\,\invpb of pPb data at \rootsNN=\,8.8\,\TeV~\cite{dEnterria:2015jna}. 
+At that \rootsNN value the nuclear PDFs are predominantly probed in the range of $0.02 \lesssim x \lesssim 0.3 $.
+(b) Approximate regions in the ($x$,\,$\mathrm{Q}^2$) plane at which different data in the EPPS16 fit~\cite{EPPS16} probe the nuclear PDFs. 
+For the first time, data constraints from \texttt{LHC} pPb collisions had been used.
+}
+\label{fig:nPDF}
+\end{figure}
+
+
+Just like in the nucleon case, nPDFs are determined by performing global analyses of experimental data. 
+Compared to the quark, the gluon content of the nuclei is even less known. To compensate this lack of constraints the most recent global NLO 
+analyses of nPDFs, \EPPS and \nCTEQ, use \texttt{RHIC} pion and \texttt{LHC} jet data (in case of \EPPS,\,Fig.~\ref{nPDF:b}) to constrain the gluon densities down to about $x=10^{-3}$. 
+However, there had been no data that could exhibit enhanced sensitivity at $x \lesssim 10^{-2}$ and EMC regions---at least till recently---and hence the gluon distribution 
+still remains largely unconstrained. The nuclear PDF analyses assume that the bound proton PDFs have the same evolution equations and sum rules as the free proton PDFs,
+provided contributions from the region $x>1$ are neglected~\cite{npdf_param}.
+%by extrapolating nPDFs from the larger $x$ regions. 
+The lack of knowledge about the gluon nPDF is not reflected by the set of error PDFs, which are given together with the best-fit PDFs;
+it is accompanied by an increased  flexibility  of  the  initial nPDF parametrization that leads to increased uncertainty in this region, e.g.,
+as evidenced by the \EPPS set as opposed to its predecessor \EPS.
+Clearly, a determination of the small- and medium-$x$ gluon nPDFs and the reduction of their uncertainties is necessary for the heavy ion phenomenology. 
+The relevance of experimental data on heavy-flavor~\cite{heavy_flavor} and dijet production~\cite{dijets,paakkinen} has been lately demonstrated, clearly pointing to a shadowed and antishadowed gluon distribution 
+at small- and medium-$x$ regions, respectively.
+
+\begin{figure}[!ht]
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{prospects:a}\includegraphics[width=0.95\textwidth]{figures/introduction/delay_time.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{prospects:b}\includegraphics[width=0.95\textwidth]{figures/introduction/CMS-TOP-17-007_Figure_004-a.pdf}}
+\end{minipage}\par\medskip
+
+
+\caption[Key novel insights into the time structure of the \QGP\ and nonperturbative uncertainties in the top mass]{
+(a) Time delay between the moment of the primary collision and that when the \PW\ boson decay products start interacting with the \QGP\ medium~\cite{Apolinario:2018}. 
+It is further split into the average contribution of separate components as shown from the colored stacked bands; vertical lines represent the dispersion in the sum of these three components.
+For comparison, the total delay time is shown for two different values of the transport coefficient of the medium, $\hat{q}$, the squared transverse momentum broadening per unit length. 
+(b) A bias in the measurement of the top quark mass can be spotted by a failure of the color-reconnection modeling to reproduce measurements that offer the best sensitivity, e.g, 
+the difference in the pseudorapidity and azimuthal angles (in radians) between the b jets assigned to the \ttbar\ decay~\cite{topmass_ljets}.
+}
+
+\label{fig:prospects}
+\end{figure}
+
+Collisions of lead nuclei with each other (PbPb) and with protons (pPb) at \texttt{LHC} can guide performance projections either at High-Luminosity \texttt{LHC}, 
+which is planned to be operated from 2026, or at a future hadron collider, in which \texttt{LHC} can be used as the final injector synchrotron.
+In heavy ion collisions, high transverse momentum (\pt) hadronic processes are known to show strong medium-induced modifications, often referred to as ``jet quenching,'' 
+up to at least the highest $\pt>100$\,\GeV\ explored at \texttt{LHC} so far~\cite{quenching}. The increase in energy and/or integrated luminosity at a future collider will provide much larger 
+abundance of high-\pt (``boosted'') processes. 
+
+Since the width of the top quark is much larger than the parton-to-hadron formation scale, the t/$\mathrm{\overline{t}}$ quarks are the only colored particles
+that decay before their hadronization, and their short lifetime implies they mostly decay within the lifetime of the strongly-interacting medium. 
+A remarkable example is represented by the boosted t/$\mathrm{\overline{t}}\rightarrow$W$\rightarrow$q\cPqbar decay chain that is a promising color-singlet probe 
+of the time evolution of the \QGP\ density (Fig.~\ref{prospects:a}), and hence of the role of color coherence. 
+Last but not least the reconstruction of the hadronic $m_{\textrm{top}}$ in proton-nucleus interactions or in the \QGP, 
+assuming its feasibility is not risked by the sizeable observed b quark energy loss~\cite{quenching_b}, could provide insights into nonperturbative \QCD\ effects 
+on such a crucial parameter. The color flow through gluon exchanges and/or nonperturbative string overlaps between t and $\mathrm{\overline{t}}$, 
+the resulted b quarks, and the underlying event surrounding the initial hard scattering may lead to an uncertainty in the reconstructed top mass of a few hundred\,\MeV (Fig.~\ref{prospects:b}).
+Indeed, the amount of top quark interactions with the color fields stretched among many partons involved in nuclear collisions will be enhanced compared to pp collisions. 

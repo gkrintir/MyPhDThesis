@@ -1,0 +1,59 @@
+\chapter{Global event and physics object reconstruction}
+\minitoc
+
+\InitialCharacter{T}o select events of potential physics interest, the \texttt{CMS} filter (``trigger'') system is composed of 
+the first level (\texttt{L1}), a custom hardware trigger, and the second level, a high-level trigger (\texttt{HLT}) that consists of custom software routines. 
+Information on the bunch structure and the timing of the incoming beams is obtained from the beam pickup for timing devices that are found on either side of the interaction point and 
+used for suppressing the noise in triggers with high background. 
+
+The \texttt{CMS} track and primary vertex reconstruction software aims to reconstruct the trajectories of charged particles while traversing the \texttt{CMS} silicon tracker. 
+Despite the high track density, the pixel tracker is well-suited to this purpose, with its high granularity giving excellent position and momentum resolution in three dimensions 
+and low channel occupancy. Tracks are further used to reconstruct the primary interaction vertices in each event. For vertices with
+many tracks, characteristic of interesting events, the achieved vertex position resolution is excellent in each of the three spatial dimensions.
+For the first time at a hadron collider, a fully-fledged particle-flow (PF) reconstruction algorithm has been developed, tuned to the \texttt{CMS} detector, and consistently used in physics analyses. 
+For each collision, final-state particles are identified and reconstructed by the PF algorithm that provides a global event description and
+leads to unprecedented \texttt{CMS} performance for electron and muon identification, jet reconstruction, and missing transverse momentum (\ptmiss) determination among others. 
+This approach also allows particles from multiple interactions (pileup) to be identified and enables efficient pileup mitigation methods.
+
+The original contribution from the present thesis to the material related to the following Chapter and listed in \hyperref[hellobiblio]{Scientific output} and \hyperref[hellobiblio1]{Internal notes} is:
+
+\begin{itemize}
+
+\item The measurement of the lepton selection (trigger, reconstruction, and identification) efficiency using a ``tag-and-probe'' method in same-flavor dilepton pp and pPb events
+  enriched in Z boson candidates.  
+\item The measurement of the lepton isolation performance in pPb collisions due to the presence of the underlying event.
+\item The optimization of the lepton isolation performance in pp collisions (at $\sqrt{s}=13$\,\TeV) due to the presence of the \QCD\ multijet background.
+\item The measurement of the resolution in the reconstructed primary-vertex positions in event topologies typical for the dedicated beam-separation scans.
+\item The offline measurement and monitoring of the \texttt{CMS} luminous region during the dedicated beam-separation scans.
+\item The measurement of the expected correct identification of a b jet as a function of the probability to be misidentified as light-flavor or gluon jet in pp collisions.
+\item The treatment in the biased estimate of the \ptmiss measurement correcting the \pt of the jets to the particle level jet \pt using the jet energy correction procedure in pp collisions.
+\item The uncertainty estimate in \ptmiss factorizing it into its components (electrons, muons, $\tau$ leptons, photons, and PF candidates not associated with
+  any of the previous physics objects) and varying each object within its scale and resolution uncertainties in pp collisions.
+
+\end{itemize}
+
+%Starting from the beam interaction region particles first enter a
+%tracker, in which charged-particle trajectories (tracks) and origins
+%(vertices) are reconstructed from signals (hits) in the sensitive
+%layers. The tracker is immersed in a magnetic field that bends the
+%trajectories and allows the electric charges and momenta of charged particles
+%to be measured. Electrons and photons are then absorbed in the electromagnetic
+%calorimeter (\texttt{ECAL}). The corresponding electromagnetic showers are detected as deposits (clusters) of energy recorded in neighbouring cells, from which the
+%energy and direction of the particles can be determined. Charged and neutral hadrons may initiate a hadronic shower in the \texttt{ECAL} as well,
+%which are subsequently fully absorbed in the hadron calorimeter (\texttt{HCAL}).
+%The corresponding clusters are used to estimate their energies and
+%directions. Muons and neutrinos traverse the calorimeters with little or
+%no interactions. While neutrinos escape undetected, albeit their presence can be inferred through the visible momentum imbalance in the plane perpendicular to the beam direction, muons produce hits
+%in additional tracking layers of dedicated muon detectors, located outside the volume of calorimeters.
+
+%The corrections from the detector-level offline event selection to the hadron-level event def-
+%inition are derived from MC simulations with the  EPOSgenerator.  The MC simulations are
+%produced with the same vertex distribution along the interaction region as observed in data.
+%The detector response is simulated with GEANT4 [29] and processed through the same event
+%reconstruction chain as the collision data.
+
+\clearpage
+
+\input{reconstruction/trigger.tex}
+\input{reconstruction/tracking.tex}
+\input{reconstruction/reconstruction.tex}

@@ -1,0 +1,307 @@
+\subsubsection{Event selection}
+\label{sec:evcat}
+
+%The two-tier trigger system (see Section~\ref{sec:egm_trigger}) selects events of interest for offline analysis.
+ This analysis is restricted to events that fired trigger paths requiring the presence of at least one muon (electron) candidate 
+ with transverse momentum (energy) $\pt > 12\,\GeV$ ($\et > 20\,\GeV$). 
+Looser online identification criteria are applied as compared to the offline selection, and no requirement on additional analysis objects is imposed at this level.
+
+Particle candidates are reconstructed offline with the \texttt{CMS} PF algorithm, which 
+identifies and provides a list of particles using an optimized combination of information from the various elements of the \texttt{CMS} detector. 
+Events are required to contain exactly one tight muon (see Section~\ref{sec:muons}) or medium electron (see Section~\ref{sec:electrons}) candidate, with $\pt > 30\,\GeV$ and $\lvert\eta\rvert < 2.1$, 
+excluding in the electron case the transition region $1.444 < \lvert\eta\rvert < 1.566$ between the \texttt{ECAL} barrel and endcap, where the reconstruction of electron objects is less efficient. 
+The muon and electron candidates are required to be isolated from nearby hadronic activity within a cone of $\Delta R = 0.3$ 
+around the direction of the track at the primary event vertex, 
+where $\Delta R = \sqrt{\smash[b]{(\Delta \eta)^2 + (\Delta \phi)^2}}$, and $\Delta
+\eta$ and $\Delta \phi$ are the separations in pseudorapidity and azimuthal angle. 
+A charged lepton is selected if its relative isolation discriminant value satisfies $I_\text{rel}<0.15$ (muon),  
+$0.07$ (electron in the barrel), or $0.08$ (electron in one of the endcaps). 
+These thresholds have been optimized to reduce the contamination from nonprompt leptons. 
+To remove the Drell--Yan background, events are rejected from the analysis if they contain extra electrons (muons) that are reconstructed 
+using a looser set of identification criteria and have $\pt>20$ ($15$)\,\GeV\ within $\lvert\eta\rvert < 2.5$ ($2.4$).
+The efficiency of the lepton selection is measured using a tag-and-probe method in events enriched with \PZ\ boson candidates 
+and selected by the same trigger requirements as the signal candidate events.
+The combined reconstruction, lepton identification, and trigger efficiency is determined as a function of lepton \pt and $\eta$.
+
+
+Events are required to have at least four reconstructed jets with $\pt> 25\,\GeV$ and $\lvert\eta\rvert< 2.5$, 
+that are separated by at least $\Delta R = 0.3$ from the selected muon or electron. 
+Jets are reconstructed from the PF candidates using the anti-\kt clustering algorithm with a distance parameter of 0.4. 
+Jet energy corrections extracted from the full detector simulation are applied as functions of jet $\pt$ and
+$\eta$~\cite{cms_jets,CMS-DP-2018-028} to both data and simulated samples. A residual correction to the data is applied to account for a
+small data-MC discrepancy in the jet energy response. 
+Jets from \cPqb\ quarks are tagged based on the presence of a secondary vertex from B-hadron decays, identified using 
+a multivariate algorithm combining tracking information.
+
+The distinct \ttbar\ signature of two \cPqb\ jets in the event, which rarely occurs in background processes such as \PW+jets and \QCD\ multijet 
+(collectively labeled as ``non-top'' background), is used to extract the signal.
+The number of jets passing a threshold on the \cPqb-jet identification discriminant, corresponding to a \cPqb\ tagging efficiency of 
+approximately 70\% with a misidentification rate of less than 0.1\% for light-flavor jets, as estimated in simulated pp and cross-checked with pPb events (Table~\ref{tab:OP}), 
+is used to classify the selected events into no (0\cPqb), exactly one (1\cPqb{}), or at least two ($\geq\ $2\cPqb{}) tagged-jet categories, described in the following. 
+All three event categories are exploited in a
+maximum-likelihood fit in order to extract the signal cross section, and simultaneously constrain the background contamination 
+and determine the efficiency of the \cPqb\ jet identification.
+
+Table \ref{tab:cutFlow} summarizes the selection requirements that are applied in the analysis to select a high purity $\ttbar\rightarrow \ell+\textrm{jets}$, $\ell$ = $\mathrm{e}$ or $\mu$, sample.
+
+\begin{table}[!ht]
+\begin{center}
+  \caption[Selection criteria applied in the $\mu$+jets and $\mathrm{e}$+jets final states for the inclusive \stt measurement at $\rootsNN=8.16$\,\TeV]{
+Selection criteria applied for the inclusive \ttbar\ cross section measurement in the $\mu$+jets and $\mathrm{e}$+jets final states using pPb collisions at $\rootsNN=8.16$\,\TeV.}
+\label{tab:cutFlow} 
+\makebox[\textwidth][c]{  
+\begin{tabular}{c||c}
+\toprule
+Filter or physics object & Selection \\
+\midrule
+Trigger          & one $\mu$ (e) candidate, \pt$>$12 (\et$>$20)\,\GeV        \\
+Electrons        & medium ID, $\pt>30\GeV$, $|\eta|<2.1$, $\PFrelIsoRho<0.08$ \\
+Muons            & tight ID,  $\pt>30\GeV$, $|\eta|<2.1$, $\PFrelIsoDb<0.15$   \\
+Jets             & loose ID, $\pt>25\GeV$, $|\eta|<2.5$                        \\
+Jet multiplicity & $\geq 4$                                                   \\
+\cPqb{} tagging  & CSVv2\,\texttt{M} (Table~\ref{tab:OP}) $\Rightarrow$ 1$\ell$4j0b, 1$\ell$4j1b, and 1$\ell$4j2b exclusive categories \\
+\bottomrule
+\end{tabular}}
+\end{center}
+\end{table}
+
+
+\subsubsection{Event categorization}
+\label{sec:evcat}
+
+As we observed in the measurement of the inclusive \ttbar\ cross section in the $\ell$+jets final state using pp collisions at $\sqrt{s}=5.02$\,\TeV~\citeTH{topobs_CMS_jhep}, 
+it is expected the main contamination from background processes to originate from \QCD\ multijet and \PW+jets events mainly. 
+Given the characteristics of these processes, categorization of events, according to the number of \cPb-tagged jets, separates signal from background. 
+The reconstruction of the kinematics of the \PW{} boson and top quark decays should further distinguish between the resonant nature of the signal and the continuum from the background.
+
+Figure~\ref{fig:anaflow} summarizes the event categories of the analysis that are attained based on identification and isolation requirements of the lepton candidates, 
+and the heavy-flavor content of the jets, i.e., identified as \cPqb or light quark jets. 
+The signal dominates the event categories with at least one lepton and four jets, two of which are \cPqb tagged (the ``1$\ell$4j2b'' category). 
+If only one jet passes the \cPqb-tagging requirement the event is classified to the ``1$\ell$4j1b'' category, 
+while in case none of the jets satisfies the \cPqb-tagging requirement the event falls in the ``1$\ell$4j0b'' category. 
+To model the \QCD\ multijet background an additional category is considered where the lepton fails identification or isolation requirements, and to further 
+reduce the contamination from \PW{}+jets and \ttbar\ events in the \QCD\ multijet control region no jet should fulfill the \cPqb-tagging requirement. 
+The category is referred to as ``1f4j0b'', with ``f'' standing for fake.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.99\textwidth]{figures/pPb8TeV/analysisflow}}
+\caption[Representation of the physics objects and event categories in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]{
+Representation of the physics objects and event categories (analysis boxes) for the inclusive \ttbar\ cross section in the $\ell$+jets final state 
+using pPb collisions at $\rootsNN=8.16$\,\TeV~\citeAN{AN-17-043}.
+}
+\label{fig:anaflow}
+\end{figure}
+
+\subsubsection{Reconstruction of the \PW{} boson leptonic and hadronic decays}
+\label{sec:wrec}
+
+In the case of \PW{} boson leptonic decay in a charged lepton and associated neutrino the reconstructed \ptmiss (see Section~\ref{sec:ptmiss}) is used to infer the \pt of the neutrino. 
+The longitudinal component of the neutrino momentum, $p_{\nu,z}$, is computed by using the energy-momentum conservation at the $\PW{}_{\ell\nu}$ vertex 
+and constraining the W boson mass to $\mW=80.4$\,\GeV~\cite{pdg_2018}. This leads to a quadratic equation in $p_{\nu,z}$ with solutions as
+\begin{linenomath}
+\begin{equation}
+\label{eq:pznu}
+p_{z,\nu} =\frac{\Lambda p_{z,\ell}}{p_{\textrm{T},\ell}^2}\pm\frac{1}{p_{\textrm{T},\ell}^2}\sqrt{\Lambda^2 p_{z,\ell}^2-p_{\textrm{T},\ell}^2(E_{\ell}^{2} \ptmisssquared-\Lambda^2)}\, ,
+\end{equation}
+\end{linenomath}
+where
+\begin{linenomath}
+\begin{equation}
+\label{eq:lambda}
+\Lambda=\frac{m_{\PW}^2}{2}+\vec{p}_{\textrm{T},\ell}\times{ \vecptmiss }\, , 
+\end{equation}
+\end{linenomath}
+and $E_{\ell}^{2}=p_{\textrm{T},\ell}^2 + p_{z,\ell}^2$ denotes the energy of the charged lepton.
+In most of the cases this leads to two real solutions for $p_{z,\nu}$ and the solution that minimizes $|p_{\nu,z}-p_{\ell,z}|$ is chosen~\citeTH{top16003}. 
+For some events the discriminant in Eq.\,(\ref{eq:pznu}) becomes negative leading to complex solutions for $p_{z,\nu}$. 
+In that case, the imaginary component is eliminated by the modification of $\vecptmiss$ so that $\mTW = \mW$, while still respecting the $\mW$ constraint. 
+This is achieved by imposing that the determinant, and thus the square-root term in Eq.\,(\ref{eq:pznu}), is null. 
+This condition gives a quadratic relation between $p_{x,\nu}$ and $p_{y,\nu}$ with two possible solutions, and one remaining degree of freedom. 
+The solution is chosen by finding the neutrino transverse momentum $\vec{p}_{\textrm{T},\nu}$  that has the minimum vectorial distance from the \vecptmiss in the $p_x\!-\!p_y$ plane. 
+With the kinematics of the neutrino fully specified, the kinematics of the leptonically decaying \PW{} boson can be then computed as $P_\PW=P_\ell+P_\nu$, 
+where $P_i$ is the four-vector of particle species $i$.
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\label{wjjsel:a}\includegraphics[width=0.48\textwidth]{figures/pPb8TeV/Figure_aux_001-a}}
+\subfloat[][]{\label{wjjsel:b}\includegraphics[width=0.48\textwidth]{figures/pPb8TeV/Figure_aux_001-b}}
+\caption[Dijet invariant mass distributions using different algorithms in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]{
+Dijet invariant mass (\mjj) spectrum obtained by 
+using different algorithms in the pairing of the jets in each event: 
+distance-based (\minDeltaR), \pt-based (leading \pt), and by minimizing the distance to the \PW{} boson mass $m_\PW$ ($\min|\mjj-m_\PW|$)~\citeTH{topobs_CMS_prl}.
+Pairs fully matched to $\PW \rightarrow \cPq\cPqbar$ decays are shown in (a), while pairs with at least one reconstructed jet not matched at parton level are shown in panel (b). 
+The results are based on the \PYTHIA \ttbar\ sample (Table~\ref{tab:mc_pPb8TeV}).
+}
+\label{fig:wjjsel}
+\end{figure}
+
+In case of \PW{} boson hadronic decays in two light quarks, \cPq and \cPqbar, all selected jets, $j$ and $j^{\prime}$, are used after removing up to 
+two \cPqb-tagged candidates using the CSVv2\,\texttt{M} working point (Table~\ref{tab:OP}). 
+When more than two jets are left a sorting algorithm based on the proximity of the jets by $\Delta R$ is applied. 
+The $\Delta R_{\textrm{min}}$ criterion preserves a high efficiency with respect to the number of events in which both jets from
+the $\PW\rightarrow \cPq\cPqbar$ decay are available while reducing the bias, i.e., any mimicking effects from the background.
+A criterion based on the closeness of $\mjj$ to the \PW{} boson mass maximizes efficiency but at the same time biases considerably the background. 
+To that end, in the analysis the \minDeltaR sorting algorithm is used, similar to the what has been found to be optimal in~\citeTH{topobs_CMS_jhep}.
+
+A comparison of the sorting algorithms based on simulation can be found in Fig.~\ref{fig:wjjsel} separately for ``correct'' and ``wrong''  assignments. 
+Successful combinations of $j$ and $j^{\prime}$ for which the algorithms are able to reconstruct both jets geometrically matched to the corresponding generator level quarks 
+from the \PW{} or \cPqt{} decays are shown in Fig.~\ref{wjjsel:a}. 
+Wrong or unmatched combinations of $j$ and $j^{\prime}$ for which the algorithms either select jets that cannot be geometrically matched to generator level information 
+or mix these physics objects from different decays are displayed in Fig.~\ref{wjjsel:b}.
+
+
+\begin{figure}[!ht]
+\begin{center}
+\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_003-a}
+\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_003-b}
+\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_003-c}
+\caption[Pre-fit dijet invariant mass distributions in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]{
+Dijet invariant mass (\mjj) distributions in the 1$\ell$4j0b (a), 1$\ell$4j1b (b), and 1$\ell$4j2b (c) event categories after the complete event selection. 
+In the upper panels, the reconstructed data are compared to the
+stacked expected contributions from the signal and the main background processes~\citeTH{topobs_CMS_prl}.
+The \ttbar, \PW+jets, and Drell--Yan (DY) processes are simulated with \PYTHIA (v6.424, tune Z2*) and normalized to the theoretical cross sections (Table~\ref{tab:mc_pPb8TeV}). 
+The \QCD\ multijet (Multijets) contribution is estimated from data using a control region.
+The bottom panels display the ratio between the data and the expectations.
+The shaded band represents the relative uncertainty due to the limited statistics in the simulated samples and in the estimate of the normalization of the \QCD\ multijet background.
+}
+\label{fig:wjjreco}
+\end{center}
+\end{figure}
+
+
+\subsubsection{Top pair decay reconstruction}
+\label{sec:toprec}
+
+Once the \PW{} bosons have been reconstructed they should be optimally combined with the \cPqb{}-jet candidates to retrieve the $\cPqt\rightarrow\PW\cPqb$ decay chains.
+In cases where jets do not fulfill the \cPqb-tagging threshold, the two jets with the highest CSVv2 discriminator value are used as the \cPqb-jet candidates.
+In the rest of the cases, the pairing of each \cPqb-jet candidate to \PW{} boson candidates can be tested using different ranking algorithms.  
+On the one hand, the proximity-based metric $\Delta R_{\textrm{min}}$ is expected to outperform in high-\pt events, and top-quark-mass-based criteria may induce a bias on the background. 
+On the other hand, a less biased mass requirement consists of minimizing the difference between the mass of the hadronic (all jets,\,$\cPqt_{\textrm{had}}$) and leptonic ($\cPqb\ell\nu$,\,$\cPqt_{\textrm{lep}}$) 
+\begin{table}[!ht]
+\begin{center}
+\caption[Metrics used to evaluate the quality of the top pair decay reconstruction at $\rootsNN=8.16$\,\TeV]
+{Fraction of events in which two \cPqb-tagged jets are successfully matched to parton level
+\cPqb{} quarks from top decays (2b) and are subsequently correctly matched to reconstruct
+the $\cPqt_{\textrm{had}}$ and $\cPqt_{\textrm{lep}}$ decay chains. 
+The pairing was tested using three metrics, i.e., a proximity-based ($\Delta R$) and two mass-based metrics that 
+minimize the mass difference of either $\cPqt_{\textrm{had}}$ and $\cPqt_{\textrm{lep}}$ quarks ($\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt_{\textrm{lep}}}|$) 
+or the mass difference of $\cPqt_{\textrm{had}}$ quark to the world average~\cite{pdg_2018} $m_\cPqt$ value ($\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt}|$)~\citeAN{AN-17-043}.
+}
+\label{tab:teff} \begin{tabular}{lcccc}
+\hline
+Category & 2\cPqb & $\cPqt_{\textrm{had}}$ & $\cPqt_{\textrm{lep}}$ & Algorithm \\
+\hline
+    \multirow{3}{*}{1$\ell$4j0b} & \multirow{3}{*}{$0.170\pm0.004$} &
+   $0.098\pm0.003$ & $0.307\pm0.005$ & $\min\Delta R$ \\
+&& $0.108\pm0.003$ & $0.242\pm0.005$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt}|$ \\
+&& $0.089\pm0.003$ & $0.289\pm0.005$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt_{\textrm{lep}}}|$\\\hline
+    \multirow{3}{*}{1$\ell$4j1b} & \multirow{3}{*}{$0.544\pm0.008$} &
+   $0.198\pm0.006$ & $0.468\pm0.008$ & $\min\Delta R$ \\
+&& $0.200\pm0.006$ & $0.458\pm0.008$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt}|$ \\
+&& $0.194\pm0.006$ & $0.454\pm0.008$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt_{\textrm{lep}}}|$\\\hline
+    \multirow{3}{*}{1$\ell$4j2b} & \multirow{3}{*}{$0.791\pm0.005$} &
+   $0.265\pm0.006$ & $0.540\pm0.006$ & $\min\Delta R$ \\
+&& $0.269\pm0.006$ & $0.535\pm0.006$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt}|$ \\
+&& $0.266\pm0.006$ & $0.541\pm0.006$ & $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt_{\textrm{lep}}}|$\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+Table~\ref{tab:teff} compares the expected efficiency for the different sorting algorithms, and 
+further comparisons of the distributions for both correctly and wrongly assigned objects in the reconstruction of top quarks in simulated W+jets events are given in the following. 
+We conclude that the strategy based on minimizing the $\cPqt_{\textrm{had}}$ and $\cPqt_{\textrm{lep}}$ mass difference is expected to have comparable efficiency to the other sorting algorithms. 
+The resolution is expected to be improved with respect to a $\Delta R_{\textrm{min}}$ ranking while avoiding to induce significant bias from the background, i.e., a peak close to the top mass in the reconstructed distribution. 
+Therefore in the analysis the \cPqb-jets are combined with the \PW{} boson candidates based on the $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt_{\textrm{lep}}}|$ criterion. 
+The output prior to any fit are given in Figs.~\ref{fig:thadsel} and~\ref{fig:tlepsel}. 
+
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_004-a}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_004-b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_004-c}}\\
+\caption[Pre-fit hadronic top mass distributions in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]{
+Hadronic top mass (\mtop) distributions in the 0 (left), 1 (center), and 2 (right) \cPqb-tagged jet categories after all selections. 
+In the upper panels, the reconstructed data are compared to the stacked expected contributions from signal and the main background processes~\citeTH{topobs_CMS_prl}.
+The \ttbar, \PW+jets, and Drell--Yan (DY) processes are simulated with \PYTHIA (v6.424, tune Z2*) and normalized to the expected cross sections and integrated luminosity.
+The \QCD\ multijet (Multiijets) contribution is estimated from data using a control region. 
+The bottom panels display the ratio between the data and the expectations.
+The shaded band represents the relative uncertainty due to the limited statistics in the simulated samples and in the estimate of the normalization of the \QCD\ multijet background.
+}
+\label{fig:thadsel}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_005-a}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_005-b}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/Figure_aux_005-c}}\\
+\caption[Pre-fit leptonic top mass distributions in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]
+{
+  Leptonic top mass (\mtop) distributions in the 0 (left), 1 (center), and 2 (right) \cPqb-tagged jet categories after all selections. 
+  In the upper panels, the reconstructed data are compared to the stacked expected contributions from signal and the main background processes~\citeTH{topobs_CMS_prl}.
+  The \ttbar, \PW+jets, and Drell--Yan (DY) processes are simulated with \PYTHIA (v6.424, tune Z2*) and normalized to the expected cross sections and integrated luminosity.
+  The \QCD\ multijet (Multiijets) contribution is estimated from data using a control region. 
+  The bottom panels display the ratio between the data and the expectations.
+  The shaded band represents the relative uncertainty due to the limited statistics in the simulated samples and in the estimate of the normalization of the \QCD\ multijet background.
+}
+\label{fig:tlepsel}
+\end{figure}
+
+
+\subsubsection{\PW{} boson and top pair-like reconstruction in \PW+jets background samples}
+\label{sec:backgroundeffect}
+
+The expected effect of the reconstruction and sorting algorithms on the W+jets background
+is evaluated using MC event simulation. 
+Because of the low event count in the default pPb simulation, a larger inclusive \PW+jets simulation is also investigated, 
+using pp collisions at 8\,\TeV\ and based on the LO \textsc{MadGraph5}~\cite{mg5} generator.
+The results are shown in Figs.~\ref{fig:wtselinwjetspPb} and~\ref{fig:wtselinwjetspp} for the pPb and pp MC event samples, respectively. 
+Although the statistical precision is low in both samples, and especially in the 1$\ell$4j2b category,  
+It can be seen that for the chosen sorting algorithm  $\min|m_{\cPqt_{\textrm{had}}}-m_{\cPqt}|$ no bias is expected either in the \mjj or the hadronic and leptonic top quark mass distributions, 
+irrespective of the event category within statistical uncertainties. 
+An additional algorithm for reconstructing the $\cPqt_{\textrm{had}}$ candidates based on their closeness to the world average $m_\cPqt$~\cite{pdg_2018} 
+reveals top mass distributions that are severely biased for the W+jets background. 
+
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j2q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j1b1q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j2b_wpPb}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j2q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j1b1q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j2b_wpPb}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j2q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j1b1q_wpPb}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j2b_wpPb}}
+\caption[Dijet invariant mass, hadronic and leptonic top mass distributions using different algorithms in the $\ell$+jets final state at $\rootsNN=8.16$\,\TeV]{
+Dijet invariant mass (a--c), and hadronic (d--f) and leptonic (g--i) top mass distributions in the 0 (a,\,d,\,g), 1 (b,\,e,\,h), and 2 (c,\,f,\,i) \cPqb-tagged jet categories 
+after all selections~\citeAN{AN-17-043}, using the simulated \PW+jets MC event sample of pPb collisions (Table~\ref{tab:mc_pPb8TeV}). 
+The curves correspond to the different sorting algorithms as described in Table~\ref{tab:teff}.
+}
+\label{fig:wtselinwjetspPb}
+\end{figure}
+
+\begin{figure}[!ht]
+\centering
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j2q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j1b1q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mjj_1l4j2b_wpp}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j2q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j1b1q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mthad_1l4j2b_wpp}}\\
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j2q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j1b1q_wpp}}
+\subfloat[][]{\includegraphics[width=0.32\textwidth]{figures/pPb8TeV/mtlep_1l4j2b_wpp}}
+\caption[Validation of the dijet invariant mass, hadronic and leptonic top mass reconstruction using pp collisions at $\sqrt{s}=8$\,\TeV]{
+  Dijet invariant mass (a--c), and hadronic (d--f) and leptonic (g--i) top mass distributions in the 0 (a,\,d,\,g), 1 (b,\,e,\,h), and 2 (c,\,f,\,i) \cPqb-tagged jet categories 
+  after all selections, using a higher event count \PW+jets MC sample of pp collisions at 8\,\TeV~\citeAN{AN-17-043}. 
+  The curves correspond to the different sorting algorithms as described in Table~\ref{tab:teff}.
+}
+\label{fig:wtselinwjetspp}
+\end{figure}
+
+

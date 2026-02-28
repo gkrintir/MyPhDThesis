@@ -1,0 +1,95 @@
+\subsection{Combination of the $\ell$+jets and dilepton final states}
+\label{sec:comb}
+
+
+The three individual \stt measurements are combined using the \texttt{BLUE} method~\cite{Lyons:1988rp,Valassi:2013bga} to determine the overall \ttbar\ cross section.
+All sources of systematic uncertainty are considered as fully correlated across all final states, with the following exceptions:
+the uncertainty associated with the finite event size of the simulated samples is taken as uncorrelated; 
+the electron identification is not relevant for the  \mmpm final state; 
+and the b tagging and \QCD\ multijet background uncertainties are only considered for the $\ell$+jets final state. 
+In the $\ell+$jets final state, the WV and $\mathrm{Z}/\gamma^*$ backgrounds are not considered separately but as part of the ``Other backgrounds'' component, which is dominated by tW events. 
+The uncertainty associated with this category is therefore treated as fully correlated with the tW uncertainty in the dileptonic final states and uncorrelated with the WV and $\mathrm{Z}/\gamma^*$ uncertainties.
+The individual results used as input to the combination are summarized in Table~\ref{tab:inputs}, including the correlations assumed between the individual sources of uncertainty.
+
+
+\begin{table*}[!ht]
+\begin{center}
+\caption[Inputs to the combination of the $\ell$+jets and dilepton final states, and the \QCD\ analysis, at $\sqrt{s}=5.02$\,\TeV]{
+Inputs to the combination of the $\ell$+jets and dilepton final states, and the \QCD\ analysis (see Section~\ref{sec:pdfs}). 
+The relative importance of statistical and systematic uncertainties in the combined result is attained by implementing the BLUE algorithm with all sources of systematic uncertainty set to zero; 
+the impact of systematic variations is then calculated by quadratically subtracting the statistical and luminosity from the total uncertainty. 
+The post-fit correlation matrix of the nuisance parameters in the $\ell$+jets analysis indicated correlations between the $\mu_\textrm{R},\mu_\textrm{F}$ scales in the W+jets background, and 
+between JES uncertainty in signal and the  $\mu_\textrm{R}$ scale in the W+jets background. Additional cross-checks to evaluate whether the assumed correlations significantly 
+affected the outcome of the combination thus involved setting to zero the correlation for the W+jets and JES uncertainty across the three final states, once at a time, 
+while preserving all other correlations~\citeAN{AN-16-358}.
+\label{tab:inputs}}
+\begin{tabular}{lcccc}
+\toprule
+Final state & \empm &  \mmpm & $\ell$+jets &  \\
+\midrule
+Central value (pb) & 76.5 & 59.2 & 68.9 & \\
+\midrule
+Sources of uncertainties (\%) &  &  &  & Correlation \\
+\midrule
+b tagging efficiency             & -     & -    & 3.4   & - \\
+Electron efficiency           & 1.4   & -    & 1.1   & 1 \\
+Muon efficiency               & 3.0   & 6.1  & 1.7   & 1 \\
+Jet energy scale                   & 1.3   & 1.3  & 3.0   & 1 \\
+Jet energy resolution              & \hspace{-3.2mm}$<$0.1  & \hspace{-3.2mm}$<$0.1 & 0.6   & 1 \\
+\ptmiss          & -     & 0.7  & -     & - \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (PS)   & 1.2   & 1.7  & 4.4   & 1 \\
+$\mu_\textrm{R},\mu_\textrm{F}$ scales of \ttbar\ signal (ME)   & \hspace{-3.2mm}$<$0.1  & 1.1  & \hspace{-3.2mm}$<$0.1  & 1 \\
+Hadronization model of \ttbar\ signal  & 1.2   & 5.2  & 3.7   & 1 \\
+PDF                   & 0.5   & 0.4  & \hspace{-3.2mm}$<$0.1  & 1 \\
+MC sample event count        & 1.4   & 2.4  & 0.1   & 0 \\
+\tW background         & 1.4   & 1.6  & 1.3   & 1 \\
+WV background         & 0.7   & 0.9  & -     & 1 \\
+Z/$\gamma^{*}$ background  & 2.7   & 15.4 & -     & 1 \\
+W+jets background     & 2.5   & 0.7  & 3.5   & 1 \\
+\QCD\ multijet background        & -     & -    & 2.4   & - \\
+\midrule
+Data sample event count           & 24.5  & 51.7 & 9.5   & 0 \\
+\midrule
+Integrated luminosity            & 2.3   & 2.3  & 2.3   & 1 \\
+\bottomrule
+\end{tabular}
+\end{center}
+\end{table*}
+
+
+The combined inclusive \ttbar\ cross section is measured to be
+\begin{eqnarray*}
+ \stt & = & 69.5 \pm 6.1\,(\stat) \pm 5.6\,(\syst) \pm 1.6\,(\lumi)\,{\mathrm{pb}}~=~69.5~\pm~8.4\,({\textrm{total}})\,{\mathrm{pb}}\, ,
+\end{eqnarray*}
+where the total uncertainty is the sum in quadrature of the individual sources of uncertainty. 
+The weights of the individual measurements, to be understood in the sense of Ref.~\cite{Valassi:2013bga}, are 81.8\% for $\ell+$jets, 13.5\% for \empm, and 4.7\% for \mmpm final states.
+
+The combined result is found to be robust by performing an iterative variant of the BLUE method~\cite{Lista:2014qia}---at each iteration the uncertainty is rescaled and the weights are recalculated---and varying some assumptions on the correlations of different combinations of systematic uncertainty. 
+Also, the post-fit correlations between the nuisance parameters in the $\ell$+jets final state have been checked, and found to have negligible impact by retrieving 
+the combination result as the input $\ell$+jets measurement in the limit of very large uncertainty in the dilepton final states.
+
+Figure~\ref{fig:sqrt} presents a summary of CMS measurements~\cite{Khachatryan:2016mqs,Khachatryan:2016yzq,CMS-PAS-TOP-16-005,CMS-PAS-TOP-16-006}
+of $\sigma_{\ttbar}$ in pp collisions at different \sqrts in the $\ell$+jets and dilepton final states, compared to the NNLO+NNLL
+prediction using the NNPDF3.0 PDF set with $\alpha_{\textrm{s}}(M_{\mathrm{Z}})=0.118$ and $m_{\textrm{top}} = 172.5$\,\GeV.
+In the inset, the results from this analysis at $ \sqrts$ = 5.02\,\TeV\ are also compared to the predictions from the MMHT14~\cite{Harland-Lang:2014zoa}, CT14~\cite{Dulat:2015mca}, and 
+ABMP16~\cite{Alekhin:2017kpj}
+PDF sets, with the latter using $\alpha_{\textrm{s}}(M_{\mathrm{Z}})=0.115$ and $m_{\textrm{top}} = 170.4$\,\GeV.
+Theoretical predictions using different PDF sets have comparable values and uncertainties, once consistent values of $\alpha_{\textrm{s}}$ and $m_{\textrm{top}}$ are associated with the respective PDF set.
+
+
+\begin{figure*}[!ht]
+\centering
+{\includegraphics[width=0.98\textwidth]{figures/pp5TeV/ttbar_sqrts_5TeV_PDFInfo.pdf}}
+\caption[Inclusive \stt measurements from \texttt{CMS} in  pp collisions as a  function of the center-of-mass energy]{
+  Inclusive \stt in
+  pp collisions as a
+  function of the center-of-mass energy; 
+  previous CMS measurements at $ \sqrts$ = 7, 8~\cite{Khachatryan:2016mqs,Khachatryan:2016yzq}, and 13~\cite{CMS-PAS-TOP-16-005,CMS-PAS-TOP-16-006}\,\TeV\ in the separate $\ell$+jets and dilepton 
+  final states are displayed, along with the combined measurement at 5.02\,\TeV\ from this analysis~\citeTH{topobs_CMS_jhep}.
+  The NNLO+NNLL theoretical prediction~\cite{mitov} using the NNPDF3.0~\cite{Ball:2014uwa} PDF set with $\alpha_{\textrm{s}}(M_{\mathrm{Z}})=0.118$ and $m_{\textrm{top}} = 172.5$\,\GeV\ is shown in the main plot. 
+  In the inset, additional predictions at $ \sqrts$ = 5.02\,\TeV\ using the MMHT14~\cite{Harland-Lang:2014zoa}, CT14~\cite{Dulat:2015mca}, and ABMP16~\cite{Alekhin:2017kpj} PDF sets, 
+  the latter with $\alpha_{\textrm{s}}(M_{\mathrm{Z}})=0.115$ and $m_{\textrm{top}} = 170.4$\,\GeV, are compared, along with the \NNPDFzero prediction, to the individual and combined results from this analysis.
+  The vertical bars and bands represent the total uncertainty in the data and in the predictions, respectively.
+}
+\label{fig:sqrt}
+\end{figure*}

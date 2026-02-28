@@ -1,0 +1,52 @@
+\section{Filling the gap between Tevatron and LHC energies}
+\label{sec:intr}
+
+The pair production cross section as a function of center-of-mass energy is of interest for the extraction of the top quark pole mass~\cite{polemass}, 
+and it has been used to constrain the gluon distribution function~\cite{Sirunyan:2017azo} at large fractions $x$ of the proton longitudinal momentum carried by the gluon, 
+where is poorly known and the correlation between the gluon distribution and \stt is maximal~\cite{gluon_vs_tt}.
+ Precise measurements of \stt in pp collisions have been published at \sqrts values of 7 and 8~\cite{ATLAStt12,ATLAStt6,Khachatryan:2016mqs,Khachatryan:2016yzq} 
+and 13\,\TeV~\cite{ATLAStt13TeV2,Khachatryan:2015uqb,CMS-PAS-TOP-16-005,CMS-PAS-TOP-16-006} by the \texttt{ATLAS} and \texttt{CMS} Collaborations at the \texttt{LHC}.
+
+
+The pp collisions at $\sqrts = 5.02$\,\TeV\ in November 2015 (Table~\ref{tab:design_vs_achieved}) offered a unique chance to fill the gap in $\sqrt{s}$ between Tevatron and \texttt{LHC}.
+ The fraction of \ttbar\ events initiated by gluon-gluon collisions grows monotonically with \sqrts. It is around 73\% at 5.02\,\TeV, 
+as calculated with \textsc{powheg}~(v2)~\cite{powheg,powheg2} at NLO using the NNPDF3.0 NLO~\cite{Ball:2014uwa} parton distribution functions,
+and increases to around 86\% at 13\,\TeV (Fig.~\ref{fig:tt_frac}), making this new data set partially complementary to the higher-energy samples.
+Measurements of \ttbar\ production at various \sqrts probe different values of $x$ and thus can provide complementary information on the gluon distribution.
+In addition, future measurements of \stt in nuclear collisions at the same nucleon-nucleon center-of-mass energy~\cite{dEnterria:2015jna,CMS-PAS-FTR-13-025} 
+would profit from the availability of a reference measurement in pp collisions at \sqrts = 5.02\,\TeV, without the need to extrapolate from measurements at different \sqrts.
+This has already been demonstrated with the first observation of the \ttbar\ process using proton-nucleus collisions at a higher nucleon-nucleon center-of-mass energy~\citeTH{topobs_CMS_prl}.
+
+In the SM, top quarks in pp collisions are mostly produced as \ttbar\ pairs. Each top quark 
+decays predominantly to a \PW\ boson and a bottom quark. 
+The \ttbar\ events are categorized according to the decay of the two \PW\ bosons.
+In \ttbar\ events where one \PW\ boson decays leptonically and the other hadronically ($\ell$+jets final state), the final state
+presents a typical signature of one isolated lepton, missing transverse momentum, two jets from the \PW\ boson hadronic decay, and two 
+jets coming from the hadronization of the b quarks.
+On the other hand, in \ttbar\ events where both \PW\ bosons decay leptonically (dilepton final state), the final state contains two leptons of opposite electric charge, missing transverse momentum, and at least two b jets. 
+The $\ell$+jets final state has a large branching ratio with a moderate amount of background, while a high purity characterizes the dilepton final state, thus compensating for its smaller branching ratio. 
+
+This analysis represents the first measurement of \stt in pp collisions at \sqrts = 5.02\,\TeV using \ttbar\ candidate events 
+with $\ell$+jets, where leptons are either electrons ($\ell=\mathrm{e}$) or muons ($\ell=\mu$), and dilepton (\empm\ or \mmpm) final states. In the former case, 
+\stt is extracted by a fit to the distribution of a kinematic variable for different categories of lepton flavor and jet multiplicity, while in the latter an event counting  approach is used.
+The two results are then combined in the final measurement, which is used as input to a quantum chromodynamics analysis at next-to-next-to-leading order to investigate 
+the impact on the determination of the gluon distribution in the less-explored kinematic range of $x \gtrsim 0.1$. 
+
+\begin{figure}
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_frac:a}\includegraphics[scale=0.35]{figures/pp5TeV/CMS-PAS-TOP-16-015_Figure-aux_001.pdf}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[]{\label{tt_frac:b}\includegraphics[scale=0.35]{figures/pp5TeV/CMS-PAS-TOP-16-015_Figure-aux_002.pdf}}
+\end{minipage}\par\medskip
+
+
+\caption[Relative fractions of initial partonic states yielding $\mathrm{t\overline{t}}$ pairs in proton-proton collisions at $\sqrt{s}=5.02$\,\TeV]{
+(a) Representative fractions (in \%) of initial partonic states yielding $\mathrm{t\overline{t}}$ pairs in pp collisions at
+$\sqrt{s}=5.02$\,\TeV simulated at NLO with \textsc{powheg} (v2) and the NNPDF3.0 NLO PDF set. 
+(b) Expected average momentum $\langle x \rangle$ of the incoming partons measured with respect to the proton momentum,
+for pp collisions at $\sqrt{s}=5.02$ and 13\,\TeV~\citeTH{top16015}.  }
+\label{fig:tt_frac}
+\end{figure}
